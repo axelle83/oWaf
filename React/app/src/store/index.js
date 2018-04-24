@@ -10,7 +10,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import reducer from 'src/store/reducer';
 
 // Middleware
-import exampleMiddleware from './exampleMiddleware';
+import exampleMiddleware from './exampleMidleware';
 
 /*
  * Code
