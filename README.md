@@ -1,7 +1,7 @@
 # Projet oWaf
 
 
-##Charte Graphique :
+## Charte Graphique :
 
 Font Titles:
 font-family: 'Pacifico', cursive
