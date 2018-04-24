@@ -1,0 +1,9 @@
+.DS_Store
+
+/vendor/
+
+wp-config.php
+wp
+
+
+/upgrade/

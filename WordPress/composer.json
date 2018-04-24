@@ -1,0 +1,29 @@
+{
+    "name": "mint/word-press",
+    "authors": [
+        {
+            "name": "angeliquepnn",
+            "email": "penon.angelique@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+      "johnpbloch/wordpress": "4.*",
+      "wpackagist-theme/twentyseventeen": "*",
+      "wpackagist-plugin/contact-form-7": "*",
+      "wpackagist-plugin/advanced-custom-fields": "*",
+      "wpackagist-plugin/advanced-custom-fields-font-awesome": "*"
+    },
+    "extra": {
+      "wordpress-install-dir": "wp",
+      "installer-paths": {
+          "content/plugins/{$name}/": ["type:wordpress-plugin"],
+          "content/themes/{$name}/": ["type:wordpress-theme"]
+      }
+    }
+}
