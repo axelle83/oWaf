@@ -66,37 +66,16 @@ define('NONCE_SALT',       'put your unique phrase here');
 $table_prefix  = 'wp_';
 
 /**
- * For developers: WordPress debugging mode.
+ * Déplacement du répertoire par défaut WP-CONTENT
  *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
+ * @link https://codex.wordpress.org/fr:Modifier_wp-config.php#D.C3.A9placer_le_R.C3.A9pertoire_wp-content
  */
 // Chemin local du répertoire WP-CONTENT (déplacé)
 define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
+
 // URL complete du répertoire WP-CONTENT (déplacé)
 define('WP_CONTENT_URL', 'http://.../content');
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
- */
- // Chemin local du répertoire WP-CONTENT (déplacé)
-define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
-// URL complete du répertoire WP-CONTENT (déplacé)
-define('WP_CONTENT_URL', 'http://.../content');
+
 /**
  * For developers: WordPress debugging mode.
  *
@@ -110,36 +89,46 @@ define('WP_CONTENT_URL', 'http://.../content');
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+
 // Si je suis en DEV
 if (WP_DEBUG) {
+
   // Je n'enregistre pas les erreurs dans un fichier de log
   define('WP_DEBUG_LOG', false);
+
   // J'affiche mes erreurs
   define('WP_DEBUG_DISPLAY', true);
+
   // Je laisse activé l'installation de plugins ou thèmes
   define('DISALLOW_FILE_MODS', false);
+
   // Force le téléchargement direct dans mon dossier sans FTP etc.
   define('FS_METHOD', 'direct');
+
   // Je vais limiter le nombre de version d'un contenu
   define('WP_POST_REVISIONS', 3);
+
 // SI je suis en PROD
 } else {
+
   // Je vais enregistrer mes erreurs dans un fichier
   define('WP_DEBUG_LOG', true);
+
   // Je n'affiche pas mes erreurs
   define('WP_DEBUG_DISPLAY', false);
+
   // Désactive l'installation de plugins ou thèmes
   define('DISALLOW_FILE_MODS', true);
 }
+
 // Bloque l'éditeur embarqué
 define('DISALLOW_FILE_EDIT', true);
-
 
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+    define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

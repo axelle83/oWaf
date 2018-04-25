@@ -2,14 +2,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Brunch</title>
-  <link rel="stylesheet" href="/app.css">
-  <script src="/app.js"></script>
-  <script>require('initialize');</script>
+  <title>oWaf, Le Blog</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+  <!-- <script src="/app.js"></script>
+  <script>require('initialize');</script> -->
 </head>
 <body>
-  <div class="brunch">
-    <a href="http://brunch.io"><img src="http://brunch.io/images/logo.png" alt="Brunch"></a>
-    <p>Bon Appétit.</p>
+  <div class="wrapper">
+    <header>
+      <nav class="header">
+        <div class="header__logo">
+          <h1>oWaf</h1>
+          <p>La communauté qui a du chien!</p>
+        </div>
+        <div class="header__menu">
+          <a href="#">Accueil</a>
+          <a href="#">La carte</a>
+          <a href="#">Déconnexion</a>
+        </div>
+      </nav>
+      <img src="images/chien-header.jpg" alt="chien header" class="header__image">
+    </header>
+    <section class="main">
+      <div class="menu">
+        <div class="menu__category">
+          <h2>Catégories</h2>
+          <ul>
+            <li>Education</li>
+            <li>Alimentation</li>
+            <li>Soins</li>
+            <li>Trucs et astuces</li>
+          </ul>
+        </div>
+        <div class="menu__posts">
+          <h2>Articles</h2>
+          <input type="text" placeholder="Recherche"><i class="fa fa-search"></i>
+        </div>
+        <div class="menu__last-posts">
+          <h2>Les derniers articles</h2>
+        </div>
+        <div class="menu__add-post">
+          <a href=""><span>+ </span>Ajouter un article</a>
+        </div>
+      </div>
+      <div class="posts">
+        <div class="post">
+          <img src="images/chihuahua.jpg" alt="chihuahua">
+          <h3>Titre de l'article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis at eius animi perspiciatis. Neque, quis, ducimus. Voluptas ad rerum amet laboriosam nisi eligendi dolor, doloremque impedit ipsa odio sapiente doloribus.</p>
+            <button class="post__category">Alimentation</button>
+        </div>
+        <div class="post">
+          <img src="images/chien-poilu.jpg" alt="chien-poilu">
+          <h3>Titre de l'article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis at eius animi perspiciatis. Neque, quis, ducimus. Voluptas ad rerum amet laboriosam nisi eligendi dolor, doloremque impedit ipsa odio sapiente doloribus.</p>
+            <button class="post__category">Alimentation</button>
+        </div>
+        <div class="post">
+          <img src="images/cavalier-king-charles.jpg" alt="cavalier-king-charles">
+          <h3>Titre de l'article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis at eius animi perspiciatis. Neque, quis, ducimus. Voluptas ad rerum amet laboriosam nisi eligendi dolor, doloremque impedit ipsa odio sapiente doloribus.</p>
+            <button class="post__category">Alimentation</button>
+        </div>
+        <div class="post">
+          <img src="images/cesar.jpg" alt="cesar">
+          <h3>Titre de l'article</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis at eius animi perspiciatis. Neque, quis, ducimus. Voluptas ad rerum amet laboriosam nisi eligendi dolor, doloremque impedit ipsa odio sapiente doloribus.</p>
+            <button class="post__category">Alimentation</button>
+        </div>
+      </div>
+    </section>
   </div>
 </body>

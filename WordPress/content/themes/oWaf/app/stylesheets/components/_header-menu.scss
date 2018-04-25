@@ -1,0 +1,22 @@
+.header {
+  &__menu {
+    display: inline;
+    padding-top: 2em;
+    @media (max-width: 480px) {
+      padding-top: 1em;
+    }
+
+    a {
+      border: solid 1px white;
+      border-radius: 1em;
+      color: white;
+      padding: 0.5em 1.5em 0.5em 1.5em;
+      @media (max-width: 740px) {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.5em;
+
+      }
+    }
+  }
+}
