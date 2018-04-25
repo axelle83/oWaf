@@ -7,10 +7,10 @@ import { createStore, compose, applyMiddleware } from 'redux';
  * Local import
  */
 // Reducer
-import reducer from 'src/store/reducer';
+import reducers from './reducers';
 
 // Middleware
-import exampleMiddleware from './exampleMidleware';
+import chatMiddleware from './chatMiddleware';
 
 /*
  * Code
@@ -22,11 +22,11 @@ if (window.devToolsExtension) {
 }
 
 // Middleware vers Enhancers
-const exampleEnhancer = applyMiddleware(exampleMiddleware);
-const enhancers = compose(exampleEnhancer, ...devTools);
+const exampleEnhancer = applyMiddleware(chatMiddleware);
+const middlewares = compose(exampleEnhancer, ...devTools);
 
 // createStore
-const store = createStore(reducer, enhancers);
+const store = createStore(reducers, middlewares);
 
 /*
  * Export

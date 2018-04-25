@@ -7,15 +7,17 @@ import React from 'react';
 /*
  * Local import
  */
-import Example from 'src/containers/Example';
+import ChatBtn from 'src/containers/Chat/ChatBtn';
+import Chat from 'src/containers/Chat/Chat';
 
 /*
  * Code
  */
 const App = () => (
-  <div>
+  <div id="app">
     Hello World!
-    <Example />
+    <ChatBtn />
+    <Chat />
   </div>
 );
 
