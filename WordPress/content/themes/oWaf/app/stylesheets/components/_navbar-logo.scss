@@ -1,0 +1,19 @@
+.navbar-item {
+  color: white;
+  display: block;
+  margin-left: 2em;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    @media (max-width: 980px) {
+      font-size: 2em;
+    }
+  }
+}
+
+.navbar-brand .navbar-item, .navbar-tabs .navbar-item {
+  @media (max-width: 1087px) {
+    display: block;
+  }
+}

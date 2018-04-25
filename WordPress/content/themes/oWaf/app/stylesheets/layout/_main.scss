@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.posts {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65%;
+}

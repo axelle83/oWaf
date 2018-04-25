@@ -4,13 +4,17 @@
 @import 'bulma';
 // @import 'popper.js';
 
-@import 'components/header-menu';
+@import 'components/navbar-menu';
+@import 'components/navbar-logo';
 @import 'components/header-image';
+@import 'components/post';
+@import 'components/sidebar';
 
 @import 'utils/vars';
 
 @import 'pages/home';
 
-@import 'layout/header';
+@import 'layout/navbar';
+@import 'layout/main';
 
 @import 'shame';

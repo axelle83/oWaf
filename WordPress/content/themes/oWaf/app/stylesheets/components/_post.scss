@@ -1,0 +1,30 @@
+.post {
+  flex: 0 0 auto;
+  width: 49%;
+  background-color: white;
+  margin-bottom: 1em;
+  padding: 1em;
+
+  img {
+    height: 42em;
+    max-width: 100%;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin: 1em 1em 1em 0;
+  }
+
+  p {
+    margin: 1em 0 1.5em 0;
+  }
+
+  a {
+    color: grey;
+    border: solid 1px grey;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+}
