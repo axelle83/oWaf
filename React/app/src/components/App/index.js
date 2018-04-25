@@ -7,17 +7,16 @@ import React from 'react';
 /*
  * Local import
  */
-import Example from 'src/containers/Example';
-import Header from 'src/components/Header';
+// import Example from 'src/containers/Example';
+import Nav from 'src/containers/Nav';
 
 /*
  * Code
  */
 const App = () => (
   <div>
-    Hello World!
-    <Example />
-    <Header />
+    {/* <Example /> */}
+    <Nav />
   </div>
 );
 
