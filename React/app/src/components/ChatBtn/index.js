@@ -9,17 +9,7 @@ import FaWeChat from 'react-icons/lib/fa/wechat';
  * Code
  */
 const ChatBtn = ({ actions }) => (
-  <div
-    id="chatBtn"
-    // className={
-    //   classNames({
-    //     'chat--open': openChat,
-    //   })
-    // }
-  >
-    <FaWeChat id="chatBtn" onClick={actions.toggleChat} />
-  </div>
-
+  <FaWeChat id="chatBtn" onClick={actions.toggleChat} />
 );
 ChatBtn.propTypes = {
   actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,

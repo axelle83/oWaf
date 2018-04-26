@@ -10,7 +10,7 @@ const initialState = {
  * Types
  */
 // Settings
-const SETTINGS_TOGGLE = 'SETTINGS_TOGGLE';
+const CHAT_TOGGLE = 'CHAT_TOGGLE';
 
 /*
  * Reducer
@@ -18,7 +18,7 @@ const SETTINGS_TOGGLE = 'SETTINGS_TOGGLE';
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     // Settings
-    case SETTINGS_TOGGLE:
+    case CHAT_TOGGLE:
       return {
         ...state,
         openChat: !state.openChat,
@@ -33,7 +33,7 @@ const reducer = (state = initialState, action = {}) => {
  */
 // Settings
 export const toggleChat = () => ({
-  type: SETTINGS_TOGGLE,
+  type: CHAT_TOGGLE,
 });
 
 /*
