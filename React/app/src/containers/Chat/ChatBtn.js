@@ -9,14 +9,14 @@ import { bindActionCreators } from 'redux';
  */
 import ChatBtn from 'src/components/ChatBtn';
 
-import { toggleChat } from 'src/store/reducers/chatBtn';
+import { toggleChat } from 'src/store/reducers/buttons';
 
 /**
  * Code
  */
 // Données
 const mapStateToProps = state => ({
-  openChat: state.chatBtn.openChat,
+  openChat: state.buttons.openChat,
 });
 
 const mapDispatchToProps = dispatch => ({

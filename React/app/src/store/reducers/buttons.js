@@ -3,6 +3,7 @@
  */
 const initialState = {
   openChat: false,
+  openContact: false,
   username: 'anonyme',
 };
 
@@ -11,6 +12,7 @@ const initialState = {
  */
 // Settings
 const CHAT_TOGGLE = 'CHAT_TOGGLE';
+const CONTACT_TOGGLE = 'CONTACT_TOGGLE';
 
 /*
  * Reducer
@@ -23,6 +25,11 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         openChat: !state.openChat,
       };
+    case CONTACT_TOGGLE:
+      return {
+        ...state,
+        openContact: !state.openContact,
+      };
     default:
       return state;
   }
@@ -33,6 +40,10 @@ const reducer = (state = initialState, action = {}) => {
  */
 // Settings
 export const toggleChat = () => ({
+  type: CHAT_TOGGLE,
+});
+
+export const toggleContact = () => ({
   type: CHAT_TOGGLE,
 });
 

@@ -13,7 +13,7 @@ import Chat from 'src/components/Chat';
  */
 // Données
 const mapStateToProps = state => ({
-  openChat: state.chatBtn.openChat,
+  openChat: state.buttons.openChat,
 });
 
 const mapDispatchToProps = {};

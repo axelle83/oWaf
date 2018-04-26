@@ -7,7 +7,7 @@ import { combineReducers } from 'redux';
  * Local import
  */
 import chatForm from 'src/store/reducers/chatForm';
-import chatBtn from 'src/store/reducers/chatBtn';
+import buttons from 'src/store/reducers/buttons';
 import chatMessages from 'src/store/reducers/chatMessages';
 
 /*
@@ -15,7 +15,7 @@ import chatMessages from 'src/store/reducers/chatMessages';
  */
 const reducers = combineReducers({
   chatForm,
-  chatBtn,
+  buttons,
   chatMessages,
 });
 
