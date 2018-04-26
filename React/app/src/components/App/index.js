@@ -7,17 +7,24 @@ import React from 'react';
 /*
  * Local import
  */
-import Example from 'src/containers/Example';
+
 import Header from 'src/components/Header';
+
+import ChatBtn from 'src/containers/Chat/ChatBtn';
+import ContactBtn from 'src/containers/Chat/ContactBtn';
+import Chat from 'src/containers/Chat/Chat';
+
 
 /*
  * Code
  */
 const App = () => (
-  <div>
+  <div id="app">
     Hello World!
-    <Example />
     <Header />
+    <ChatBtn />
+    <ContactBtn />
+    <Chat />
   </div>
 );
 

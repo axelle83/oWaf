@@ -17,6 +17,7 @@
     "socket.io": "^2.1.0",
     "stylus-brunch": "^2.10.0"
   },
+  
   "devDependencies": {
     "babel-brunch": "https://github.com/babel/babel-brunch.git",
     "babel-eslint": "^8.2.3",
