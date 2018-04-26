@@ -14,9 +14,9 @@ import React from 'react';
 /*
 *  Code
  */
-const HomeVisiteur = () => (
-  <div id="homeVisiteur">
-    Home Visiteur
+const HomeMembre = () => (
+  <div id="homeMembre">
+    Home Membre
   </div>
 );
 
@@ -24,4 +24,4 @@ const HomeVisiteur = () => (
 * Export default
  */
 
-export default HomeVisiteur;
+export default HomeMembre;

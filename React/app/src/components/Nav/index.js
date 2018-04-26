@@ -3,8 +3,8 @@
 *
  */
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 
 /*
@@ -14,19 +14,29 @@ import React from 'react';
 /*
 *  Code
  */
-const Nav = () => (
+const Nav = ({ buttons }) => (
   <nav id="nav">
     <div id="nav-title">
       <h1 id="nav-h1">oWaf</h1>
-      <p id="nav-p">La communauté qui as du chien !</p>
+      <p id="nav-p">La communauté qui a du chien !</p>
     </div>
     <div id="button">
-      <button href="" id="button-connexion">Connexion</button>
-      <button href="" id="button-inscription">Inscription</button>
+      {Object.keys(buttons).map(button => (
+        <NavLink
+          exact
+          key={button}
+          to={buttons[button].path}
+          className="button"
+        >
+          {button}
+        </NavLink>
+      ))}
     </div>
   </nav>
 );
-
+Nav.propTypes = {
+  buttons: PropTypes.object.isRequired,
+};
 /*
 * Export default
  */
