@@ -3,6 +3,10 @@
   color: black;
   display: flex;
   justify-content: space-between;
+  padding: 3em 6em;
+  @media (max-width: 980px) {
+    padding: 1em;
+  }
 
   span {
     font-family: 'Pacifico', cursive;
