@@ -11,8 +11,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
  * Local import
  */
 import App from 'src/components/App';
-
 import store from 'src/store';
+
+import { chatConnect } from 'src/store/chatMiddleware';
 
 /*
  * Code
@@ -26,4 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </Provider>
   );
   render(rootComponent, document.getElementById('root'));
+
+  store.dispatch(chatConnect());
 });

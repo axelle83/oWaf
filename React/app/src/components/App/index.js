@@ -8,13 +8,22 @@ import { Route, Switch } from 'react-router-dom';
 /*
  * Local import
  */
+
 import Nav from 'src/containers/Nav';
 import NotFound from 'src/components/NotFound';
 import routes from 'src/routes';
 
+// import Header from 'src/components/Header';
+
+import ChatBtn from 'src/containers/Chat/ChatBtn';
+import ContactBtn from 'src/containers/Chat/ContactBtn';
+import Chat from 'src/containers/Chat/Chat';
+
+
 /*
  * Code
  */
+
 
 class App extends React.Component {
  changeTitle = ({ pathname }) => {
@@ -38,6 +47,9 @@ class App extends React.Component {
                <main>
                  <Nav buttons={routes[path].buttons} />
                  {routes[path].component}
+                 <ChatBtn />
+                 <ContactBtn />
+                 <Chat />
                </main>
                 )
               }
