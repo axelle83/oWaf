@@ -32,7 +32,7 @@ const chatMiddleware = store => next => (action) => {
 
       if (content !== '') {
         const message = {
-          username: state.chatBtn.username,
+          username: state.buttons.username,
           content,
           date,
         };
