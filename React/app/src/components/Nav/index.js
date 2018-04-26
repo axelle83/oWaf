@@ -3,6 +3,8 @@
 *
  */
 import React from 'react';
+// import PropTypes from 'prop-types';
+// import { Route } from 'react-router-dom';
 
 
 /*
@@ -23,9 +25,7 @@ const Nav = () => (
       <button href="" id="button-inscription">Inscription</button>
     </div>
   </nav>
-
 );
-
 
 /*
 * Export default
