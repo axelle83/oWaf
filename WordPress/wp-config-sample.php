@@ -112,7 +112,7 @@ if (WP_DEBUG) {
 } else {
 
   // Je vais enregistrer mes erreurs dans un fichier
-  define('WP_DEBUG_LOG', true);
+  define('WP_DEBUG_LOG', false);
 
   // Je n'affiche pas mes erreurs
   define('WP_DEBUG_DISPLAY', false);
