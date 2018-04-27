@@ -8,7 +8,7 @@
    */
 
     function restapi_add_json() {
-        
+
 
         register_rest_field( 'post', 'nom_du_lieu', array(
             'get_callback' => function( $post ) {
@@ -55,4 +55,3 @@
     }
 
     add_action( 'rest_api_init', 'restapi_add_json' );
-?>

@@ -1,5 +1,7 @@
 <?php
 
+if (!function_exists('owaf_setup')):
+
 function owaf_setup() {
   // Background
   add_theme_support( 'custom-background' );
@@ -20,4 +22,6 @@ function owaf_setup() {
   // Je viens déclarer à WordPress que les traductions du domaine "owaf" se trouvent dans le dossier du thème "/languages"
   load_theme_textdomain( 'owaf', get_template_directory() . '/languages');
 }
+
+endif;
 add_action('after_setup_theme', 'owaf_setup');
