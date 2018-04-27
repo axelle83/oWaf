@@ -11,6 +11,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import Nav from 'src/containers/Nav';
 import NotFound from 'src/components/NotFound';
+// import Cgu from 'src/components/Cgu';
+import Footer from 'src/components/Footer';
 import routes from 'src/routes';
 
 // import Header from 'src/components/Header';
@@ -50,6 +52,7 @@ class App extends React.Component {
                  <ChatBtn />
                  <ContactBtn />
                  <Chat />
+                 <Footer />
                </main>
                 )
               }
@@ -59,6 +62,7 @@ class App extends React.Component {
            <main>
              <Nav buttons={routes['/not-found'].buttons} />
              <NotFound />
+             <Footer />
            </main>
          )}
          />
