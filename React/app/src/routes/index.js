@@ -12,7 +12,6 @@ import HomeMembre from 'src/components/HomeMembre';
 /*
  * Code
  */
-
 const routes = {
   '/not-found': {
     buttons: {
