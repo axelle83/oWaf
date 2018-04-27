@@ -5,7 +5,7 @@ class Place_cpt
   public function __construct()
   {
     add_action('init', [$this, 'cpt_place_init']);
-    add_action('init',array($this,'create_taxonomies'));
+    // add_action('init',array($this,'create_taxonomies'));
   }
 
   public function cpt_place_init()
@@ -33,21 +33,22 @@ class Place_cpt
       'public'             => true,
       'publicly_queryable' => false,
       'show_ui'            => true,
+      'show_tagcloud'      => true,
       'show_in_menu'       => true,
       'show_in_nav_menus'  => true,
       'show_in_rest'       => true,
       'query_var'          => true,
       'has_archive'        => false,
       'hierarchical'       => false,
+      'taxonomies'         => array('category'),
       'menu_position'      => null,
-      'supports'           => [
+        'supports'           => [
         'title',
         'author',
         'custom-fields',
-        'page-attributes',
-        'thumbnail'
       ],
-      'menu_icon' => 'dashicons-admin-post'
+
+      'menu_icon' => 'dashicons-location-alt'
   );
 
     register_post_type('place', $args);
@@ -56,15 +57,32 @@ class Place_cpt
 public function create_taxonomies()
   {
 
-    register_taxonomy(
-      'type',
-      'place',
-      [
-        'label' => 'Types',
-        'hierarchical' => true,
-        'public' => true
-        ]
-    );
+    $labels = [
+      'name'                       => 'type',
+      'singular_name'              => 'type de lieu',
+      'menu_name'                  => 'types de lieux',
+      'all_items'                  => 'Tous les types',
+      'new_item_name'              => 'Nouveau type',
+      'add_new_item'               => 'Ajouter un type',
+      'update_item'                => 'Mettre à jour un type',
+      'edit_item'                  => 'Editer un type',
+      'view_item'                  => 'Voir tous les type',
+      'add_or_remove_items'        => 'Ajouter une supprimer un type',
+      'search_items'               => 'Rechercher un type',
+      'not_found'                  => 'Aucun type trouvé',
+      'items_list'                 => 'Lister les type',
+      'items_list_navigation'      => 'Lister les type',
+    ];
+    $args = [
+      'labels'                     => $labels,
+      'hierarchical'               => true,
+      'public'                     => true,
+      'show_in_rest'               => true,
+      'supports'           => [
+        'custom-fields',
+      ]
+    ];
+    register_taxonomy( 'place', 'type', $args );
 
   }
 

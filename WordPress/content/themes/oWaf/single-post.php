@@ -2,7 +2,7 @@
 
 <?php if (have_posts()): while( have_posts()): the_post(); ?>
 
-  <?php get_template_part('template-parts/posts/article', 'full'); ?>
+  <?php get_template_part('template-parts/posts/post', 'full'); ?>
 
 <?php endwhile; endif; ?>
 
