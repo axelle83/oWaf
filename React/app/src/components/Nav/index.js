@@ -26,7 +26,7 @@ const Nav = ({ buttons }) => (
           exact
           key={button}
           to={buttons[button].path}
-          className="button"
+          className="button-nav"
         >
           {button}
         </NavLink>
