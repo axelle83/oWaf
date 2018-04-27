@@ -8,6 +8,7 @@ import React from 'react';
  */
 import HomeVisiteur from 'src/components/HomeVisiteur';
 import HomeMembre from 'src/components/HomeMembre';
+import Cgu from 'src/components/Cgu';
 
 /*
  * Code
@@ -44,6 +45,15 @@ const routes = {
       },
       Déconnexion: {
         path: '/disconnect',
+      },
+    },
+  },
+  '/cgu': {
+    nav: 'Cgu',
+    component: <Cgu />,
+    buttons: {
+      Accueil: {
+        path: '/',
       },
     },
   },
