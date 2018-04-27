@@ -16,7 +16,7 @@ import React from 'react';
  */
 const NotFound = () => (
   <div id="NotFound">
-    404
+    <p className="title">Tu es perdu ?</p>
   </div>
 );
 
