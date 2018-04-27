@@ -9,7 +9,7 @@ import React from 'react';
  */
 
 import Header from 'src/components/Header';
-import Map from 'src/components/Map';
+import MapContainer from 'src/components/MapContainer';
 // import Places from 'src/components/Map/Places';
 
 
@@ -28,7 +28,7 @@ const App = () => (
     <ChatBtn />
     <ContactBtn />
     <Chat />
-    <Map />
+    <MapContainer />
     {/* <Places /> */}
   </div>
 );
