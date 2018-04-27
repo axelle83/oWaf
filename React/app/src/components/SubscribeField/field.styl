@@ -1,0 +1,70 @@
+@require "app/styles/charte"
+
+/*
+ * Classes
+ */
+.field
+	position: relative
+	display: block
+
+	/*
+	 * Children
+	 */
+	&-input
+		border: 1px solid #ccc
+		color: #ccc
+		font-size: 1.2em
+		height: 2.75em
+		width: 50%
+		margin: .4em 0
+		padding: 0 1em
+
+		&::placeholder
+			color: #aaa
+
+	&-label
+		font-size: 1.2em
+		height: 2.75em
+		width: 50%
+		margin: .4em 0
+		padding: 0 1em
+
+
+	/*
+	 * Modifiers
+	 */
+	&--has-value &
+		&-input
+			padding-top: 1em
+
+		&-label
+			display: block
+			animation: fadeInTop .2s
+
+	&--has-error &
+		&-input
+			border-color: $color-error
+		&-label
+			color: $color-error
+
+	&--has-focus &
+		&-input
+			border-color: $color-input-border--focus
+
+		&-label
+			color: $color-input-label--focus
+
+/*
+ * ID
+ */
+#app
+	color: $color-text
+	max-width: 360px
+	margin: 3em auto
+
+
+
+@keyframes fadeInTop
+	0%
+		transform: translateY(1em)
+		opacity: 0

@@ -18,8 +18,10 @@ import routes from 'src/routes';
 // import Header from 'src/components/Header';
 
 import ChatBtn from 'src/containers/Chat/ChatBtn';
-import ContactBtn from 'src/containers/Chat/ContactBtn';
+import ContactBtn from 'src/containers/ContactBtn';
 import Chat from 'src/containers/Chat/Chat';
+import Contact from 'src/containers/Contact';
+import Login from 'src/containers/Login';
 
 
 /*
@@ -49,9 +51,11 @@ class App extends React.Component {
                <main>
                  <Nav buttons={routes[path].buttons} />
                  {routes[path].component}
-                 <ChatBtn />
+                 <ChatBtn visible={routes[path].chat} />
                  <ContactBtn />
                  <Chat />
+                 <Login visible={routes[path].login} />
+                 <Contact />
                  <Footer />
                </main>
                 )
