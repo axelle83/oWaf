@@ -4,6 +4,7 @@
 const initialState = {
   openChat: false,
   openContact: false,
+  openlogin: false,
   username: 'anonyme',
 };
 
@@ -13,6 +14,7 @@ const initialState = {
 // Settings
 const CHAT_TOGGLE = 'CHAT_TOGGLE';
 const CONTACT_TOGGLE = 'CONTACT_TOGGLE';
+const LOGIN_TOGGLE = 'LOGIN_TOGGLE';
 
 /*
  * Reducer
@@ -24,6 +26,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         openChat: !state.openChat,
+      };
+    case LOGIN_TOGGLE:
+      return {
+        ...state,
+        openLogin: !state.openLogin,
       };
     case CONTACT_TOGGLE:
       return {
@@ -44,7 +51,11 @@ export const toggleChat = () => ({
 });
 
 export const toggleContact = () => ({
-  type: CHAT_TOGGLE,
+  type: CONTACT_TOGGLE,
+});
+
+export const toggleCLogin = () => ({
+  type: LOGIN_TOGGLE,
 });
 
 /*
