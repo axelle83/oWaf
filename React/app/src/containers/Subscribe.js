@@ -2,6 +2,7 @@
  * Npm import
  */
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 
 /*
@@ -19,8 +20,11 @@ const mapStateToProps = null;
 // Actions
 const mapDispatchToProps = {};
 
-
+const SubscribeContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Subscribe);
 /*
  * Export default
  */
-export default connect(mapStateToProps, mapDispatchToProps)(Subscribe);
+export default withRouter(SubscribeContainer);

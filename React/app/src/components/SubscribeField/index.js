@@ -4,18 +4,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-// import validateEmail from 'validate-email';
+import validateEmail from 'validate-email';
 
 
 /*
  * Local import
  */
 
-
 /*
  * Code
  */
-
 
 /*
  * Component
@@ -29,12 +27,11 @@ export default class SubscribeField extends React.Component {
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     value: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'number']),
+    type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
   }
 
   static defaultProps = {
     value: '',
-    type: 'text',
   }
 
   state = {
@@ -42,19 +39,20 @@ export default class SubscribeField extends React.Component {
     focus: false,
   }
 
-
   /**
    * Handle change event
-   * @param {Event} evt objet d'evement
    */
   handleChange = (evt) => {
     // Modifier le state de <App />
     const { value } = evt.target;
+    console.log('début');
     this.props.onChange(value);
+    console.log('component');
+    console.log(value);
     // On vérifie l'email
     if (this.props.type === 'email') {
-      // const error = !validateEmail(value);
-      // this.setState({ error });
+      const error = !validateEmail(value);
+      this.setState({ error });
     }
   }
 

@@ -2,6 +2,7 @@
  * Npm import
  */
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 /*
  * Local import
@@ -18,11 +19,16 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onChange: (value) => {
+    console.log('container');
     dispatch(changeInput({ name: ownProps.name, value }));
   },
 });
 
+const SubscribeFieldContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SubscribeField);
 /*
  * Export default
  */
-export default connect(mapStateToProps, mapDispatchToProps)(SubscribeField);
+export default withRouter(SubscribeFieldContainer);
