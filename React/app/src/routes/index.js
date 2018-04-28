@@ -28,6 +28,7 @@ const routes = {
     nav: 'Home',
     component: <HomeVisiteur />,
     chat: false,
+    login: false,
     buttons: {
       Inscription: {
         path: '/subscribe',
@@ -52,6 +53,7 @@ const routes = {
     nav: 'Subscribe',
     component: <Subscribe />,
     chat: false,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
@@ -62,6 +64,7 @@ const routes = {
     nav: 'Home',
     component: <HomeMembre />,
     chat: true,
+    login: false,
     buttons: {
       'Mon profil': {
         path: '/profile',
@@ -81,6 +84,7 @@ const routes = {
     nav: 'Profile',
     component: <Profile />,
     chat: true,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
@@ -100,6 +104,7 @@ const routes = {
     nav: 'Map',
     component: <Map />,
     chat: true,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
@@ -119,6 +124,7 @@ const routes = {
     nav: 'Cgu',
     component: <Cgu />,
     chat: false,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
