@@ -8,11 +8,12 @@ import { SEND_MESSAGE } from './reducers/chatForm';
 const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
 
 let socket;
+const io = require('socket.io-client');
 
 const chatMiddleware = store => next => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT:
-      socket = window.io();
+      socket = io('http://localhost:3000/');
       socket.on('send_message', (message) => {
         store.dispatch(receiveMessage(message));
       });
