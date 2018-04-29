@@ -1,12 +1,21 @@
 @require "app/styles/charte"
 
 #cgu
-
-  background: radial-gradient(circle, $bgSalmon, $bgBlue);
   display: flex
   justify-content: center
   height: 90em
   font-family: $text
+  animation: pulse 5s infinite
+@keyframes pulse
+  0%
+    background-color: $bgBlue
+  50%
+    background-color: $bgSalmon
+
+  100%
+    background-color: $bgPeche
+
+
 
 .cgu
   background-color: $color
@@ -37,7 +46,7 @@
     height: 58.7em
   .cgu
     width: 50%
-    margin-top: 10em
+    margin-top: 8em
     margin-bottom: 4em
     &-title
       font-size: 2em

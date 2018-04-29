@@ -2,6 +2,7 @@
 
 
 
+
 #homeVisiteur
 
   padding-top: 1.54em
@@ -27,6 +28,23 @@
   color: $color
   text-align: center
   padding : 1em
+  animation: flash 5s infinite
+@keyframes flash
+  from,
+  50%,
+  to
+    opacity: 1;
+
+
+  25%,
+  75%
+    opacity: 0.2;
+
+
+
+
+
+
 
 
 
@@ -47,6 +65,7 @@
   background-size: contain
   background-repeat: no-repeat
   background-position: top
+
 
 .visiteur-carte-text
   font-size: 2em
@@ -74,6 +93,7 @@
   margin-left: 1.5em
 
 
+
 .visiteur-img2-img
   background-image: url(/images/tim-mossholder-599480-unsplash.jpg);
   background-size: contain
@@ -83,6 +103,10 @@
   width: 50%
   margin-left: 2em
   margin-top: 1em
+  transition-property: transform
+  transition-duration: 1s
+  transition-timing-function: ease-in
+
 
 
 .visiteur-articles
