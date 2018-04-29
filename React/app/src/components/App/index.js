@@ -27,7 +27,7 @@ import Login from 'src/containers/Login';
  */
 
 
-class App extends React.Component {
+class test extends React.Component {
  changeTitle = ({ pathname }) => {
    // On récupère notre objet de data
    const route = routes[pathname];
@@ -77,4 +77,4 @@ class App extends React.Component {
 /*
  * Export default
  */
-export default App;
+export default test;

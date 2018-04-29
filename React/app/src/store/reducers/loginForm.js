@@ -2,7 +2,6 @@
  * Initial state
  */
 const initialState = {
-  pseudo: '',
 };
 
 /*

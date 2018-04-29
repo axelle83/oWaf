@@ -6,15 +6,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import validateEmail from 'validate-email';
 
-
-/*
- * Local import
- */
-
-/*
- * Code
- */
-
 /*
  * Component
  */
@@ -43,12 +34,8 @@ export default class SubscribeField extends React.Component {
    * Handle change event
    */
   handleChange = (evt) => {
-    // Modifier le state de <App />
     const { value } = evt.target;
-    console.log('début');
     this.props.onChange(value);
-    console.log('component');
-    console.log(value);
     // On vérifie l'email
     if (this.props.type === 'email') {
       const error = !validateEmail(value);

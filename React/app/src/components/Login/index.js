@@ -24,7 +24,10 @@ const Login = ({ visible }) => (
     )
     }
   >
-    Se connecter
+    <form id="login-form">
+      <input id="login-email" value="mail" />
+      <input id="login-password" value="pass" />
+    </form>
   </div>
 );
 

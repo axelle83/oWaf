@@ -19,7 +19,6 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onChange: (value) => {
-    console.log('container');
     dispatch(changeInput({ name: ownProps.name, value }));
   },
 });
@@ -28,6 +27,7 @@ const SubscribeFieldContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(SubscribeField);
+
 /*
  * Export default
  */
