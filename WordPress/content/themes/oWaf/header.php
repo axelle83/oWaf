@@ -17,6 +17,7 @@
             <p>La communauté qui a du chien!</p>
           </div>
         </div>
+
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -24,9 +25,7 @@
         </a>
         <div class="navbar-menu">
           <div class="navbar-end">
-            <a href="#">Accueil</a>
-            <a href="#">La carte</a>
-            <a href="#">Déconnexion</a>
+            <?php get_template_part('template-parts/nav/nav-menu'); ?>
           </div>
         </div>
       </nav>

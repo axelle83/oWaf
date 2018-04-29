@@ -13,7 +13,7 @@ function owaf_setup() {
   add_theme_support( 'custom-header' );
   // Menus de navigation
   register_nav_menus([
-    'main-nav' => 'Menu principal de oWaf'
+    'header' => 'Menu principal de oWaf'
   ]);
   // // sidebar
   // register_sidebar('sidebar');
