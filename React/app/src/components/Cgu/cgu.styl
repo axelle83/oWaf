@@ -2,25 +2,45 @@
 
 #cgu
 
-  background-color: $bgBlue
+  background: radial-gradient(circle, $bgSalmon, $bgBlue);
   display: flex
   justify-content: center
-  height: 100vh
+  height: 90em
   font-family: $text
 
 .cgu
   background-color: $color
-  width: 50%
-  margin-top: 10em
-  margin-bottom: 5em
+  width: 75%
+  margin-top: 15em
+  margin-bottom: 7em
 
   &-title
-    font-size: 2em
+    font-size: 1.7em
     text-align: center
     margin-bottom: 2em
     margin-top: 2em
 
   &-text
-    font-size: 1.5em
+    font-size: 1.6em
     text-align: justify
     margin: 1.8em
+
+
+// @media screen and (min-width: 500px)
+
+
+
+
+@media screen and (min-width: 1200px)
+
+  #cgu
+    height: 58.7em
+  .cgu
+    width: 50%
+    margin-top: 10em
+    margin-bottom: 4em
+    &-title
+      font-size: 2em
+      &-text
+        font-size: 1.4em
+        margin: 1em
