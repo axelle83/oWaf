@@ -10,7 +10,7 @@ $menuParameters = [
 $menu = wp_nav_menu($menuParameters);
 echo strip_tags($menu, '<a>');
 ?>
-
+<!--
    <a href="#">Accueil</a>
     <a href="#">La carte</a>
-    <a href="#">Déconnexion</a>
+    <a href="#">Déconnexion</a> -->
