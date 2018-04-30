@@ -29,6 +29,7 @@ define('DB_USER', 'owaf');
 define('DB_PASSWORD', 'owaf');
 
 /** MySQL hostname */
+// define('DB_HOST', 'localhost');
 define('DB_HOST', '217.70.189.93');
 
 /** Database Charset to use in creating database tables. */
@@ -46,14 +47,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         ',JOg4 t~.j}>Z`8bENSuXl>d@.&++-jfvI+b />H<%[HE,t|{f~;.iC*Kf$E_O~{');
-define('SECURE_AUTH_KEY',  'L-02leX[!.:Pw{H_bl>2K0ZguKCnU?z4?9E7,-(R;]&7l:0U.BfD>/=_]|=+,AJl');
-define('LOGGED_IN_KEY',    'T+X%Eq~kTu8j<vR%B$JU{z*1bw9,y?]=e1(|(f)M|-gp}cx+f?l`ZjN[9JHM.1V$');
-define('NONCE_KEY',        ' Vq?~+L;I5Swl!ajA#MTU%]D6zM N&Xdww|P0NzH&B#P~?bUuF_i51=QuJSmqafj');
-define('AUTH_SALT',        '>;SDg-?2os(Pq0)`m8@q`,$2K32f<^-e9$kP,}hNqp{5^VR4HavPW-s<k?C3]9.p');
-define('SECURE_AUTH_SALT', 'h%o%-8k9h9U#(^k28b@W5kUZ40=aG-vc(80qkl`-)Wj~VW+a+[ 0td[.F<+th~zx');
-define('LOGGED_IN_SALT',   'BbTi#7F_:l]1CmN+|Y-Z6-DoZ7I?Odn[l[+TSXDN531mK#)gn3lb]hZLs3%{}p6~');
-define('NONCE_SALT',       '{o0]0j@Ip6-3(S+N+Wir.B+jwL/P@jaV}]ixWY~lY0R`]S:@l=|RupXu] Hd$f7s');
+define('AUTH_KEY',         'R)4@Q;ln,_?WY72dro)Y%1+6 /HR-v{3F)tk4!q9K }*R}e|CXY[<!ub Pk>Ye|Q');
+define('SECURE_AUTH_KEY',  '{}05X20=Jf3(^AUQjrti|F5NH?L!BUi)srdQ,L+a$1/]lkc>i3q+0lCXDXS0+J#9');
+define('LOGGED_IN_KEY',    'sz{*LNw+JhiL+j(QUjLavM3@z-.[UQ!7;4R5xc;K)T.+dH#50q;Je]8Tha.N18(/');
+define('NONCE_KEY',        '(+qj#g]!:!F^v7X>[7I@U+$M.U`qzKUO,!MA2|Gcn/44dJc<l,?3T62IVR[la]n0');
+define('AUTH_SALT',        '5ax,K9$y_b/;!i0Sc?~6O5Y)5,esk$Bqm*JQF-5~^ZFb1ww{fj%+50~b%Q=NH<7C');
+define('SECURE_AUTH_SALT', ';875SZ|-Elt{F.$Q_[SBwG#nPLbf!aV_{@UnXb]OvI#|HeBJyFT-^mv|]?TSzo9o');
+define('LOGGED_IN_SALT',   'j|Yo#dZS% `Fi_1:V5)yLc+W_4s,iq`hdR0PK9Ic<-E8x2+o}iW3|-i+a%Faf:r}');
+define('NONCE_SALT',       '6B-v[g0J/:`zNj1|Pxdz0+2izgq<3tX<`hM5+i(e}XZtGEu?1=<zh7ivh[Q8|x>K');
 
 /**#@-*/
 
@@ -75,6 +76,7 @@ define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
 
 // URL complete du répertoire WP-CONTENT (déplacé)
 define('WP_CONTENT_URL', 'http://localhost/oWaf/WordPress/content');
+// define('WP_CONTENT_URL', 'http://217.70.189.93/WordPress/content/');
 
 /**
  * For developers: WordPress debugging mode.
@@ -112,7 +114,7 @@ if (WP_DEBUG) {
 } else {
 
   // Je vais enregistrer mes erreurs dans un fichier
-  define('WP_DEBUG_LOG', false);
+  define('WP_DEBUG_LOG', true);
 
   // Je n'affiche pas mes erreurs
   define('WP_DEBUG_DISPLAY', false);
