@@ -1,23 +1,32 @@
+@require "app/styles/charte"
+
 #chat
 	position: absolute
-	top: 0
-	left: 0
-	justify-content: space-between
-	border: 1px solid red
-	background: white
+	// top: 0
+	// left: 0
+	// justify-content: space-between
+	border: 3px outset $bgPink
+	border-radius: 12px
+	background: linear-gradient(50deg, $bgPinkPastel, $color)
 	overflow: hidden
-	color: #222
-	width: 90vw
-	height: 50vh
-	margin: 20vh 5vw
+	color: $color
+	width: 50em
+	height: 26vh
+	margin: 50vh 5vw
 	&.chat
 		display: none
+		padding-left: 1.5em
+		padding-top: 1.5em
 	&.chat--open
 		display: flex
+
 	&-display
 		margin-left: 2em
 		width: 95%
+
+
 @media (min-width: 1024px)
 	#chat
 		width: 50vw
-		margin: 20vh 25vw
+		margin: 2vh 44vw
+		height: 50vh
