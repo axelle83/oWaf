@@ -9,7 +9,7 @@ import React from 'react';
  */
 
 import Header from 'src/components/Header';
-import MapContainer from 'src/components/MapContainer';
+import MyMapComponent from 'src/components/MyMapComponent';
 // import Places from 'src/components/Map/Places';
 
 
@@ -28,7 +28,7 @@ const App = () => (
     <ChatBtn />
     <ContactBtn />
     <Chat />
-    <MapContainer />
+    <MyMapComponent isMarkerShown />
     {/* <Places /> */}
   </div>
 );
