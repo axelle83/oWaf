@@ -21,7 +21,7 @@ import ChatBtn from 'src/containers/Chat/ChatBtn';
 import ContactBtn from 'src/containers/ContactBtn';
 import Chat from 'src/containers/Chat/Chat';
 import Contact from 'src/containers/Contact';
-import Login from 'src/containers/Login';
+// import Login from 'src/containers/Login';
 /*
  * Code
  */
@@ -52,7 +52,7 @@ class test extends React.Component {
                  <ChatBtn visible={routes[path].chat} />
                  <ContactBtn />
                  <Chat />
-                 <Login visible={routes[path].login} />
+                 {/* <Login visible={routes[path].login} /> */}
                  <Contact />
                  <Footer />
                </main>

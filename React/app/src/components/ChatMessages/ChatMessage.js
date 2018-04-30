@@ -18,12 +18,14 @@ const ChatMessage = ({
     },
   )}
   >
-    <div className="message-infos">
-      <span className="message-user">{username}</span>
-      <span className="message-date">{date}</span>
+    <div className="message-user">
+      {username}
     </div>
     <div className="message-content">
       {content}
+    </div>
+    <div className="message-date">
+      {date}
     </div>
   </div>
 );

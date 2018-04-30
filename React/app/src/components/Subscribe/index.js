@@ -3,6 +3,7 @@
 *
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 /*
@@ -14,26 +15,45 @@ import SubscribeField from 'src/containers/SubscribeField';
 /*
 *  Code
  */
-const Subscribe = () => (
-  <form id="subscribe">
-    <div id="subscribe-title">Profil</div>
-    <div id="subscribe-me">
-      {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
-    </div>
-    <div id="subscribe-dog">
-      <div id="subscribe-dog-title">Mon chien</div>
-      {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
-      <input id="subscribe-dog-sex" type="checkbox" value="Mâle" />Mâle
-      <input id="subscribe-dog-sex" type="checkbox" value="Femelle" />Femelle
-      <button id="subscribe-dog-validate">
-        Valider
-      </button>
-    </div>
-    <button id="subscribe-submit">
-      S'inscrire
-    </button>
-  </form>
-);
+class Subscribe extends React.Component {
+   onSubmit = (evt) => {
+     evt.preventDefault();
+     this.props.onSubscribeSubmit();
+   }
+
+   render() {
+     return (
+       <form
+         id="subscribe"
+         onSubmit={this.onSubmit}
+       >
+         <div id="subscribe-title">Profil</div>
+         <div id="subscribe-me">
+           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
+         </div>
+         <div className="subscribe-dog">
+           <div className="subscribe-dog-title">Mon chien</div>
+           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
+           <input className="subscribe-dog-sex" type="checkbox" value="Mâle" />Mâle
+           <input className="subscribe-dog-sex" type="checkbox" value="Femelle" />Femelle
+           <button className="subscribe-dog-validate">
+           Valider
+           </button>
+         </div>
+         <button id="subscribe-dog-add">
+           Ajouter un chien
+         </button>
+         <button id="subscribe-submit">
+           S'inscrire
+         </button>
+       </form>
+     );
+   }
+}
+
+Subscribe.propTypes = {
+  onSubscribeSubmit: PropTypes.func.isRequired,
+};
 
 /*
 * Export default

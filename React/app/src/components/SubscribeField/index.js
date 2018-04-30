@@ -68,25 +68,25 @@ export default class SubscribeField extends React.Component {
     const {
       name, placeholder, value, type,
     } = this.props;
-    const id = `field-${name}`;
+    const id = `subscribe-${name}`;
     return (
       <div
         className={classNames(
-          'field',
-          { 'field--has-value': value !== '' },
-          { 'field--has-error': error },
-          { 'field--has-focus': focus },
+          'subscribe',
+          { 'subscribe--has-value': value !== '' },
+          { 'subscribe--has-error': error },
+          { 'subscribe--has-focus': focus },
         )}
       >
         <label
-          className="field-label"
+          className="subscribe-label"
           htmlFor={id}
         >
           {placeholder}
         </label>
         <input
           type={type}
-          className="field-input"
+          className="subscribe-input"
           id={id}
           name={name}
           placeholder={placeholder}

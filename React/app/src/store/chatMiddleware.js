@@ -24,12 +24,14 @@ const chatMiddleware = store => next => (action) => {
 
       const content = state.chatForm.input.trim();
 
+      const day = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+      const month = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
       const now = new Date();
       let h = now.getHours();
       let m = now.getMinutes();
       if (h < 10) h = `0${h}`;
       if (m < 10) m = `0${m}`;
-      const date = `${h}:${m}`;
+      const date = `${day[now.getDay()]} ${now.getDate()} ${month[now.getMonth()]} ${now.getFullYear()} - ${h}:${m}`;
 
       if (content !== '') {
         const message = {

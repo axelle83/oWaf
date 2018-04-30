@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
  * Local import
  */
 import Subscribe from 'src/components/Subscribe';
-
+import { subscribeSubmit } from 'src/store/reducers/memberForm';
 
 /*
  * Code
@@ -18,7 +18,11 @@ import Subscribe from 'src/components/Subscribe';
 const mapStateToProps = null;
 
 // Actions
-const mapDispatchToProps = {};
+const mapDispatchToProps = dispatch => ({
+  onSubscribeSubmit: () => {
+    dispatch(subscribeSubmit());
+  },
+});
 
 const SubscribeContainer = connect(
   mapStateToProps,
