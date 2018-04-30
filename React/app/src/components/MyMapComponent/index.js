@@ -20,7 +20,24 @@ const MyMapComponent = compose(
       <Marker position={{ lat: 43.50, lng: 7 }} onClick={props.onMarkerClick} />}
   </GoogleMap>
   ));
-
+  // On teste tout d'abord si le navigateur prend en charge la géolocalisation HTML5
+if (navigator.geolocation) {
+  const watchId = navigator.geolocation.watchPosition(
+    successCallback,
+    null,
+    { enableHighAccuracy: true },
+  );
+}
+else {
+  alert("Votre navigateur n'est pas compatible avec la géolocalisation HTML 5");
+}
+function successCallback(position) {
+  map.panTo(new google.maps.Latlng(position.coords.latitude, position.coords.longitude));
+  const marker = new google.maps.Marker({
+    position: new google.maps.Latlng(position.coords.latitude, position.coords.longitude),
+    map,
+  });
+}
 class MyFancyComponent extends React.Component {
   state = {
     isMarkerShown: false,
