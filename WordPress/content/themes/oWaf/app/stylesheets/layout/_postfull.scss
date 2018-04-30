@@ -3,11 +3,7 @@
   background-color: white;
   margin: auto;
   padding: 1em;
-
-  img {
-    height: 42em;
-    max-width: 100%;
-  }
+  margin-bottom: 1em;
 
   h3 {
     text-transform: uppercase;
@@ -25,6 +21,12 @@
     border: solid 1px grey;
     padding: 0.5em;
     border-radius: 0.5em;
+  }
+}
+
+.postfull {
+  &__content {
+    margin-bottom: 1em;
   }
 }
 
