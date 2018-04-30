@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
 
-  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+ 
   <?php wp_head(); ?>
 
 </head>
