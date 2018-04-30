@@ -7,7 +7,7 @@
 
    */
 
-    function restapi_add_json() {
+    function owaf_register_rest_fields() {
 
 
         register_rest_field( 'post', 'nom_du_lieu', array(
@@ -52,6 +52,27 @@
             }
         ) );
 
+
     }
 
-    add_action( 'rest_api_init', 'restapi_add_json' );
+
+    add_action( 'rest_api_init', 'owaf_register_rest_fields' );
+
+
+
+    fonction publique get_remote_posts() {
+    $posts = get_transient ('remote_posts');
+    if (vide ($posts)) {
+        $ response = wp_remote_get ('http://217.70.189.93/wp-json/wp/v2/posts/');
+        if (is_wp_error ($réponse)) {
+            return array ();
+        }
+
+        $posts = json_decode (wp_remote_retrieve_body($response));
+
+        if (vide ($posts)) {
+            return array ();
+        }
+
+    }
+}
