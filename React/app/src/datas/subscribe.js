@@ -36,16 +36,13 @@ const dog = [
     type: 'text',
     name: 'dog-name',
     placeholder: 'Nom du chien',
+    mandatory: true,
   },
   {
     type: 'number',
     name: 'dog-birth',
     placeholder: 'Année de naissance',
-  },
-  {
-    type: 'text',
-    name: 'dog-race',
-    placeholder: 'Race',
+    mandatory: false,
   },
 ];
 

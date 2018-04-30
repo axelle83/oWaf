@@ -18,7 +18,6 @@ export default class SubscribeField extends React.Component {
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     mandatory: PropTypes.bool.isRequired,
-    // errorpassword: PropTypes.bool.isRequired,
     inputValue: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
   }
@@ -41,6 +40,11 @@ export default class SubscribeField extends React.Component {
     // On vérifie l'email
     if (this.props.type === 'email') {
       const error = !validateEmail(value);
+      this.setState({ error });
+    }
+    // On vérifie l'année de naissance
+    if (this.props.type === 'number') {
+      const error = !(value.length === 4 && value > 2000);
       this.setState({ error });
     }
     // on vérifie les champs obligatoires

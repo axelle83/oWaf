@@ -4,6 +4,7 @@
 const initialState = {
   members: [],
   errorpassword: false,
+  'dog-sex': 'femelle',
 };
 
 /*
