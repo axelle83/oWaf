@@ -29,5 +29,5 @@
           </div>
         </div>
       </nav>
-      <img src="images/chien-header.jpg" alt="chien header" class="header__image">
+      <img  class="header__image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
     </header>
