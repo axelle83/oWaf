@@ -2,8 +2,8 @@
  * Initial state
  */
 const initialState = {
-  pseudo: '',
   members: [],
+  errorpassword: false,
 };
 
 /*
@@ -31,20 +31,25 @@ const reducer = (state = initialState, action = {}) => {
       };
 
     case SUBSCRIBE_SUBMIT: {
+      if (state.password !== state.confirmpassword) {
+        return {
+          ...state,
+          errorpassword: true,
+        };
+      }
       // ID
       lastId += 1;
 
-      // On crée l'objet tâche
+      // On crée l'objet membre
       const member = {
         id: lastId,
-        label: state.input,
-        done: false,
-        favorite: false,
+        username: state.pseudo,
+        email: state.email,
       };
-
       // Je retourne le nouveau state
       return {
         ...state,
+        errorpassword: false,
         members: [...state.members, member],
       };
     }

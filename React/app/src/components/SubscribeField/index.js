@@ -17,12 +17,14 @@ export default class SubscribeField extends React.Component {
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    value: PropTypes.string,
+    mandatory: PropTypes.bool.isRequired,
+    // errorpassword: PropTypes.bool.isRequired,
+    inputValue: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
   }
 
   static defaultProps = {
-    value: '',
+    inputValue: '',
   }
 
   state = {
@@ -41,16 +43,21 @@ export default class SubscribeField extends React.Component {
       const error = !validateEmail(value);
       this.setState({ error });
     }
+    // on vérifie les champs obligatoires
+    if (this.props.mandatory === true) {
+      const error = !value;
+      this.setState({ error });
+    }
   }
 
   /**
    * Handle focus event
    */
   handleFocus = () => {
-    this.setState({
-      error: false,
-      focus: true,
-    });
+    // this.setState({
+    //   error: false,
+    //   focus: true,
+    // });
   }
 
   /**
@@ -66,14 +73,14 @@ export default class SubscribeField extends React.Component {
   render() {
     const { error, focus } = this.state;
     const {
-      name, placeholder, value, type,
+      name, placeholder, inputValue, type, mandatory,
     } = this.props;
     const id = `subscribe-${name}`;
     return (
       <div
         className={classNames(
           'subscribe',
-          { 'subscribe--has-value': value !== '' },
+          { 'subscribe--has-value': inputValue !== '' },
           { 'subscribe--has-error': error },
           { 'subscribe--has-focus': focus },
         )}
@@ -90,8 +97,9 @@ export default class SubscribeField extends React.Component {
           id={id}
           name={name}
           placeholder={placeholder}
-          value={value}
+          inputvalue={inputValue}
           onChange={this.handleChange}
+          required={mandatory}
         />
       </div>
     );

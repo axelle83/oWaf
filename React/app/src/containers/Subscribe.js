@@ -15,7 +15,9 @@ import { subscribeSubmit } from 'src/store/reducers/memberForm';
  * Code
  */
 // State
-const mapStateToProps = null;
+const mapStateToProps = state => ({
+  errorpassword: state.memberForm.errorpassword,
+});
 
 // Actions
 const mapDispatchToProps = dispatch => ({

@@ -14,7 +14,7 @@ import { changeInput } from 'src/store/reducers/memberForm';
  * Code
  */
 const mapStateToProps = (state, ownProps) => ({
-  value: state[ownProps.name],
+  inputValue: state[ownProps.name],
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

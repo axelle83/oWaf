@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 
 /*
@@ -30,6 +31,18 @@ class Subscribe extends React.Component {
          <div id="subscribe-title">Profil</div>
          <div id="subscribe-me">
            {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
+           <div
+             className={
+               classNames(
+                 'password',
+                 {
+                 'error-password': this.props.errorpassword,
+               },
+             )
+           }
+           >
+             Les mots de passe ne sont pas identiques
+           </div>
          </div>
          <div className="subscribe-dog">
            <div className="subscribe-dog-title">Mon chien</div>
@@ -53,6 +66,10 @@ class Subscribe extends React.Component {
 
 Subscribe.propTypes = {
   onSubscribeSubmit: PropTypes.func.isRequired,
+  errorpassword: PropTypes.bool,
+};
+Subscribe.defaultProps = {
+  errorpassword: 'false',
 };
 
 /*
