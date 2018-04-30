@@ -10,7 +10,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <div class="navbar-item" href="#">
             <h1><?php bloginfo('name'); ?></h1>
@@ -23,7 +23,7 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
-        <div class="navbar-menu">
+        <div class="navbar-menu ">
           <div class="navbar-end">
             <?php get_template_part('template-parts/nav/nav-menu'); ?>
           </div>
