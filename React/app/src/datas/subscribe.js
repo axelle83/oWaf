@@ -3,21 +3,31 @@ const me = [
     type: 'text',
     name: 'pseudo',
     placeholder: 'Mon pseudo',
+    mandatory: true,
   },
   {
     type: 'text',
     name: 'city',
     placeholder: 'Ma ville',
+    mandatory: true,
   },
   {
     type: 'email',
     name: 'email',
     placeholder: 'Mon adresse mail',
+    mandatory: true,
   },
   {
     type: 'password',
     name: 'password',
     placeholder: 'Mon mot de passe',
+    mandatory: true,
+  },
+  {
+    type: 'password',
+    name: 'confirmpassword',
+    placeholder: 'Confirmer le mot de passe',
+    mandatory: true,
   },
 ];
 
