@@ -3,6 +3,7 @@
 *
  */
 import React from 'react';
+// import { render } from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -27,10 +28,10 @@ class Subscribe extends React.Component {
     this.props.onSubscribeSubmit();
   }
 
-  handleOptionChange = (evt) => {
-    this.setState({
-      selectedOption: evt.target.value,
-    });
+  addDog = () => {
+    console.log('add');
+    document.getElementById('next').innerHTML += 'test';
+    // render('<div>test</div>', document.getElementById('next'));
   }
 
   render() {
@@ -63,10 +64,17 @@ class Subscribe extends React.Component {
            Valider
           </button>
         </div>
-        <button id="subscribe-dog-add">
+        <div id="next">Next</div>
+        <button
+          id="subscribe-dog-add"
+          onClick={this.addDog}
+        >
           Ajouter un chien
         </button>
-        <button id="subscribe-submit">
+        <button
+          id="subscribe-submit"
+          onClick={this.onSubmit}
+        >
           S'inscrire
         </button>
       </form>

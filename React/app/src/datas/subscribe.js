@@ -46,7 +46,48 @@ const dog = [
   },
 ];
 
+const login = {
+  title: 'Connexion',
+  desc: 'Renseignez votre adresse e-mail et votre mot de passe pour accéder à votre compte',
+  link: 'Mot de passe oublié ?',
+  fields: [
+    {
+      type: 'email',
+      name: 'email',
+      placeholder: 'Adresse e-mail',
+      mandatory: true,
+    },
+    {
+      type: 'password',
+      name: 'password',
+      placeholder: 'Mot de passe',
+      mandatory: true,
+    },
+  ],
+  submit: {
+    className: 'form-submit--login',
+    label: 'Se connecter',
+  },
+};
+const password = {
+  title: 'Mot de passe oublié',
+  desc: 'Renseignez votre adresse e-mail et nous vous envoyons un nouveau mot de passe tout beau tout neuf',
+  link: 'Annuler',
+  fields: [
+    {
+      type: 'email',
+      name: 'email',
+      placeholder: 'Adresse e-mail',
+    },
+  ],
+  submit: {
+    label: 'Regénérer mot de passe',
+  },
+};
+
 export default {
   me,
   dog,
+  login,
+  password,
 };

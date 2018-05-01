@@ -54,7 +54,7 @@ export const toggleContact = () => ({
   type: CONTACT_TOGGLE,
 });
 
-export const toggleCLogin = () => ({
+export const toggleLogin = () => ({
   type: LOGIN_TOGGLE,
 });
 

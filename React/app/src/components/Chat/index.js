@@ -11,7 +11,6 @@ import FaWeChat from 'react-icons/lib/fa/wechat';
  */
 import ChatMessages from 'src/containers/Chat/ChatMessages';
 import ChatForm from 'src/containers/Chat/ChatForm';
-import ChatBtn from 'src/containers/Chat/ChatBtn';
 
 
 /**

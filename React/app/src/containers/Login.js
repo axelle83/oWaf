@@ -12,9 +12,7 @@ import Login from 'src/components/Login';
  * Code
  */
 // Données
-const mapStateToProps = state => ({
-  openContact: state.buttons.openLogin,
-});
+const mapStateToProps = null;
 
 const mapDispatchToProps = {};
 

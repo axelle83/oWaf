@@ -8,6 +8,8 @@ import { SEND_MESSAGE } from './reducers/chatForm';
 const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
 
 let socket;
+
+/* eslint-disable-next-line */
 const io = require('socket.io-client');
 
 const chatMiddleware = store => next => (action) => {

@@ -1,0 +1,31 @@
+@require "app/styles/charte"
+
+
+/*
+ * ID
+ */
+#form
+	margin: 1em 
+
+	&-submit
+		background: $color-button-background
+		border: 0
+		border-radius: 0
+		color: $color-button
+		font-size: 1em
+		display: block
+		text-transform: uppercase
+		height: 3.3em
+		width: 100%
+
+		&.form-submit--login
+			display: flex
+			align-items: center
+			justify-content: center
+			&::before
+				content: ""
+				background: url("../images/cat.svg") no-repeat bottom left
+				background-size: contain
+				height: 1.5em
+				width: 1.5em
+				margin-right: .6em

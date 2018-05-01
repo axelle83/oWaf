@@ -5,13 +5,15 @@ const initialState = {
   members: [],
   errorpassword: false,
   'dog-sex': 'femelle',
+  view: 'password',
 };
 
 /*
 * Types
 */
 const INPUT_CHANGE = 'INPUT_CHANGE';
-const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
+export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
+export const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
 
 /*
 * Code
@@ -45,7 +47,9 @@ const reducer = (state = initialState, action = {}) => {
       const member = {
         id: lastId,
         username: state.pseudo,
+        city: state.city,
         email: state.email,
+        password: state.password,
       };
       // Je retourne le nouveau state
       return {
@@ -55,6 +59,13 @@ const reducer = (state = initialState, action = {}) => {
       };
     }
 
+    case LOGIN_SUBMIT: {
+      console.log('login');
+      // Je retourne le nouveau state
+      return {
+        ...state,
+      };
+    }
 
     default:
       return state;
@@ -73,6 +84,9 @@ export const changeInput = ({ name, value }) => ({
 export const subscribeSubmit = id => ({
   type: SUBSCRIBE_SUBMIT,
   id,
+});
+export const loginSubmit = () => ({
+  type: LOGIN_SUBMIT,
 });
 
 export default reducer;

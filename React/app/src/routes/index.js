@@ -12,11 +12,22 @@ import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/components/Profile';
 import Map from 'src/components/Map';
+import Login from 'src/containers/Login';
 
 /*
  * Code
  */
 const routes = {
+  '/test': {
+    nav: 'Test',
+    component: <Login />,
+    chat: true,
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
   '/not-found': {
     buttons: {
       Accueil: {
