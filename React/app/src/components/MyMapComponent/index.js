@@ -2,6 +2,7 @@ import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
+
 const MyMapComponent = compose(
   withProps({
     googleMapURL: 'https://maps.googleapis.com/maps/api/js?keyAIzaSyB8KfvLpBdTKiBps38oaVMacZR9kwKR32o.exp&libraries=geometry,drawing,places',
@@ -18,27 +19,10 @@ const MyMapComponent = compose(
       defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
       {props.isMarkerShown &&
-      <Marker position={{ lat: 43.12, lng: 6.12, title: 'coucou' }} onClick={props.onMarkerClick} />}
+        <Marker position={{ lat: 43.12, lng: 6.12 }} onClick={props.onMarkerClick} title="nom du lieu" name="nom du lieu" />}
     </GoogleMap>
   ));
-  // On teste tout d'abord si le navigateur prend en charge la géolocalisation HTML5
-if (navigator.geolocation) {
-  const watchId = navigator.geolocation.watchPosition(
-    successCallback,
-    null,
-    { enableHighAccuracy: true },
-  );
-}
-else {
-  alert("Votre navigateur n'est pas compatible avec la géolocalisation HTML 5");
-}
-function successCallback(position) {
-  map.panTo(new google.maps.Latlng(position.coords.latitude, position.coords.longitude));
-  const marker = new google.maps.Marker({
-    position: new google.maps.Latlng(position.coords.latitude, position.coords.longitude),
-    map,
-  });
-}
+
 class MyFancyComponent extends React.Component {
   state = {
     isMarkerShown: false,
@@ -49,7 +33,7 @@ class MyFancyComponent extends React.Component {
   componentDidMount() {
     if ('geolocation' in navigator) {
       // coords de géolocalisation
-      navigator.geolocation.getCurrentPosition(position => {
+      navigator.geolocation.getCurrentPosition((position) => {
         const crd = position.coords;
         const lat = crd.latitude;
         const lng = crd.longitude;
