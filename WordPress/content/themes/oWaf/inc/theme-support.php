@@ -15,17 +15,17 @@ function owaf_setup() {
   register_nav_menus([
     'header' => 'Menu principal de oWaf'
   ]);
-  // register_sidebar( array(
-  //       'name'          => __( 'Sidebar d\'oWaf', 'owaf' ),
-  //       'id'            => '1',
-  //       'description'   => 'sidebar d\oWaf',
-  //       'class'         => '.sidebar__posts',
-	//       // 'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	//       // 'after_widget'  => '</div>',
-	//       // 'before_title'  => '<h2 class="widgettitle">',
-	//       // 'after_title'   => '</h2>'
-  //     )
-  // );
+  register_sidebar( array(
+        'name'          => __( 'Sidebar d\'oWaf', 'owaf' ),
+        'id'            => '1',
+        'description'   => 'sidebar d\oWaf',
+        'class'         => '.sidebar__posts',
+	      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	      'after_widget'  => '</div>',
+	      'before_title'  => '<h2 class="widgettitle">',
+	      'after_title'   => '</h2>'
+      )
+  );
   // // sidebar
   // register_sidebar('sidebar');
   // Les images de mise en avant
