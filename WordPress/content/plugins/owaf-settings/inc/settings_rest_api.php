@@ -3,11 +3,11 @@
    Plugin Name: RestApi (RAR)
    Description: Créer une liaison BDD entre WP et React
    Version: 1.0
-   Author: IL
+   Author: oWaf
 
    */
 
-    function owaf_register_rest_fields() {
+    function restapi_add_json() {
 
 
         register_rest_field( 'post', 'nom_du_lieu', array(
@@ -52,27 +52,43 @@
             }
         ) );
 
+        register_rest_field( 'post', 'nom_du_chien', array(
+            'get_callback' => function( $post ) {
+                return get_field('nom_du_chien');
+            }
+        ) );
+
+        register_rest_field( 'post', 'annee_de_naissance', array(
+            'get_callback' => function( $post ) {
+                return get_field('annee_de_naissance');
+            }
+        ) );
+
+        register_rest_field( 'post', 'photo_du_chien', array(
+            'get_callback' => function( $post ) {
+                return get_field('photo_du_chien');
+            }
+        ) );
+
+        register_rest_field( 'post', 'male', array(
+            'get_callback' => function( $post ) {
+                return get_field('male');
+            }
+        ) );
+
+        register_rest_field( 'post', 'femelle', array(
+            'get_callback' => function( $post ) {
+                return get_field('femelle');
+            }
+        ) );
+
+        register_rest_field( 'post', 'ville', array(
+            'get_callback' => function( $post ) {
+                return get_field('ville');
+            }
+        ) );
+
 
     }
 
-
-    add_action( 'rest_api_init', 'owaf_register_rest_fields' );
-
-
-
-    fonction publique get_remote_posts() {
-    $posts = get_transient ('remote_posts');
-    if (vide ($posts)) {
-        $ response = wp_remote_get ('http://217.70.189.93/wp-json/wp/v2/posts/');
-        if (is_wp_error ($réponse)) {
-            return array ();
-        }
-
-        $posts = json_decode (wp_remote_retrieve_body($response));
-
-        if (vide ($posts)) {
-            return array ();
-        }
-
-    }
-}
+    add_action( 'rest_api_init', 'restapi_add_json' );

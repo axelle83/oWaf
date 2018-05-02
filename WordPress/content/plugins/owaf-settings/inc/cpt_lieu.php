@@ -1,14 +1,16 @@
 <?php
 
-class Place_cpt
+class cpt_lieu
 {
   public function __construct()
   {
-    add_action('init', [$this, 'cpt_place_init']);
-    // add_action('init',array($this,'create_taxonomies'));
+    add_action('init', [$this, 'cpt_lieu_init']);
+    add_action('init', [$this, 'create_taxonomies']);
+
+
   }
 
-  public function cpt_place_init()
+  public function cpt_lieu_init()
   {
     $labels = array(
       'name'               => 'Lieux',
@@ -40,18 +42,14 @@ class Place_cpt
       'query_var'          => true,
       'has_archive'        => false,
       'hierarchical'       => false,
-      'taxonomies'         => array('category'),
+      'taxonomies'         => array('category', 'post-tag'),
       'menu_position'      => null,
-        'supports'           => [
-        'title',
-        'author',
-        'custom-fields',
-      ],
+      'supports'         => array('title','custom-fields',),
 
       'menu_icon' => 'dashicons-location-alt'
   );
 
-    register_post_type('place', $args);
+    register_post_type('lieu', $args);
   }
 
 public function create_taxonomies()
@@ -82,13 +80,14 @@ public function create_taxonomies()
         'custom-fields',
       ]
     ];
-    register_taxonomy( 'place', 'type', $args );
+    register_taxonomy( 'lieu', 'type', $args );
 
   }
 
   public function activation()
   {
-    $this->cpt_place_init();
+    $this->cpt_lieu_init();
+    $this->create_taxonomies();
     flush_rewrite_rules();
   }
 
