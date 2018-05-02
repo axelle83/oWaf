@@ -15,6 +15,17 @@ function owaf_setup() {
   register_nav_menus([
     'header' => 'Menu principal de oWaf'
   ]);
+  // register_sidebar( array(
+  //       'name'          => __( 'Primary Sidebar', 'owaf' ),
+  //       'id'            => 'sidebar-1',
+  //       'description'   => 'left sidebar',
+  //       'class'         => '.sidebar',
+	//       'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	//       'after_widget'  => '</li>',
+	//       'before_title'  => '<h2 class="widgettitle">',
+	//       'after_title'   => '</h2>'
+  //     )
+  // );
   // // sidebar
   // register_sidebar('sidebar');
   // Les images de mise en avant
