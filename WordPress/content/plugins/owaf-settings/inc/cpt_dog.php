@@ -31,7 +31,7 @@ class cpt_dog
       'labels'             => $labels,
       'description'        => 'information sur le chien',
       'capability_type'    => 'post',
-      'public'             => true,
+      'public'             => false,
       'publicly_queryable' => false,
       'show_ui'            => true,
       'show_tagcloud'      => true,
@@ -40,7 +40,7 @@ class cpt_dog
       'show_in_rest'       => true,
       'query_var'          => true,
       'has_archive'        => false,
-      'hierarchical'       => false,
+      'hierarchical'       => true,
       'menu_position'      => null,
       'supports'         => array('custom-fields'),
 

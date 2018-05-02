@@ -13,8 +13,8 @@ class cpt_lieu
   public function cpt_lieu_init()
   {
     $labels = array(
-      'name'               => 'Lieux',
-      'singular_name'      => 'Lieu',
+      'name'               => 'Lieux','taxonomy general name',
+      'singular_name'      => 'Lieu', 'taxonomy singular name',
       'menu_name'          => 'Lieux',
       'name_admin_bar'     => 'Lieu',
       'add_new'            => 'Ajouter un lieu',
@@ -32,12 +32,10 @@ class cpt_lieu
       'labels'             => $labels,
       'description'        => 'Lieu partagé sur la carte',
       'capability_type'    => 'post',
-      'public'             => true,
+      'public'             => false,
       'publicly_queryable' => false,
       'show_ui'            => true,
-      'show_tagcloud'      => true,
-      'show_in_menu'       => true,
-      'show_in_nav_menus'  => true,
+      'show_admin_column' => true,
       'show_in_rest'       => true,
       'query_var'          => true,
       'has_archive'        => false,
@@ -45,6 +43,7 @@ class cpt_lieu
       'taxonomies'         => array('category', 'post-tag'),
       'menu_position'      => null,
       'supports'         => array('title','custom-fields',),
+      'rest_controller_class' => 'WP_REST_Terms_Controller',
 
       'menu_icon' => 'dashicons-location-alt'
   );
