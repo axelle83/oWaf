@@ -2,7 +2,7 @@
  * InitialState
  */
 const initialState = {
-  input: 'test',
+  input: '',
 };
 
 /*

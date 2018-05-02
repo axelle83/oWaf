@@ -3,7 +3,6 @@
  */
 import { connect } from 'react-redux';
 
-
 /*
  * Local import
  */
