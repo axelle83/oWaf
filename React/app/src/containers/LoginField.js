@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
  * Local import
  */
 import LoginField from 'src/components/LoginField';
-import { changeInput } from 'src/store/reducers/loginForm';
+import { changeLogin } from 'src/store/reducers/loginForm';
 
 
 /*
@@ -16,13 +16,13 @@ import { changeInput } from 'src/store/reducers/loginForm';
  */
 // State
 const mapStateToProps = (state, ownProps) => ({
-  value: state[ownProps.name],
+  inputValue: state[ownProps.name],
 });
 
 // Actions
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onChange: (value) => {
-    dispatch(changeInput({ name: ownProps.name, value }));
+    dispatch(changeLogin({ name: ownProps.name, value }));
   },
 });
 

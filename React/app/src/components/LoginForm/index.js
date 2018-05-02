@@ -17,9 +17,12 @@ import LoginField from 'src/containers/LoginField';
 class LoginForm extends React.Component {
   onSubmit = (evt) => {
     evt.preventDefault();
-    console.log(evt);
-    // const func = (this.props.data.submit.function);
-    this.props.loginSubmit();
+    if (this.props.data.title === 'Connexion') {
+      this.props.loginSubmit();
+    }
+    else {
+      this.props.newpassSubmit();
+    }
   }
 
   render() {
@@ -38,12 +41,13 @@ class LoginForm extends React.Component {
 }
 LoginForm.propTypes = {
   loginSubmit: PropTypes.func.isRequired,
+  newpassSubmit: PropTypes.func.isRequired,
   data: PropTypes.shape({
     fields: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+    title: PropTypes.string.isRequired,
     submit: PropTypes.shape({
       className: PropTypes.string,
       label: PropTypes.string.isRequired,
-      // function: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

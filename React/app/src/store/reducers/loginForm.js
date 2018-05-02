@@ -3,8 +3,9 @@
  * Types
  */
 const CHANGE_VIEW = 'CHANGE_VIEW';
-const INPUT_CHANGE = 'INPUT_CHANGE';
+const LOGIN_CHANGE = 'LOGIN_CHANGE';
 const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
+const PASS_SUBMIT = 'PASS_SUBMIT';
 
 /*
  * State
@@ -24,12 +25,18 @@ const reducer = (state = initialState, action = {}) => {
         view: action.view,
       };
     case LOGIN_SUBMIT:
-      console.log('login');
+      console.log(state.pseudo);
+      console.log(state.password);
+      return {
+        ...state,
+      };
+    case PASS_SUBMIT:
+      console.log(state.email);
       return {
         ...state,
       };
 
-    case INPUT_CHANGE:
+    case LOGIN_CHANGE:
       return {
         ...state,
         [action.name]: action.value,
@@ -50,8 +57,11 @@ export const changeView = view => ({
 export const loginSubmit = () => ({
   type: LOGIN_SUBMIT,
 });
-export const changeInput = ({ name, value }) => ({
-  type: INPUT_CHANGE,
+export const newpassSubmit = () => ({
+  type: PASS_SUBMIT,
+});
+export const changeLogin = ({ name, value }) => ({
+  type: LOGIN_CHANGE,
   name,
   value,
 });

@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
  */
 import datas from 'src/datas/subscribe';
 import LoginForm from 'src/components/LoginForm';
-import { loginSubmit } from 'src/store/reducers/loginForm';
+import { loginSubmit, newpassSubmit } from 'src/store/reducers/loginForm';
 
 
 /*
@@ -24,6 +24,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   loginSubmit: () => {
     dispatch(loginSubmit());
+  },
+  newpassSubmit: () => {
+    dispatch(newpassSubmit());
   },
 });
 

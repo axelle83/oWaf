@@ -31,12 +31,12 @@ export default class LoginField extends React.Component {
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     fa: PropTypes.string.isRequired,
-    value: PropTypes.string,
+    inputValue: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email']),
   }
 
   static defaultProps = {
-    value: '',
+    inputValue: '',
     type: 'text',
   }
 
@@ -84,7 +84,7 @@ export default class LoginField extends React.Component {
     const {
       name,
       placeholder,
-      value,
+      inputValue,
       type,
       fa,
     } = this.props;
@@ -94,7 +94,7 @@ export default class LoginField extends React.Component {
       <div
         className={classNames(
           'field',
-          { 'field--has-value': value !== '' },
+          { 'field--has-value': inputValue !== '' },
           { 'field--has-error': error },
           { 'field--has-focus': focus },
         )}
@@ -106,7 +106,7 @@ export default class LoginField extends React.Component {
           id={id}
           name={name}
           placeholder={placeholder}
-          value={value}
+          inputvalue={inputValue}
           onChange={this.handleChange}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
