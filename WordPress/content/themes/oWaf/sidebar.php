@@ -10,8 +10,8 @@
   </div>
   <div class="sidebar__posts">
     <h2>Articles</h2>
-      <?php $searchform = get_search_form();?>
-      <!-- echo strip_tags($searchform, '<label>'); -->
+      <?php $searchform = get_search_form();
+      echo strip_tags($searchform, '<label>');?>
       <!-- <input type="text" placeholder="Recherche"><button type="button" name="button"><i class="fa fa-search"></i></button> -->
   </div>
   <div class="sidebar__add-post">
