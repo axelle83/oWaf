@@ -18,7 +18,7 @@
         endif;
         ?>
 
-        
+
     <!-- <input type="text" placeholder="Recherche"><button type="button" name="button"><i class="fa fa-search"></i></button> -->
 =======
       <?php $searchform = get_search_form();?>
