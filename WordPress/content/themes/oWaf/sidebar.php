@@ -15,6 +15,8 @@
         dynamic_sidebar( '1' );
         endif;
         ?>
+
+        
     <!-- <input type="text" placeholder="Recherche"><button type="button" name="button"><i class="fa fa-search"></i></button> -->
   </div>
   <div class="sidebar__add-post">
