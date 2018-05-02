@@ -54,7 +54,7 @@ class test extends React.Component {
                  <Chat />
                  <Login visible={routes[path].login} />
                  <Contact />
-                 {/* <Footer /> */}
+                 <Footer />
                </main>
                 )
               }
