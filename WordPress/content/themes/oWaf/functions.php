@@ -18,7 +18,7 @@ function add_search_box($items, $args) {
         $searchform = ob_get_contents();
         ob_end_clean();
 
-        $items .= '<li>' . $searchform . '</li>';
+        $items .= '<div>' . $searchform . '</div>';
         return $items;
 }
 add_filter('wp_nav_menu_items','add_search_box', 10, 2);
