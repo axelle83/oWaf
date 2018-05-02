@@ -12,7 +12,7 @@
     <h2>Articles</h2>
 
       <?php $searchform = get_search_form();
-      echo strip_tags($searchform, '<label>');?>
+      echo strip_tags($searchform, '<input>');?>
 
       <!-- <?php
         if( is_active_sidebar( '1' ) ):

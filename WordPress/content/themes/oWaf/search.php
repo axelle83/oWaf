@@ -4,7 +4,8 @@
 
     <?php if(have_posts()): ?>
 
-    <h2>Résultat de la recherche: "<?php echo get_search_query(); ?>"</h2>
+    <h2 style="display: flex;
+    justify-content: center;">Résultat de la recherche: "<?php echo get_search_query(); ?>"</h2>
 
   <?php else: ?>
 
