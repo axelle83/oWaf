@@ -69,6 +69,7 @@ const login = {
   submit: {
     className: 'form-submit--login',
     label: 'Se connecter',
+    function: 'onLoginSubmit',
   },
 };
 const password = {
@@ -80,10 +81,12 @@ const password = {
       type: 'email',
       name: 'email',
       placeholder: 'Votre adresse e-mail',
+      fa: 'FaUser',
     },
   ],
   submit: {
     label: 'Regénérer un mot de passe',
+    function: 'onNewpassSubmit',
   },
 };
 
