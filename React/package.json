@@ -8,6 +8,7 @@
     "classnames": "^2.2.5",
     "google-map-react": "^0.34.0",
     "google-maps-react": "^2.0.2",
+    "markerwithlabel": "^2.0.1",
     "postcss-brunch": "0.5.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
 
 
 const MyMapComponent = compose(
@@ -20,7 +21,15 @@ const MyMapComponent = compose(
     >
       {props.isMarkerShown &&
         <Marker position={{ lat: 48.85, lng: 2.34 }} onClick={props.onMarkerClick} labelAnchor={new google.maps.Point(0, 0)} title="nom du lieu" name="nom du lieu" />}
-
+      <MarkerWithLabel
+        position={{ lat: 45, lng: 2 }}
+        labelAnchor={new google.maps.Point(0, 0)}
+        labelStyle={{ backgroundColor: 'yellow', fontSize: '32px', padding: '16px' }}
+        title="ici"
+        name="ici"
+      >
+        <div>Hello There!</div>
+      </MarkerWithLabel>
     </GoogleMap>
   ));
 
