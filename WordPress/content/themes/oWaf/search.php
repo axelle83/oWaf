@@ -1,5 +1,17 @@
+<?php get_header(); ?>
 
-  <div class="sidebar__posts">
-    <h2>Articles</h2>
-    <input type="text" placeholder="Recherche"><button type="button" name="button"><i class="fa fa-search"></i></button>
-  </div>
+  <section>
+    <h2>Résultat de la recherche: "<?php echo get_search_query(); ?>"</h2>
+
+    <div>
+      <?php get_search_form(); ?>
+    </div>
+
+    <?php if(have_posts()): while(have_posts()): the_post();
+      get_template_part('template-parts/post/excerpt');
+    endwhile; endif; ?>
+
+    <a href="<?php echo home_url(); ?>">Retourner à l'accueil</a>
+  </section>
+
+<?php get_footer(); ?>
