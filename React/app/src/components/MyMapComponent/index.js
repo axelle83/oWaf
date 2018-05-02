@@ -19,7 +19,8 @@ const MyMapComponent = compose(
       defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
       {props.isMarkerShown &&
-        <Marker position={{ lat: 43.12, lng: 6.12 }} onClick={props.onMarkerClick} title="nom du lieu" name="nom du lieu" />}
+        <Marker position={{ lat: 48.85, lng: 2.34 }} onClick={props.onMarkerClick} labelAnchor={new google.maps.Point(0, 0)} title="nom du lieu" name="nom du lieu" />}
+
     </GoogleMap>
   ));
 
@@ -29,7 +30,7 @@ class MyFancyComponent extends React.Component {
     lat: 0,
     lng: 0,
   }
-
+  // eslint disable
   componentDidMount() {
     if ('geolocation' in navigator) {
       // coords de géolocalisation
