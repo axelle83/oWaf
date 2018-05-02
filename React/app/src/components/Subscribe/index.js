@@ -3,7 +3,6 @@
 *
  */
 import React from 'react';
-// import { render } from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -14,25 +13,22 @@ import classNames from 'classnames';
 import fields from 'src/datas/subscribe';
 import SubscribeField from 'src/containers/SubscribeField';
 import SubscribeRadio from 'src/containers/SubscribeRadio';
+import SubscribeUpload from 'src/containers/SubscribeUpload';
 
 /*
 *  Code
  */
 class Subscribe extends React.Component {
-  // state = {
-  //   selectedOption: 'femelle',
-  // }
-
   onSubmit = (evt) => {
     evt.preventDefault();
     this.props.onSubscribeSubmit();
   }
 
-  addDog = () => {
-    console.log('add');
-    document.getElementById('next').innerHTML += 'test';
-    // render('<div>test</div>', document.getElementById('next'));
-  }
+  // addDog = () => {
+  //   console.log('add');
+  //   document.getElementById('next').innerHTML += 'test';
+  // render('<div>test</div>', document.getElementById('next'));
+  // }
 
   render() {
     return (
@@ -60,17 +56,14 @@ class Subscribe extends React.Component {
           <div className="subscribe-dog-title">Mon chien</div>
           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
           <SubscribeRadio name="dog-sex" />
-          <button className="subscribe-dog-validate">
-           Valider
-          </button>
+          <SubscribeUpload />
         </div>
-        <div id="next">Next</div>
-        <button
+        {/* <button
           id="subscribe-dog-add"
           onClick={this.addDog}
         >
           Ajouter un chien
-        </button>
+        </button> */}
         <button
           id="subscribe-submit"
           onClick={this.onSubmit}

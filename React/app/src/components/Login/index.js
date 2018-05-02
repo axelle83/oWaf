@@ -5,13 +5,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-
 /*
  * Local import
  */
 import ChangeView from 'src/containers/ChangeView';
 import LoginForm from 'src/containers/LoginForm';
-
 
 /*
  * Code

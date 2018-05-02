@@ -32,10 +32,9 @@ export default class SubscribeRadio extends React.Component {
     const {
       selectedOption, name,
     } = this.props;
-    // const id = `subscribe-${name}`;
     return (
       <div className="subscribe-dog-sex">
-        <label>
+        <label className="subscribe-dog-sex-label">
           <input
             name={name}
             type="radio"
@@ -45,7 +44,7 @@ export default class SubscribeRadio extends React.Component {
           />
         Femelle
         </label>
-        <label>
+        <label className="subscribe-dog-sex-label">
           <input
             name={name}
             type="radio"

@@ -52,16 +52,18 @@ const login = {
   link: 'Mot de passe oublié ?',
   fields: [
     {
-      type: 'email',
-      name: 'email',
-      placeholder: 'Adresse e-mail',
+      type: 'text',
+      name: 'pseudo',
+      placeholder: 'pseudo',
       mandatory: true,
+      fa: 'FaUser',
     },
     {
       type: 'password',
       name: 'password',
-      placeholder: 'Mot de passe',
+      placeholder: '******',
       mandatory: true,
+      fa: 'FaLock',
     },
   ],
   submit: {
@@ -77,11 +79,11 @@ const password = {
     {
       type: 'email',
       name: 'email',
-      placeholder: 'Adresse e-mail',
+      placeholder: 'Votre adresse e-mail',
     },
   ],
   submit: {
-    label: 'Regénérer mot de passe',
+    label: 'Regénérer un mot de passe',
   },
 };
 

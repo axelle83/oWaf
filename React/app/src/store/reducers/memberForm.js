@@ -6,6 +6,7 @@ const initialState = {
   errorpassword: false,
   'dog-sex': 'femelle',
   view: 'password',
+  selectedFile: {},
 };
 
 /*
@@ -14,6 +15,7 @@ const initialState = {
 const INPUT_CHANGE = 'INPUT_CHANGE';
 export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
 export const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
+const LOAD_IMAGE = 'LOAD_IMAGE';
 
 /*
 * Code
@@ -31,6 +33,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+      };
+    case LOAD_IMAGE:
+      console.log('reducer', action.value);
+      return {
+        ...state,
+        selectedFile: action.value.name,
       };
 
     case SUBSCRIBE_SUBMIT: {
@@ -87,6 +95,10 @@ export const subscribeSubmit = id => ({
 });
 export const loginSubmit = () => ({
   type: LOGIN_SUBMIT,
+});
+export const loadImage = value => ({
+  type: LOAD_IMAGE,
+  value,
 });
 
 export default reducer;
