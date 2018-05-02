@@ -12,11 +12,22 @@ import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/components/Profile';
 import Map from 'src/components/Map';
+import Login from 'src/containers/Login';
 
 /*
  * Code
  */
 const routes = {
+  '/test': {
+    nav: 'Test',
+    component: <Login />,
+    chat: true,
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
   '/not-found': {
     buttons: {
       Accueil: {
@@ -28,6 +39,7 @@ const routes = {
     nav: 'Home',
     component: <HomeVisiteur />,
     chat: false,
+    login: false,
     buttons: {
       Inscription: {
         path: '/subscribe',
@@ -52,6 +64,7 @@ const routes = {
     nav: 'Subscribe',
     component: <Subscribe />,
     chat: false,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
@@ -62,6 +75,7 @@ const routes = {
     nav: 'Home',
     component: <HomeMembre />,
     chat: true,
+    login: false,
     buttons: {
       'Mon profil': {
         path: '/profile',
@@ -81,6 +95,7 @@ const routes = {
     nav: 'Profile',
     component: <Profile />,
     chat: true,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
@@ -100,6 +115,7 @@ const routes = {
     nav: 'Map',
     component: <Map />,
     chat: true,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',
@@ -119,6 +135,7 @@ const routes = {
     nav: 'Cgu',
     component: <Cgu />,
     chat: false,
+    login: false,
     buttons: {
       Accueil: {
         path: '/',

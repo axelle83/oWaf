@@ -5,11 +5,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import validateEmail from 'validate-email';
+import FaLock from 'react-icons/lib/fa/lock';
+import FaUser from 'react-icons/lib/fa/user';
+
+
+/*
+ * Local import
+ */
+
+
+/*
+ * Code
+ */
+
 
 /*
  * Component
  */
-export default class SubscribeField extends React.Component {
+export default class LoginField extends React.Component {
   /*
    * PropTypes
    */
@@ -17,13 +30,14 @@ export default class SubscribeField extends React.Component {
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    mandatory: PropTypes.bool.isRequired,
+    fa: PropTypes.string.isRequired,
     inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
+    type: PropTypes.oneOf(['text', 'password', 'email']),
   }
 
   static defaultProps = {
     inputValue: '',
+    type: 'text',
   }
 
   state = {
@@ -37,19 +51,10 @@ export default class SubscribeField extends React.Component {
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
+
     // On vérifie l'email
     if (this.props.type === 'email') {
       const error = !validateEmail(value);
-      this.setState({ error });
-    }
-    // On vérifie l'année de naissance
-    if (this.props.type === 'number') {
-      const error = !(value.length === 4 && value > 2000);
-      this.setState({ error });
-    }
-    // on vérifie les champs obligatoires
-    if (this.props.mandatory === true) {
-      const error = !value;
       this.setState({ error });
     }
   }
@@ -58,10 +63,10 @@ export default class SubscribeField extends React.Component {
    * Handle focus event
    */
   handleFocus = () => {
-    // this.setState({
-    //   error: false,
-    //   focus: true,
-    // });
+    this.setState({
+      error: false,
+      focus: true,
+    });
   }
 
   /**
@@ -77,34 +82,41 @@ export default class SubscribeField extends React.Component {
   render() {
     const { error, focus } = this.state;
     const {
-      name, placeholder, inputValue, type, mandatory,
+      name,
+      placeholder,
+      inputValue,
+      type,
+      fa,
     } = this.props;
-    const id = `subscribe-${name}`;
+    const Icon = fa === 'FaLock' ? FaLock : FaUser;
+    const id = `field-${name}`;
     return (
       <div
         className={classNames(
-          'subscribe',
-          { 'subscribe--has-value': inputValue !== '' },
-          { 'subscribe--has-error': error },
-          { 'subscribe--has-focus': focus },
+          'field',
+          { 'field--has-value': inputValue !== '' },
+          { 'field--has-error': error },
+          { 'field--has-focus': focus },
         )}
       >
-        <label
-          className="subscribe-label"
-          htmlFor={id}
-        >
-          {placeholder}
-        </label>
+        <Icon />
         <input
           type={type}
-          className="subscribe-input"
+          className="field-input"
           id={id}
           name={name}
           placeholder={placeholder}
           inputvalue={inputValue}
           onChange={this.handleChange}
-          required={mandatory}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
         />
+        {/* <label
+          className="field-label"
+          htmlFor={id}
+        >
+          {placeholder}
+        </label> */}
       </div>
     );
   }

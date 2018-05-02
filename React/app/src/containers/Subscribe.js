@@ -2,25 +2,35 @@
  * Npm import
  */
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 
 /*
  * Local import
  */
 import Subscribe from 'src/components/Subscribe';
-
+import { subscribeSubmit } from 'src/store/reducers/memberForm';
 
 /*
  * Code
  */
 // State
-const mapStateToProps = null;
+const mapStateToProps = state => ({
+  errorpassword: state.memberForm.errorpassword,
+});
 
 // Actions
-const mapDispatchToProps = {};
+const mapDispatchToProps = dispatch => ({
+  onSubscribeSubmit: () => {
+    dispatch(subscribeSubmit());
+  },
+});
 
-
+const SubscribeContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Subscribe);
 /*
  * Export default
  */
-export default connect(mapStateToProps, mapDispatchToProps)(Subscribe);
+export default withRouter(SubscribeContainer);

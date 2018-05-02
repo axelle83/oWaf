@@ -14,7 +14,8 @@ import ChatMessage from 'src/components/ChatMessages/ChatMessage';
 // Données
 const mapStateToProps = (state, ownProps) => ({
   ...state.chatMessages.list[ownProps.id],
-  myself: state.chatBtn.username === state.chatMessages.list[ownProps.id].username,
+  username: state.loginForm.pseudo,
+  myself: state.buttons.username === state.chatMessages.list[ownProps.id].username,
 });
 
 // Actions

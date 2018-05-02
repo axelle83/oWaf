@@ -1,0 +1,25 @@
+@require "app/styles/charte"
+
+/*
+ * Classes
+ */
+.changeview
+	color: $colorBlue
+	cursor: pointer
+	display: block
+	font-size: 1.1em
+	margin: 1em 0
+	text-align: center
+	text-decoration: underline
+
+	&--back
+		display: flex
+		align-items: flex-end
+		&::before
+			content: ""
+			background: url("../images/arrow.svg") no-repeat
+			background-size: contain
+			width: .8em
+			height: .8em
+			margin-right: .3em
+			transform: rotate(.5turn)

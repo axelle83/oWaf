@@ -9,10 +9,13 @@ const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
 
 let socket;
 
+/* eslint-disable-next-line */
+const io = require('socket.io-client');
+
 const chatMiddleware = store => next => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT:
-      socket = window.io();
+      socket = io('http://localhost:3000/');
       socket.on('send_message', (message) => {
         store.dispatch(receiveMessage(message));
       });
@@ -23,16 +26,18 @@ const chatMiddleware = store => next => (action) => {
 
       const content = state.chatForm.input.trim();
 
+      const day = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+      const month = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
       const now = new Date();
       let h = now.getHours();
       let m = now.getMinutes();
       if (h < 10) h = `0${h}`;
       if (m < 10) m = `0${m}`;
-      const date = `${h}:${m}`;
+      const date = `${day[now.getDay()]} ${now.getDate()} ${month[now.getMonth()]} ${now.getFullYear()} - ${h}:${m}`;
 
       if (content !== '') {
         const message = {
-          username: state.chatBtn.username,
+          username: state.buttons.username,
           content,
           date,
         };

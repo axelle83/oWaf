@@ -12,14 +12,14 @@ import classNames from 'classnames';
 /**
  * Code
  */
-const Contact = ({ visible }) => (
+const Contact = ({ openContact }) => (
   <div
     id="contact"
     className={
       classNames(
         'contact',
         {
-        'contact--open': visible,
+        'contact--open': openContact,
       },
     )
     }
@@ -29,7 +29,7 @@ const Contact = ({ visible }) => (
 );
 
 Contact.propTypes = {
-  visible: PropTypes.bool.isRequired,
+  openContact: PropTypes.bool.isRequired,
 };
 
 /**

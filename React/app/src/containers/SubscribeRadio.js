@@ -7,14 +7,14 @@ import { withRouter } from 'react-router-dom';
 /*
  * Local import
  */
-import SubscribeField from 'src/components/SubscribeField';
+import SubscribeRadio from 'src/components/SubscribeRadio';
 import { changeInput } from 'src/store/reducers/memberForm';
 
 /*
  * Code
  */
-const mapStateToProps = (state, ownProps) => ({
-  inputValue: state[ownProps.name],
+const mapStateToProps = state => ({
+  selectedOption: state.memberForm['dog-sex'],
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
@@ -23,12 +23,12 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   },
 });
 
-const SubscribeFieldContainer = connect(
+const SubscribeRadioContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SubscribeField);
+)(SubscribeRadio);
 
 /*
  * Export default
  */
-export default withRouter(SubscribeFieldContainer);
+export default withRouter(SubscribeRadioContainer);

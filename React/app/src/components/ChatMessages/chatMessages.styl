@@ -1,20 +1,27 @@
-
+@require "app/styles/charte"
 #messages
-	border-top: 1px solid #ccc
-	height: 40vh
+	// border-top: 1px solid $bgPink
+	height: 20vh
 	overflow-y: auto
 
 	.message
 		padding: .5rem 1rem
+		border-radius: 0.5em
+		margin-bottom: 0.2em
 		&-content
-			font-size: 1.2em
+			font-size: 1em
+			padding: .1em
 
-		&-infos
-			text-transform: uppercase
-			font-size: 0.6em
+		&-user
+			font-style: bold
+			font-size: 1rem
 
 		&-date
-			&::before
-				content: " - "
+			font-size: .5rem
+			font-style: italic
 		&--own
-			background-color: #f1f1f1
+			background: linear-gradient($bgPinkPastel,$bgPinkLigth)
+
+@media (min-width: 1024px)
+	#messages
+		height: 40vh

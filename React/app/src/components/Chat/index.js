@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import FaWeChat from 'react-icons/lib/fa/wechat';
 
 /**
  * Local import
@@ -27,8 +28,11 @@ const Chat = ({ openChat }) => (
     )
     }
   >
-    <ChatMessages />
-    <ChatForm />
+    <FaWeChat />
+    <div id="chat-display">
+      <ChatMessages />
+      <ChatForm />
+    </div>
   </div>
 );
 Chat.propTypes = {

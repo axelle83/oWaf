@@ -23,6 +23,7 @@ const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     // Settings
     case CHAT_TOGGLE:
+      console.log(state);
       return {
         ...state,
         openChat: !state.openChat,
@@ -54,7 +55,7 @@ export const toggleContact = () => ({
   type: CONTACT_TOGGLE,
 });
 
-export const toggleCLogin = () => ({
+export const toggleLogin = () => ({
   type: LOGIN_TOGGLE,
 });
 

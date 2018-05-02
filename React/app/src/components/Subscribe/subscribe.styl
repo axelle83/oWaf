@@ -1,33 +1,44 @@
 @require "app/styles/charte"
 
-
-/*
- * ID
- */
 #subscribe
-  padding-top: 10em
+  // padding-top: 10em
 	margin: 1em 0
-    
+  padding: 8em 20em
+  background-color: $bgPeche
+  color: $color
 
-	&-submit
-		background: $color-button-background
-		border: 0
-		border-radius: 0
-		color: $color-button
-		font-size: 1em
-		display: block
-		text-transform: uppercase
-		height: 3.3em
-		width: 100%
+  &-title
+    font-family: 'Pacifico'
+    text-align: right
+    font-size: 2em
+    padding-bottom: .5em
 
-		&.form-submit--login
-			display: flex
-			align-items: center
-			justify-content: center
-			&::before
-				content: ""
-				background: url("../images/cat.svg") no-repeat bottom left
-				background-size: contain
-				height: 1.5em
-				width: 1.5em
-				margin-right: .6em
+#subscribe-submit
+	border: 1px solid $color
+	border-radius: 0
+	font-size: 1em
+	display: block
+	text-transform: uppercase
+	height: 3.3em
+	width: 100%
+
+#subscribe-me
+.subscribe-dog
+  border: 1px solid $color
+  border-radius: 10px
+  margin-bottom: 2em
+
+.subscribe-dog-title
+  font-family: 'Pacifico'
+  text-align: right
+  font-size: 1.2em
+  padding: .5em
+
+.password
+  display: none
+  padding: 0 0 0.5em 0.5em
+  font-size: 1.5em
+  font-family: 'Pacifico'
+.error-password
+  display: block
+  color: $color
