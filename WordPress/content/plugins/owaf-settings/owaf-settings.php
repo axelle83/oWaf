@@ -37,6 +37,7 @@ register_activation_hook(__FILE__, [$cpt_dog, 'activation']);
 register_deactivation_hook(__FILE__, [$cpt_dog, 'deactivation']);
 
 
+
 // Customisation du tableau de bord
 
 add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
@@ -59,17 +60,3 @@ function example_add_dashboard_widgets() {
 wp_add_dashboard_widget('example_dashboard_widget', 'Mon Widget Personnalisé', 'example_dashboard_widget_function');
 }
 add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
-
-
-// barre de recherche
-function add_search_box($items, $args) {
-
-        ob_start();
-        get_search_form();
-        $searchform = ob_get_contents();
-        ob_end_clean();
-
-        $items .= '<li>' . $searchform . '</li>';
-        return $items;
-}
-add_filter('wp_nav_menu_items','add_search_box', 10, 2);
