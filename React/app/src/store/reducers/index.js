@@ -15,6 +15,7 @@ import loginForm from 'src/store/reducers/loginForm';
 /*
  * Code
  */
+
 const reducers = combineReducers({
   chatForm,
   buttons,

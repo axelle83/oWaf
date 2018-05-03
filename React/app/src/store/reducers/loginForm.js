@@ -12,6 +12,7 @@ const PASS_SUBMIT = 'PASS_SUBMIT';
  */
 const initialState = {
   view: 'login',
+  pseudo: '',
 };
 
 /*
@@ -29,6 +30,7 @@ const reducer = (state = initialState, action = {}) => {
       console.log(state.password);
       return {
         ...state,
+        pseudo: state.pseudo,
       };
     case PASS_SUBMIT:
       console.log(state.email);

@@ -58,6 +58,9 @@ const routes = {
       Accueil: {
         path: '/',
       },
+      Membre: {
+        path: '/membre',
+      },
     },
   },
   '/subscribe': {

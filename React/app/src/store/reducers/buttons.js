@@ -23,7 +23,6 @@ const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     // Settings
     case CHAT_TOGGLE:
-      console.log(state);
       return {
         ...state,
         openChat: !state.openChat,
