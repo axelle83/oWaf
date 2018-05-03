@@ -3,13 +3,18 @@
 #chatBtn
 	position: absolute
 	right: 0
-	top: 35%
+	top: 22%
 	cursor: pointer
 	font-size: 2.5em
-	color: $bgOrange
+	color:  lighten($bgPeche, 20%)
 	margin: .3em
 
 .chat
 	display: none
 .chatVisible
 	display: block
+
+@media screen and (min-width: 1200px)
+	#chatBtn
+		top: 75%
+		color: $bgPeche

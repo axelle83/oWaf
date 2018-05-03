@@ -1,7 +1,8 @@
 @require "app/styles/charte"
 
+
 #nav
-    background-color: $bgNav
+    background-color: lighten($bgPeche, 15%)
     color: $color
     position: fixed
     width: 100%
@@ -9,8 +10,7 @@
     justify-content: space-between
     padding-top: 1em
     z-index: 1
-    border-bottom: 1px solid white
-
+    // border-bottom: 1px solid white
 
     &-title
         padding-left:6em
@@ -26,15 +26,17 @@
             font-family: $text
             padding-top: 1em
 
+
+
 #button
     margin-top: 1.7em
 
     .button-nav
 
-            border: 1px solid $border
+            border: 2px solid $border
             border-radius: 1em
             color : $color
             font-size: 1.5em
             font-family: $text
-            margin-right: 4em
+            margin-right: 2em
             padding: 0.3em
