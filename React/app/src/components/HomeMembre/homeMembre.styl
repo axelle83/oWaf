@@ -1,7 +1,23 @@
 @require "app/styles/charte"
 
 #homeMembre
-  height: 5em
-  padding-top: 2em
-  font-size: 5em
-  background-color: $bgPinkLigth
+  display: block
+  padding-top: 9em
+  background: linear-gradient($bgPeche, $bgPink, $bgOrange)
+  scroll-behavior: smooth
+  height: 100em
+
+.homeMembre-img
+  background-image: url('/images/marcus-wallis-471436-unsplash.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  border: 3px solid $bgBtn
+  margin: auto
+  width: 90%
+  height: 30em
+@media screen and (min-width: 1200px)
+  #homeMembre
+    padding-top: 10em
+  .homeMembre-img
+    height: 50em
