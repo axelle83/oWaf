@@ -14,7 +14,7 @@ class cpt_dog
     $labels = array(
       'name'               => 'Chien',
       'singular_name'      => 'Chien',
-      'menu_name'          => 'Ajouter un nouveau chien',
+      'menu_name'          => 'Chien',
       'name_admin_bar'     => 'Chien',
       'add_new'            => 'Ajouter un nouveau chien',
       'add_new_item'       => 'Ajouter  un nouveau chien',
@@ -75,6 +75,7 @@ public function create_taxonomies()
       'public'                     => true,
       'show_in_rest'               => true,
       'supports'           => [
+         'title',
         'custom-fields',
       ]
     ];

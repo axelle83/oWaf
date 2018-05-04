@@ -9,7 +9,6 @@
 
 function owaf_register_rest_fields() {
 
-  // Thumbnail
   register_rest_field(
     'lieu',
     'adresse',
@@ -39,20 +38,52 @@ function owaf_register_rest_fields() {
       'schema' => null
     ]
   );
+
+  register_rest_field(
+    'dog',
+    'genre',
+    [
+      'get_callback' => 'owaf_rest_api_genre',
+      'update_callback' => null,
+      'schema' => null
+    ]
+  );
+
+  register_rest_field(
+    'dog',
+    'naiss',
+    [
+      'get_callback' => 'owaf_rest_api_naiss',
+      'update_callback' => null,
+      'schema' => null
+    ]
+  );
+
+  register_rest_field(
+    'dog',
+    'photo_du_chien',
+    [
+      'get_callback' => 'owaf_rest_api_dog_img',
+      'update_callback' => null,
+      'schema' => null
+    ]
+  );
+
 }
 
-function owaf_rest_api_adresse($lieu, $field_name, $request) {
+function owaf_rest_api_genre($dog, $field_name, $request) {
 
+    return get_post_meta($dog['id'], 'genre', true);
+}
 
-  $output = array();
-  foreach ($lieu['adresse'] as $adresse_id) {
+function owaf_rest_api_naiss($dog, $field_name, $request) {
 
-    $term_details = get_term($adresse_id, 'adresse');
+    return get_post_meta($dog['id'], 'naiss', true);
+}
 
-    $output[] = $adresse_name;
-  }
+function owaf_rest_api_dog_img($dog, $field_name, $request) {
 
-  return $output;
+    return get_post_meta($dog['id'], 'dog_img', true);
 }
 
 

@@ -18,6 +18,8 @@ require plugin_dir_path(__FILE__) . 'inc/cpt_lieu.php';
 // Chargement des lieu de ma rest api
 require plugin_dir_path(__FILE__) . 'inc/cpt_dog.php';
 
+// Chargement des lieu de ma rest api
+require plugin_dir_path(__FILE__) . 'inc/settings_rest_api.php';
 
 $cpt_lieu = new cpt_lieu();
 
