@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Redirect } from 'react-router-dom';
 
 /*
  * Local import
@@ -23,14 +23,16 @@ class LoginForm extends React.Component {
     else {
       this.props.newpassSubmit();
     }
-    this.context.router.push('/');
   }
 
   render() {
-    const { data } = this.props;
+    const { data, logged } = this.props;
+    console.log(logged);
+    if (logged) return <Redirect to="/membre" />;
     return (
       <form id="loginform" onSubmit={this.onSubmit}>
         <h1 id="loginform-title">{data.title}</h1>
+        <p>Logged : {logged}</p>
         {/* <div id="loginform-desc">{data.desc}</div> */}
         {data.fields.map(field => <LoginField key={field.name} {...field} />)}
         <button id="loginform-submit" className={data.submit.className}>
@@ -43,6 +45,7 @@ class LoginForm extends React.Component {
 LoginForm.propTypes = {
   loginSubmit: PropTypes.func.isRequired,
   newpassSubmit: PropTypes.func.isRequired,
+  logged: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     fields: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
     title: PropTypes.string.isRequired,
