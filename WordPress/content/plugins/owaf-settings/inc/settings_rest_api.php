@@ -71,6 +71,21 @@ function owaf_register_rest_fields() {
 
 }
 
+function owaf_rest_api_adresse($lieu, $field_name, $request) {
+
+    return get_post_meta($lieu['id'], 'adresse', true);
+}
+
+function owaf_rest_api_details($lieu, $field_name, $request) {
+
+    return get_post_meta($lieu['id'], 'details', true);
+}
+
+function owaf_rest_api_commentaire($lieu, $field_name, $request) {
+
+    return get_post_meta($lieu['id'], 'commentaire', true);
+}
+
 function owaf_rest_api_genre($dog, $field_name, $request) {
 
     return get_post_meta($dog['id'], 'genre', true);
