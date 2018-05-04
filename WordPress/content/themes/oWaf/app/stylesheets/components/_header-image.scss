@@ -1,7 +1,9 @@
 .header {
   &__image {
-    height: 60em;
-    width: 980em;
-    background-repeat: round;
+      min-height: 80vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
   }
 }
