@@ -4,4 +4,6 @@
     <p><?php the_content(); ?></p>
     <p>Ecrit par <?php the_author(); ?>, le <?php the_date('j F Y'); ?>.</p>
     <div><?php the_category(); ?></div>
+    <a style="border: none; display: flex;
+    justify-content: flex-end;" href="<?php echo home_url(); ?>">Retourner à l'accueil</a>
 </div>

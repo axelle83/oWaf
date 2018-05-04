@@ -1,9 +1,13 @@
 <?php get_header(); ?>
-    <section class="main">
 
-      <?php get_template_part('sidebar'); ?>
+  <?php get_template_part('template-parts/image/entete') ?>
 
-      <?php get_template_part('template-parts/posts/posts-front-page'); ?>
+<section class="main">
 
-    </section>
+  <?php get_template_part('sidebar'); ?>
+
+  <?php get_template_part('template-parts/posts/posts-front-page'); ?>
+
+</section>
+
 <?php get_footer(); ?>

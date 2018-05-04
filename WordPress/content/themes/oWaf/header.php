@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
 
   <?php wp_head(); ?>
 
@@ -29,5 +29,4 @@
           </div>
         </div>
       </nav>
-      <img  class="header__image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
     </header>

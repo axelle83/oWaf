@@ -32,6 +32,9 @@
       padding: 0.5em;
       margin-right: 0.5em;
       margin-bottom: 7em;
+      @media (max-width: 908px) {
+        margin-bottom: 1em;
+      }
     }
 
     button {
