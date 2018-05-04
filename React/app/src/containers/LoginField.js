@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
  * Local import
  */
 import LoginField from 'src/components/LoginField';
-import { changeLogin } from 'src/store/reducers/loginForm';
+import { changeLogin } from 'src/store/reducers/login';
 
 
 /*

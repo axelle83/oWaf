@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
  */
 import datas from 'src/datas/subscribe';
 import LoginForm from 'src/components/LoginForm';
-import { loginSubmit, newpassSubmit } from 'src/store/reducers/loginForm';
+import { loginSubmit, newpassSubmit } from 'src/store/reducers/login';
 
 
 /*
@@ -16,7 +16,7 @@ import { loginSubmit, newpassSubmit } from 'src/store/reducers/loginForm';
  */
 // State
 const mapStateToProps = state => ({
-  data: datas[state.loginForm.view],
+  data: datas[state.login.view],
 });
 
 // Actions

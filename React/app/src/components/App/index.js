@@ -11,12 +11,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import Nav from 'src/containers/Nav';
 import NotFound from 'src/components/NotFound';
-// import Cgu from 'src/components/Cgu';
 import Footer from 'src/components/Footer';
 import routes from 'src/routes';
-
-// import Header from 'src/components/Header';
-
 import ChatBtn from 'src/containers/Chat/ChatBtn';
 import ContactBtn from 'src/containers/ContactBtn';
 import Chat from 'src/containers/Chat/Chat';
@@ -27,7 +23,7 @@ import Login from 'src/containers/Login';
  */
 
 
-class test extends React.Component {
+class App extends React.Component {
  changeTitle = ({ pathname }) => {
    // On récupère notre objet de data
    const route = routes[pathname];
@@ -77,4 +73,4 @@ class test extends React.Component {
 /*
  * Export default
  */
-export default test;
+export default App;

@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
  * Local import
  */
 import SubscribeUpload from 'src/components/SubscribeUpload';
-import { loadImage } from 'src/store/reducers/memberForm';
+import { loadImage } from 'src/store/reducers/member';
 
 /*
  * Code

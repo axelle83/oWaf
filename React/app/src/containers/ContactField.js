@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom';
 /*
  * Local import
  */
-import SubscribeField from 'src/components/SubscribeField';
-import { changeInput } from 'src/store/reducers/member';
+import ContactField from 'src/components/ContactField';
+import { changeContact } from 'src/store/reducers/contact';
 
 /*
  * Code
@@ -19,16 +19,16 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onChange: (value) => {
-    dispatch(changeInput({ name: ownProps.name, value }));
+    dispatch(changeContact({ name: ownProps.name, value }));
   },
 });
 
-const SubscribeFieldContainer = connect(
+const ContactFieldContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SubscribeField);
+)(ContactField);
 
 /*
  * Export default
  */
-export default withRouter(SubscribeFieldContainer);
+export default withRouter(ContactFieldContainer);

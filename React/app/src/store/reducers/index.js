@@ -9,8 +9,9 @@ import { combineReducers } from 'redux';
 import chatForm from 'src/store/reducers/chatForm';
 import buttons from 'src/store/reducers/buttons';
 import chatMessages from 'src/store/reducers/chatMessages';
-import memberForm from 'src/store/reducers/memberForm';
-import loginForm from 'src/store/reducers/loginForm';
+import member from 'src/store/reducers/member';
+import login from 'src/store/reducers/login';
+import contact from 'src/store/reducers/contact';
 
 /*
  * Code
@@ -19,8 +20,9 @@ const reducers = combineReducers({
   chatForm,
   buttons,
   chatMessages,
-  memberForm,
-  loginForm,
+  member,
+  login,
+  contact,
 });
 
 /*

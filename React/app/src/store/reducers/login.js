@@ -1,4 +1,7 @@
 
+import React from 'react';
+import { Redirect } from 'react-router-dom';
+// import { browserHistory } from 'react-router';
 /*
  * Types
  */
@@ -12,6 +15,7 @@ const PASS_SUBMIT = 'PASS_SUBMIT';
  */
 const initialState = {
   view: 'login',
+  logged: false,
 };
 
 /*
@@ -27,9 +31,14 @@ const reducer = (state = initialState, action = {}) => {
     case LOGIN_SUBMIT:
       console.log(state.pseudo);
       console.log(state.password);
-      return {
-        ...state,
-      };
+      // this.context.router.push('/');
+      // browserHistory.push('/member');
+      // return {
+      //   ...state,
+      //   logged: true,
+      // };
+      // return <Redirect from="/connect" to="/" />;
+
     case PASS_SUBMIT:
       console.log(state.email);
       return {

@@ -37,7 +37,7 @@ const chatMiddleware = store => next => (action) => {
 
       if (content !== '') {
         const message = {
-          username: state.loginForm.pseudo,
+          username: state.login.pseudo,
           content,
           date,
         };

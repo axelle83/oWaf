@@ -23,6 +23,7 @@ class LoginForm extends React.Component {
     else {
       this.props.newpassSubmit();
     }
+    this.context.router.push('/');
   }
 
   render() {
@@ -51,7 +52,9 @@ LoginForm.propTypes = {
     }).isRequired,
   }).isRequired,
 };
-
+LoginForm.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
 /*
  * Export default
  */

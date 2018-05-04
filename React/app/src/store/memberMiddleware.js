@@ -2,7 +2,7 @@
 /**
  * Code
  */
-import { SUBSCRIBE_SUBMIT } from './reducers/memberForm';
+import { SUBSCRIBE_SUBMIT } from './reducers/member';
 
 const memberMiddleware = store => next => (action) => {
   switch (action.type) {

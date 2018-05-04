@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
  * Local import
  */
 import ChangeView from 'src/components/ChangeView';
-import { changeView } from 'src/store/reducers/loginForm';
+import { changeView } from 'src/store/reducers/login';
 import datas from 'src/datas/subscribe';
 
 /*
@@ -16,8 +16,8 @@ import datas from 'src/datas/subscribe';
  */
 // State
 const mapStateToProps = (state, ownProps) => ({
-  active: state.loginForm.view === ownProps.from,
-  data: datas[state.loginForm.view],
+  active: state.login.view === ownProps.from,
+  data: datas[state.login.view],
 });
 
 // Actions

@@ -8,13 +8,13 @@ import { withRouter } from 'react-router-dom';
  * Local import
  */
 import SubscribeRadio from 'src/components/SubscribeRadio';
-import { changeInput } from 'src/store/reducers/memberForm';
+import { changeInput } from 'src/store/reducers/member';
 
 /*
  * Code
  */
 const mapStateToProps = state => ({
-  selectedOption: state.memberForm['dog-sex'],
+  selectedOption: state.member['dog-sex'],
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

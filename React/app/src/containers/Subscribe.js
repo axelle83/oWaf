@@ -9,14 +9,14 @@ import { withRouter } from 'react-router-dom';
  * Local import
  */
 import Subscribe from 'src/components/Subscribe';
-import { subscribeSubmit } from 'src/store/reducers/memberForm';
+import { subscribeSubmit } from 'src/store/reducers/member';
 
 /*
  * Code
  */
 // State
 const mapStateToProps = state => ({
-  errorpassword: state.memberForm.errorpassword,
+  errorpassword: state.member.errorpassword,
 });
 
 // Actions

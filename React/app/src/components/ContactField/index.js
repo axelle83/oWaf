@@ -4,24 +4,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import FaLock from 'react-icons/lib/fa/lock';
-import FaUser from 'react-icons/lib/fa/user';
-
-
-/*
- * Local import
- */
-
-
-/*
- * Code
- */
-
 
 /*
  * Component
  */
-export default class LoginField extends React.Component {
+export default class ContactField extends React.Component {
   /*
    * PropTypes
    */
@@ -29,19 +16,17 @@ export default class LoginField extends React.Component {
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    fa: PropTypes.string.isRequired,
+    // mandatory: PropTypes.bool.isRequired,
     inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password']),
+    type: PropTypes.oneOf(['text', 'textarea']).isRequired,
   }
 
   static defaultProps = {
     inputValue: '',
-    type: 'text',
   }
 
   state = {
     error: false,
-    focus: false,
   }
 
   /**
@@ -50,7 +35,6 @@ export default class LoginField extends React.Component {
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
-
     // on vérifie les champs obligatoires
     if (evt.target.required) {
       const error = !value;
@@ -58,57 +42,31 @@ export default class LoginField extends React.Component {
     }
   }
 
-  /**
-   * Handle focus event
-   */
-  // handleFocus = () => {
-  //   this.setState({
-  //     error: false,
-  //     focus: true,
-  //   });
-  // }
-
-  /**
-   * Handle blur event
-   */
-  // handleBlur = () => {
-  //   this.setState({ focus: false });
-  // }
-
   /*
    * Render
    */
   render() {
-    const { error, focus } = this.state;
+    const { error } = this.state;
     const {
-      name,
-      placeholder,
-      inputValue,
-      type,
-      fa,
+      name, placeholder, inputValue, type,
     } = this.props;
-    const Icon = fa === 'FaLock' ? FaLock : FaUser;
-    const id = `field-${name}`;
+    const id = `contact-${name}`;
     return (
       <div
         className={classNames(
-          'field',
-          { 'field--has-value': inputValue !== '' },
-          { 'field--has-error': error },
-          { 'field--has-focus': focus },
+          'contact',
+          { 'contact--has-value': inputValue !== '' },
+          { 'contact--has-error': error },
         )}
       >
-        <Icon />
         <input
           type={type}
-          className="field-input"
+          className="contact-input"
           id={id}
           name={name}
           placeholder={placeholder}
           inputvalue={inputValue}
           onChange={this.handleChange}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
           required
         />
       </div>
