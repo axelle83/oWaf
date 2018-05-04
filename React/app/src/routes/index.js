@@ -13,15 +13,16 @@ import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/components/Profile';
 import Map from 'src/components/Map';
 import Login from 'src/containers/Login';
+import Disconnect from 'src/containers/Disconnect';
 
 /*
  * Code
  */
 const routes = {
-  '/test': {
+  '/disconnect': {
     nav: 'Test',
-    component: <Login />,
-    chat: true,
+    component: <Disconnect />,
+    chat: false,
     buttons: {
       Accueil: {
         path: '/',

@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Redirect } from 'react-router-dom';
+// import React from 'react';
+// import { Redirect } from 'react-router-dom';
 /*
  * Types
  */
@@ -8,6 +8,7 @@ const CHANGE_VIEW = 'CHANGE_VIEW';
 const LOGIN_CHANGE = 'LOGIN_CHANGE';
 const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
 const PASS_SUBMIT = 'PASS_SUBMIT';
+const DISCONNECT = 'DISCONNECT';
 
 /*
  * State
@@ -28,16 +29,20 @@ const reducer = (state = initialState, action = {}) => {
         view: action.view,
       };
     case LOGIN_SUBMIT:
-      console.log(state.pseudo);
-      console.log(state.password);
+      // console.log(state.pseudo);
+      // console.log(state.password);
       return {
         ...state,
         logged: true,
       };
-      // return <Redirect from="/connect" to="/" />;
+    case DISCONNECT:
+      return {
+        ...state,
+        logged: false,
+      };
 
     case PASS_SUBMIT:
-      console.log(state.email);
+      // console.log(state.email);
       return {
         ...state,
       };
@@ -62,6 +67,9 @@ export const changeView = view => ({
 });
 export const loginSubmit = () => ({
   type: LOGIN_SUBMIT,
+});
+export const disconnect = () => ({
+  type: DISCONNECT,
 });
 export const newpassSubmit = () => ({
   type: PASS_SUBMIT,
