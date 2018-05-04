@@ -32,7 +32,7 @@ class cpt_lieu
       'labels'             => $labels,
       'description'        => 'Lieu partagé sur la carte',
       'capability_type'    => 'post',
-      'public'             => false,
+      'public'             => true,
       'publicly_queryable' => false,
       'show_ui'            => true,
       'show_admin_column' => true,
@@ -43,7 +43,7 @@ class cpt_lieu
       'taxonomies'         => array('category', 'post-tag'),
       'menu_position'      => null,
       'supports'         => array('title','custom-fields',),
-      'rest_controller_class' => 'WP_REST_Terms_Controller',
+      // 'rest_controller_class' => 'WP_REST_Terms_Controller',
 
       'menu_icon' => 'dashicons-location-alt'
   );

@@ -1,0 +1,24 @@
+@require "app/styles/charte"
+
+#login
+	position: absolute
+	top: 0
+	right: 0
+	border-radius: 10px
+	margin: 10em auto
+	background-color: $bgBlu
+	overflow: hidden
+	color: #222
+	height: 25vh
+	width: 90vw
+	&.login
+		display: none
+	&.login--open
+		display: block
+
+@media (min-width: 1024px)
+	#login
+		max-width: 360px
+		width: 50vw
+		margin: 20vh 25vw
+		height: 40vh
