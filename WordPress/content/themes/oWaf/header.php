@@ -29,5 +29,5 @@
           </div>
         </div>
       </nav>
-      <img  class="header__image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+      <img  class="header__image" style="background-image: url(<?php the_post_thumbnail_url(); ?>">
     </header>

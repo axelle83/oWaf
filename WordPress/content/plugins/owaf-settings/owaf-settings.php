@@ -36,27 +36,8 @@ register_activation_hook(__FILE__, [$cpt_dog, 'activation']);
 // A la désactivation
 register_deactivation_hook(__FILE__, [$cpt_dog, 'deactivation']);
 
+add_filter( 'dog', 'wpm_change_title_cpt' );
 
-
-// Customisation du tableau de bord
-
-add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
-function my_custom_dashboard_widgets() {
-global $wp_meta_boxes;
-unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
-unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
-wp_add_dashboard_widget('custom_help_widget', 'Besoin d\'aide ?', 'custom_dashboard_help');
-}
-function custom_dashboard_help() {
-echo '<p>Bienvenu dans votre espace d\'administration ! Si vous avez besoin d\'aide à la soumission d\'un article, n\'hésitez pas à consulter le support technique.</p>';
-}
-
-
-function example_dashboard_widget_function() {
-echo "Bonjour à tous ! Ceci est un widget personnalisé où vous trouverez des informations et mises à jour importantes concernant ce portail d'actualités.";
-}
-function example_add_dashboard_widgets() {
-wp_add_dashboard_widget('example_dashboard_widget', 'Mon Widget Personnalisé', 'example_dashboard_widget_function');
-}
-add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+add_filter('acf/settings/google_api_key', function () {
+   return 'AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo';
+});

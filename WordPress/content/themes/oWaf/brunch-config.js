@@ -53,6 +53,6 @@ exports.npm = {
 exports.modules = {
   // on require le module "initialize" du fichier "app.js" pour éviter de le require dans le html
   autoRequire: {
-    'js/app.js': ['js/initialize']
+    'js/app.js': ['initialize']
   }
 };

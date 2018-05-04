@@ -42,7 +42,7 @@ class cpt_dog
       'has_archive'        => false,
       'hierarchical'       => true,
       'menu_position'      => null,
-      'supports'         => array('custom-fields'),
+      'supports'         => array('title', 'custom-fields'),
 
       'menu_icon' => 'dashicons-admin-page'
   );
