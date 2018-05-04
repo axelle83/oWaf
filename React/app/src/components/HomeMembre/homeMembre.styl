@@ -5,7 +5,8 @@
   padding-top: 9em
   background: linear-gradient($bgPeche, $bgPink, $bgOrange)
   scroll-behavior: smooth
-  height: 100em
+  height: auto
+  font-family: $text
 
 .homeMembre-img
   background-image: url('/images/marcus-wallis-471436-unsplash.jpg')
@@ -16,8 +17,103 @@
   margin: auto
   width: 90%
   height: 30em
+
+.homeMembre-text
+  font-family: $title
+  font-size: 3em
+  color: $color
+  text-align: center
+  padding : 1em
+  animation: flash 5s infinite
+
+.homeMembre-carte
+  color: $color
+  padding-top: 1em
+  padding-bottom: 1em
+  width: 100%
+
+.homeMembre-carte-title
+  font-family: $title
+  font-size: 2em
+  margin-bottom: 0.5em
+  color: $color
+  text-align: center
+
+
+
+.homeMembre-carte-img
+  background-image: url('/images/google-maps-par-defaut.jpg')
+  height: 30em
+  width: 80%
+  margin: auto
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: top
+
+.homeMembre-carte-texte
+  font-size: 2em
+  color: $color
+  font-family: $text
+  text-align: center
+  margin: 1em
+
+.homeMembre-blog
+  font-size: 2em
+  color: $color
+  padding-top: 0.5em
+  padding-left: 1em
+  font-family: $title
+
+.homeMembre-blog-article
+  border: 2px solid $color
+  height: 20em
+  margin: 1em 1em 0em 1em
+  color: $color
+
 @media screen and (min-width: 1200px)
   #homeMembre
     padding-top: 10em
+
   .homeMembre-img
     height: 50em
+
+  .homeMembre-carte-title
+    text-align: left
+    margin-left: 2em
+    font-size: 2em
+
+  .homeMembre-carte
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: flex-start
+    align-content: stretch
+    align-items: flex-start
+
+
+  .homeMembre-carte-img
+    width: 60%
+    margin-top: 1em
+    margin-left: 0em
+    order: 0
+    flex: 0 1 auto
+    align-self: center
+
+  .homeMembre-carte-texte
+    margin: 0
+    order: 0;
+    flex: 0 1 auto
+    align-self: center
+    width: 30%
+    margin-left: 0
+    margin-right: 5em
+    font-size: 2.5em
+    padding-left: 0
+
+  .homeMembre-blog
+    text-align: left
+    margin-left: 1em
+    font-size: 2em
+  .homeMembre-blog-article
+    height: 25em
+    margin: 2em 2em 0em 2em
