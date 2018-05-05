@@ -6,9 +6,10 @@
  */
 const CHANGE_VIEW = 'CHANGE_VIEW';
 const LOGIN_CHANGE = 'LOGIN_CHANGE';
-const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
+export const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
 const PASS_SUBMIT = 'PASS_SUBMIT';
 const DISCONNECT = 'DISCONNECT';
+const CONNECT = 'CONNECT';
 
 /*
  * State
@@ -29,6 +30,13 @@ const reducer = (state = initialState, action = {}) => {
         view: action.view,
       };
     case LOGIN_SUBMIT:
+      // console.log(state.pseudo);
+      // console.log(state.password);
+      return {
+        ...state,
+        // logged: true,
+      };
+    case CONNECT:
       // console.log(state.pseudo);
       // console.log(state.password);
       return {
@@ -69,6 +77,9 @@ export const loginSubmit = () => ({
 });
 export const disconnect = () => ({
   type: DISCONNECT,
+});
+export const connect = () => ({
+  type: CONNECT,
 });
 export const newpassSubmit = () => ({
   type: PASS_SUBMIT,

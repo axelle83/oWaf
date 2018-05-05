@@ -13,6 +13,7 @@ import reducers from './reducers';
 import chatMiddleware from './chatMiddleware';
 import memberMiddleware from './memberMiddleware';
 import mailMiddleware from './mailMiddleware';
+import loginMiddleware from './loginMiddleware';
 
 /*
  * Code
@@ -24,8 +25,13 @@ if (window.devToolsExtension) {
 }
 
 // Middleware vers Enhancers
-const exampleEnhancer = applyMiddleware(chatMiddleware, memberMiddleware, mailMiddleware);
-const middlewares = compose(exampleEnhancer, ...devTools);
+const Enhancer = applyMiddleware(
+  chatMiddleware,
+  memberMiddleware,
+  mailMiddleware,
+  loginMiddleware,
+);
+const middlewares = compose(Enhancer, ...devTools);
 
 // createStore
 const store = createStore(reducers, middlewares);
