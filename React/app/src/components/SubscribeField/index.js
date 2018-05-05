@@ -18,6 +18,7 @@ export default class SubscribeField extends React.Component {
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     mandatory: PropTypes.bool.isRequired,
+    // inputValue: PropTypes.string.isRequired,
     inputValue: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
   }
@@ -101,7 +102,7 @@ export default class SubscribeField extends React.Component {
           id={id}
           name={name}
           placeholder={placeholder}
-          inputvalue={inputValue}
+          value={inputValue}
           onChange={this.handleChange}
           required={mandatory}
         />

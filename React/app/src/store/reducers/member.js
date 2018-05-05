@@ -15,6 +15,7 @@ const initialState = {
 */
 const INPUT_CHANGE = 'INPUT_CHANGE';
 export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
+export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
 const LOAD_IMAGE = 'LOAD_IMAGE';
 const SUBSCRIBE = 'SUBSCRIBE';
 
@@ -56,6 +57,21 @@ const reducer = (state = initialState, action = {}) => {
         errorpassword: false,
       };
     }
+
+    case PROFILE_SUBMIT: {
+      if (state.password !== state.confirmpassword) {
+        return {
+          ...state,
+          errorpassword: true,
+        };
+      }
+      console.log('profile');
+      // Je retourne le nouveau state
+      return {
+        ...state,
+        errorpassword: false,
+      };
+    }
     case SUBSCRIBE:
       console.log('subscribe');
       // console.log(state.pseudo);
@@ -81,6 +97,9 @@ export const changeInput = ({ name, value }) => ({
 export const subscribeSubmit = id => ({
   type: SUBSCRIBE_SUBMIT,
   id,
+});
+export const profileSubmit = () => ({
+  type: PROFILE_SUBMIT,
 });
 export const subscribe = () => ({
   type: SUBSCRIBE,

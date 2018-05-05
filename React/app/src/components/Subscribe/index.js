@@ -36,7 +36,7 @@ class Subscribe extends React.Component {
         id="subscribe"
         onSubmit={this.onSubmit}
       >
-        <div id="subscribe-title">Profil</div>
+        {/* <div id="subscribe-title">Profil</div> */}
         <div id="subscribe-me">
           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
           <div

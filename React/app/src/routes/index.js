@@ -10,9 +10,9 @@ import HomeVisiteur from 'src/components/HomeVisiteur';
 import HomeMembre from 'src/components/HomeMembre';
 import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
-import Profile from 'src/components/Profile';
+import Profile from 'src/containers/Profile';
 import Map from 'src/components/Map';
-import Login from 'src/containers/Login';
+// import Login from 'src/containers/Login';
 import Disconnect from 'src/containers/Disconnect';
 
 /*
@@ -20,7 +20,7 @@ import Disconnect from 'src/containers/Disconnect';
  */
 const routes = {
   '/disconnect': {
-    nav: 'Test',
+    nav: 'Disconnect',
     component: <Disconnect />,
     chat: false,
     buttons: {
@@ -69,6 +69,9 @@ const routes = {
     buttons: {
       Accueil: {
         path: '/',
+      },
+      Profile: {
+        path: '/profile',
       },
     },
   },
