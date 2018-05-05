@@ -4,9 +4,10 @@
 const initialState = {
   members: [],
   errorpassword: false,
-  'dog-sex': 'femelle',
+  dogSex: 'femelle',
   view: 'password',
   selectedFile: {},
+  subscribe: false,
 };
 
 /*
@@ -15,13 +16,14 @@ const initialState = {
 const INPUT_CHANGE = 'INPUT_CHANGE';
 export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
 const LOAD_IMAGE = 'LOAD_IMAGE';
+const SUBSCRIBE = 'SUBSCRIBE';
 
 /*
 * Code
 */
 
-const ids = initialState.members.map(obj => obj.id);
-let lastId = ids.length > 0 ? Math.max(...ids) : 0;
+// const ids = initialState.members.map(obj => obj.id);
+// let lastId = ids.length > 0 ? Math.max(...ids) : 0;
 
 /*
  * Reducer
@@ -37,7 +39,7 @@ const reducer = (state = initialState, action = {}) => {
     case LOAD_IMAGE:
       return {
         ...state,
-        selectedFile: action.value.name,
+        selectedFile: action.value,
       };
 
     case SUBSCRIBE_SUBMIT: {
@@ -47,26 +49,21 @@ const reducer = (state = initialState, action = {}) => {
           errorpassword: true,
         };
       }
-      // ID
-      lastId += 1;
 
-      // On crée l'objet membre
-      const member = {
-        id: lastId,
-        username: state.pseudo,
-        city: state.city,
-        email: state.email,
-        password: state.password,
-      };
-      console.log(member);
       // Je retourne le nouveau state
       return {
         ...state,
         errorpassword: false,
-        members: [...state.members, member],
       };
     }
-
+    case SUBSCRIBE:
+      console.log('subscribe');
+      // console.log(state.pseudo);
+      // console.log(state.password);
+      return {
+        ...state,
+        subscribe: true,
+      };
     default:
       return state;
   }
@@ -84,6 +81,9 @@ export const changeInput = ({ name, value }) => ({
 export const subscribeSubmit = id => ({
   type: SUBSCRIBE_SUBMIT,
   id,
+});
+export const subscribe = () => ({
+  type: SUBSCRIBE,
 });
 export const loadImage = value => ({
   type: LOAD_IMAGE,

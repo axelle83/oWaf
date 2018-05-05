@@ -34,13 +34,13 @@ const me = [
 const dog = [
   {
     type: 'text',
-    name: 'dog-name',
+    name: 'dogName',
     placeholder: 'Nom du chien',
     mandatory: true,
   },
   {
     type: 'number',
-    name: 'dog-birth',
+    name: 'dogBirth',
     placeholder: 'Année de naissance',
     mandatory: false,
   },

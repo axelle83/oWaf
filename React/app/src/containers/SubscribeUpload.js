@@ -14,7 +14,7 @@ import { loadImage } from 'src/store/reducers/member';
  * Code
  */
 const mapStateToProps = state => ({
-  selectedFile: state.selectedFile,
+  selectedFile: state.member.selectedFile,
 });
 
 const mapDispatchToProps = dispatch => ({

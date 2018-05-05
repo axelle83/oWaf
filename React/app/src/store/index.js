@@ -11,7 +11,7 @@ import reducers from './reducers';
 
 // Middleware
 import chatMiddleware from './chatMiddleware';
-import memberMiddleware from './memberMiddleware';
+import subscribeMiddleware from './subscribeMiddleware';
 import mailMiddleware from './mailMiddleware';
 import loginMiddleware from './loginMiddleware';
 
@@ -27,7 +27,7 @@ if (window.devToolsExtension) {
 // Middleware vers Enhancers
 const Enhancer = applyMiddleware(
   chatMiddleware,
-  memberMiddleware,
+  subscribeMiddleware,
   mailMiddleware,
   loginMiddleware,
 );

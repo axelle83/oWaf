@@ -6,6 +6,7 @@
 .subscribe
 	position: relative
 	display: block
+	height: 3.5em
 
 	&-input
 		border: 1px solid $color
@@ -21,43 +22,18 @@
 
 		&::placeholder
 			color: #aaa
-			font-size: .9em
+			font-size: .8em
 
 	&-label
+		display: inline-block
 		font-size: 1.2em
 		height: 2.75em
-		width: 50%
+		width: 25%
 		margin: .4em 0
 		padding: 0 1em
 
-
-	/*
-	 * Modifiers
-	 */
-	&--has-value &
-		&-input
-			padding-top: 1em
-
-		&-label
-			display: block
-			animation: fadeInTop .2s
-
 	&--has-error &
 		&-input
-			border-color: red
-		&-label
-			color: red
-
-	&--has-focus &
-		&-input
 			border-color: blue
-
 		&-label
 			color: blue
-
-
-
-@keyframes fadeInTop
-	0%
-		transform: translateY(1em)
-		opacity: 0
