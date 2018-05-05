@@ -27,23 +27,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// app.get('/', (req, res) => {
-//   res.render('contact');
-// });
-
-app.get('/', function(req, res) {
-  res.sendFile(indexPath);
-  console.log('mail');
+app.get('/', (req, res) => {
+  res.render('contact');
 });
-app.post('/send', (req, res) => {
-  const output = `
-    <p>Message de contact</p>
-    <h3>Expéditeur</h3>
-    <p>Mail: ${req.body.mail}</p>
-    <h3>Message</h3>
-    <p>${req.body.message}</p>
-  `;
 
+// app.get('/', function(req, res) {
+//   res.sendFile(indexPath);
+//   console.log('mail');
+// });
+app.post('/send', (req, res) => {
+  // const output = `
+  //   <p>Message de contact</p>
+  //   <h3>Expéditeur</h3>
+  //   <p>Mail: ${req.body.mail}</p>
+  //   <h3>Message</h3>
+  //   <p>${req.body.message}</p>
+  // `;
+  console.log('test');
   const transporter = nodemailer.createTransport('SMTP', {
     service: 'Gmail',
     auth: {
@@ -59,7 +59,7 @@ app.post('/send', (req, res) => {
     from: 'axelle.lecroq@yahoo.fr',
     to: 'owafusion@gmail.com',
     subject: 'Message de contact oWaf',
-    html: output,
+    html: 'test',
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

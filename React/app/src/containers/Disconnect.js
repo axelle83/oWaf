@@ -14,10 +14,10 @@ import { disconnect } from 'src/store/reducers/login';
  * Code
  */
 // State
-const mapStateToProps = null;
-// const mapStateToProps = state => ({
-//   logged: state.login.logged,
-// });
+// const mapStateToProps = null;
+const mapStateToProps = state => ({
+  logged: state.login.logged,
+});
 
 // Actions
 const mapDispatchToProps = dispatch => ({

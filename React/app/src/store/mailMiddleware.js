@@ -1,37 +1,20 @@
 
+import axios from 'axios';
 import { CONTACT_SUBMIT } from './reducers/contact';
 
 const mailMiddleware = store => next => (action) => {
   switch (action.type) {
-    case CONTACT_SUBMIT:
-    console.log('middle');
-      // smtpTransport = mailer.createTransport('SMTP', {
-      //   service: 'Gmail',
-      //   auth: {
-      //     user: 'owafusion@gmail.com',
-      //     pass: '1oWaf&4filles',
-      //   },
-      // });
-      //
-      // mail = {
-      //   from: 'axelle.lecroq@yahoo.fr',
-      //   to: 'owafusion@gmail.com',
-      //   subject: 'test',
-      //   html: 'blabla',
-      // };
-      //
-      // smtpTransport.sendMail(mail, function(error, response) {
-      //   if(error) {
-      //     console.log("Erreur lors de l'envoie du mail!");
-      //     console.log(error);
-      //   }
-      //   else {
-      //     console.log("Mail envoyé avec succès!");
-      //   }
-      //   smtpTransport.close();
-      // });
-
-        break;
+    case CONTACT_SUBMIT: {
+      const state = store.getState();
+      const object = state.contact.object.trim();
+      const main = state.contact.main.trim();
+      axios
+        .post('http://localhost/4000/')
+        .then((response) => {
+          console.log(response);
+        });
+    }
+      break;
 
     default:
       break;

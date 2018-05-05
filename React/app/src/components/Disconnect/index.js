@@ -14,24 +14,18 @@ import { Redirect } from 'react-router-dom';
  * Code
  */
 class Disconnect extends React.Component {
-  // state = {
-  //   logged: true,
-  // }
   componentDidMount() {
     this.props.disconnect();
   }
   render() {
     // const { logged } = this.props;
-    // if (logged) {
-    //   return <Redirect to="/" />;
-    // }
     // console.log(logged);
     return <Redirect to="/" />;
   }
 }
 Disconnect.propTypes = {
   disconnect: PropTypes.func.isRequired,
-  // logged: PropTypes.bool.isRequired,
+  logged: PropTypes.bool.isRequired,
 };
 /*
  * Export default

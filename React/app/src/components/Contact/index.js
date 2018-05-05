@@ -32,7 +32,7 @@ class Contact extends React.Component {
           )
         }
       >
-        <form method="POST" id="contactform" action="/send" onSubmit={this.onSubmit}>
+        <form method="POST" id="contactform" onSubmit={this.onSubmit}>
           <h1 id="contactform-title">Nous contacter</h1>
           <div>blabla</div>
           <ContactField

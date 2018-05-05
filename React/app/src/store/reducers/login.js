@@ -37,8 +37,7 @@ const reducer = (state = initialState, action = {}) => {
       };
     case DISCONNECT:
       return {
-        ...state,
-        logged: false,
+        initialState,
       };
 
     case PASS_SUBMIT:

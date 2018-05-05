@@ -27,7 +27,6 @@ class LoginForm extends React.Component {
 
   render() {
     const { data, logged } = this.props;
-    console.log(logged);
     if (logged) return <Redirect to="/membre" />;
     return (
       <form id="loginform" onSubmit={this.onSubmit}>

@@ -17,7 +17,6 @@ const initialState = {
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case CONTACT_SUBMIT:
-      console.log('contact');
       return {
         ...state,
       };
