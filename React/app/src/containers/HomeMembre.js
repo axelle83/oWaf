@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
  * Local import
  */
 import HomeMembre from 'src/components/HomeMembre';
-// import datas from 'src/datas/subscribe';
+
 
 /*
  * Code

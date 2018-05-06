@@ -19,7 +19,7 @@ const HomeMembre = () => (
 
 
     <div className="homeMembre-img" />
-    <div className="homeMembre-text">Bienvenue JeanMachin et une caresse à Médore </div>
+    <div className="homeMembre-text">Bienvenue Jean-machin et une caresse à Médore  </div>
 
     <div className="homeMembre-carte-title">Carte intéractive</div>
     <div className="homeMembre-carte">
@@ -33,6 +33,7 @@ const HomeMembre = () => (
 
   </div>
 );
+
 
 /*
 * Export default
