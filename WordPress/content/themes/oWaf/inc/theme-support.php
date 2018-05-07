@@ -9,6 +9,8 @@ function owaf_setup() {
   add_theme_support('automatic-feed-links');
   // Title automatique
   add_theme_support('title-tag');
+
+
   //Pour le custom header - image -
   $args = array(
     'width'         => 980,
@@ -17,6 +19,8 @@ function owaf_setup() {
     'uploads'       => true,
 );
 add_theme_support( 'custom-header', $args );
+
+
   // Menus de navigation
   register_nav_menus([
     'header' => 'Menu principal de oWaf'
