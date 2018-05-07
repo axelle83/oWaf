@@ -11,9 +11,9 @@ function owaf_setup() {
   add_theme_support('title-tag');
   //Pour le custom header - image -
   $args = array(
-	'width'         => 99,
-	'height'        => 60,
-	'default-image' => get_template_directory_uri() . '/app/assets/images/header.jpg',
+	'width'         => 1024,
+	'height'        => 100,
+	'default-image' => get_template_directory_uri() . 'images/header.jpg',
 	'uploads'       => true,
 );
 add_theme_support( 'custom-header', $args );
