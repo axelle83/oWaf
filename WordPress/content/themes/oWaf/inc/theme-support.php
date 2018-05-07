@@ -12,7 +12,7 @@ function owaf_setup() {
   //Pour le custom header - image -
   $args = array(
     'width'         => 980,
-    'height'        => 350,
+    'height'        => 550,
     'default-image' => get_template_directory_uri() . '/app/assets/images/header.jpg',
     'uploads'       => true,
 );
