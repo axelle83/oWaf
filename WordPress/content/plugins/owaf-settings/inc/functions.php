@@ -15,7 +15,7 @@ function wpm_change_title_cpt( $title ){
          return $title;
 }
 
-//Début de la customisation du tableau de bord
+//Début de la customisation du tableau de bord à continuer
 
 add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 function my_custom_dashboard_widgets() {
