@@ -13,7 +13,7 @@ function owaf_setup() {
   $args = array(
 	'width'         => 1024,
 	'height'        => 100,
-	'default-image' => get_template_directory_uri() . 'images/header.jpg',
+	'default-image' => get_template_directory_uri() . '/app/assets/images/header.jpg',
 	'uploads'       => true,
 );
 add_theme_support( 'custom-header', $args );
