@@ -1,3 +1,2 @@
-<ul>
-  <li><?php the_category(); ?></li>
-</ul>
+
+<?php wp_list_categories('title_li'); ?>
