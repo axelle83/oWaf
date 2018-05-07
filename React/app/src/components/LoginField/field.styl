@@ -1,13 +1,8 @@
 @require "app/styles/charte"
 
-/*
- * Classes
- */
 .field
 	position: relative
-	/*
-	 * Children
-	 */
+
 	&-input
 		display: block
 		border: 1px solid #ccc
@@ -31,32 +26,8 @@
 		text-transform: uppercase
 		font-size: .8em
 
-
-	/*
-	 * Modifiers
-	 */
-	&--has-value &
-		&-input
-			padding-top: 1em
-
-		&-label
-			display: block
-			animation: fadeInTop .2s
-
 	&--has-error &
 		&-input
-			border-color: $color-error
+			border-color: red
 		&-label
-			color: $color-error
-
-	&--has-focus &
-		&-input
-			border-color: $color-input-border--focus
-
-		&-label
-			color: $color-input-label--focus
-
-@keyframes fadeInTop
-	0%
-		transform: translateY(1em)
-		opacity: 0
+			color: red

@@ -1,49 +1,34 @@
 @require "app/styles/charte"
 
-/*
- * Classes
- */
 .contact
 	position: relative
-	display: block
 
 	&-input
-		border: 1px solid $color
-		color: $color
-		border-radius: 10px
-		background-color: $bgPeche
-		position: relative
-		font-size: 1.2em
-		height: 1.8em
-		width: 50%
-		margin: .4em 0
-		padding: 0 1em
-
-		&::placeholder
-			color: #aaa
-			font-size: .9em
-
-	&-label
+		display: block
+		border: 1px solid #ccc
+		color: #ccc
 		font-size: 1.2em
 		height: 2.75em
-		width: 50%
+		width: 100%
 		margin: .4em 0
 		padding: 0 1em
+		&::placeholder
+			color: #ccc
 
-
-	/*
-	 * Modifiers
-	 */
-	&--has-value &
-		&-input
-			padding-top: 1em
-
-		&-label
-			display: block
-			animation: fadeInTop .2s
+	&-textarea
+		height: 5em
+	&-label
+		display: none
+		color: #f1f1f1
+		position: absolute
+		top: .75em
+		left: 1.5em
+		font-family: 'Source Sans Pro'
+		text-transform: uppercase
+		font-size: .8em
 
 	&--has-error &
 		&-input
-			background-color: $bgBlu
+			border-color: red
 		&-label
-			color: $bgBlu
+			color: red

@@ -19,7 +19,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { openContact } = this.props;
+    const { openContact, send } = this.props;
     return (
       <div
         id="contact"
@@ -33,21 +33,36 @@ class Contact extends React.Component {
         }
       >
         <form method="POST" id="contactform" onSubmit={this.onSubmit}>
-          <h1 id="contactform-title">Nous contacter</h1>
-          <div>blabla</div>
+          <h1 id="contact-title">Nous contacter</h1>
+          <ContactField
+            type="email"
+            name="email"
+            placeholder="Votre email"
+          />
           <ContactField
             type="text"
             name="object"
-            placeholder="Titre du message"
+            placeholder="L'objet de votre message"
           />
           <ContactField
             type="textarea"
-            name="main"
+            name="message"
             placeholder="Votre message"
           />
-          <button type="submit" id="contactform-submit">
+          <button type="submit" id="contact-submit">
           Valider
           </button>
+          <p
+            id="contactSend"
+            className={
+            classNames(
+              'contact',
+              { 'contact--send': send },
+            )
+            }
+          >
+            Votre message a bien été envoyé
+          </p>
         </form>
       </div>
     );
@@ -56,6 +71,7 @@ class Contact extends React.Component {
 
 Contact.propTypes = {
   openContact: PropTypes.bool.isRequired,
+  send: PropTypes.bool.isRequired,
   contactSubmit: PropTypes.func.isRequired,
 };
 

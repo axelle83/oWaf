@@ -18,8 +18,8 @@ class Disconnect extends React.Component {
     this.props.disconnect();
   }
   render() {
-    // const { logged } = this.props;
-    // console.log(logged);
+    const { logged } = this.props;
+    console.log(logged);
     return <Redirect to="/" />;
   }
 }

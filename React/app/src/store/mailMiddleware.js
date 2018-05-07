@@ -1,17 +1,26 @@
 
 import axios from 'axios';
-import { CONTACT_SUBMIT } from './reducers/contact';
+import { CONTACT_SUBMIT, sendMessage } from './reducers/contact';
 
 const mailMiddleware = store => next => (action) => {
   switch (action.type) {
     case CONTACT_SUBMIT: {
       const state = store.getState();
       const object = state.contact.object.trim();
-      const main = state.contact.main.trim();
+      const message = state.contact.message.trim();
+      const email = state.contact.email.trim();
+      const url = 'http://localhost:4000/send';
+      const config = {
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      };
+
       axios
-        .post('http://localhost/4000/')
-        .then((response) => {
-          console.log(response);
+        .post(url, `email=${email}&object=${object}&message=${message}`, config)
+        .then(() => {
+          store.dispatch(sendMessage());
+        })
+        .catch((error) => {
+          console.log(error);
         });
     }
       break;

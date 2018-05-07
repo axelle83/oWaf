@@ -7,6 +7,7 @@
     "body-parser": "^1.18.2",
     "brunch": "^2.10.12",
     "classnames": "^2.2.5",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "google-map-react": "^0.34.0",

@@ -18,7 +18,7 @@ export default class ContactField extends React.Component {
     onChange: PropTypes.func.isRequired,
     // mandatory: PropTypes.bool.isRequired,
     inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'textarea']).isRequired,
+    type: PropTypes.oneOf(['text', 'textarea', 'email']).isRequired,
   }
 
   static defaultProps = {
@@ -61,7 +61,10 @@ export default class ContactField extends React.Component {
       >
         <input
           type={type}
-          className="contact-input"
+          className={classNames(
+            'contact-input',
+            { 'contact-textarea': type === 'textarea' },
+          )}
           id={id}
           name={name}
           placeholder={placeholder}
