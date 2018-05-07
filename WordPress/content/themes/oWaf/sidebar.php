@@ -5,9 +5,9 @@
   </div>
   <div class="sidebar__posts">
     <h2>Articles</h2>
-      <?php $searchform = get_search_form();
+      <?php $searchform = get_search_form();?>
+      <!-- echo strip_tags($searchform, '<input>'); -->
 
-     echo strip_tags($searchform, '<input>');?>
 
       <!-- <?php
         if( is_active_sidebar( '1' ) ):
