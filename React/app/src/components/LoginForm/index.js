@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 /*
  * Local import
@@ -24,7 +25,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, send, view } = this.props;
     return (
       <form id="loginform" onSubmit={this.onSubmit}>
         <h1 id="loginform-title">{data.title}</h1>
@@ -32,13 +33,26 @@ class LoginForm extends React.Component {
         <button id="loginform-submit" className={data.submit.className}>
           {data.submit.label}
         </button>
+        <p
+          id="passwordSend"
+          className={
+          classNames(
+            'password',
+            { 'password--send': send && view === 'password' },
+          )
+          }
+        >
+          Votre nouveau mot de passe vous attend dans votre boîte mail
+        </p>
       </form>
     );
   }
 }
 LoginForm.propTypes = {
   loginSubmit: PropTypes.func.isRequired,
+  send: PropTypes.bool.isRequired,
   newpassSubmit: PropTypes.func.isRequired,
+  view: PropTypes.string.isRequired,
   data: PropTypes.shape({
     fields: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
     title: PropTypes.string.isRequired,

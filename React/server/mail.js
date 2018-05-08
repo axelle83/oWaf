@@ -41,7 +41,7 @@ app.post('/send', (req, res) => {
   `;
 
   const transporter = nodemailer.createTransport('SMTP', {
-    service: 'Gmail',
+    // service: 'Gmail',
     auth: {
       user: 'owafusion@gmail.com',
       pass: '1oWaf&4filles',
@@ -53,7 +53,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
     from: 'axelle.lecroq@yahoo.fr',
-    to: 'owafusion@gmail.com',
+    to: 'axelle.lecroq@yahoo.fr',
     subject: 'Message de contact oWaf',
     html: output,
   };
@@ -64,6 +64,45 @@ app.post('/send', (req, res) => {
     }
     console.log('message envoyé', info.messageId);
     res.render('contact', { msg: 'message envoyé' });
+  });
+  transporter.close();
+});
+
+/*
+ * POST (oubli password)
+ */
+app.post('/pass', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
+
+  const output = `
+    <h3>Nouveau mot de passe</h3>
+    <p>${req.body.email}</p>
+  `;
+
+  const transporter = nodemailer.createTransport('SMTP', {
+    auth: {
+      user: 'owafusion@gmail.com',
+      pass: '1oWaf&4filles',
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  const mailOptions = {
+    to: req.body.email,
+    subject: 'oWaf - Mot de passe oublié',
+    html: output,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log('message envoyé', info.messageId);
   });
   transporter.close();
 });

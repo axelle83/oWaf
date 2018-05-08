@@ -31,7 +31,7 @@ export default class LoginField extends React.Component {
     onChange: PropTypes.func.isRequired,
     fa: PropTypes.string.isRequired,
     inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password']),
+    type: PropTypes.oneOf(['text', 'password', 'email']),
   }
 
   static defaultProps = {

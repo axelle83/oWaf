@@ -7,9 +7,10 @@
 const CHANGE_VIEW = 'CHANGE_VIEW';
 const LOGIN_CHANGE = 'LOGIN_CHANGE';
 export const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
-const PASS_SUBMIT = 'PASS_SUBMIT';
+export const PASS_SUBMIT = 'PASS_SUBMIT';
 const DISCONNECT = 'DISCONNECT';
 const CONNECT = 'CONNECT';
+const SEND_MESSAGE = 'SEND_MESSAGE';
 
 /*
  * State
@@ -54,7 +55,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
       };
-
+    case SEND_MESSAGE:
+      return {
+        ...state,
+        send: true,
+      };
     case LOGIN_CHANGE:
       return {
         ...state,
@@ -84,6 +89,9 @@ export const connect = () => ({
 });
 export const newpassSubmit = () => ({
   type: PASS_SUBMIT,
+});
+export const sendMessage = () => ({
+  type: SEND_MESSAGE,
 });
 export const changeLogin = ({ name, value }) => ({
   type: LOGIN_CHANGE,
