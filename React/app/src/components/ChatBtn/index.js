@@ -10,16 +10,18 @@ import classNames from 'classnames';
  * Code
  */
 const ChatBtn = ({ actions, visible }) => (
-  <FaWeChat
-    id="chatBtn"
-    onClick={actions.toggleChat}
-    className={classNames(
-      'chat',
-      {
-      chatVisible: visible,
-    },
-  )}
-  />
+  <div id="chatBtn">
+    <FaWeChat
+      onClick={actions.toggleChat}
+      className={classNames(
+        'chat',
+        {
+          chatVisible: visible,
+        },
+      )}
+    />
+    <span id="chatBtn-info">Accéder au chat</span>
+  </div>
 );
 ChatBtn.propTypes = {
   actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,

@@ -8,3 +8,17 @@
 	font-size: 2.5em
 	color: $bgOrange
 	margin: .3em
+	&-info
+		position: absolute
+		margin-top: 30px
+		margin-left: -200px
+		padding: 15px
+		transform: scale(0) rotate(12deg)
+		opacity: 0
+		font-size: .5em
+		background-color: $bgGray
+
+#contactBtn:hover span
+	transform: scale(1) rotate(0)
+	transition: all .25s
+	opacity: 1

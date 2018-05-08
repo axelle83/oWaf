@@ -12,7 +12,9 @@ import Login from 'src/components/Login';
  * Code
  */
 // Données
-const mapStateToProps = null;
+const mapStateToProps = state => ({
+  logged: state.login.logged,
+});
 
 const mapDispatchToProps = {};
 

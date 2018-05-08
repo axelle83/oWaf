@@ -17,7 +17,6 @@ import { loginSubmit, newpassSubmit } from 'src/store/reducers/login';
 // State
 const mapStateToProps = state => ({
   data: datas[state.login.view],
-  logged: state.login.logged,
 });
 
 // Actions

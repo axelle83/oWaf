@@ -9,10 +9,12 @@ import FaEnveloppe from 'react-icons/lib/fa/envelope';
  * Code
  */
 const ContactBtn = ({ actions }) => (
-  <FaEnveloppe
-    id="contactBtn"
-    onClick={actions.toggleContact}
-  />
+  <div id="contactBtn">
+    <FaEnveloppe
+      onClick={actions.toggleContact}
+    />
+    <span id="contactBtn-info">Nous contacter</span>
+  </div>
 );
 ContactBtn.propTypes = {
   actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,

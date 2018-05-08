@@ -18,10 +18,10 @@ import ContactBtn from 'src/containers/ContactBtn';
 import Chat from 'src/containers/Chat/Chat';
 import Contact from 'src/containers/Contact';
 import Login from 'src/containers/Login';
+
 /*
  * Code
  */
-
 
 class App extends React.Component {
  changeTitle = ({ pathname }) => {
