@@ -103,3 +103,34 @@ function owaf_rest_api_dog_img($dog, $field_name, $request) {
 
 
 add_action( 'rest_api_init', 'owaf_register_rest_fields' );
+
+
+
+// rajout des 2 champs qui sont joins dans la table $user
+
+function dog_id_add_user_data() {
+register_rest_field( 'user','dog_id',
+    array(
+        'get_callback'  => 'rest_get_user_field',
+        'update_callback'   => null,
+        'schema'            => null,
+     )
+);
+}
+add_action( 'rest_api_init', 'dog_id_add_user_data' );
+
+
+function adress_add_user_data() {
+register_rest_field( 'user','ville',
+    array(
+        'get_callback'  => 'rest_get_user_field',
+        'update_callback'   => null,
+        'schema'            => null,
+     )
+);
+}
+add_action( 'rest_api_init', 'adress_add_user_data' );
+
+function rest_get_user_field( $user, $field_name, $request ) {
+    return get_user_meta( $user[ 'id' ], $field_name, true );
+}
