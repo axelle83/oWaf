@@ -78,8 +78,8 @@ app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
   const output = `
-    <h3>Nouveau mot de passe</h3>
-    <p>${req.body.email}</p>
+    <h3>Voici votre nouveau mot de passe pour accéder au site oWaf :</h3>
+    <p>${req.body.password}</p>
   `;
 
   const transporter = nodemailer.createTransport('SMTP', {

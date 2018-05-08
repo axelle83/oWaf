@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const { data, send, view } = this.props;
+    const { data, passSend, view } = this.props;
     return (
       <form id="loginform" onSubmit={this.onSubmit}>
         <h1 id="loginform-title">{data.title}</h1>
@@ -38,7 +38,7 @@ class LoginForm extends React.Component {
           className={
           classNames(
             'password',
-            { 'password--send': send && view === 'password' },
+            { 'password--send': passSend && view === 'password' },
           )
           }
         >
@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
 }
 LoginForm.propTypes = {
   loginSubmit: PropTypes.func.isRequired,
-  send: PropTypes.bool.isRequired,
+  passSend: PropTypes.bool.isRequired,
   newpassSubmit: PropTypes.func.isRequired,
   view: PropTypes.string.isRequired,
   data: PropTypes.shape({

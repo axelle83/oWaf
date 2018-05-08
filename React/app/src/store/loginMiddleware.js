@@ -2,7 +2,7 @@
 * Import
 */
 import axios from 'axios';
-import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendMessage } from './reducers/login';
+import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass } from './reducers/login';
 
 /**
  * Code
@@ -31,12 +31,12 @@ const loginMiddleware = store => next => (action) => {
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
-
+      const password = Math.random().toString(36).substr(2, 9);
       axios
-        .post(urlPass, `email=${email}`, config)
+        .post(urlPass, `email=${email}&password=${password}`, config)
         .then(() => {
           console.log('ok');
-          store.dispatch(sendMessage());
+          store.dispatch(sendPass());
         })
         .catch((error) => {
           console.log(error);

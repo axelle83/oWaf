@@ -10,7 +10,7 @@ export const LOGIN_SUBMIT = 'LOGIN_SUBMIT';
 export const PASS_SUBMIT = 'PASS_SUBMIT';
 const DISCONNECT = 'DISCONNECT';
 const CONNECT = 'CONNECT';
-const SEND_MESSAGE = 'SEND_MESSAGE';
+const SEND_PASS = 'SEND_PASS';
 
 /*
  * State
@@ -18,6 +18,7 @@ const SEND_MESSAGE = 'SEND_MESSAGE';
 const initialState = {
   view: 'login',
   logged: false,
+  passSend: false,
 };
 
 /*
@@ -55,10 +56,10 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
       };
-    case SEND_MESSAGE:
+    case SEND_PASS:
       return {
         ...state,
-        send: true,
+        passSend: true,
       };
     case LOGIN_CHANGE:
       return {
@@ -90,8 +91,8 @@ export const connect = () => ({
 export const newpassSubmit = () => ({
   type: PASS_SUBMIT,
 });
-export const sendMessage = () => ({
-  type: SEND_MESSAGE,
+export const sendPass = () => ({
+  type: SEND_PASS,
 });
 export const changeLogin = ({ name, value }) => ({
   type: LOGIN_CHANGE,
