@@ -16,7 +16,7 @@ import ChatForm from 'src/containers/Chat/ChatForm';
 /**
  * Code
  */
-const Chat = ({ openChat }) => (
+const Chat = ({ actions, openChat }) => (
   <div
     id="chat"
     className={
@@ -28,7 +28,7 @@ const Chat = ({ openChat }) => (
     )
     }
   >
-    <FaWeChat />
+    <FaWeChat id="chatClose" onClick={actions.toggleChat} />
     <div id="chat-display">
       <ChatMessages />
       <ChatForm />
@@ -36,6 +36,7 @@ const Chat = ({ openChat }) => (
   </div>
 );
 Chat.propTypes = {
+  actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
   openChat: PropTypes.bool.isRequired,
 };
 /**
