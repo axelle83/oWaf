@@ -2,7 +2,7 @@
  * Npm import
  */
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 
 /*
@@ -56,6 +56,11 @@ class App extends React.Component {
               }
            />
           ))}
+         <Route
+           exact
+           path="/blog"
+           render={() => window.location = 'http://217.70.189.93/WordPress/content/themes/oWaf/public/'}
+         />
          <Route render={() => (
            <main>
              <Nav buttons={routes['/not-found'].buttons} />

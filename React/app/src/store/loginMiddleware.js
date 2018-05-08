@@ -8,14 +8,18 @@ import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass } from './reducers/login';
  * Code
  */
 
-const url = '/wp-json/wp/v2/users';
+const url = 'https://demo.wp-api.org/wp-json/wp/v2/posts';
+// const url = '/wp-json/wp/v2/users';
 const urlPass = 'http://localhost:4000/pass';
 
 const loginMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOGIN_SUBMIT: {
+      const config = {
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      };
       axios
-        .get(url)
+        .get(url, config)
         .then((response) => {
           console.log('ok', response);
           store.dispatch(connect());
