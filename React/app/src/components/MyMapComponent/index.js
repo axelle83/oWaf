@@ -1,12 +1,13 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
-import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
+import datas from 'src/datas';
+// import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
 
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL: 'https://maps.googleapis.com/maps/api/js?keyAIzaSyB8KfvLpBdTKiBps38oaVMacZR9kwKR32o.exp&libraries=geometry,drawing,places',
+    googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAVQtHXYY_yzzutflzsTmGc6DcRg6TLhB4&v=3.exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: '100%' }} />,
     containerElement: <div style={{ height: '600px' }} />,
     mapElement: <div style={{ height: '100%' }} />,
@@ -19,17 +20,7 @@ const MyMapComponent = compose(
       defaultZoom={8}
       defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
-      {props.isMarkerShown &&
-        <Marker position={{ lat: 48.85, lng: 2.34 }} onClick={props.onMarkerClick} labelAnchor={new google.maps.Point(0, 0)} title="nom du lieu" name="nom du lieu" />}
-      <MarkerWithLabel
-        position={{ lat: 45, lng: 2 }}
-        labelAnchor={new google.maps.Point(0, 0)}
-        labelStyle={{ backgroundColor: 'yellow', fontSize: '32px', padding: '16px' }}
-        title="ici"
-        name="ici"
-      >
-        <div>Hello There!</div>
-      </MarkerWithLabel>
+      <Marker position={{ lat: 48.85, lng: 2.34 }} onClick={props.onMarkerClick} labelAnchor={new google.maps.Point(0, 0)} icon="/images/blue_MarkerR.png" title={datas.marker[0].title} name="nom du lieu" />
     </GoogleMap>
   ));
 
@@ -65,10 +56,6 @@ class MyFancyComponent extends React.Component {
     }, 3000);
   }
 
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false });
-    this.delayedShowMarker();
-  }
 
   render() {
     return (
@@ -76,7 +63,6 @@ class MyFancyComponent extends React.Component {
         lat={this.state.lat}
         lng={this.state.lng}
         isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick}
       />
     );
   }

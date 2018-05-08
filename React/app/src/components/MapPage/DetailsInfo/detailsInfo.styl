@@ -1,0 +1,40 @@
+@require "app/styles/charte"
+
+#detailsInfo
+    display: block
+    flex-direction: column
+    width: 25em
+    margin: auto
+
+
+.detailsInfo-name, .detailsInfo-address, .detailsInfo-gps
+    border: none
+    border-radius: 0.5em
+    padding: 0.5em
+    margin-bottom: 1em
+    font-size: 1.5em
+    width: 100%
+
+.check
+    font-size: 2em
+    color: $bgGray
+
+input[type=checkbox]
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+
+input[type=checkbox]
+    -border-radius: 4px
+    height: 18px
+    width: 18px
+    background: #fff
+    border: 1px solid #ccc
+
+input[type="checkbox"]:checked
+  background: green
+  margin:0px
+  position: relative
+  &:before
+    display: block;
+    position: absolute
