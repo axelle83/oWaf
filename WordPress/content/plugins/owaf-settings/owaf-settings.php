@@ -21,8 +21,6 @@ require plugin_dir_path(__FILE__) . 'inc/cpt_dog.php';
 // Chargement des lieu de ma rest api
 require plugin_dir_path(__FILE__) . 'inc/settings_rest_api.php';
 
-// Chargement des lieu de ma rest api
-require plugin_dir_path(__FILE__) . 'inc/user.php';
 
 $cpt_lieu = new cpt_lieu();
 
@@ -42,6 +40,8 @@ register_activation_hook(__FILE__, [$cpt_dog, 'activation']);
 register_deactivation_hook(__FILE__, [$cpt_dog, 'deactivation']);
 
 add_filter( 'dog', 'wpm_change_title_cpt' );
+
+// map api
 
 add_filter('acf/settings/google_api_key', function () {
    return 'AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo';
