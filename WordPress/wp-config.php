@@ -78,6 +78,8 @@ define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
 define('WP_CONTENT_URL', 'http://localhost/oWaf/WordPress/content');
 // define('WP_CONTENT_URL', 'http://217.70.189.93/WordPress/content/');
 
+define('WP_HOME','http://localhost/oWaf/WordPress/wp');
+define('WP_SITEURL','http://localhost/oWaf/WordPress/');
 /**
  * For developers: WordPress debugging mode.
  *
