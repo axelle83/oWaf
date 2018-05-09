@@ -3,13 +3,10 @@
   display: block;
   margin-left: 2em;
   padding-top: 1em;
-        //   padding-left:6em;
-        // padding-top: 0.8em;
-        // padding-bottom: 0.8em;
 
   h1 {
     font-size: 3em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.1em;
     @media (max-width: 980px) {
       font-size: 2em;
     }
