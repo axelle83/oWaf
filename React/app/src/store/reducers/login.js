@@ -11,6 +11,7 @@ export const PASS_SUBMIT = 'PASS_SUBMIT';
 const DISCONNECT = 'DISCONNECT';
 const CONNECT = 'CONNECT';
 const SEND_PASS = 'SEND_PASS';
+const USER_ERROR = 'USER_ERROR';
 
 /*
  * State
@@ -19,6 +20,7 @@ const initialState = {
   view: 'login',
   logged: false,
   passSend: false,
+  userError: false,
 };
 
 /*
@@ -30,21 +32,20 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         view: action.view,
+        userError: false,
       };
+
     case LOGIN_SUBMIT:
-      // console.log(state.pseudo);
-      // console.log(state.password);
       return {
         ...state,
-        // logged: true,
       };
+
     case CONNECT:
-      // console.log(state.pseudo);
-      // console.log(state.password);
       return {
         ...state,
         logged: true,
       };
+
     case DISCONNECT:
       return {
         ...state,
@@ -52,15 +53,23 @@ const reducer = (state = initialState, action = {}) => {
       };
 
     case PASS_SUBMIT:
-      // console.log(state.email);
       return {
         ...state,
       };
+
     case SEND_PASS:
+    console.log('send');
       return {
         ...state,
         passSend: true,
       };
+
+    case USER_ERROR:
+      return {
+        ...state,
+        userError: true,
+      };
+
     case LOGIN_CHANGE:
       return {
         ...state,
@@ -85,14 +94,18 @@ export const loginSubmit = () => ({
 export const disconnect = () => ({
   type: DISCONNECT,
 });
-export const connect = () => ({
+export const connect = data => ({
   type: CONNECT,
+  data,
 });
 export const newpassSubmit = () => ({
   type: PASS_SUBMIT,
 });
 export const sendPass = () => ({
   type: SEND_PASS,
+});
+export const userError = () => ({
+  type: USER_ERROR,
 });
 export const changeLogin = ({ name, value }) => ({
   type: LOGIN_CHANGE,
