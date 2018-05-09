@@ -3,18 +3,31 @@
   display: block;
   margin-left: 2em;
   padding-top: 1em;
+<<<<<<< HEAD
 
   h1 {
     font-size: 3em;
     margin-bottom: 0.1em;
+=======
+
+
+
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    margin-left: 0.8em;
+>>>>>>> 1a5d48ac2d024d04142b57051be6dbbda96f0c72
     @media (max-width: 980px) {
       font-size: 2em;
+      text-align: center;
     }
   }
 
   p {
-    font-size: 1em;
-    padding-top: 1em;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+
   }
 }
 
@@ -22,4 +35,5 @@
   @media (max-width: 1087px) {
     display: block;
   }
+
 }
