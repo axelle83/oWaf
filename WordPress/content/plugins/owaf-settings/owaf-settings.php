@@ -41,8 +41,30 @@ register_deactivation_hook(__FILE__, [$cpt_dog, 'deactivation']);
 
 add_filter( 'dog', 'wpm_change_title_cpt' );
 
-// map api
+//
+// // map api
+//
+// add_filter('acf/settings/google_api_key', function () {
+//    return 'AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo';
+// });
 
-add_filter('acf/settings/google_api_key', function () {
-   return 'AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo';
-});
+
+// Map google_api_key
+function my_theme_add_scripts() {
+    if (is_page('lacarte')) {
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo', array(), '3', true );
+        wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/google-maps.js', array('google-map', 'jquery'), '0.1', true );
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'my_theme_add_scripts' );
+
+function my_acf_google_map_api( $api ){
+
+	$api['key'] = 'AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo';
+
+	return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

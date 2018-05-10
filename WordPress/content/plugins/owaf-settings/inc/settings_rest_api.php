@@ -132,8 +132,8 @@ register_rest_field( 'user','ville',
 add_action( 'rest_api_init', 'adress_add_user_data' );
 
 
-function email_add_user_data() {
-register_rest_field( 'user','email',
+function mail_add_user_data() {
+register_rest_field( 'user','mail',
     array(
         'get_callback'  => 'rest_get_user_field',
         'update_callback'   => null,
@@ -141,8 +141,16 @@ register_rest_field( 'user','email',
      )
 );
 }
-add_action( 'rest_api_init', 'email_add_user_data' );
+add_action( 'rest_api_init', 'mail_add_user_data' );
 
 function rest_get_user_field( $user, $field_name, $request ) {
     return get_user_meta( $user[ 'id' ], $field_name, true );
+}
+
+
+
+add_filter( 'rest_user_query' , 'custom_rest_user_query' );
+function custom_rest_user_query( $prepared_args, $request = null ) {
+ unset($prepared_args['has_published_posts']);
+ return $prepared_args;
 }
