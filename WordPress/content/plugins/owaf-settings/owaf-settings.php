@@ -51,7 +51,7 @@ add_filter( 'dog', 'wpm_change_title_cpt' );
 
 // Map google_api_key
 function my_theme_add_scripts() {
-    if (is_page('lacarte')) {
+    if (is_page('map')) {
         wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA2BwnfF3T6Nd_filKP5OIT7wfqsnsDyDo', array(), '3', true );
         wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/google-maps.js', array('google-map', 'jquery'), '0.1', true );
     }
