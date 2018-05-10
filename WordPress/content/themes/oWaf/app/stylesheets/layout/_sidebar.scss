@@ -7,6 +7,8 @@
     margin-bottom: 1em;
     @media (max-width: 980px) {
       font-size: 1.3em;
+      justify-content: center;
+      display: flex;
     }
   }
 
@@ -15,10 +17,20 @@
     border-radius: 1em;
     color: white;
     padding: 0.5em 1.5em;
+      @media (max-width: 768px){
+        border: none;
+      }
   }
 
   li {
     margin-bottom: 2em;
+    margin-left: 1em;
+      @media (max-width: 768px){
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: center;
+      }
   }
 
   &__posts {
@@ -32,9 +44,13 @@
       padding: 0.5em;
       margin-right: 0.5em;
       margin-bottom: 7em;
-      @media (max-width: 908px) {
-        margin-bottom: 1em;
-      }
+      margin-left: 1em;
+        @media (max-width: 908px) {
+          margin-bottom: 1em;
+        }
+        @media (max-width: 768px){
+          margin-left: 1em;
+        }
     }
 
     button {
@@ -46,5 +62,12 @@
 
   &__category {
     list-style: none;
+  }
+}
+
+.searchform div {
+  @media (max-width: 768px){
+    display: flex;
+    justify-content: center;
   }
 }
