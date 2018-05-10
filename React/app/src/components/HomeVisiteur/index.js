@@ -30,7 +30,7 @@ const HomeVisiteur = () => (
       <div className="visiteur-img2-img" />
     </div>
 
-    <div className="visiteur-articles">Article à la une</div>
+    <div className="visiteur-articles">Articles à la une</div>
 
   </div>
 );

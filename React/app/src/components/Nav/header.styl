@@ -10,11 +10,10 @@
     position: fixed
     width: 100%
     z-index: 1
-    // border-bottom: 1px solid white
 
     &-title
-    padding-bottom: .8em
-        padding-left:6em
+        padding-bottom: .8em
+        padding-left:3.8em
         padding-top: .8em
 
     &-h1
@@ -32,11 +31,14 @@
     margin-top: 1.7em
 
     .button-nav
-
             border: 2px solid $color
             border-radius: 1em
             color: $color
             font-family: $text
-            font-size: 1.5em
+            font-size: 1.2em
+            margin-right: 2em
+            padding:.5em 1.5em
+            
+@media screen and (min-width: 1200px)
+    .button-nav
             margin-right: 4em
-            padding: .5em 1.5em
