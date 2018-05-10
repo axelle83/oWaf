@@ -76,3 +76,23 @@ function my_acf_google_map_api( $api ){
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+// Page de la map
+class Map {
+	private $map_options;
+
+	public function __construct() {
+		add_action( 'admin_menu', array( $this, 'map_add_plugin_page' ) );
+	
+	}
+
+	public function map_add_plugin_page() {
+		add_pages_page(
+			'map', // page_title
+			'map', // menu_title
+			'manage_options', // capability
+			'lacarte', // menu_slug
+			array( $this, 'map_create_admin_page' ) // function
+		);
+	}
+}

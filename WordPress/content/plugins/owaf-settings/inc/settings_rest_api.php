@@ -105,7 +105,6 @@ function owaf_rest_api_dog_img($dog, $field_name, $request) {
 add_action( 'rest_api_init', 'owaf_register_rest_fields' );
 
 
-
 // rajout des 3 champs qui sont joins dans la table $user
 
 function dog_id_add_user_data() {
