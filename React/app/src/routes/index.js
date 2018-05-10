@@ -11,7 +11,7 @@ import HomeMembre from 'src/components/HomeMembre';
 import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/containers/Profile';
-import Map from 'src/components/Map';
+import MapPage from 'src/components/MapPage';
 // import Login from 'src/containers/Login';
 import Disconnect from 'src/containers/Disconnect';
 
@@ -117,7 +117,7 @@ const routes = {
   },
   '/map': {
     nav: 'Map',
-    component: <Map />,
+    component: <MapPage />,
     chat: true,
     login: false,
     buttons: {
