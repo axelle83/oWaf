@@ -12,6 +12,9 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Nav from 'src/containers/Nav';
 import NotFound from 'src/components/NotFound';
 import Footer from 'src/components/Footer';
+
+import MapPage from 'src/components/MapPage';
+
 import routes from 'src/routes';
 import ChatBtn from 'src/containers/Chat/ChatBtn';
 import ContactBtn from 'src/containers/ContactBtn';
