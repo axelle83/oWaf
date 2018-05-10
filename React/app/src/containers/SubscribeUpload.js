@@ -19,7 +19,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onChange: (value) => {
-    // console.log('container', value);
     dispatch(loadImage(value));
   },
 });

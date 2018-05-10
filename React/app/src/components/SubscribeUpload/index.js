@@ -12,16 +12,12 @@ export default class SubscribeUpload extends React.Component {
    * PropTypes
    */
   static propTypes = {
-    // selectedFile: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
   }
 
-  // state = { selectedFile: null }
-
   fileChangedHandler = (event) => {
     const file = event.target.files[0];
-    // console.log(file);
     this.props.onChange(file);
     // this.setState({ selectedFile: event.target.files[0] });
   }
@@ -33,14 +29,13 @@ export default class SubscribeUpload extends React.Component {
    * Render
    */
   render() {
-    const { name, selectedFile } = this.props;
+    const { name } = this.props;
     return (
       <div id="subscribe-dog-image">
         <label id="subscribe-dog-image-label">
           Sélectionner une photo
           <input
             name={name}
-            // value={selectedFile}
             id="subscribe-dog-image-file"
             type="file"
             onChange={this.fileChangedHandler}

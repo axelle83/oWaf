@@ -43,7 +43,7 @@ const loginMiddleware = store => next => (action) => {
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
-      const admin = btoa('owaf:owaf');
+      const admin = btoa('restapi:restapi');
       const newConfig = {
         headers: { Authorization: `Basic ${admin}` },
       };

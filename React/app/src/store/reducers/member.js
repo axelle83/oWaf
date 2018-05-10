@@ -6,7 +6,7 @@ const initialState = {
   errorpassword: false,
   dogSex: 'femelle',
   view: 'password',
-  selectedFile: '',
+  selectedFile: {},
   subscribe: false,
   logged: false,
 };
@@ -17,7 +17,7 @@ const initialState = {
 const INPUT_CHANGE = 'INPUT_CHANGE';
 export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
 export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
-const LOAD_IMAGE = 'LOAD_IMAGE';
+export const LOAD_IMAGE = 'LOAD_IMAGE';
 const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
 
@@ -35,11 +35,11 @@ const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     // récupération des données du membre qui vient de se connecter
     case GET_MEMBER:
-      console.log(action.data);
       return {
         ...state,
         pseudo: action.data.name,
         city: action.data.ville,
+        id: action.data[0].id,
         // TODO autres données
         // email: action.data.mail,
       };
@@ -54,7 +54,6 @@ const reducer = (state = initialState, action = {}) => {
     case LOAD_IMAGE:
       return {
         ...state,
-        selectedFile: action.value,
       };
 
     // submit du form d'inscription
