@@ -58,7 +58,6 @@ const reducer = (state = initialState, action = {}) => {
       };
 
     case SEND_PASS:
-    console.log('send');
       return {
         ...state,
         passSend: true,

@@ -37,11 +37,15 @@ const loginMiddleware = store => next => (action) => {
 
     // mot de passe oublié
     case PASS_SUBMIT: {
-      const state = store.getState();
+      let state = store.getState();
       const email = state.login.email.trim();
       const urlMail = `${urlUser}/?search=${email}`;
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      };
+      const admin = btoa('owaf:owaf');
+      const newConfig = {
+        headers: { Authorization: `Basic ${admin}` },
       };
       // nouveau mot de passe
       const password = Math.random().toString(36).substr(2, 9);
@@ -50,6 +54,19 @@ const loginMiddleware = store => next => (action) => {
         // il existe un user avec ce mail : on regénère un mdp
         .then((response) => {
           if (response.data.length > 0) {
+            // récupération de l'id pour ajout dans l'url
+            store.dispatch(getMember(response.data));
+            state = store.getState();
+            const urlId = `${urlUser}/${state.member.id}`;
+            // envoi du nouveau mdp dans la bdd
+            axios
+              .post(urlId, { password }, newConfig)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((error) => {
+                console.log(error);
+              });
             // envoi du mdp par mail
             axios
               .post(urlPass, `email=${email}&password=${password}`, config)
