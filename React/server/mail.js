@@ -41,7 +41,6 @@ app.post('/send', (req, res) => {
   `;
 
   const transporter = nodemailer.createTransport('SMTP', {
-    // service: 'Gmail',
     auth: {
       user: 'owafusion@gmail.com',
       pass: '1oWaf&4filles',
@@ -53,7 +52,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
     from: 'axelle.lecroq@yahoo.fr',
-    to: 'axelle.lecroq@yahoo.fr',
+    to: 'owafusion@gmail.com',
     subject: 'Message de contact oWaf',
     html: output,
   };
