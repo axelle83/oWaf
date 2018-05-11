@@ -16,26 +16,35 @@
 		display: none
 	&.contact--open
 		display: block
-	&-submit
-		background: $bgPinkLigth
-		border: 0
-		border-radius: 10px
-		color: #fff
-		font-size: 1em
-		display: block
-		text-transform: uppercase
-		height: 3.3em
-		width: 100%
 	&-title
 		font-family: 'Pacifico'
 		font-size: 2em
 		padding-bottom: .5em
+
 #contactSend
 	&.contact
 		display: none
 	&.contact--send
-		font-family: 'Pacifico'
+		font-family: $title
 		font-size: 2em
+		padding: .5em
+		display: block
+
+#contact-submit
+#contact-send
+	background: $bgPinkLigth
+	border: 0
+	border-radius: 10px
+	color: #fff
+	font-size: 1em
+	display: block
+	text-transform: uppercase
+	height: 3.3em
+	width: 100%
+	&.contact
+		display: none
+	&.contact--send
+		font-size: 1em
 		padding: .5em
 		display: block
 

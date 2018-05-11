@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
  */
 import Contact from 'src/components/Contact';
 import { contactSubmit } from 'src/store/reducers/contact';
+import { toggleContact } from 'src/store/reducers/buttons';
 
 /**
  * Code
@@ -21,6 +22,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   contactSubmit: () => {
     dispatch(contactSubmit());
+  },
+  toggleContact: () => {
+    dispatch(toggleContact());
   },
 });
 
