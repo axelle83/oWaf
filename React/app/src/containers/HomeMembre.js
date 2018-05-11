@@ -8,16 +8,21 @@ import { connect } from 'react-redux';
  * Local import
  */
 import HomeMembre from 'src/components/HomeMembre';
+import { getPost } from 'src/store/reducers/post';
 
 
 /*
  * Code
  */
 // State
-const mapStateToProps = () => null;
+const mapStateToProps = null;
 
 // Actions
-const mapDispatchToProps = () => {};
+const mapDispatchToProps = dispatch => ({
+  getPost: () => {
+    dispatch(getPost());
+  },
+});
 
 
 /*
