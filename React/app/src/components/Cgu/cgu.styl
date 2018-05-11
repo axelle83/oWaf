@@ -1,11 +1,12 @@
 @require "app/styles/charte"
 
 #cgu
-  display: flex
-  justify-content: center
-  height: 90em
-  font-family: $text
   animation: pulse 5s infinite
+  display: flex
+  font-family: $text
+  justify-content: center
+  height: 75em
+
 @keyframes pulse
   0%
     background-color: $bgPink
@@ -19,20 +20,23 @@
 
 .cgu
   background-color: $color
+  border-radius: 3%
+  margin-top: 10em
   width: 75%
-  margin-top: 15em
-  margin-bottom: 7em
+  // margin-bottom: 7em
 
   &-title
     font-size: 1.7em
-    text-align: center
+    font-family: $title
     margin-bottom: 2em
     margin-top: 2em
-
+    text-align: center
+    text-decoration: underline
   &-text
     font-size: 1.6em
-    text-align: justify
+    font-weight: 500
     margin: 1.8em
+    text-align: justify
 
 
 // @media screen and (min-width: 500px)
@@ -44,10 +48,11 @@
 
   #cgu
     height: auto
+    padding-top: 1.3em
   .cgu
     width: 50%
-    margin-top: 8em
     margin-bottom: 4em
+    margin-top: 8em
     &-title
       font-size: 2em
       &-text

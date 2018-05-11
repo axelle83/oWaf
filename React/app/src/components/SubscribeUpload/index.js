@@ -12,16 +12,12 @@ export default class SubscribeUpload extends React.Component {
    * PropTypes
    */
   static propTypes = {
-    // selectedFile: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
   }
 
-  // state = { selectedFile: null }
-
   fileChangedHandler = (event) => {
     const file = event.target.files[0];
-    // console.log(file);
     this.props.onChange(file);
     // this.setState({ selectedFile: event.target.files[0] });
   }

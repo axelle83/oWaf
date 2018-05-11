@@ -26,11 +26,11 @@ const HomeVisiteur = () => (
     </div>
 
     <div className="visiteur-img2">
-      <div className="visiteur-img2-text">Vous partez en déplacement et vous ne savez pas ou détendre votre chien ? Restez zen la communauté oWaf est là pour vous...</div>
+      <div className="visiteur-img2-text">Vous partez en déplacement et vous ne savez pas ou détendre votre chien ? <br /> Restez zen la communauté oWaf est là pour vous...</div>
       <div className="visiteur-img2-img" />
     </div>
 
-    <div className="visiteur-articles">Article à la une</div>
+    <div className="visiteur-articles">Articles à la une</div>
 
   </div>
 );

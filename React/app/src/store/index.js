@@ -14,6 +14,7 @@ import chatMiddleware from './chatMiddleware';
 import subscribeMiddleware from './subscribeMiddleware';
 import mailMiddleware from './mailMiddleware';
 import loginMiddleware from './loginMiddleware';
+import postMiddleware from './postMiddleware';
 
 /*
  * Code
@@ -30,6 +31,7 @@ const Enhancer = applyMiddleware(
   subscribeMiddleware,
   mailMiddleware,
   loginMiddleware,
+  postMiddleware,
 );
 const middlewares = compose(Enhancer, ...devTools);
 

@@ -2,45 +2,86 @@
 * Import
 */
 import axios from 'axios';
-import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass } from './reducers/login';
+import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass, userError } from './reducers/login';
+import { getMember } from './reducers/member';
 
 /**
  * Code
  */
-
-const url = 'https://demo.wp-api.org/wp-json/wp/v2/posts';
-// const url = '/wp-json/wp/v2/users';
+const urlUser = 'http://217.70.189.93/wp-json/wp/v2/users';
+const urlUserMe = 'http://217.70.189.93/wp-json/wp/v2/users/me';
 const urlPass = 'http://localhost:4000/pass';
 
 const loginMiddleware = store => next => (action) => {
   switch (action.type) {
+    // login : demande d'autorisation pseudo:password en base64
     case LOGIN_SUBMIT: {
+      const state = store.getState();
+      const user = btoa(`${state.login.pseudo}:${state.login.password}`);
       const config = {
-        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        headers: { Authorization: `Basic ${user}` },
       };
       axios
-        .get(url, config)
+        .get(urlUserMe, config)
+        // il existe un user avec ce mdp : on connecte
         .then((response) => {
-          console.log('ok', response);
           store.dispatch(connect());
+          store.dispatch(getMember(response.data));
         })
-        .catch((error) => {
-          console.log('ko', error);
+        // sinon on affiche un message d'erreur
+        .catch(() => {
+          store.dispatch(userError());
         });
       break;
     }
+
+    // mot de passe oublié
     case PASS_SUBMIT: {
-      const state = store.getState();
+      let state = store.getState();
       const email = state.login.email.trim();
+      const urlMail = `${urlUser}/?search=${email}`;
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
+      const admin = btoa('restapi:restapi');
+      const newConfig = {
+        headers: { Authorization: `Basic ${admin}` },
+      };
+      // nouveau mot de passe
       const password = Math.random().toString(36).substr(2, 9);
       axios
-        .post(urlPass, `email=${email}&password=${password}`, config)
-        .then(() => {
-          console.log('ok');
-          store.dispatch(sendPass());
+        .get(urlMail, config)
+        // il existe un user avec ce mail : on regénère un mdp
+        .then((response) => {
+          if (response.data.length > 0) {
+            // récupération de l'id pour ajout dans l'url
+            store.dispatch(getMember(response.data));
+            state = store.getState();
+            const urlId = `${urlUser}/${state.member.id}`;
+            // envoi du nouveau mdp dans la bdd
+            axios
+              .post(urlId, { password }, newConfig)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+            // envoi du mdp par mail
+            axios
+              .post(urlPass, `email=${email}&password=${password}`, config)
+              .then(() => {
+                console.log('ok');
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+            store.dispatch(sendPass());
+          }
+          else {
+            // il n'existe pas d'utilisateur correspondant : on affiche un message d'erreur
+            store.dispatch(userError());
+          }
         })
         .catch((error) => {
           console.log(error);

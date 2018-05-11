@@ -8,6 +8,7 @@ const initialState = {
   view: 'password',
   selectedFile: {},
   subscribe: false,
+  logged: false,
 };
 
 /*
@@ -16,8 +17,9 @@ const initialState = {
 const INPUT_CHANGE = 'INPUT_CHANGE';
 export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
 export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
-const LOAD_IMAGE = 'LOAD_IMAGE';
+export const LOAD_IMAGE = 'LOAD_IMAGE';
 const SUBSCRIBE = 'SUBSCRIBE';
+const GET_MEMBER = 'GET_MEMBER';
 
 /*
 * Code
@@ -31,6 +33,18 @@ const SUBSCRIBE = 'SUBSCRIBE';
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    // récupération des données du membre qui vient de se connecter
+    case GET_MEMBER:
+      return {
+        ...state,
+        pseudo: action.data.name,
+        city: action.data.ville,
+        id: action.data[0].id,
+        // TODO autres données
+        // email: action.data.mail,
+      };
+
+    // modif d'un input
     case INPUT_CHANGE:
       return {
         ...state,
@@ -40,9 +54,9 @@ const reducer = (state = initialState, action = {}) => {
     case LOAD_IMAGE:
       return {
         ...state,
-        selectedFile: action.value,
       };
 
+    // submit du form d'inscription
     case SUBSCRIBE_SUBMIT: {
       if (state.password !== state.confirmpassword) {
         return {
@@ -50,14 +64,13 @@ const reducer = (state = initialState, action = {}) => {
           errorpassword: true,
         };
       }
-
-      // Je retourne le nouveau state
       return {
         ...state,
         errorpassword: false,
       };
     }
 
+    // submit du form de profil
     case PROFILE_SUBMIT: {
       if (state.password !== state.confirmpassword) {
         return {
@@ -66,7 +79,6 @@ const reducer = (state = initialState, action = {}) => {
         };
       }
       console.log('profile');
-      // Je retourne le nouveau state
       return {
         ...state,
         errorpassword: false,
@@ -107,6 +119,10 @@ export const subscribe = () => ({
 export const loadImage = value => ({
   type: LOAD_IMAGE,
   value,
+});
+export const getMember = data => ({
+  type: GET_MEMBER,
+  data,
 });
 
 export default reducer;

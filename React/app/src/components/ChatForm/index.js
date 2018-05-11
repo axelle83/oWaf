@@ -38,7 +38,7 @@ class ChatForm extends React.Component {
           value={inputValue}
           onChange={this.handleChange}
         />
-        <button id="chat-submit">
+        <button id="chat-form-submit">
           Envoyer
         </button>
       </form>

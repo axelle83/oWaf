@@ -90,12 +90,12 @@ export default class SubscribeField extends React.Component {
           { 'subscribe--has-focus': focus },
         )}
       >
-        <label
+        {/* <label
           className="subscribe-label"
           htmlFor={id}
-        >
-          {placeholder}
-        </label>
+        > */}
+          {/* {placeholder}
+        </label> */}
         <input
           type={type}
           className="subscribe-input"

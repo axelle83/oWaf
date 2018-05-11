@@ -18,6 +18,7 @@ import { loginSubmit, newpassSubmit } from 'src/store/reducers/login';
 const mapStateToProps = state => ({
   data: datas[state.login.view],
   passSend: state.login.passSend,
+  userError: state.login.userError,
   view: state.login.view,
 });
 

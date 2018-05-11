@@ -25,7 +25,9 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const { data, passSend, view } = this.props;
+    const {
+      data, passSend, view, userError,
+    } = this.props;
     return (
       <form id="loginform" onSubmit={this.onSubmit}>
         <h1 id="loginform-title">{data.title}</h1>
@@ -44,6 +46,17 @@ class LoginForm extends React.Component {
         >
           Votre nouveau mot de passe vous attend dans votre boîte mail
         </p>
+        <p
+          id="errorLogin"
+          className={
+          classNames(
+            'errorLogin',
+            { 'errorLogin--true': userError },
+          )
+          }
+        >
+          Il n'y a pas d'utilisateur correspondant
+        </p>
       </form>
     );
   }
@@ -51,6 +64,7 @@ class LoginForm extends React.Component {
 LoginForm.propTypes = {
   loginSubmit: PropTypes.func.isRequired,
   passSend: PropTypes.bool.isRequired,
+  userError: PropTypes.bool.isRequired,
   newpassSubmit: PropTypes.func.isRequired,
   view: PropTypes.string.isRequired,
   data: PropTypes.shape({

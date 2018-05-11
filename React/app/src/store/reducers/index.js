@@ -12,6 +12,7 @@ import chatMessages from 'src/store/reducers/chatMessages';
 import member from 'src/store/reducers/member';
 import login from 'src/store/reducers/login';
 import contact from 'src/store/reducers/contact';
+import post from 'src/store/reducers/post';
 
 /*
  * Code
@@ -23,6 +24,7 @@ const reducers = combineReducers({
   member,
   login,
   contact,
+  post,
 });
 
 /*
