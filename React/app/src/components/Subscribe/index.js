@@ -33,6 +33,7 @@ class Subscribe extends React.Component {
   render() {
     return (
       <form
+        encType="multipart/form-data"
         id="subscribe"
         onSubmit={this.onSubmit}
       >

@@ -26,35 +26,37 @@ const subscribeMiddleware = store => next => (action) => {
         .post(urlDog, {
           slug: state.member.dogName,
           title: state.member.dogName,
+          naiss: state.member.dogBirth,
+          genre: state.member.dogSex,
         }, config)
         .then((response) => {
-          console.log('ok', response.data);
-          axios
-            .post(`${urlDog}/${response.data.id}`, {
-              naiss: state.member.dogBirth,
-              genre: state.member.dogSex,
-            }, config)
-            .then((res) => {
-              console.log(res);
-            })
-            .catch((error) => {
-              console.log(error);
-            });
+          console.log('ok', response.data.id);
           // axios
-          //   .post(urlUser, {
-          //     username: state.member.pseudo,
-          //     email: state.member.email,
-          //     password: state.member.password,
-          //     ville: state.member.city,
-          //     dog_id: response.data.id,
+          //   .post(`${urlDog}/${response.data.id}`, {
           //   }, config)
           //   .then((res) => {
-          //     console.log(res.data);
+          //     console.log(res);
           //   })
           //   .catch((error) => {
           //     console.log(error);
           //   });
-          // store.dispatch(subscribe());
+          axios
+            .post(urlUser, {
+              username: state.member.pseudo,
+              email: state.member.email,
+              password: state.member.password,
+              meta: {
+                ville: state.member.city,
+              },
+              // dog_id: response.data.id,
+            }, config)
+            .then((res) => {
+              console.log(res.data);
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+          store.dispatch(subscribe());
         })
         .catch((error) => {
           console.log('ko', error);
@@ -62,21 +64,22 @@ const subscribeMiddleware = store => next => (action) => {
       break;
     }
     case LOAD_IMAGE: {
-      const formData = new FormData();
-      console.log(action.value);
-      formData.append('image', action.value, action.value.name);
+      // const formData = new FormData();
+      // formData.append('image', action.value, action.value.name);
       // formData.append('name', action.value.name);
       // formData.append('image', action.value);
-      console.log(formData);
+      // console.log(formData);
+      console.log(action.value.name);
       const admin = btoa('restapi:restapi');
+      const file = btoa(`${action.value.name}`);
       const config = {
         headers: {
           Authorization: `Basic ${admin}`,
-          'content-type': 'multipart/form-data',
+          'content-type': false,
         },
       };
       axios
-        .post(urlMedia, action.value, config)
+        .post(urlMedia, file, config)
         .then((response) => {
           console.log('ok', response.data);
         })
