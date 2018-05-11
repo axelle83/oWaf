@@ -1,0 +1,32 @@
+.navbar-item {
+  color: white;
+  display: block;
+  margin-left: 2em;
+  padding-top: 1em;
+
+
+
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    margin-left: 0.8em;
+    @media (max-width: 980px) {
+      font-size: 2em;
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+
+  }
+}
+
+.navbar-brand .navbar-item, .navbar-tabs .navbar-item {
+  @media (max-width: 1087px) {
+    display: block;
+  }
+
+}

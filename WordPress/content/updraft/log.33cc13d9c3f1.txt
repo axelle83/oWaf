@@ -1,0 +1,731 @@
+0000.000 (0) Opened log file at time: Tue, 08 May 2018 13:28:31 +0000 on http://localhost/oWaf/WordPress/wp
+0000.027 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.14.7 WP: 4.9.5 PHP: 7.0.28-0ubuntu0.16.04.1 (apache2handler, Linux ingrid-labeaume 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64) MySQL: 5.7.22 WPLANG: fr_FR Server: Apache/2.4.18 (Ubuntu) safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 9.9M | 2M) multisite: N openssl: OpenSSL 1.0.2g  1 Mar 2016 mcrypt: N LANG: C ZipArchive::addFile: N
+0000.064 (0) Free space on disk containing Updraft's temporary directory: 8995.9 MB
+0000.114 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 1 (schedule: manual)
+0000.186 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.285 (0) Set semaphore last lock (fd) time to 2018-05-08 13:28:31
+0000.366 (0) Semaphore lock (fd) complete
+0000.530 (0) Backup run: resumption=0, nonce=33cc13d9c3f1, begun at=1525786111 (0s ago), job type=backup
+0000.592 (0) Scheduling a resumption (1) after 300 seconds (1525786411) in case this run gets aborted
+0000.657 (0) Checking if we have a zip executable available
+0000.682 (0) Testing: /usr/bin/zip
+0000.735 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.767 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.792 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.818 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.843 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.873 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.899 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.925 (0) Working binary zip found: /usr/bin/zip
+0001.001 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0001.028 (0) Creation of backups of directories: beginning
+0001.142 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0001.312 (0) Total entities for the zip file: 383 directories, 2287 files (0 skipped as non-modified), 34 MB
+0001.338 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.364 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.391 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.417 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.443 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.469 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (17.9 MB, 2287 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0002.828 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: size is now: 5.40 MB
+0002.895 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 600 files added (on-disk size: 5544.6 KB)
+0002.923 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 700 files added (on-disk size: 5544.6 KB)
+0002.952 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 800 files added (on-disk size: 5544.6 KB)
+0002.980 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 900 files added (on-disk size: 5544.6 KB)
+0003.009 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1000 files added (on-disk size: 5544.6 KB)
+0003.035 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3 MB, 2287 files batched, 501 (1002) added so far); re-opening (prior size: 5544.6 KB)
+0003.514 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1100 files added (on-disk size: 6509.7 KB)
+0003.542 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1200 files added (on-disk size: 6509.7 KB)
+0003.569 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1300 files added (on-disk size: 6509.7 KB)
+0003.597 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1400 files added (on-disk size: 6509.7 KB)
+0003.628 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1500 files added (on-disk size: 6509.7 KB)
+0003.654 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 2287 files batched, 501 (1503) added so far); re-opening (prior size: 6509.7 KB)
+0004.114 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1600 files added (on-disk size: 7588.5 KB)
+0004.148 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1700 files added (on-disk size: 7588.5 KB)
+0004.185 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1800 files added (on-disk size: 7588.5 KB)
+0004.213 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 1900 files added (on-disk size: 7588.5 KB)
+0004.241 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 2000 files added (on-disk size: 7588.5 KB)
+0004.267 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.1 MB, 2287 files batched, 501 (2004) added so far); re-opening (prior size: 7588.5 KB)
+0004.731 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 2100 files added (on-disk size: 8878.2 KB)
+0004.757 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: 2200 files added (on-disk size: 8878.2 KB)
+0005.362 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip.tmp: size is now: 11.20 MB
+0005.670 (0) Created plugins zip (0) - 11450.6 KB in 4.5 s (2543.3 KB/s) (sha1: f8953424421f1cdab0859f1a1b3b61b82f47978a, sha256: 23908db2414a866672dd7d0e0ec7a956845bab8560ba99ab82ca47ed215c2c33)
+0005.735 (0) Beginning creation of dump of themes (split every: 400 MB)
+0006.106 (0) Total entities for the zip file: 1963 directories, 14212 files (363 skipped as non-modified), 133.6 MB
+0006.143 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (26.7 MB, 14212 files batched, 23 (23) added so far); re-opening (prior size: 0 KB)
+0006.527 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: size is now: 26.10 MB
+0006.592 (0) A useful amount of data was added after this amount of zip processing: 0.9 s (normalised: 0.9 s, rate: 28920 KB/s)
+0006.655 (0) Performance is good - will increase the amount of data we attempt to batch (time=0.94396901130676, normalised_time=0.88520133913562, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=177684322)
+0006.722 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/weinre/weinre add_as=themes/oWaf/node_modules/.bin/weinre
+0006.723 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 100 files added (on-disk size: 26723.4 KB)
+0006.759 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 200 files added (on-disk size: 26723.4 KB)
+0006.800 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 300 files added (on-disk size: 26723.4 KB)
+0006.828 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 400 files added (on-disk size: 26723.4 KB)
+0006.854 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 500 files added (on-disk size: 26723.4 KB)
+0006.879 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.5 MB, 14212 files batched, 501 (524) added so far); re-opening (prior size: 26723.4 KB)
+0007.572 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 600 files added (on-disk size: 29563.3 KB)
+0007.599 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 700 files added (on-disk size: 29563.3 KB)
+0007.626 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 800 files added (on-disk size: 29563.3 KB)
+0007.653 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 900 files added (on-disk size: 29563.3 KB)
+0007.702 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1000 files added (on-disk size: 29563.3 KB)
+0007.730 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 14212 files batched, 501 (1025) added so far); re-opening (prior size: 29563.3 KB)
+0008.339 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1100 files added (on-disk size: 30393.1 KB)
+0008.370 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/acorn/bin/acorn add_as=themes/oWaf/node_modules/.bin/acorn
+0008.370 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1200 files added (on-disk size: 30393.1 KB)
+0008.396 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/json5/lib/cli.js add_as=themes/oWaf/node_modules/.bin/json5
+0008.397 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1300 files added (on-disk size: 30393.1 KB)
+0008.425 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1400 files added (on-disk size: 30393.1 KB)
+0008.453 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1500 files added (on-disk size: 30393.1 KB)
+0008.479 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2 MB, 14212 files batched, 501 (1526) added so far); re-opening (prior size: 30393.1 KB)
+0008.988 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-gyp/node_modules/semver/bin/semver add_as=themes/oWaf/node_modules/node-gyp/node_modules/.bin/semver
+0008.989 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-gyp/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/node-gyp/node_modules/.bin/mkdirp
+0008.989 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1600 files added (on-disk size: 31157.8 KB)
+0009.014 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-gyp/bin/node-gyp.js add_as=themes/oWaf/node_modules/.bin/node-gyp
+0009.015 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1700 files added (on-disk size: 31157.8 KB)
+0009.040 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/uuid/bin/uuid add_as=themes/oWaf/node_modules/.bin/uuid
+0009.040 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1800 files added (on-disk size: 31157.8 KB)
+0009.069 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/copycat-brunch/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/copycat-brunch/node_modules/.bin/mkdirp
+0009.069 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 1900 files added (on-disk size: 31157.8 KB)
+0009.097 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/image-size/bin/image-size.js add_as=themes/oWaf/node_modules/.bin/image-size
+0009.097 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2000 files added (on-disk size: 31157.8 KB)
+0009.123 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.5 MB, 14212 files batched, 501 (2027) added so far); re-opening (prior size: 31157.8 KB)
+0009.681 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2100 files added (on-disk size: 32024.3 KB)
+0009.713 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2200 files added (on-disk size: 32024.3 KB)
+0009.775 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2300 files added (on-disk size: 32024.3 KB)
+0009.801 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2400 files added (on-disk size: 32024.3 KB)
+0009.829 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2500 files added (on-disk size: 32024.3 KB)
+0009.855 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 MB, 14212 files batched, 501 (2528) added so far); re-opening (prior size: 32024.3 KB)
+0010.282 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2600 files added (on-disk size: 32476.2 KB)
+0010.310 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2700 files added (on-disk size: 32476.2 KB)
+0010.343 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2800 files added (on-disk size: 32476.2 KB)
+0010.371 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 2900 files added (on-disk size: 32476.2 KB)
+0010.435 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3000 files added (on-disk size: 32476.2 KB)
+0010.462 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.2 MB, 14212 files batched, 501 (3029) added so far); re-opening (prior size: 32476.2 KB)
+0010.878 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-sass/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/node-sass/node_modules/.bin/mkdirp
+0010.878 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3100 files added (on-disk size: 32698.1 KB)
+0010.938 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-sass/node_modules/har-validator/bin/har-validator add_as=themes/oWaf/node_modules/node-sass/node_modules/.bin/har-validator
+0010.939 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3200 files added (on-disk size: 32698.1 KB)
+0010.987 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/in-install.js add_as=themes/oWaf/node_modules/.bin/in-install
+0010.987 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/not-in-install.js add_as=themes/oWaf/node_modules/.bin/not-in-install
+0010.988 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/in-publish.js add_as=themes/oWaf/node_modules/.bin/in-publish
+0010.988 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/not-in-publish.js add_as=themes/oWaf/node_modules/.bin/not-in-publish
+0010.988 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/semver/bin/semver add_as=themes/oWaf/node_modules/.bin/semver
+0010.988 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/miller-rabin/bin/miller-rabin add_as=themes/oWaf/node_modules/.bin/miller-rabin
+0010.989 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3300 files added (on-disk size: 32698.1 KB)
+0011.017 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3400 files added (on-disk size: 32698.1 KB)
+0011.045 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3500 files added (on-disk size: 32698.1 KB)
+0011.070 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.4 MB, 14212 files batched, 501 (3530) added so far); re-opening (prior size: 32698.1 KB)
+0011.890 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3600 files added (on-disk size: 34918.1 KB)
+0011.918 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3700 files added (on-disk size: 34918.1 KB)
+0011.945 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3800 files added (on-disk size: 34918.1 KB)
+0011.972 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 3900 files added (on-disk size: 34918.1 KB)
+0011.998 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4000 files added (on-disk size: 34918.1 KB)
+0012.024 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.5 MB, 14212 files batched, 501 (4031) added so far); re-opening (prior size: 34918.1 KB)
+0012.673 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4100 files added (on-disk size: 35919 KB)
+0012.700 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4200 files added (on-disk size: 35919 KB)
+0012.737 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4300 files added (on-disk size: 35919 KB)
+0012.764 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4400 files added (on-disk size: 35919 KB)
+0012.792 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4500 files added (on-disk size: 35919 KB)
+0012.818 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 MB, 14212 files batched, 501 (4532) added so far); re-opening (prior size: 35919 KB)
+0013.321 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4600 files added (on-disk size: 36341.3 KB)
+0013.348 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4700 files added (on-disk size: 36341.3 KB)
+0013.377 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4800 files added (on-disk size: 36341.3 KB)
+0013.403 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 4900 files added (on-disk size: 36341.3 KB)
+0013.431 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5000 files added (on-disk size: 36341.3 KB)
+0013.457 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/less/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/less/node_modules/.bin/mkdirp
+0013.457 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 14212 files batched, 501 (5033) added so far); re-opening (prior size: 36341.3 KB)
+0013.952 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/less/node_modules/mime/cli.js add_as=themes/oWaf/node_modules/less/node_modules/.bin/mime
+0013.952 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/less/bin/lessc add_as=themes/oWaf/node_modules/.bin/lessc
+0013.952 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5100 files added (on-disk size: 36681.4 KB)
+0013.981 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5200 files added (on-disk size: 36681.4 KB)
+0014.010 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5300 files added (on-disk size: 36681.4 KB)
+0014.039 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5400 files added (on-disk size: 36681.4 KB)
+0014.065 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/strip-indent/cli.js add_as=themes/oWaf/node_modules/.bin/strip-indent
+0014.067 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5500 files added (on-disk size: 36681.4 KB)
+0014.094 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.2 MB, 14212 files batched, 501 (5534) added so far); re-opening (prior size: 36681.4 KB)
+0014.699 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5600 files added (on-disk size: 37838.7 KB)
+0014.726 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/csswring/bin/csswring.js add_as=themes/oWaf/node_modules/.bin/csswring
+0014.726 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5700 files added (on-disk size: 37838.7 KB)
+0014.753 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/postcss-url/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/postcss-url/node_modules/.bin/mkdirp
+0014.754 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5800 files added (on-disk size: 37838.7 KB)
+0014.781 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/postcss-url/node_modules/mime/cli.js add_as=themes/oWaf/node_modules/postcss-url/node_modules/.bin/mime
+0014.782 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 5900 files added (on-disk size: 37838.7 KB)
+0014.811 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6000 files added (on-disk size: 37838.7 KB)
+0014.840 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7 MB, 14212 files batched, 501 (6035) added so far); re-opening (prior size: 37838.7 KB)
+0015.807 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/uglify-js/bin/uglifyjs add_as=themes/oWaf/node_modules/.bin/uglifyjs
+0015.808 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/browserslist/cli.js add_as=themes/oWaf/node_modules/.bin/browserslist
+0015.808 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6100 files added (on-disk size: 40931 KB)
+0015.835 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6200 files added (on-disk size: 40931 KB)
+0015.861 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6300 files added (on-disk size: 40931 KB)
+0015.889 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6400 files added (on-disk size: 40931 KB)
+0015.915 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6500 files added (on-disk size: 40931 KB)
+0015.942 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 MB, 14212 files batched, 501 (6536) added so far); re-opening (prior size: 40931 KB)
+0016.532 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6600 files added (on-disk size: 41434 KB)
+0016.561 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6700 files added (on-disk size: 41434 KB)
+0016.588 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6800 files added (on-disk size: 41434 KB)
+0016.614 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 6900 files added (on-disk size: 41434 KB)
+0016.640 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7000 files added (on-disk size: 41434 KB)
+0016.667 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.7 MB, 14212 files batched, 501 (7037) added so far); re-opening (prior size: 41434 KB)
+0017.198 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7100 files added (on-disk size: 41755.9 KB)
+0017.225 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7200 files added (on-disk size: 41755.9 KB)
+0017.252 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7300 files added (on-disk size: 41755.9 KB)
+0017.281 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7400 files added (on-disk size: 41755.9 KB)
+0017.307 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sass-brunch/node_modules/node-sass/bin/node-sass add_as=themes/oWaf/node_modules/sass-brunch/node_modules/.bin/node-sass
+0017.307 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sass-brunch/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/sass-brunch/node_modules/.bin/mkdirp
+0017.308 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7500 files added (on-disk size: 41755.9 KB)
+0017.333 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5 MB, 14212 files batched, 501 (7538) added so far); re-opening (prior size: 41755.9 KB)
+0018.272 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/check-dependencies/bin/cli.js add_as=themes/oWaf/node_modules/.bin/check-dependencies
+0018.272 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7600 files added (on-disk size: 43433.1 KB)
+0018.300 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7700 files added (on-disk size: 43433.1 KB)
+0018.328 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/errno/cli.js add_as=themes/oWaf/node_modules/.bin/errno
+0018.328 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7800 files added (on-disk size: 43433.1 KB)
+0018.355 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/localtunnel/bin/client add_as=themes/oWaf/node_modules/.bin/lt
+0018.355 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/which/bin/which add_as=themes/oWaf/node_modules/.bin/which
+0018.355 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/ncp/bin/ncp add_as=themes/oWaf/node_modules/.bin/ncp
+0018.356 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 7900 files added (on-disk size: 43433.1 KB)
+0018.381 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/brunch/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/brunch/node_modules/.bin/mkdirp
+0018.381 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/brunch/bin/brunch add_as=themes/oWaf/node_modules/.bin/brunch
+0018.382 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8000 files added (on-disk size: 43433.1 KB)
+0018.409 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.7 MB, 14212 files batched, 501 (8039) added so far); re-opening (prior size: 43433.1 KB)
+0019.086 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8100 files added (on-disk size: 44348.8 KB)
+0019.110 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/nopt/bin/nopt.js add_as=themes/oWaf/node_modules/.bin/nopt
+0019.111 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8200 files added (on-disk size: 44348.8 KB)
+0019.138 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8300 files added (on-disk size: 44348.8 KB)
+0019.164 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8400 files added (on-disk size: 44348.8 KB)
+0019.192 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8500 files added (on-disk size: 44348.8 KB)
+0019.218 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.4 MB, 14212 files batched, 501 (8540) added so far); re-opening (prior size: 44348.8 KB)
+0019.997 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8600 files added (on-disk size: 45772.8 KB)
+0020.037 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8700 files added (on-disk size: 45772.8 KB)
+0020.078 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8800 files added (on-disk size: 45772.8 KB)
+0020.114 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 8900 files added (on-disk size: 45772.8 KB)
+0020.160 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9000 files added (on-disk size: 45772.8 KB)
+0020.201 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.5 MB, 14212 files batched, 501 (9041) added so far); re-opening (prior size: 45772.8 KB)
+0020.914 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9100 files added (on-disk size: 46754.7 KB)
+0020.942 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9200 files added (on-disk size: 46754.7 KB)
+0020.969 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/regjsparser/bin/parser add_as=themes/oWaf/node_modules/.bin/regjsparser
+0020.970 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9300 files added (on-disk size: 46754.7 KB)
+0021.008 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9400 files added (on-disk size: 46754.7 KB)
+0021.156 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9500 files added (on-disk size: 46754.7 KB)
+0021.183 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 14212 files batched, 501 (9542) added so far); re-opening (prior size: 46754.7 KB)
+0021.815 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/autoprefixer/node_modules/browserslist/cli.js add_as=themes/oWaf/node_modules/autoprefixer/node_modules/.bin/browserslist
+0021.815 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/dev-ip/lib/dev-ip.js add_as=themes/oWaf/node_modules/.bin/dev-ip
+0021.816 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9600 files added (on-disk size: 47503 KB)
+0021.842 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9700 files added (on-disk size: 47503 KB)
+0021.871 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9800 files added (on-disk size: 47503 KB)
+0021.899 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 9900 files added (on-disk size: 47503 KB)
+0021.926 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10000 files added (on-disk size: 47503 KB)
+0021.953 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 MB, 14212 files batched, 501 (10043) added so far); re-opening (prior size: 47503 KB)
+0022.570 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10100 files added (on-disk size: 47926.6 KB)
+0022.599 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10200 files added (on-disk size: 47926.6 KB)
+0022.625 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10300 files added (on-disk size: 47926.6 KB)
+0022.653 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10400 files added (on-disk size: 47926.6 KB)
+0022.680 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10500 files added (on-disk size: 47926.6 KB)
+0022.706 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.7 MB, 14212 files batched, 501 (10544) added so far); re-opening (prior size: 47926.6 KB)
+0023.302 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10600 files added (on-disk size: 48236.9 KB)
+0023.357 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10700 files added (on-disk size: 48236.9 KB)
+0023.400 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sass-graph/bin/sassgraph add_as=themes/oWaf/node_modules/.bin/sassgraph
+0023.401 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10800 files added (on-disk size: 48236.9 KB)
+0023.429 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 10900 files added (on-disk size: 48236.9 KB)
+0023.459 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/quickly-copy-file/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/quickly-copy-file/node_modules/.bin/mkdirp
+0023.459 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11000 files added (on-disk size: 48236.9 KB)
+0023.488 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.8 MB, 14212 files batched, 501 (11045) added so far); re-opening (prior size: 48236.9 KB)
+0024.226 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11100 files added (on-disk size: 49248.6 KB)
+0024.252 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/jsesc/bin/jsesc add_as=themes/oWaf/node_modules/.bin/jsesc
+0024.253 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/coffee-script/bin/cake add_as=themes/oWaf/node_modules/.bin/cake
+0024.253 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/coffee-script/bin/coffee add_as=themes/oWaf/node_modules/.bin/coffee
+0024.253 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/css-mqpacker/bin/mqpacker add_as=themes/oWaf/node_modules/.bin/mqpacker
+0024.253 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11200 files added (on-disk size: 49248.6 KB)
+0024.278 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11300 files added (on-disk size: 49248.6 KB)
+0024.304 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11400 files added (on-disk size: 49248.6 KB)
+0024.332 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11500 files added (on-disk size: 49248.6 KB)
+0024.359 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.5 MB, 14212 files batched, 501 (11546) added so far); re-opening (prior size: 49248.6 KB)
+0025.431 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11600 files added (on-disk size: 51114.8 KB)
+0025.458 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/fstream/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/fstream/node_modules/.bin/mkdirp
+0025.458 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/send/node_modules/mime/cli.js add_as=themes/oWaf/node_modules/send/node_modules/.bin/mime
+0025.459 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11700 files added (on-disk size: 51114.8 KB)
+0025.485 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11800 files added (on-disk size: 51114.8 KB)
+0025.531 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 11900 files added (on-disk size: 51114.8 KB)
+0025.557 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sshpk/bin/sshpk-conv add_as=themes/oWaf/node_modules/.bin/sshpk-conv
+0025.558 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sshpk/bin/sshpk-sign add_as=themes/oWaf/node_modules/.bin/sshpk-sign
+0025.558 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sshpk/bin/sshpk-verify add_as=themes/oWaf/node_modules/.bin/sshpk-verify
+0025.558 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12000 files added (on-disk size: 51114.8 KB)
+0025.612 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/pushserve/pushserve add_as=themes/oWaf/node_modules/.bin/pushserve
+0025.613 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.5 MB, 14212 files batched, 501 (12047) added so far); re-opening (prior size: 51114.8 KB)
+0026.418 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12100 files added (on-disk size: 52308.1 KB)
+0026.449 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/rimraf/bin.js add_as=themes/oWaf/node_modules/.bin/rimraf
+0026.449 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12200 files added (on-disk size: 52308.1 KB)
+0026.477 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12300 files added (on-disk size: 52308.1 KB)
+0026.505 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12400 files added (on-disk size: 52308.1 KB)
+0026.536 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/init-skeleton/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/init-skeleton/node_modules/.bin/mkdirp
+0026.536 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12500 files added (on-disk size: 52308.1 KB)
+0026.565 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.6 MB, 14212 files batched, 501 (12548) added so far); re-opening (prior size: 52308.1 KB)
+0027.402 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12600 files added (on-disk size: 53510 KB)
+0027.430 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12700 files added (on-disk size: 53510 KB)
+0027.458 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12800 files added (on-disk size: 53510 KB)
+0027.486 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 12900 files added (on-disk size: 53510 KB)
+0027.513 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13000 files added (on-disk size: 53510 KB)
+0027.543 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 14212 files batched, 501 (13049) added so far); re-opening (prior size: 53510 KB)
+0028.179 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13100 files added (on-disk size: 53780 KB)
+0028.212 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13200 files added (on-disk size: 53780 KB)
+0028.239 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13300 files added (on-disk size: 53780 KB)
+0028.293 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13400 files added (on-disk size: 53780 KB)
+0028.318 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/stylus/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/stylus/node_modules/.bin/mkdirp
+0028.319 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13500 files added (on-disk size: 53780 KB)
+0028.344 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.7 MB, 14212 files batched, 501 (13550) added so far); re-opening (prior size: 53780 KB)
+0029.016 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13600 files added (on-disk size: 54719.1 KB)
+0029.045 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13700 files added (on-disk size: 54719.1 KB)
+0029.071 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13800 files added (on-disk size: 54719.1 KB)
+0029.097 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 13900 files added (on-disk size: 54719.1 KB)
+0029.123 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 14000 files added (on-disk size: 54719.1 KB)
+0029.150 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.7 MB, 14212 files batched, 501 (14051) added so far); re-opening (prior size: 54719.1 KB)
+0029.806 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 14100 files added (on-disk size: 55367.5 KB)
+0029.858 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: 14200 files added (on-disk size: 55367.5 KB)
+0030.481 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip.tmp: size is now: 80.40 MB
+0031.490 (0) Created themes zip (0) - 82316.6 KB in 25.7 s (3199.3 KB/s) (sha1: d410f13d64b3b6c01fce75728e5367202e6a1d55, sha256: d353cff8f995d37cc6ad87e4861022ae69e39d04ac643de692c096831d095d41)
+0031.559 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0031.591 (0) Looking for candidates to back up in: /var/www/html/oWaf/WordPress/content/uploads
+0031.617 (0) finding files: 2018: adding to list (1)
+0031.649 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0031.716 (0) Total entities for the zip file: 3 directories, 170 files (0 skipped as non-modified), 55.5 MB
+0031.742 (0) Zip: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0032.628 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip.tmp: size is now: 55.50 MB
+0033.998 (0) Created uploads zip (0) - 56879.9 KB in 2.3 s (24474.6 KB/s) (sha1: 2765216b6f6f9a0ff9bb79e84ef63d11dee3619f, sha256: a3d2ab71748dba684afc83ed07c0abe77a58288790f7494fa20d27ed1dd4006d)
+0034.079 (0) Beginning backup of other directories found in the content directory (index: 0)
+0034.105 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0034.132 (0) Looking for candidates to back up in: /var/www/html/oWaf/WordPress/content
+0034.161 (0) finding files: upgrade: skipping: excluded by options
+0034.204 (0) finding files: updraft: skipping: this is the updraft directory
+0034.231 (0) finding files: plugins: skipping: this is the plugins directory
+0034.260 (0) finding files: themes: skipping: this is the themes directory
+0034.296 (0) finding files: languages: adding to list (1)
+0034.331 (0) finding files: uploads: skipping: this is the uploads directory
+0034.406 (0) Total entities for the zip file: 3 directories, 20 files (0 skipped as non-modified), 2.5 MB
+0034.781 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-others.zip.tmp: size is now: 0.70 MB
+0034.966 (0) Created others zip (0) - 717.8 KB in 0.6 s (1185.9 KB/s) (sha1: 8cfe3bc955ec2afbdab639e51e1f0606dc108a4c, sha256: ef74c79d681758c7163981700477fd088cc33cd53ecccaf21512bfc236c30c10)
+0035.130 (0) Saving backup status to database (elements: 8)
+0035.250 (0) Beginning creation of database dump (WordPress DB)
+0035.329 (0) Testing: /usr/bin/mysqldump
+0036.233 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1218 bytes total)
+0036.427 (0) Binary mysqldump: error (code: 5)
+0036.655 (0) Table wp_options: Total expected rows (approximate): 210
+0036.847 (0) Table wp_options: Total rows added: 206 in 0.17 seconds
+0036.876 (0) Table wp_options: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_options.table.gz - 10.5 KB)
+0037.021 (0) Table wp_users: Total expected rows (approximate): 0
+0037.146 (0) Table wp_users: Total rows added: 1 in 0.10 seconds
+0037.170 (0) Table wp_users: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_users.table.gz - 0.6 KB)
+0037.358 (0) Table wp_usermeta: Total expected rows (approximate): 33
+0037.517 (0) Table wp_usermeta: Total rows added: 33 in 0.12 seconds
+0037.559 (0) Table wp_usermeta: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_usermeta.table.gz - 1.5 KB)
+0037.750 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0038.007 (0) Table wp_commentmeta: Total rows added: 0 in 0.23 seconds
+0038.035 (0) Table wp_commentmeta: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0038.172 (0) Table wp_comments: Total expected rows (approximate): 0
+0038.283 (0) Table wp_comments: Total rows added: 1 in 0.09 seconds
+0038.309 (0) Table wp_comments: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_comments.table.gz - 0.7 KB)
+0038.473 (0) Table wp_links: Total expected rows (approximate): 0
+0038.563 (0) Table wp_links: Total rows added: 0 in 0.07 seconds
+0038.588 (0) Table wp_links: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_links.table.gz - 0.4 KB)
+0038.729 (0) Table wp_postmeta: Total expected rows (approximate): 476
+0038.906 (0) Table wp_postmeta: Total rows added: 476 in 0.15 seconds
+0038.930 (0) Table wp_postmeta: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_postmeta.table.gz - 7 KB)
+0039.071 (0) Table wp_posts: Total expected rows (approximate): 166
+0039.573 (0) Table wp_posts: Total rows added: 166 in 0.48 seconds
+0039.599 (0) Table wp_posts: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_posts.table.gz - 15.1 KB)
+0039.760 (0) Table wp_term_relationships: Total expected rows (approximate): 16
+0039.876 (0) Table wp_term_relationships: Total rows added: 16 in 0.09 seconds
+0039.902 (0) Table wp_term_relationships: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0040.063 (0) Table wp_term_taxonomy: Total expected rows (approximate): 10
+0040.178 (0) Table wp_term_taxonomy: Total rows added: 10 in 0.09 seconds
+0040.204 (0) Table wp_term_taxonomy: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_term_taxonomy.table.gz - 0.5 KB)
+0040.361 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0040.452 (0) Table wp_termmeta: Total rows added: 0 in 0.07 seconds
+0040.476 (0) Table wp_termmeta: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_termmeta.table.gz - 0.4 KB)
+0040.648 (0) Table wp_terms: Total expected rows (approximate): 9
+0040.972 (0) Table wp_terms: Total rows added: 9 in 0.30 seconds
+0040.998 (0) Table wp_terms: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_terms.table.gz - 0.5 KB)
+0041.153 (0) Table wp_novomap_gmap: Total expected rows (approximate): 0
+0041.271 (0) Table wp_novomap_gmap: Total rows added: 0 in 0.09 seconds
+0041.299 (0) Table wp_novomap_gmap: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_novomap_gmap.table.gz - 0.6 KB)
+0041.465 (0) Table wp_novomap_marker: Total expected rows (approximate): 0
+0041.566 (0) Table wp_novomap_marker: Total rows added: 0 in 0.07 seconds
+0041.595 (0) Table wp_novomap_marker: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_novomap_marker.table.gz - 0.4 KB)
+0041.739 (0) Table wp_novomap_marker_logo: Total expected rows (approximate): 9
+0041.871 (0) Table wp_novomap_marker_logo: Total rows added: 9 in 0.11 seconds
+0041.905 (0) Table wp_novomap_marker_logo: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_novomap_marker_logo.table.gz - 0.6 KB)
+0042.064 (0) Table wp_wpuf_subscribers: Total expected rows (approximate): 0
+0042.152 (0) Table wp_wpuf_subscribers: Total rows added: 0 in 0.06 seconds
+0042.177 (0) Table wp_wpuf_subscribers: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_wpuf_subscribers.table.gz - 0.4 KB)
+0042.315 (0) Table wp_wpuf_transaction: Total expected rows (approximate): 0
+0042.414 (0) Table wp_wpuf_transaction: Total rows added: 0 in 0.07 seconds
+0042.443 (0) Table wp_wpuf_transaction: finishing file (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_wpuf_transaction.table.gz - 0.5 KB)
+0042.569 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_options.table.gz (1/17): adding to final database dump
+0042.596 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_users.table.gz (2/17): adding to final database dump
+0042.622 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_usermeta.table.gz (3/17): adding to final database dump
+0042.649 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_commentmeta.table.gz (4/17): adding to final database dump
+0042.676 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_comments.table.gz (5/17): adding to final database dump
+0042.703 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_links.table.gz (6/17): adding to final database dump
+0042.728 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_postmeta.table.gz (7/17): adding to final database dump
+0042.754 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_posts.table.gz (8/17): adding to final database dump
+0042.787 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_term_relationships.table.gz (9/17): adding to final database dump
+0042.816 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_term_taxonomy.table.gz (10/17): adding to final database dump
+0042.841 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_termmeta.table.gz (11/17): adding to final database dump
+0042.867 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_terms.table.gz (12/17): adding to final database dump
+0042.894 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_novomap_gmap.table.gz (13/17): adding to final database dump
+0042.922 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_novomap_marker.table.gz (14/17): adding to final database dump
+0042.949 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_novomap_marker_logo.table.gz (15/17): adding to final database dump
+0042.980 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_wpuf_subscribers.table.gz (16/17): adding to final database dump
+0043.007 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db-table-wp_wpuf_transaction.table.gz (17/17): adding to final database dump
+0043.033 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz: finished writing out complete database file (24 KB)
+0043.210 (0) Total database tables backed up: 17 (backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz, size: 37295, sha256)
+0043.498 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0043.524 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0043.562 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0043.588 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-others.zip: others: This file has not yet been successfully uploaded: will queue
+0043.615 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz: db: This file has not yet been successfully uploaded: will queue
+0043.641 (0) Saving backup history. Total backup size: 147.9 MB
+0043.772 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0043.933 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0043.988 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-c41c69f86764b5e8db47a8a07434de62)
+0045.433 (0) Google Drive: creating path: /UpdraftPlus
+0046.713 (0) Google Drive quota usage: used=3262.6 MB, total=15360 MB, available=12097.4 MB
+0046.757 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip: Attempting to upload to Google Drive (into folder id: 1B0FWrgfAwtuV2HnanJFhdpbb1bB_0Mon)
+0054.782 (0) Googledrive chunked upload: 8.9 % uploaded (1048576)
+0062.215 (0) Googledrive chunked upload: 17.9 % uploaded (2097152)
+0069.493 (0) Googledrive chunked upload: 26.8 % uploaded (3145728)
+0077.100 (0) Googledrive chunked upload: 35.8 % uploaded (4194304)
+0084.350 (0) Googledrive chunked upload: 44.7 % uploaded (5242880)
+0092.015 (0) Googledrive chunked upload: 53.7 % uploaded (6291456)
+0099.232 (0) Googledrive chunked upload: 62.6 % uploaded (7340032)
+0106.689 (0) Googledrive chunked upload: 71.5 % uploaded (8388608)
+0113.925 (0) Googledrive chunked upload: 80.5 % uploaded (9437184)
+0121.009 (0) Googledrive chunked upload: 89.4 % uploaded (10485760)
+0128.675 (0) Googledrive chunked upload: 98.4 % uploaded (11534336)
+0131.350 (0) Googledrive chunked upload: 100 % uploaded (11534336)
+0131.483 (0) OK: Archive backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip uploaded to Google Drive in 84.68 seconds
+0131.587 (0) Recording as successfully uploaded: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip (72489bde5b8502274f1dfb1b229cb9c7)
+0131.815 (0) Deleting local file: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-plugins.zip: OK
+0132.272 (0) Google Drive quota usage: used=3273.8 MB, total=15360 MB, available=12086.2 MB
+0132.301 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip: Attempting to upload to Google Drive (into folder id: 1B0FWrgfAwtuV2HnanJFhdpbb1bB_0Mon)
+0139.738 (0) Googledrive chunked upload: 1.2 % uploaded (1048576)
+0147.497 (0) Googledrive chunked upload: 2.5 % uploaded (2097152)
+0155.088 (0) Googledrive chunked upload: 3.7 % uploaded (3145728)
+0162.290 (0) Googledrive chunked upload: 5 % uploaded (4194304)
+0169.710 (0) Googledrive chunked upload: 6.2 % uploaded (5242880)
+0177.364 (0) Googledrive chunked upload: 7.5 % uploaded (6291456)
+0184.795 (0) Googledrive chunked upload: 8.7 % uploaded (7340032)
+0192.072 (0) Googledrive chunked upload: 10 % uploaded (8388608)
+0199.800 (0) Googledrive chunked upload: 11.2 % uploaded (9437184)
+0207.710 (0) Googledrive chunked upload: 12.4 % uploaded (10485760)
+0215.589 (0) Googledrive chunked upload: 13.7 % uploaded (11534336)
+0222.739 (0) Googledrive chunked upload: 14.9 % uploaded (12582912)
+0230.572 (0) Googledrive chunked upload: 16.2 % uploaded (13631488)
+0237.808 (0) Googledrive chunked upload: 17.4 % uploaded (14680064)
+0245.273 (0) Googledrive chunked upload: 18.7 % uploaded (15728640)
+0252.656 (0) Googledrive chunked upload: 19.9 % uploaded (16777216)
+0259.822 (0) The scheduled resumption is within 45 seconds - will reschedule
+0259.891 (0) Rescheduling resumption 1: moving to 345 seconds from now (1525786716)
+0260.038 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0260.070 (0) Googledrive chunked upload: 21.1 % uploaded (17825792)
+0272.491 (0) Googledrive chunked upload: 22.4 % uploaded (18874368)
+0279.619 (0) Googledrive chunked upload: 23.6 % uploaded (19922944)
+0286.707 (0) Googledrive chunked upload: 24.9 % uploaded (20971520)
+0294.325 (0) Googledrive chunked upload: 26.1 % uploaded (22020096)
+0301.678 (0) Googledrive chunked upload: 27.4 % uploaded (23068672)
+0309.123 (0) Googledrive chunked upload: 28.6 % uploaded (24117248)
+0316.680 (0) The time we have been running (316.6) is approaching the resumption interval (345) - increasing resumption interval to 347
+0316.761 (0) Googledrive chunked upload: 29.9 % uploaded (25165824)
+0323.951 (0) The time we have been running (323.8) is approaching the resumption interval (347) - increasing resumption interval to 354
+0324.025 (0) Googledrive chunked upload: 31.1 % uploaded (26214400)
+0331.269 (0) The time we have been running (331.2) is approaching the resumption interval (354) - increasing resumption interval to 362
+0331.345 (0) Googledrive chunked upload: 32.3 % uploaded (27262976)
+0338.732 (0) The time we have been running (338.6) is approaching the resumption interval (362) - increasing resumption interval to 369
+0338.807 (0) Googledrive chunked upload: 33.6 % uploaded (28311552)
+0345.977 (0) The time we have been running (345.9) is approaching the resumption interval (369) - increasing resumption interval to 376
+0346.060 (0) Googledrive chunked upload: 34.8 % uploaded (29360128)
+0353.325 (0) The time we have been running (353.2) is approaching the resumption interval (376) - increasing resumption interval to 384
+0353.405 (0) Googledrive chunked upload: 36.1 % uploaded (30408704)
+0360.852 (0) The time we have been running (360.8) is approaching the resumption interval (384) - increasing resumption interval to 391
+0360.994 (0) Googledrive chunked upload: 37.3 % uploaded (31457280)
+0368.254 (0) The time we have been running (368.2) is approaching the resumption interval (391) - increasing resumption interval to 399
+0368.345 (0) Googledrive chunked upload: 38.6 % uploaded (32505856)
+0375.603 (0) The time we have been running (375.5) is approaching the resumption interval (399) - increasing resumption interval to 406
+0375.680 (0) Googledrive chunked upload: 39.8 % uploaded (33554432)
+0382.876 (0) The time we have been running (382.8) is approaching the resumption interval (406) - increasing resumption interval to 413
+0382.980 (0) Googledrive chunked upload: 41.1 % uploaded (34603008)
+0391.233 (0) The time we have been running (391.1) is approaching the resumption interval (413) - increasing resumption interval to 422
+0391.308 (0) Googledrive chunked upload: 42.3 % uploaded (35651584)
+0398.496 (0) The time we have been running (398.4) is approaching the resumption interval (422) - increasing resumption interval to 429
+0398.573 (0) Googledrive chunked upload: 43.5 % uploaded (36700160)
+0406.109 (0) The time we have been running (406) is approaching the resumption interval (429) - increasing resumption interval to 436
+0406.185 (0) Googledrive chunked upload: 44.8 % uploaded (37748736)
+0413.363 (0) The time we have been running (413.3) is approaching the resumption interval (436) - increasing resumption interval to 444
+0413.443 (0) Googledrive chunked upload: 46 % uploaded (38797312)
+0420.662 (0) The time we have been running (420.6) is approaching the resumption interval (444) - increasing resumption interval to 451
+0420.741 (0) Googledrive chunked upload: 47.3 % uploaded (39845888)
+0428.144 (0) The time we have been running (428) is approaching the resumption interval (451) - increasing resumption interval to 459
+0428.232 (0) Googledrive chunked upload: 48.5 % uploaded (40894464)
+0435.403 (0) The time we have been running (435.3) is approaching the resumption interval (459) - increasing resumption interval to 466
+0435.484 (0) Googledrive chunked upload: 49.8 % uploaded (41943040)
+0442.884 (0) The time we have been running (442.8) is approaching the resumption interval (466) - increasing resumption interval to 473
+0442.959 (0) Googledrive chunked upload: 51 % uploaded (42991616)
+0450.480 (0) The time we have been running (450.4) is approaching the resumption interval (473) - increasing resumption interval to 481
+0450.557 (0) Googledrive chunked upload: 52.2 % uploaded (44040192)
+0458.195 (0) The time we have been running (458.1) is approaching the resumption interval (481) - increasing resumption interval to 489
+0458.273 (0) Googledrive chunked upload: 53.5 % uploaded (45088768)
+0465.546 (0) The time we have been running (465.4) is approaching the resumption interval (489) - increasing resumption interval to 496
+0465.624 (0) Googledrive chunked upload: 54.7 % uploaded (46137344)
+0473.089 (0) The time we have been running (473) is approaching the resumption interval (496) - increasing resumption interval to 503
+0473.165 (0) Googledrive chunked upload: 56 % uploaded (47185920)
+0480.329 (0) The time we have been running (480.2) is approaching the resumption interval (503) - increasing resumption interval to 511
+0480.406 (0) Googledrive chunked upload: 57.2 % uploaded (48234496)
+0487.608 (0) The time we have been running (487.5) is approaching the resumption interval (511) - increasing resumption interval to 518
+0487.709 (0) Googledrive chunked upload: 58.5 % uploaded (49283072)
+0495.034 (0) The time we have been running (494.9) is approaching the resumption interval (518) - increasing resumption interval to 525
+0495.108 (0) Googledrive chunked upload: 59.7 % uploaded (50331648)
+0502.301 (0) The time we have been running (502.2) is approaching the resumption interval (525) - increasing resumption interval to 533
+0502.379 (0) Googledrive chunked upload: 61 % uploaded (51380224)
+0509.593 (0) The time we have been running (509.5) is approaching the resumption interval (533) - increasing resumption interval to 540
+0509.735 (0) Googledrive chunked upload: 62.2 % uploaded (52428800)
+0517.553 (0) The time we have been running (517.4) is approaching the resumption interval (540) - increasing resumption interval to 548
+0517.631 (0) Googledrive chunked upload: 63.4 % uploaded (53477376)
+0525.061 (0) The time we have been running (525) is approaching the resumption interval (548) - increasing resumption interval to 555
+0525.138 (0) Googledrive chunked upload: 64.7 % uploaded (54525952)
+0532.409 (0) The time we have been running (532.3) is approaching the resumption interval (555) - increasing resumption interval to 563
+0532.509 (0) Googledrive chunked upload: 65.9 % uploaded (55574528)
+0539.962 (0) The time we have been running (539.9) is approaching the resumption interval (563) - increasing resumption interval to 570
+0540.042 (0) Googledrive chunked upload: 67.2 % uploaded (56623104)
+0547.218 (0) The time we have been running (547.1) is approaching the resumption interval (570) - increasing resumption interval to 578
+0547.294 (0) Googledrive chunked upload: 68.4 % uploaded (57671680)
+0555.040 (0) The time we have been running (554.9) is approaching the resumption interval (578) - increasing resumption interval to 585
+0555.117 (0) Googledrive chunked upload: 69.7 % uploaded (58720256)
+0562.357 (0) The time we have been running (562.2) is approaching the resumption interval (585) - increasing resumption interval to 593
+0562.693 (0) The scheduled resumption is within 45 seconds - will reschedule
+0562.763 (0) Rescheduling resumption 1: moving to 638 seconds from now (1525787312)
+0562.896 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 593 + 45 = 638
+0562.959 (0) Googledrive chunked upload: 70.9 % uploaded (59768832)
+0570.758 (0) Googledrive chunked upload: 72.2 % uploaded (60817408)
+0578.206 (0) Googledrive chunked upload: 73.4 % uploaded (61865984)
+0586.253 (0) Googledrive chunked upload: 74.6 % uploaded (62914560)
+0594.345 (0) Googledrive chunked upload: 75.9 % uploaded (63963136)
+0601.751 (0) Googledrive chunked upload: 77.1 % uploaded (65011712)
+0609.306 (0) The time we have been running (609.2) is approaching the resumption interval (638) - increasing resumption interval to 640
+0609.405 (0) Googledrive chunked upload: 78.4 % uploaded (66060288)
+0616.731 (0) The time we have been running (616.6) is approaching the resumption interval (640) - increasing resumption interval to 647
+0616.819 (0) Googledrive chunked upload: 79.6 % uploaded (67108864)
+0624.146 (0) The time we have been running (624) is approaching the resumption interval (647) - increasing resumption interval to 655
+0624.221 (0) Googledrive chunked upload: 80.9 % uploaded (68157440)
+0633.392 (0) The time we have been running (633) is approaching the resumption interval (655) - increasing resumption interval to 663
+0633.490 (0) Googledrive chunked upload: 82.1 % uploaded (69206016)
+0641.294 (0) The time we have been running (641.1) is approaching the resumption interval (663) - increasing resumption interval to 672
+0641.371 (0) Googledrive chunked upload: 83.3 % uploaded (70254592)
+0648.743 (0) The time we have been running (648.6) is approaching the resumption interval (672) - increasing resumption interval to 679
+0648.819 (0) Googledrive chunked upload: 84.6 % uploaded (71303168)
+0656.280 (0) The time we have been running (656.2) is approaching the resumption interval (679) - increasing resumption interval to 687
+0656.359 (0) Googledrive chunked upload: 85.8 % uploaded (72351744)
+0663.515 (0) The time we have been running (663.4) is approaching the resumption interval (687) - increasing resumption interval to 694
+0663.598 (0) Googledrive chunked upload: 87.1 % uploaded (73400320)
+0670.942 (0) The time we have been running (670.8) is approaching the resumption interval (694) - increasing resumption interval to 701
+0671.029 (0) Googledrive chunked upload: 88.3 % uploaded (74448896)
+0678.839 (0) The time we have been running (678.7) is approaching the resumption interval (701) - increasing resumption interval to 709
+0678.917 (0) Googledrive chunked upload: 89.6 % uploaded (75497472)
+0686.126 (0) The time we have been running (686) is approaching the resumption interval (709) - increasing resumption interval to 717
+0686.203 (0) Googledrive chunked upload: 90.8 % uploaded (76546048)
+0693.801 (0) The time we have been running (693.6) is approaching the resumption interval (717) - increasing resumption interval to 724
+0693.877 (0) Googledrive chunked upload: 92.1 % uploaded (77594624)
+0701.425 (0) The time we have been running (701.3) is approaching the resumption interval (724) - increasing resumption interval to 732
+0701.515 (0) Googledrive chunked upload: 93.3 % uploaded (78643200)
+0708.924 (0) The time we have been running (708.8) is approaching the resumption interval (732) - increasing resumption interval to 739
+0709.014 (0) Googledrive chunked upload: 94.5 % uploaded (79691776)
+0716.483 (0) The time we have been running (716.4) is approaching the resumption interval (739) - increasing resumption interval to 747
+0716.560 (0) Googledrive chunked upload: 95.8 % uploaded (80740352)
+0724.129 (0) The time we have been running (724) is approaching the resumption interval (747) - increasing resumption interval to 755
+0724.206 (0) Googledrive chunked upload: 97 % uploaded (81788928)
+0732.351 (0) The time we have been running (732.2) is approaching the resumption interval (755) - increasing resumption interval to 763
+0732.431 (0) Googledrive chunked upload: 98.3 % uploaded (82837504)
+0739.592 (0) The time we have been running (739.5) is approaching the resumption interval (763) - increasing resumption interval to 770
+0739.669 (0) Googledrive chunked upload: 99.5 % uploaded (83886080)
+0743.616 (0) The time we have been running (743.5) is approaching the resumption interval (770) - increasing resumption interval to 774
+0743.696 (0) Googledrive chunked upload: 100 % uploaded (83886080)
+0743.824 (0) OK: Archive backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip uploaded to Google Drive in 611.5 seconds
+0743.920 (0) Recording as successfully uploaded: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip (b2dc494f825140c74d880435d8ca77b5)
+0744.062 (0) Deleting local file: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-themes.zip: OK
+0744.402 (0) Google Drive quota usage: used=3354.2 MB, total=15360 MB, available=12005.8 MB
+0744.428 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip: Attempting to upload to Google Drive (into folder id: 1B0FWrgfAwtuV2HnanJFhdpbb1bB_0Mon)
+0752.098 (0) The time we have been running (752) is approaching the resumption interval (774) - increasing resumption interval to 782
+0752.178 (0) Googledrive chunked upload: 1.8 % uploaded (1048576)
+0759.507 (0) The time we have been running (759.4) is approaching the resumption interval (782) - increasing resumption interval to 790
+0759.639 (0) Googledrive chunked upload: 3.6 % uploaded (2097152)
+0766.940 (0) The time we have been running (766.8) is approaching the resumption interval (790) - increasing resumption interval to 797
+0767.021 (0) Googledrive chunked upload: 5.4 % uploaded (3145728)
+0774.283 (0) The time we have been running (774.2) is approaching the resumption interval (797) - increasing resumption interval to 805
+0774.363 (0) Googledrive chunked upload: 7.2 % uploaded (4194304)
+0781.908 (0) The time we have been running (781.7) is approaching the resumption interval (805) - increasing resumption interval to 812
+0781.993 (0) Googledrive chunked upload: 9 % uploaded (5242880)
+0789.190 (0) The time we have been running (789.1) is approaching the resumption interval (812) - increasing resumption interval to 820
+0789.267 (0) Googledrive chunked upload: 10.8 % uploaded (6291456)
+0796.449 (0) The time we have been running (796.3) is approaching the resumption interval (820) - increasing resumption interval to 827
+0796.529 (0) Googledrive chunked upload: 12.6 % uploaded (7340032)
+0803.751 (0) The time we have been running (803.6) is approaching the resumption interval (827) - increasing resumption interval to 834
+0803.835 (0) Googledrive chunked upload: 14.4 % uploaded (8388608)
+0811.635 (0) The time we have been running (811.5) is approaching the resumption interval (834) - increasing resumption interval to 842
+0811.717 (0) Googledrive chunked upload: 16.2 % uploaded (9437184)
+0819.623 (0) The time we have been running (819.5) is approaching the resumption interval (842) - increasing resumption interval to 850
+0819.710 (0) Googledrive chunked upload: 18 % uploaded (10485760)
+0826.916 (0) The time we have been running (826.8) is approaching the resumption interval (850) - increasing resumption interval to 857
+0826.997 (0) Googledrive chunked upload: 19.8 % uploaded (11534336)
+0834.742 (0) The time we have been running (834.6) is approaching the resumption interval (857) - increasing resumption interval to 865
+0834.827 (0) Googledrive chunked upload: 21.6 % uploaded (12582912)
+0844.463 (0) The time we have been running (844.3) is approaching the resumption interval (865) - increasing resumption interval to 875
+0844.584 (0) Googledrive chunked upload: 23.4 % uploaded (13631488)
+0852.656 (0) The time we have been running (852.5) is approaching the resumption interval (875) - increasing resumption interval to 883
+0852.822 (0) Googledrive chunked upload: 25.2 % uploaded (14680064)
+0860.404 (0) The time we have been running (860.3) is approaching the resumption interval (883) - increasing resumption interval to 891
+0860.485 (0) Googledrive chunked upload: 27 % uploaded (15728640)
+0874.853 (0) The time we have been running (874.7) is approaching the resumption interval (891) - increasing resumption interval to 905
+0874.980 (0) Googledrive chunked upload: 28.8 % uploaded (16777216)
+0882.543 (0) The time we have been running (882.4) is approaching the resumption interval (905) - increasing resumption interval to 913
+0882.622 (0) Googledrive chunked upload: 30.6 % uploaded (17825792)
+0889.929 (0) The time we have been running (889.8) is approaching the resumption interval (913) - increasing resumption interval to 920
+0890.008 (0) Googledrive chunked upload: 32.4 % uploaded (18874368)
+0897.732 (0) The time we have been running (897.4) is approaching the resumption interval (920) - increasing resumption interval to 928
+0897.811 (0) Googledrive chunked upload: 34.2 % uploaded (19922944)
+0905.099 (0) The time we have been running (905) is approaching the resumption interval (928) - increasing resumption interval to 935
+0905.182 (0) Googledrive chunked upload: 36 % uploaded (20971520)
+0914.113 (0) The time we have been running (914) is approaching the resumption interval (935) - increasing resumption interval to 944
+0914.206 (0) Googledrive chunked upload: 37.8 % uploaded (22020096)
+0922.409 (0) The time we have been running (922.3) is approaching the resumption interval (944) - increasing resumption interval to 953
+0922.492 (0) Googledrive chunked upload: 39.6 % uploaded (23068672)
+0930.167 (0) The time we have been running (930) is approaching the resumption interval (953) - increasing resumption interval to 960
+0930.318 (0) Googledrive chunked upload: 41.4 % uploaded (24117248)
+0937.919 (0) The time we have been running (937.8) is approaching the resumption interval (960) - increasing resumption interval to 968
+0937.996 (0) Googledrive chunked upload: 43.2 % uploaded (25165824)
+0945.501 (0) The time we have been running (945.4) is approaching the resumption interval (968) - increasing resumption interval to 976
+0945.584 (0) Googledrive chunked upload: 45 % uploaded (26214400)
+0953.090 (0) The time we have been running (952.9) is approaching the resumption interval (976) - increasing resumption interval to 983
+0953.174 (0) Googledrive chunked upload: 46.8 % uploaded (27262976)
+0964.162 (0) The time we have been running (963.9) is approaching the resumption interval (983) - increasing resumption interval to 994
+0964.240 (0) Googledrive chunked upload: 48.6 % uploaded (28311552)
+0971.617 (0) The time we have been running (971.5) is approaching the resumption interval (994) - increasing resumption interval to 1002
+0971.702 (0) Googledrive chunked upload: 50.4 % uploaded (29360128)
+0979.333 (0) The time we have been running (979.2) is approaching the resumption interval (1002) - increasing resumption interval to 1010
+0979.416 (0) Googledrive chunked upload: 52.2 % uploaded (30408704)
+0987.468 (0) The time we have been running (987.3) is approaching the resumption interval (1010) - increasing resumption interval to 1018
+0987.562 (0) Googledrive chunked upload: 54 % uploaded (31457280)
+0994.898 (0) The time we have been running (994.8) is approaching the resumption interval (1018) - increasing resumption interval to 1025
+0994.977 (0) Googledrive chunked upload: 55.8 % uploaded (32505856)
+1002.480 (0) The time we have been running (1002.4) is approaching the resumption interval (1025) - increasing resumption interval to 1033
+1002.558 (0) Googledrive chunked upload: 57.6 % uploaded (33554432)
+1010.179 (0) The time we have been running (1010.1) is approaching the resumption interval (1033) - increasing resumption interval to 1041
+1010.257 (0) Googledrive chunked upload: 59.4 % uploaded (34603008)
+1017.604 (0) The time we have been running (1017.5) is approaching the resumption interval (1041) - increasing resumption interval to 1048
+1017.689 (0) Googledrive chunked upload: 61.2 % uploaded (35651584)
+1025.110 (0) The time we have been running (1025) is approaching the resumption interval (1048) - increasing resumption interval to 1055
+1025.199 (0) Googledrive chunked upload: 63 % uploaded (36700160)
+1032.442 (0) The time we have been running (1032.3) is approaching the resumption interval (1055) - increasing resumption interval to 1063
+1032.518 (0) Googledrive chunked upload: 64.8 % uploaded (37748736)
+1039.703 (0) The time we have been running (1039.6) is approaching the resumption interval (1063) - increasing resumption interval to 1070
+1039.783 (0) Googledrive chunked upload: 66.6 % uploaded (38797312)
+1047.410 (0) The time we have been running (1047.3) is approaching the resumption interval (1070) - increasing resumption interval to 1078
+1047.489 (0) Googledrive chunked upload: 68.4 % uploaded (39845888)
+1054.749 (0) The time we have been running (1054.6) is approaching the resumption interval (1078) - increasing resumption interval to 1085
+1054.825 (0) Googledrive chunked upload: 70.2 % uploaded (40894464)
+1062.107 (0) The time we have been running (1062) is approaching the resumption interval (1085) - increasing resumption interval to 1093
+1062.183 (0) Googledrive chunked upload: 72 % uploaded (41943040)
+1069.365 (0) The time we have been running (1069.3) is approaching the resumption interval (1093) - increasing resumption interval to 1100
+1069.444 (0) Googledrive chunked upload: 73.8 % uploaded (42991616)
+1076.656 (0) The time we have been running (1076.6) is approaching the resumption interval (1100) - increasing resumption interval to 1107
+1076.736 (0) Googledrive chunked upload: 75.6 % uploaded (44040192)
+1083.938 (0) The time we have been running (1083.8) is approaching the resumption interval (1107) - increasing resumption interval to 1114
+1084.016 (0) Googledrive chunked upload: 77.4 % uploaded (45088768)
+1091.409 (0) The time we have been running (1091.3) is approaching the resumption interval (1114) - increasing resumption interval to 1122
+1091.486 (0) Googledrive chunked upload: 79.2 % uploaded (46137344)
+1098.796 (0) The time we have been running (1098.7) is approaching the resumption interval (1122) - increasing resumption interval to 1129
+1098.875 (0) Googledrive chunked upload: 81 % uploaded (47185920)
+1107.341 (0) The time we have been running (1107.2) is approaching the resumption interval (1129) - increasing resumption interval to 1138
+1107.424 (0) Googledrive chunked upload: 82.8 % uploaded (48234496)
+1114.608 (0) The time we have been running (1114.5) is approaching the resumption interval (1138) - increasing resumption interval to 1145
+1114.684 (0) Googledrive chunked upload: 84.6 % uploaded (49283072)
+1121.888 (0) The time we have been running (1121.8) is approaching the resumption interval (1145) - increasing resumption interval to 1152
+1121.967 (0) Googledrive chunked upload: 86.4 % uploaded (50331648)
+1129.245 (0) The time we have been running (1129.1) is approaching the resumption interval (1152) - increasing resumption interval to 1160
+1129.323 (0) Googledrive chunked upload: 88.2 % uploaded (51380224)
+1136.476 (0) The time we have been running (1136.4) is approaching the resumption interval (1160) - increasing resumption interval to 1167
+1136.556 (0) Googledrive chunked upload: 90 % uploaded (52428800)
+1143.698 (0) The time we have been running (1143.6) is approaching the resumption interval (1167) - increasing resumption interval to 1174
+1143.776 (0) Googledrive chunked upload: 91.8 % uploaded (53477376)
+1150.951 (0) The time we have been running (1150.9) is approaching the resumption interval (1174) - increasing resumption interval to 1181
+1151.030 (0) Googledrive chunked upload: 93.6 % uploaded (54525952)
+1158.206 (0) The time we have been running (1158.1) is approaching the resumption interval (1181) - increasing resumption interval to 1189
+1158.285 (0) The scheduled resumption is within 45 seconds - will reschedule
+1158.345 (0) Rescheduling resumption 1: moving to 600 seconds from now (1525787869)
+1158.452 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 1189 + 45 = 1234
+1158.477 (0) Googledrive chunked upload: 95.4 % uploaded (55574528)
+1165.595 (0) Googledrive chunked upload: 97.2 % uploaded (56623104)
+1172.724 (0) Googledrive chunked upload: 99 % uploaded (57671680)
+1178.174 (0) Googledrive chunked upload: 100 % uploaded (57671680)
+1178.305 (0) OK: Archive backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip uploaded to Google Drive in 433.85 seconds
+1178.404 (0) Recording as successfully uploaded: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip (33cde2c7ecc8e7c352df858f65340c92)
+1178.545 (0) Deleting local file: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-uploads.zip: OK
+1179.075 (0) Google Drive quota usage: used=3409.7 MB, total=15360 MB, available=11950.3 MB
+1179.104 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-others.zip: Attempting to upload to Google Drive (into folder id: 1B0FWrgfAwtuV2HnanJFhdpbb1bB_0Mon)
+1185.343 (0) Googledrive chunked upload: 100 % uploaded
+1185.487 (0) OK: Archive backup_2018-05-08-1328_oWaf_33cc13d9c3f1-others.zip uploaded to Google Drive in 6.36 seconds
+1185.597 (0) Recording as successfully uploaded: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-others.zip (acc11911b2b585bea031dde8324209ac)
+1185.754 (0) Deleting local file: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-others.zip: OK
+1186.465 (0) Google Drive quota usage: used=3410.4 MB, total=15360 MB, available=11949.6 MB
+1186.493 (0) backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz: Attempting to upload to Google Drive (into folder id: 1B0FWrgfAwtuV2HnanJFhdpbb1bB_0Mon)
+1188.482 (0) Googledrive chunked upload: 100 % uploaded
+1188.615 (0) OK: Archive backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz uploaded to Google Drive in 2.08 seconds
+1188.716 (0) Recording as successfully uploaded: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz (c43343f0c5a2795336117a0da4e76eac)
+1188.855 (0) Deleting local file: backup_2018-05-08-1328_oWaf_33cc13d9c3f1-db.gz: OK
+1188.956 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+1189.011 (0) Number of backup sets in history: 3; groups (db): 1
+1189.038 (0) Examining (for databases) backup set with group_id=0, nonce=33cc13d9c3f1, datestamp=1525786111 (May 08 2018 13:28:31)
+1189.066 (0) This backup set is the backup set just made, so will not be deleted.
+1189.066 (0) Examining (for databases) backup set with group_id=0, nonce=13b81f3717cb, datestamp=1525785873 (May 08 2018 13:24:33)
+1189.066 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1189.091 (0) Examining (for databases) backup set with group_id=0, nonce=170aaf2a3b79, datestamp=1525016580 (Apr 29 2018 15:43:00)
+1189.091 (0) 1525016580: db: this set includes a database (backup_2018-04-29-1543_oWaf_170aaf2a3b79-db.gz); db count is now 2
+1189.091 (0) 1525016580: db: over retain limit (2); will delete this database
+1189.091 (0) Delete file: backup_2018-04-29-1543_oWaf_170aaf2a3b79-db.gz, service=googledrive
+1189.118 (0) Deleting local copy (backup_2018-04-29-1543_oWaf_170aaf2a3b79-db.gz)
+1189.654 (0) backup_2018-04-29-1543_oWaf_170aaf2a3b79-db.gz: Deletion failed: file was not found
+1189.739 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+1189.770 (0) Number of backup sets in history: 3; groups (files): 1
+1189.796 (0) Examining (for files) backup set with nonce=33cc13d9c3f1, datestamp=1525786111 (May 08 2018 13:28:31)
+1189.796 (0) This backup set is the backup set just made, so will not be deleted.
+1189.834 (0) This backup set is the backup set just made, so will not be deleted.
+1189.834 (0) This backup set is the backup set just made, so will not be deleted.
+1189.834 (0) This backup set is the backup set just made, so will not be deleted.
+1189.834 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1189.859 (0) Examining (for files) backup set with nonce=13b81f3717cb, datestamp=1525785873 (May 08 2018 13:24:33)
+1189.859 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1189.860 (0) Examining (for files) backup set with nonce=170aaf2a3b79, datestamp=1525016580 (Apr 29 2018 15:43:00)
+1189.860 (0) plugins: over retain limit (2); will delete this file entity
+1189.860 (0) themes: over retain limit (2); will delete this file entity
+1189.860 (0) uploads: over retain limit (2); will delete this file entity
+1189.860 (0) others: over retain limit (2); will delete this file entity
+1189.860 (0) Delete file: backup_2018-04-29-1543_oWaf_170aaf2a3b79-plugins.zip, service=googledrive
+1189.885 (0) Deleting local copy (backup_2018-04-29-1543_oWaf_170aaf2a3b79-plugins.zip)
+1189.910 (0) Delete file: backup_2018-04-29-1543_oWaf_170aaf2a3b79-themes.zip, service=googledrive
+1189.936 (0) Deleting local copy (backup_2018-04-29-1543_oWaf_170aaf2a3b79-themes.zip)
+1189.966 (0) Delete file: backup_2018-04-29-1543_oWaf_170aaf2a3b79-uploads.zip, service=googledrive
+1189.992 (0) Deleting local copy (backup_2018-04-29-1543_oWaf_170aaf2a3b79-uploads.zip)
+1190.019 (0) Delete file: backup_2018-04-29-1543_oWaf_170aaf2a3b79-others.zip, service=googledrive
+1190.045 (0) Deleting local copy (backup_2018-04-29-1543_oWaf_170aaf2a3b79-others.zip)
+1190.449 (0) backup_2018-04-29-1543_oWaf_170aaf2a3b79-plugins.zip: Deletion failed: file was not found
+1190.476 (0) backup_2018-04-29-1543_oWaf_170aaf2a3b79-themes.zip: Deletion failed: file was not found
+1190.503 (0) backup_2018-04-29-1543_oWaf_170aaf2a3b79-uploads.zip: Deletion failed: file was not found
+1190.528 (0) backup_2018-04-29-1543_oWaf_170aaf2a3b79-others.zip: Deletion failed: file was not found
+1190.610 (0) This backup set is now empty; will remove from history
+1190.635 (0) Deleting log file (log.170aaf2a3b79.txt)
+1190.660 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+1190.821 (0) Resume backup (33cc13d9c3f1, 0): finish run
+1190.913 (0) Decremented the semaphore (fd) by 1
+1190.966 (0) Semaphore (fd) unlocked
+1190.992 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+1191.117 (0) The backup apparently succeeded and is now complete
+1191.144 (0) Fetching RSS news feed
+1192.091 (0) Fetched RSS news feed; result is a: SimplePie
+1192.233 (0) Sending email ('Fichiers et base de données (Sauvegarde complète)') report (attachments: 0, size: 0 KB) to: labea...
+1192.345 (0) La sauvegarde a réussie. Elle est maintenant terminée.

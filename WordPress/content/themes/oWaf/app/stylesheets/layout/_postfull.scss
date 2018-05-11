@@ -1,0 +1,40 @@
+.postfull {
+  width: 50%;
+  background-color: white;
+  margin: auto;
+  padding: 1em;
+  margin-bottom: 1em;
+  margin-top: 7em;
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin: 1em 1em 1em 0;
+  }
+
+  p {
+    margin: 1em 0 1.5em 0;
+  }
+
+  a {
+        color: grey;
+    border: solid 1px grey;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    display: inline-flex;
+    margin-top: 0.51em;
+  }
+}
+
+.postfull {
+  &__content {
+    margin-bottom: 1em;
+  }
+}
+
+.post {
+    @media (max-width: 980px) {
+      width: 99%;
+    }
+}

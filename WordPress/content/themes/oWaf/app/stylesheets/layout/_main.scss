@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+    @media (max-width: 768px){
+      display: block;
+      justify-content: center;
+    }
+}
+
+.posts {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65%;
+    @media (max-width: 786px){
+      width: 100%;
+    }
+}

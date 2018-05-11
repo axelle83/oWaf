@@ -1,0 +1,417 @@
+0000.000 (0) Opened log file at time: Tue, 08 May 2018 13:24:33 +0000 on http://localhost/oWaf/WordPress/wp
+0000.024 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.14.7 WP: 4.9.5 PHP: 7.0.28-0ubuntu0.16.04.1 (apache2handler, Linux ingrid-labeaume 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64) MySQL: 5.7.22 WPLANG: fr_FR Server: Apache/2.4.18 (Ubuntu) safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 9.9M | 4M) multisite: N openssl: OpenSSL 1.0.2g  1 Mar 2016 mcrypt: N LANG: C ZipArchive::addFile: N
+0000.053 (0) Free space on disk containing Updraft's temporary directory: 9144.2 MB
+0000.142 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.205 (0) Semaphore (fd, wp_options) being initialised
+0000.331 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.430 (0) Set semaphore last lock (fd) time to 2018-05-08 13:24:34
+0000.455 (0) Semaphore lock (fd) complete
+0000.630 (0) Backup run: resumption=0, nonce=13b81f3717cb, begun at=1525785873 (1s ago), job type=backup
+0000.749 (0) Scheduling a resumption (1) after 300 seconds (1525786174) in case this run gets aborted
+0001.048 (0) Checking if we have a zip executable available
+0001.271 (0) Testing: /usr/bin/zip
+0001.312 (0) Output: zip warning: binziptest/test.zip not found or empty
+0001.338 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0001.372 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0001.400 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0001.426 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0001.457 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0001.483 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0001.508 (0) Working binary zip found: /usr/bin/zip
+0001.564 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0001.589 (0) Creation of backups of directories: beginning
+0001.674 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0001.793 (0) Total entities for the zip file: 383 directories, 2287 files (0 skipped as non-modified), 34 MB
+0001.826 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.858 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.890 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.916 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.944 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.969 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (17.9 MB, 2287 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0003.424 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: size is now: 5.40 MB
+0003.484 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 600 files added (on-disk size: 5544.6 KB)
+0003.512 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 700 files added (on-disk size: 5544.6 KB)
+0003.539 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 800 files added (on-disk size: 5544.6 KB)
+0003.565 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 900 files added (on-disk size: 5544.6 KB)
+0003.591 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1000 files added (on-disk size: 5544.6 KB)
+0003.616 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3 MB, 2287 files batched, 501 (1002) added so far); re-opening (prior size: 5544.6 KB)
+0004.152 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1100 files added (on-disk size: 6509.7 KB)
+0004.184 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1200 files added (on-disk size: 6509.7 KB)
+0004.214 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1300 files added (on-disk size: 6509.7 KB)
+0004.241 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1400 files added (on-disk size: 6509.7 KB)
+0004.267 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1500 files added (on-disk size: 6509.7 KB)
+0004.292 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 2287 files batched, 501 (1503) added so far); re-opening (prior size: 6509.7 KB)
+0004.726 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1600 files added (on-disk size: 7588.5 KB)
+0004.754 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1700 files added (on-disk size: 7588.5 KB)
+0004.787 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1800 files added (on-disk size: 7588.5 KB)
+0004.814 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 1900 files added (on-disk size: 7588.5 KB)
+0004.841 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 2000 files added (on-disk size: 7588.5 KB)
+0004.867 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.1 MB, 2287 files batched, 501 (2004) added so far); re-opening (prior size: 7588.5 KB)
+0005.574 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 2100 files added (on-disk size: 8878.2 KB)
+0005.608 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: 2200 files added (on-disk size: 8878.2 KB)
+0006.289 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip.tmp: size is now: 11.20 MB
+0006.574 (0) Created plugins zip (0) - 11450.6 KB in 4.9 s (2348.3 KB/s) (sha1: f8953424421f1cdab0859f1a1b3b61b82f47978a, sha256: 23908db2414a866672dd7d0e0ec7a956845bab8560ba99ab82ca47ed215c2c33)
+0006.633 (0) Beginning creation of dump of themes (split every: 400 MB)
+0007.857 (0) Total entities for the zip file: 1963 directories, 14212 files (363 skipped as non-modified), 133.6 MB
+0007.883 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (26.7 MB, 14212 files batched, 23 (23) added so far); re-opening (prior size: 0 KB)
+0008.501 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: size is now: 26.10 MB
+0008.559 (0) A useful amount of data was added after this amount of zip processing: 2.5 s (normalised: 2.4 s, rate: 10760.3 KB/s)
+0008.635 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.5370650291443, normalised_time=2.3791176769285, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=66111231)
+0008.708 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/weinre/weinre add_as=themes/oWaf/node_modules/.bin/weinre
+0008.709 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 100 files added (on-disk size: 26723.4 KB)
+0008.913 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 200 files added (on-disk size: 26723.4 KB)
+0008.940 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 300 files added (on-disk size: 26723.4 KB)
+0008.970 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 400 files added (on-disk size: 26723.4 KB)
+0008.999 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 500 files added (on-disk size: 26723.4 KB)
+0009.027 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.5 MB, 14212 files batched, 501 (524) added so far); re-opening (prior size: 26723.4 KB)
+0009.764 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 600 files added (on-disk size: 29563.3 KB)
+0009.804 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 700 files added (on-disk size: 29563.3 KB)
+0009.832 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 800 files added (on-disk size: 29563.3 KB)
+0009.857 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 900 files added (on-disk size: 29563.3 KB)
+0009.885 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1000 files added (on-disk size: 29563.3 KB)
+0009.911 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 14212 files batched, 501 (1025) added so far); re-opening (prior size: 29563.3 KB)
+0010.425 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1100 files added (on-disk size: 30393.1 KB)
+0010.452 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/acorn/bin/acorn add_as=themes/oWaf/node_modules/.bin/acorn
+0010.452 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1200 files added (on-disk size: 30393.1 KB)
+0010.476 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/json5/lib/cli.js add_as=themes/oWaf/node_modules/.bin/json5
+0010.478 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1300 files added (on-disk size: 30393.1 KB)
+0010.514 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1400 files added (on-disk size: 30393.1 KB)
+0010.541 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1500 files added (on-disk size: 30393.1 KB)
+0010.567 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2 MB, 14212 files batched, 501 (1526) added so far); re-opening (prior size: 30393.1 KB)
+0011.169 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-gyp/node_modules/semver/bin/semver add_as=themes/oWaf/node_modules/node-gyp/node_modules/.bin/semver
+0011.169 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-gyp/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/node-gyp/node_modules/.bin/mkdirp
+0011.169 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1600 files added (on-disk size: 31157.8 KB)
+0011.197 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-gyp/bin/node-gyp.js add_as=themes/oWaf/node_modules/.bin/node-gyp
+0011.197 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1700 files added (on-disk size: 31157.8 KB)
+0011.236 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/uuid/bin/uuid add_as=themes/oWaf/node_modules/.bin/uuid
+0011.236 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1800 files added (on-disk size: 31157.8 KB)
+0011.264 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/copycat-brunch/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/copycat-brunch/node_modules/.bin/mkdirp
+0011.264 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 1900 files added (on-disk size: 31157.8 KB)
+0011.290 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/image-size/bin/image-size.js add_as=themes/oWaf/node_modules/.bin/image-size
+0011.291 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2000 files added (on-disk size: 31157.8 KB)
+0011.317 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.5 MB, 14212 files batched, 501 (2027) added so far); re-opening (prior size: 31157.8 KB)
+0011.886 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2100 files added (on-disk size: 32024.3 KB)
+0011.915 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2200 files added (on-disk size: 32024.3 KB)
+0011.942 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2300 files added (on-disk size: 32024.3 KB)
+0011.969 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2400 files added (on-disk size: 32024.3 KB)
+0011.997 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2500 files added (on-disk size: 32024.3 KB)
+0012.023 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 MB, 14212 files batched, 501 (2528) added so far); re-opening (prior size: 32024.3 KB)
+0012.539 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2600 files added (on-disk size: 32476.2 KB)
+0012.567 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2700 files added (on-disk size: 32476.2 KB)
+0012.595 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2800 files added (on-disk size: 32476.2 KB)
+0012.621 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 2900 files added (on-disk size: 32476.2 KB)
+0012.647 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3000 files added (on-disk size: 32476.2 KB)
+0012.673 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.2 MB, 14212 files batched, 501 (3029) added so far); re-opening (prior size: 32476.2 KB)
+0013.099 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-sass/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/node-sass/node_modules/.bin/mkdirp
+0013.099 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3100 files added (on-disk size: 32698.1 KB)
+0013.125 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/node-sass/node_modules/har-validator/bin/har-validator add_as=themes/oWaf/node_modules/node-sass/node_modules/.bin/har-validator
+0013.126 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3200 files added (on-disk size: 32698.1 KB)
+0013.151 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/in-install.js add_as=themes/oWaf/node_modules/.bin/in-install
+0013.151 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/not-in-install.js add_as=themes/oWaf/node_modules/.bin/not-in-install
+0013.151 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/in-publish.js add_as=themes/oWaf/node_modules/.bin/in-publish
+0013.151 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/in-publish/not-in-publish.js add_as=themes/oWaf/node_modules/.bin/not-in-publish
+0013.152 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/semver/bin/semver add_as=themes/oWaf/node_modules/.bin/semver
+0013.152 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/miller-rabin/bin/miller-rabin add_as=themes/oWaf/node_modules/.bin/miller-rabin
+0013.154 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3300 files added (on-disk size: 32698.1 KB)
+0013.180 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3400 files added (on-disk size: 32698.1 KB)
+0013.207 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3500 files added (on-disk size: 32698.1 KB)
+0013.232 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.4 MB, 14212 files batched, 501 (3530) added so far); re-opening (prior size: 32698.1 KB)
+0014.080 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3600 files added (on-disk size: 34918.1 KB)
+0014.108 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3700 files added (on-disk size: 34918.1 KB)
+0014.138 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3800 files added (on-disk size: 34918.1 KB)
+0014.165 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 3900 files added (on-disk size: 34918.1 KB)
+0014.194 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4000 files added (on-disk size: 34918.1 KB)
+0014.221 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.5 MB, 14212 files batched, 501 (4031) added so far); re-opening (prior size: 34918.1 KB)
+0014.806 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4100 files added (on-disk size: 35919 KB)
+0014.833 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4200 files added (on-disk size: 35919 KB)
+0014.858 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4300 files added (on-disk size: 35919 KB)
+0014.884 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4400 files added (on-disk size: 35919 KB)
+0014.910 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4500 files added (on-disk size: 35919 KB)
+0014.937 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 MB, 14212 files batched, 501 (4532) added so far); re-opening (prior size: 35919 KB)
+0015.556 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4600 files added (on-disk size: 36341.3 KB)
+0015.584 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4700 files added (on-disk size: 36341.3 KB)
+0015.610 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4800 files added (on-disk size: 36341.3 KB)
+0015.637 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 4900 files added (on-disk size: 36341.3 KB)
+0015.663 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5000 files added (on-disk size: 36341.3 KB)
+0015.688 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/less/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/less/node_modules/.bin/mkdirp
+0015.688 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 14212 files batched, 501 (5033) added so far); re-opening (prior size: 36341.3 KB)
+0016.164 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/less/node_modules/mime/cli.js add_as=themes/oWaf/node_modules/less/node_modules/.bin/mime
+0016.164 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/less/bin/lessc add_as=themes/oWaf/node_modules/.bin/lessc
+0016.165 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5100 files added (on-disk size: 36681.4 KB)
+0016.192 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5200 files added (on-disk size: 36681.4 KB)
+0016.219 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5300 files added (on-disk size: 36681.4 KB)
+0016.245 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5400 files added (on-disk size: 36681.4 KB)
+0016.271 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/strip-indent/cli.js add_as=themes/oWaf/node_modules/.bin/strip-indent
+0016.271 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5500 files added (on-disk size: 36681.4 KB)
+0016.302 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.2 MB, 14212 files batched, 501 (5534) added so far); re-opening (prior size: 36681.4 KB)
+0017.075 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5600 files added (on-disk size: 37838.7 KB)
+0017.105 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/csswring/bin/csswring.js add_as=themes/oWaf/node_modules/.bin/csswring
+0017.105 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5700 files added (on-disk size: 37838.7 KB)
+0017.131 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/postcss-url/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/postcss-url/node_modules/.bin/mkdirp
+0017.131 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5800 files added (on-disk size: 37838.7 KB)
+0017.160 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/postcss-url/node_modules/mime/cli.js add_as=themes/oWaf/node_modules/postcss-url/node_modules/.bin/mime
+0017.160 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 5900 files added (on-disk size: 37838.7 KB)
+0017.192 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6000 files added (on-disk size: 37838.7 KB)
+0017.220 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7 MB, 14212 files batched, 501 (6035) added so far); re-opening (prior size: 37838.7 KB)
+0018.104 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/uglify-js/bin/uglifyjs add_as=themes/oWaf/node_modules/.bin/uglifyjs
+0018.104 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/browserslist/cli.js add_as=themes/oWaf/node_modules/.bin/browserslist
+0018.104 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6100 files added (on-disk size: 40931 KB)
+0018.131 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6200 files added (on-disk size: 40931 KB)
+0018.159 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6300 files added (on-disk size: 40931 KB)
+0018.193 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6400 files added (on-disk size: 40931 KB)
+0018.219 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6500 files added (on-disk size: 40931 KB)
+0018.249 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 MB, 14212 files batched, 501 (6536) added so far); re-opening (prior size: 40931 KB)
+0018.773 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6600 files added (on-disk size: 41434 KB)
+0018.801 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6700 files added (on-disk size: 41434 KB)
+0018.826 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6800 files added (on-disk size: 41434 KB)
+0018.855 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 6900 files added (on-disk size: 41434 KB)
+0018.883 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7000 files added (on-disk size: 41434 KB)
+0018.908 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.7 MB, 14212 files batched, 501 (7037) added so far); re-opening (prior size: 41434 KB)
+0019.381 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7100 files added (on-disk size: 41755.9 KB)
+0019.410 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7200 files added (on-disk size: 41755.9 KB)
+0019.436 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7300 files added (on-disk size: 41755.9 KB)
+0019.463 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7400 files added (on-disk size: 41755.9 KB)
+0019.490 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sass-brunch/node_modules/node-sass/bin/node-sass add_as=themes/oWaf/node_modules/sass-brunch/node_modules/.bin/node-sass
+0019.490 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sass-brunch/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/sass-brunch/node_modules/.bin/mkdirp
+0019.491 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7500 files added (on-disk size: 41755.9 KB)
+0019.519 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5 MB, 14212 files batched, 501 (7538) added so far); re-opening (prior size: 41755.9 KB)
+0020.408 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/check-dependencies/bin/cli.js add_as=themes/oWaf/node_modules/.bin/check-dependencies
+0020.408 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7600 files added (on-disk size: 43433.1 KB)
+0020.438 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7700 files added (on-disk size: 43433.1 KB)
+0020.463 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/errno/cli.js add_as=themes/oWaf/node_modules/.bin/errno
+0020.464 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7800 files added (on-disk size: 43433.1 KB)
+0020.491 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/localtunnel/bin/client add_as=themes/oWaf/node_modules/.bin/lt
+0020.491 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/which/bin/which add_as=themes/oWaf/node_modules/.bin/which
+0020.492 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/ncp/bin/ncp add_as=themes/oWaf/node_modules/.bin/ncp
+0020.493 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 7900 files added (on-disk size: 43433.1 KB)
+0020.518 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/brunch/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/brunch/node_modules/.bin/mkdirp
+0020.518 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/brunch/bin/brunch add_as=themes/oWaf/node_modules/.bin/brunch
+0020.519 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8000 files added (on-disk size: 43433.1 KB)
+0020.546 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.7 MB, 14212 files batched, 501 (8039) added so far); re-opening (prior size: 43433.1 KB)
+0021.170 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8100 files added (on-disk size: 44348.8 KB)
+0021.213 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/nopt/bin/nopt.js add_as=themes/oWaf/node_modules/.bin/nopt
+0021.214 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8200 files added (on-disk size: 44348.8 KB)
+0021.243 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8300 files added (on-disk size: 44348.8 KB)
+0021.272 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8400 files added (on-disk size: 44348.8 KB)
+0021.299 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8500 files added (on-disk size: 44348.8 KB)
+0021.326 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.4 MB, 14212 files batched, 501 (8540) added so far); re-opening (prior size: 44348.8 KB)
+0022.214 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8600 files added (on-disk size: 45772.8 KB)
+0022.240 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8700 files added (on-disk size: 45772.8 KB)
+0022.267 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8800 files added (on-disk size: 45772.8 KB)
+0022.302 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 8900 files added (on-disk size: 45772.8 KB)
+0022.329 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9000 files added (on-disk size: 45772.8 KB)
+0022.356 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.5 MB, 14212 files batched, 501 (9041) added so far); re-opening (prior size: 45772.8 KB)
+0023.145 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9100 files added (on-disk size: 46754.7 KB)
+0023.172 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9200 files added (on-disk size: 46754.7 KB)
+0023.198 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/regjsparser/bin/parser add_as=themes/oWaf/node_modules/.bin/regjsparser
+0023.199 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9300 files added (on-disk size: 46754.7 KB)
+0023.226 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9400 files added (on-disk size: 46754.7 KB)
+0023.280 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9500 files added (on-disk size: 46754.7 KB)
+0023.306 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 14212 files batched, 501 (9542) added so far); re-opening (prior size: 46754.7 KB)
+0024.041 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/autoprefixer/node_modules/browserslist/cli.js add_as=themes/oWaf/node_modules/autoprefixer/node_modules/.bin/browserslist
+0024.042 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/dev-ip/lib/dev-ip.js add_as=themes/oWaf/node_modules/.bin/dev-ip
+0024.042 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9600 files added (on-disk size: 47503 KB)
+0024.069 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9700 files added (on-disk size: 47503 KB)
+0024.098 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9800 files added (on-disk size: 47503 KB)
+0024.146 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 9900 files added (on-disk size: 47503 KB)
+0024.173 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10000 files added (on-disk size: 47503 KB)
+0024.203 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 MB, 14212 files batched, 501 (10043) added so far); re-opening (prior size: 47503 KB)
+0024.871 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10100 files added (on-disk size: 47926.6 KB)
+0024.899 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10200 files added (on-disk size: 47926.6 KB)
+0024.938 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10300 files added (on-disk size: 47926.6 KB)
+0024.976 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10400 files added (on-disk size: 47926.6 KB)
+0025.003 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10500 files added (on-disk size: 47926.6 KB)
+0025.031 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.7 MB, 14212 files batched, 501 (10544) added so far); re-opening (prior size: 47926.6 KB)
+0025.654 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10600 files added (on-disk size: 48236.9 KB)
+0025.685 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10700 files added (on-disk size: 48236.9 KB)
+0025.913 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sass-graph/bin/sassgraph add_as=themes/oWaf/node_modules/.bin/sassgraph
+0025.914 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10800 files added (on-disk size: 48236.9 KB)
+0025.948 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 10900 files added (on-disk size: 48236.9 KB)
+0025.980 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/quickly-copy-file/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/quickly-copy-file/node_modules/.bin/mkdirp
+0025.981 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11000 files added (on-disk size: 48236.9 KB)
+0026.012 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.8 MB, 14212 files batched, 501 (11045) added so far); re-opening (prior size: 48236.9 KB)
+0026.811 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11100 files added (on-disk size: 49248.6 KB)
+0026.838 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/jsesc/bin/jsesc add_as=themes/oWaf/node_modules/.bin/jsesc
+0026.838 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/coffee-script/bin/cake add_as=themes/oWaf/node_modules/.bin/cake
+0026.838 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/coffee-script/bin/coffee add_as=themes/oWaf/node_modules/.bin/coffee
+0026.838 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/css-mqpacker/bin/mqpacker add_as=themes/oWaf/node_modules/.bin/mqpacker
+0026.838 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11200 files added (on-disk size: 49248.6 KB)
+0026.868 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11300 files added (on-disk size: 49248.6 KB)
+0026.895 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11400 files added (on-disk size: 49248.6 KB)
+0026.926 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11500 files added (on-disk size: 49248.6 KB)
+0026.968 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.5 MB, 14212 files batched, 501 (11546) added so far); re-opening (prior size: 49248.6 KB)
+0028.013 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11600 files added (on-disk size: 51114.8 KB)
+0028.080 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/fstream/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/fstream/node_modules/.bin/mkdirp
+0028.080 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/send/node_modules/mime/cli.js add_as=themes/oWaf/node_modules/send/node_modules/.bin/mime
+0028.081 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11700 files added (on-disk size: 51114.8 KB)
+0028.183 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11800 files added (on-disk size: 51114.8 KB)
+0028.237 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 11900 files added (on-disk size: 51114.8 KB)
+0028.266 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sshpk/bin/sshpk-conv add_as=themes/oWaf/node_modules/.bin/sshpk-conv
+0028.266 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sshpk/bin/sshpk-sign add_as=themes/oWaf/node_modules/.bin/sshpk-sign
+0028.266 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/sshpk/bin/sshpk-verify add_as=themes/oWaf/node_modules/.bin/sshpk-verify
+0028.267 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12000 files added (on-disk size: 51114.8 KB)
+0028.292 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/pushserve/pushserve add_as=themes/oWaf/node_modules/.bin/pushserve
+0028.292 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.5 MB, 14212 files batched, 501 (12047) added so far); re-opening (prior size: 51114.8 KB)
+0029.289 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12100 files added (on-disk size: 52308.1 KB)
+0029.316 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/rimraf/bin.js add_as=themes/oWaf/node_modules/.bin/rimraf
+0029.317 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12200 files added (on-disk size: 52308.1 KB)
+0029.342 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12300 files added (on-disk size: 52308.1 KB)
+0029.373 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12400 files added (on-disk size: 52308.1 KB)
+0029.399 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/init-skeleton/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/init-skeleton/node_modules/.bin/mkdirp
+0029.400 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12500 files added (on-disk size: 52308.1 KB)
+0029.425 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.6 MB, 14212 files batched, 501 (12548) added so far); re-opening (prior size: 52308.1 KB)
+0030.299 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12600 files added (on-disk size: 53510 KB)
+0030.327 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12700 files added (on-disk size: 53510 KB)
+0030.357 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12800 files added (on-disk size: 53510 KB)
+0030.384 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 12900 files added (on-disk size: 53510 KB)
+0030.413 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13000 files added (on-disk size: 53510 KB)
+0030.499 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 14212 files batched, 501 (13049) added so far); re-opening (prior size: 53510 KB)
+0031.110 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13100 files added (on-disk size: 53780 KB)
+0031.135 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13200 files added (on-disk size: 53780 KB)
+0031.161 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13300 files added (on-disk size: 53780 KB)
+0031.190 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13400 files added (on-disk size: 53780 KB)
+0031.217 (0) File skipped due to unexpected name mismatch (locale: C): file=/var/www/html/oWaf/WordPress/content/themes/oWaf/node_modules/stylus/node_modules/mkdirp/bin/cmd.js add_as=themes/oWaf/node_modules/stylus/node_modules/.bin/mkdirp
+0031.218 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13500 files added (on-disk size: 53780 KB)
+0031.249 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.7 MB, 14212 files batched, 501 (13550) added so far); re-opening (prior size: 53780 KB)
+0032.172 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13600 files added (on-disk size: 54719.1 KB)
+0032.200 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13700 files added (on-disk size: 54719.1 KB)
+0032.226 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13800 files added (on-disk size: 54719.1 KB)
+0032.253 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 13900 files added (on-disk size: 54719.1 KB)
+0032.278 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 14000 files added (on-disk size: 54719.1 KB)
+0032.304 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.7 MB, 14212 files batched, 501 (14051) added so far); re-opening (prior size: 54719.1 KB)
+0033.167 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 14100 files added (on-disk size: 55367.5 KB)
+0033.199 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: 14200 files added (on-disk size: 55367.5 KB)
+0033.932 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip.tmp: size is now: 80.40 MB
+0034.911 (0) Created themes zip (0) - 82316.6 KB in 28.3 s (2913.4 KB/s) (sha1: d410f13d64b3b6c01fce75728e5367202e6a1d55, sha256: d353cff8f995d37cc6ad87e4861022ae69e39d04ac643de692c096831d095d41)
+0035.053 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0035.123 (0) Looking for candidates to back up in: /var/www/html/oWaf/WordPress/content/uploads
+0035.156 (0) finding files: 2018: adding to list (1)
+0035.182 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0035.256 (0) Total entities for the zip file: 3 directories, 170 files (0 skipped as non-modified), 55.5 MB
+0035.282 (0) Zip: backup_2018-05-08-1324_oWaf_13b81f3717cb-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0036.590 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-uploads.zip.tmp: size is now: 55.50 MB
+0037.312 (0) Created uploads zip (0) - 56879.9 KB in 2.1 s (27028.6 KB/s) (sha1: 2765216b6f6f9a0ff9bb79e84ef63d11dee3619f, sha256: a3d2ab71748dba684afc83ed07c0abe77a58288790f7494fa20d27ed1dd4006d)
+0037.383 (0) Beginning backup of other directories found in the content directory (index: 0)
+0037.432 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0037.458 (0) Looking for candidates to back up in: /var/www/html/oWaf/WordPress/content
+0037.485 (0) finding files: upgrade: skipping: excluded by options
+0037.510 (0) finding files: updraft: skipping: this is the updraft directory
+0037.535 (0) finding files: plugins: skipping: this is the plugins directory
+0037.564 (0) finding files: themes: skipping: this is the themes directory
+0037.588 (0) finding files: languages: adding to list (1)
+0037.615 (0) finding files: uploads: skipping: this is the uploads directory
+0037.687 (0) Total entities for the zip file: 3 directories, 20 files (0 skipped as non-modified), 2.5 MB
+0038.026 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-others.zip.tmp: size is now: 0.70 MB
+0038.206 (0) Created others zip (0) - 717.8 KB in 0.6 s (1281.7 KB/s) (sha1: 8cfe3bc955ec2afbdab639e51e1f0606dc108a4c, sha256: ef74c79d681758c7163981700477fd088cc33cd53ecccaf21512bfc236c30c10)
+0038.480 (0) Saving backup status to database (elements: 8)
+0038.611 (0) Beginning creation of database dump (WordPress DB)
+0038.705 (0) Testing: /usr/bin/mysqldump
+0039.422 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1218 bytes total)
+0039.568 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0039.768 (0) Table wp_options: Total expected rows (approximate): 185
+0040.029 (0) Table wp_options: Total rows added: 181 in 0.19 seconds
+0040.064 (0) Table wp_options: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_options.table.gz - 9.5 KB)
+0040.199 (0) Table wp_users: Total expected rows (approximate): 0
+0040.308 (0) Table wp_users: Total rows added: 1 in 0.08 seconds
+0040.332 (0) Table wp_users: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_users.table.gz - 0.6 KB)
+0040.496 (0) Table wp_usermeta: Total expected rows (approximate): 33
+0040.615 (0) Table wp_usermeta: Total rows added: 33 in 0.09 seconds
+0040.641 (0) Table wp_usermeta: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_usermeta.table.gz - 1.5 KB)
+0040.774 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0040.879 (0) Table wp_commentmeta: Total rows added: 0 in 0.07 seconds
+0040.905 (0) Table wp_commentmeta: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0041.313 (0) Table wp_comments: Total expected rows (approximate): 0
+0041.429 (0) Table wp_comments: Total rows added: 1 in 0.09 seconds
+0041.455 (0) Table wp_comments: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_comments.table.gz - 0.7 KB)
+0041.600 (0) Table wp_links: Total expected rows (approximate): 0
+0041.694 (0) Table wp_links: Total rows added: 0 in 0.07 seconds
+0041.721 (0) Table wp_links: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_links.table.gz - 0.4 KB)
+0041.880 (0) Table wp_postmeta: Total expected rows (approximate): 476
+0042.070 (0) Table wp_postmeta: Total rows added: 476 in 0.16 seconds
+0042.095 (0) Table wp_postmeta: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_postmeta.table.gz - 7 KB)
+0042.226 (0) Table wp_posts: Total expected rows (approximate): 166
+0042.783 (0) Table wp_posts: Total rows added: 166 in 0.53 seconds
+0042.810 (0) Table wp_posts: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_posts.table.gz - 15.1 KB)
+0042.959 (0) Table wp_term_relationships: Total expected rows (approximate): 16
+0043.106 (0) Table wp_term_relationships: Total rows added: 16 in 0.10 seconds
+0043.133 (0) Table wp_term_relationships: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0043.263 (0) Table wp_term_taxonomy: Total expected rows (approximate): 10
+0043.416 (0) Table wp_term_taxonomy: Total rows added: 10 in 0.10 seconds
+0043.442 (0) Table wp_term_taxonomy: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_term_taxonomy.table.gz - 0.5 KB)
+0043.569 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0043.660 (0) Table wp_termmeta: Total rows added: 0 in 0.07 seconds
+0043.688 (0) Table wp_termmeta: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_termmeta.table.gz - 0.4 KB)
+0043.833 (0) Table wp_terms: Total expected rows (approximate): 9
+0044.208 (0) Table wp_terms: Total rows added: 9 in 0.35 seconds
+0044.263 (0) Table wp_terms: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_terms.table.gz - 0.5 KB)
+0044.395 (0) Table wp_novomap_gmap: Total expected rows (approximate): 0
+0044.494 (0) Table wp_novomap_gmap: Total rows added: 0 in 0.07 seconds
+0044.533 (0) Table wp_novomap_gmap: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_novomap_gmap.table.gz - 0.6 KB)
+0044.669 (0) Table wp_novomap_marker: Total expected rows (approximate): 0
+0044.777 (0) Table wp_novomap_marker: Total rows added: 0 in 0.08 seconds
+0044.801 (0) Table wp_novomap_marker: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_novomap_marker.table.gz - 0.4 KB)
+0044.946 (0) Table wp_novomap_marker_logo: Total expected rows (approximate): 9
+0045.080 (0) Table wp_novomap_marker_logo: Total rows added: 9 in 0.11 seconds
+0045.105 (0) Table wp_novomap_marker_logo: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_novomap_marker_logo.table.gz - 0.6 KB)
+0045.241 (0) Table wp_wpuf_subscribers: Total expected rows (approximate): 0
+0045.342 (0) Table wp_wpuf_subscribers: Total rows added: 0 in 0.07 seconds
+0045.367 (0) Table wp_wpuf_subscribers: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_wpuf_subscribers.table.gz - 0.4 KB)
+0045.507 (0) Table wp_wpuf_transaction: Total expected rows (approximate): 0
+0045.605 (0) Table wp_wpuf_transaction: Total rows added: 0 in 0.07 seconds
+0045.630 (0) Table wp_wpuf_transaction: finishing file (backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_wpuf_transaction.table.gz - 0.5 KB)
+0045.743 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_options.table.gz (1/17): adding to final database dump
+0045.776 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_users.table.gz (2/17): adding to final database dump
+0045.801 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_usermeta.table.gz (3/17): adding to final database dump
+0045.827 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_commentmeta.table.gz (4/17): adding to final database dump
+0045.855 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_comments.table.gz (5/17): adding to final database dump
+0045.880 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_links.table.gz (6/17): adding to final database dump
+0045.904 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_postmeta.table.gz (7/17): adding to final database dump
+0045.932 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_posts.table.gz (8/17): adding to final database dump
+0045.973 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_term_relationships.table.gz (9/17): adding to final database dump
+0045.998 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_term_taxonomy.table.gz (10/17): adding to final database dump
+0046.028 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_termmeta.table.gz (11/17): adding to final database dump
+0046.066 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_terms.table.gz (12/17): adding to final database dump
+0046.092 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_novomap_gmap.table.gz (13/17): adding to final database dump
+0046.118 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_novomap_marker.table.gz (14/17): adding to final database dump
+0046.150 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_novomap_marker_logo.table.gz (15/17): adding to final database dump
+0046.176 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_wpuf_subscribers.table.gz (16/17): adding to final database dump
+0046.203 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db-table-wp_wpuf_transaction.table.gz (17/17): adding to final database dump
+0046.228 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db.gz: finished writing out complete database file (24 KB)
+0046.388 (0) Total database tables backed up: 17 (backup_2018-05-08-1324_oWaf_13b81f3717cb-db.gz, size: 36217, sha256)
+0046.666 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0046.689 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0046.717 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0046.745 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-others.zip: others: This file has not yet been successfully uploaded: will queue
+0046.772 (0) backup_2018-05-08-1324_oWaf_13b81f3717cb-db.gz: db: This file has not yet been successfully uploaded: will queue
+0046.797 (0) Saving backup history. Total backup size: 147.9 MB
+0046.903 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0047.021 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0047.044 (0) No remote despatch: user chose no remote backup service
+0047.132 (0) Recording as successfully uploaded: backup_2018-05-08-1324_oWaf_13b81f3717cb-plugins.zip (23b7646e170882eb9d4394cc634e5a51)
+0047.364 (0) Recording as successfully uploaded: backup_2018-05-08-1324_oWaf_13b81f3717cb-themes.zip (39779682d9c11427afce787f166c251a)
+0047.570 (0) Recording as successfully uploaded: backup_2018-05-08-1324_oWaf_13b81f3717cb-uploads.zip (a93b0a10fdb9570ab976fd88f12a62bf)
+0047.797 (0) Recording as successfully uploaded: backup_2018-05-08-1324_oWaf_13b81f3717cb-others.zip (ed5e8f11cb476f0965d9896fdb6a114b)
+0048.044 (0) Recording as successfully uploaded: backup_2018-05-08-1324_oWaf_13b81f3717cb-db.gz (11cd16d170b574bea333ef40cf2920c2)
+0048.353 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0048.401 (0) Number of backup sets in history: 2; groups (db): 1
+0048.426 (0) Examining (for databases) backup set with group_id=0, nonce=13b81f3717cb, datestamp=1525785873 (May 08 2018 13:24:33)
+0048.452 (0) This backup set is the backup set just made, so will not be deleted.
+0048.452 (0) Examining (for databases) backup set with group_id=0, nonce=170aaf2a3b79, datestamp=1525016580 (Apr 29 2018 15:43:00)
+0048.452 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0048.477 (0) Number of backup sets in history: 2; groups (files): 1
+0048.508 (0) Examining (for files) backup set with nonce=13b81f3717cb, datestamp=1525785873 (May 08 2018 13:24:33)
+0048.508 (0) This backup set is the backup set just made, so will not be deleted.
+0048.533 (0) This backup set is the backup set just made, so will not be deleted.
+0048.533 (0) This backup set is the backup set just made, so will not be deleted.
+0048.533 (0) This backup set is the backup set just made, so will not be deleted.
+0048.533 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0048.557 (0) Examining (for files) backup set with nonce=170aaf2a3b79, datestamp=1525016580 (Apr 29 2018 15:43:00)
+0048.557 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0048.558 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0048.656 (0) Resume backup (13b81f3717cb, 0): finish run
+0048.767 (0) Decremented the semaphore (fd) by 1
+0048.816 (0) Semaphore (fd) unlocked
+0048.839 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0048.946 (0) The backup apparently succeeded and is now complete
+0048.991 (0) No email will/can be sent - the user has not configured an email address.
+0049.017 (0) La sauvegarde a réussie. Elle est maintenant terminée.
