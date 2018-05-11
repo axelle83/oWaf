@@ -105,7 +105,9 @@ function owaf_rest_api_dog_img($dog, $dog_img, $request) {
 
 
 
-// rajout des 3 champs qui sont joins dans la table $user
+// rajout des 3 champs qui sont joins dans la table $user à voir si faut les rentrer dans acf
+
+add_action( 'rest_api_init', 'dog_id_add_user_data' );
 
 add_action( 'rest_api_init', 'dog_id_add_user_data' );
 
@@ -125,6 +127,7 @@ function rest_get_user_field( $user, $dog_id, $request ) {
     return get_user_meta( $user[ 'id' ], $dog_id, true );
 }
 
+add_action( 'rest_api_init', 'adress_add_user_data' );
 
 
 add_action( 'rest_api_init', 'adress_add_user_data' );
@@ -144,6 +147,7 @@ function rest_get_user_field( $user, $ville, $request ) {
     return get_user_meta( $user[ 'id' ], $ville, true );
 }
 
+add_action( 'rest_api_init', 'mail_add_user_data' );
 
 add_action( 'rest_api_init', 'mail_add_user_data' );
 
