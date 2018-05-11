@@ -12,7 +12,6 @@ import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/containers/Profile';
 import MapPage from 'src/components/MapPage';
-// import Login from 'src/containers/Login';
 import Disconnect from 'src/containers/Disconnect';
 
 /*
@@ -70,7 +69,7 @@ const routes = {
       Accueil: {
         path: '/',
       },
-      Profile: {
+      'Mon profil': {
         path: '/profile',
       },
     },
@@ -124,7 +123,7 @@ const routes = {
       Accueil: {
         path: '/',
       },
-      Profil: {
+      'Mon profil': {
         path: '/profile',
       },
       Blog: {
