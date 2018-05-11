@@ -6,6 +6,7 @@
    Author: oWaf
    */
 
+add_action( 'rest_api_init', 'owaf_register_rest_fields' );
 
 function owaf_register_rest_fields() {
 
@@ -18,6 +19,11 @@ function owaf_register_rest_fields() {
       'schema'  => null
     ]
   );
+function owaf_rest_api_adresse($lieu, $adresse, $request) {
+
+    return get_post_meta($lieu['id'], 'adresse', true);
+}
+
 
   register_rest_field(
     'lieu',
@@ -28,6 +34,10 @@ function owaf_register_rest_fields() {
       'schema' => null
     ]
   );
+  function owaf_rest_api_details($lieu, $details, $request) {
+
+      return get_post_meta($lieu['id'], 'details', true);
+  }
 
   register_rest_field(
     'lieu',
@@ -39,6 +49,11 @@ function owaf_register_rest_fields() {
     ]
   );
 
+  function owaf_rest_api_commentaire($lieu, $commentaire, $request) {
+
+      return get_post_meta($lieu['id'], 'commentaire', true);
+  }
+
   register_rest_field(
     'dog',
     'genre',
@@ -48,6 +63,12 @@ function owaf_register_rest_fields() {
       'schema' => null
     ]
   );
+
+
+  function owaf_rest_api_genre($dog, $genre, $request) {
+
+      return get_post_meta($dog['id'], 'genre', true);
+  }
 
   register_rest_field(
     'dog',
@@ -59,9 +80,15 @@ function owaf_register_rest_fields() {
     ]
   );
 
+
+  function owaf_rest_api_naiss($dog, $naiss, $request) {
+
+      return get_post_meta($dog['id'], 'naiss', true);
+  }
+
   register_rest_field(
     'dog',
-    'photo_du_chien',
+    'dog_img',
     [
       'get_callback' => 'owaf_rest_api_dog_img',
       'update_callback' => null,
@@ -71,79 +98,70 @@ function owaf_register_rest_fields() {
 
 }
 
-function owaf_rest_api_adresse($lieu, $field_name, $request) {
-
-    return get_post_meta($lieu['id'], 'adresse', true);
-}
-
-function owaf_rest_api_details($lieu, $field_name, $request) {
-
-    return get_post_meta($lieu['id'], 'details', true);
-}
-
-function owaf_rest_api_commentaire($lieu, $field_name, $request) {
-
-    return get_post_meta($lieu['id'], 'commentaire', true);
-}
-
-function owaf_rest_api_genre($dog, $field_name, $request) {
-
-    return get_post_meta($dog['id'], 'genre', true);
-}
-
-function owaf_rest_api_naiss($dog, $field_name, $request) {
-
-    return get_post_meta($dog['id'], 'naiss', true);
-}
-
-function owaf_rest_api_dog_img($dog, $field_name, $request) {
+function owaf_rest_api_dog_img($dog, $dog_img, $request) {
 
     return get_post_meta($dog['id'], 'dog_img', true);
 }
 
 
-add_action( 'rest_api_init', 'owaf_register_rest_fields' );
-
 
 // rajout des 3 champs qui sont joins dans la table $user
 
-function dog_id_add_user_data() {
-register_rest_field( 'user','dog_id',
-    array(
-        'get_callback'  => 'rest_get_user_field',
-        'update_callback'   => null,
-        'schema'            => null,
-     )
-);
-}
 add_action( 'rest_api_init', 'dog_id_add_user_data' );
 
+function dog_id_add_user_data() {
 
-function adress_add_user_data() {
-register_rest_field( 'user','ville',
-    array(
+register_rest_field(
+  'user',
+  'dog_id',
+    [
         'get_callback'  => 'rest_get_user_field',
         'update_callback'   => null,
         'schema'            => null,
-     )
+     ]
 );
 }
+function rest_get_user_field( $user, $dog_id, $request ) {
+    return get_user_meta( $user[ 'id' ], $dog_id, true );
+}
+
+
+
 add_action( 'rest_api_init', 'adress_add_user_data' );
 
-
-function mail_add_user_data() {
-register_rest_field( 'user','mail',
-    array(
+function adress_add_user_data() {
+register_rest_field(
+  'user',
+  'ville',
+    [
         'get_callback'  => 'rest_get_user_field',
         'update_callback'   => null,
         'schema'            => null,
-     )
+     ]
 );
 }
+function rest_get_user_field( $user, $ville, $request ) {
+    return get_user_meta( $user[ 'id' ], $ville, true );
+}
+
+
 add_action( 'rest_api_init', 'mail_add_user_data' );
 
-function rest_get_user_field( $user, $field_name, $request ) {
-    return get_user_meta( $user[ 'id' ], $field_name, true );
+function mail_add_user_data() {
+register_rest_field(
+  'user',
+  'mail',
+    [
+        'get_callback'  => 'rest_get_user_field',
+        'update_callback'   => null,
+        'schema'            => null,
+     ]
+);
+}
+
+
+function rest_get_user_field( $user, $mail, $request ) {
+    return get_user_meta( $user[ 'id' ], $mail, true );
 }
 
 
