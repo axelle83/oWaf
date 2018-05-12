@@ -28,6 +28,7 @@ const initialState = {
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    // change view from login to pasword
     case CHANGE_VIEW:
       return {
         ...state,
@@ -35,46 +36,55 @@ const reducer = (state = initialState, action = {}) => {
         userError: false,
       };
 
+    // change of an input
+    case LOGIN_CHANGE:
+      return {
+        ...state,
+        [action.name]: action.value,
+        userError: false,
+      };
+
+    // login form submit
     case LOGIN_SUBMIT:
       return {
         ...state,
       };
 
+    // connection after login submit
     case CONNECT:
       return {
         ...state,
         logged: true,
       };
 
-    case DISCONNECT:
-      return {
-        ...state,
-        looged: false,
-      };
-
+    // password form submit
     case PASS_SUBMIT:
       return {
         ...state,
       };
 
+    // confirm new password send
     case SEND_PASS:
       return {
         ...state,
         passSend: true,
       };
 
+    // there is an error, user not recognized
     case USER_ERROR:
       return {
         ...state,
         userError: true,
       };
 
-    case LOGIN_CHANGE:
+    // disconnect
+    case DISCONNECT:
       return {
         ...state,
-        [action.name]: action.value,
+        looged: false,
       };
 
+    // default case
     default:
       return state;
   }

@@ -69,9 +69,6 @@ const routes = {
       Accueil: {
         path: '/',
       },
-      'Mon profil': {
-        path: '/profile',
-      },
     },
   },
   '/membre': {
@@ -101,7 +98,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/',
+        path: '/membre',
       },
       Carte: {
         path: '/map',
@@ -121,7 +118,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/',
+        path: '/membre',
       },
       'Mon profil': {
         path: '/profile',

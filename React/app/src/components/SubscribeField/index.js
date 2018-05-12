@@ -72,6 +72,7 @@ export default class SubscribeField extends React.Component {
           { 'subscribe--has-focus': focus },
         )}
       >
+        {/* labels only in profile view, not in subscribe view */}
         {window.location.pathname === '/profile' &&
         <label
           className="subscribe-label"

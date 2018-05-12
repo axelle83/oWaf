@@ -9,6 +9,10 @@ const initialState = {
   selectedFile: {},
   subscribe: false,
   logged: false,
+  pseudo: '',
+  city: '',
+  id: '',
+  email: '',
 };
 
 /*
@@ -22,29 +26,22 @@ const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
 
 /*
-* Code
-*/
-
-// const ids = initialState.members.map(obj => obj.id);
-// let lastId = ids.length > 0 ? Math.max(...ids) : 0;
-
-/*
  * Reducer
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    // récupération des données du membre qui vient de se connecter
+    // gets the data of the connected member
     case GET_MEMBER:
       return {
         ...state,
-        pseudo: action.data.name,
+        pseudo: action.data.slug,
         city: action.data.ville,
-        id: action.data[0].id,
+        id: action.data.id,
+        email: action.data.email,
         // TODO autres données
-        // email: action.data.mail,
       };
 
-    // modif d'un input
+    // change of an input
     case INPUT_CHANGE:
       return {
         ...state,
@@ -56,7 +53,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
       };
 
-    // submit du form d'inscription
+    // subscibe form submit
     case SUBSCRIBE_SUBMIT: {
       if (state.password !== state.confirmpassword) {
         return {
@@ -70,7 +67,7 @@ const reducer = (state = initialState, action = {}) => {
       };
     }
 
-    // submit du form de profil
+    // profile form submit
     case PROFILE_SUBMIT: {
       if (state.password !== state.confirmpassword) {
         return {
@@ -86,8 +83,6 @@ const reducer = (state = initialState, action = {}) => {
     }
     case SUBSCRIBE:
       console.log('subscribe');
-      // console.log(state.pseudo);
-      // console.log(state.password);
       return {
         ...state,
         subscribe: true,
