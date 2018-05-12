@@ -18,7 +18,6 @@ export default class SubscribeField extends React.Component {
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     mandatory: PropTypes.bool.isRequired,
-    // inputValue: PropTypes.string.isRequired,
     inputValue: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
   }
@@ -38,38 +37,21 @@ export default class SubscribeField extends React.Component {
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
-    // On vérifie l'email
+    // check if email input is of email format
     if (this.props.type === 'email') {
       const error = !validateEmail(value);
       this.setState({ error });
     }
-    // On vérifie l'année de naissance
+    // check if birth year > 2000
     if (this.props.type === 'number') {
       const error = !(value.length === 4 && value > 2000);
       this.setState({ error });
     }
-    // on vérifie les champs obligatoires
+    // check mandatory fields
     if (this.props.mandatory === true) {
       const error = !value;
       this.setState({ error });
     }
-  }
-
-  /**
-   * Handle focus event
-   */
-  handleFocus = () => {
-    // this.setState({
-    //   error: false,
-    //   focus: true,
-    // });
-  }
-
-  /**
-   * Handle blur event
-   */
-  handleBlur = () => {
-    this.setState({ focus: false });
   }
 
   /*
@@ -90,12 +72,14 @@ export default class SubscribeField extends React.Component {
           { 'subscribe--has-focus': focus },
         )}
       >
-        {/* <label
+        {window.location.pathname === '/profile' &&
+        <label
           className="subscribe-label"
           htmlFor={id}
-        > */}
-          {/* {placeholder}
-        </label> */}
+        >
+          {placeholder}
+        </label>
+        }
         <input
           type={type}
           className="subscribe-input"
