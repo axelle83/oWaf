@@ -15,11 +15,12 @@ class HomeMembre extends React.Component {
   render() {
     const {
       title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
+      name, dogName,
     } = this.props;
     return (
       <div id="homeMembre">
         <div className="homeMembre-img" />
-        <div className="homeMembre-text">Bienvenue Jean-machin et une caresse à Médore  </div>
+        <div className="homeMembre-text">Bienvenue {name} et {dogName}  </div>
         <div className="homeMembre-carte-title">Carte interactive</div>
         <div className="homeMembre-carte">
           <div className="homeMembre-carte-img" />
@@ -63,6 +64,8 @@ HomeMembre.propTypes = {
   title3: PropTypes.string.isRequired,
   category3: PropTypes.string.isRequired,
   excerpt3: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  dogName: PropTypes.string.isRequired,
 };
 
 /*
