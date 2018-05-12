@@ -3,7 +3,7 @@ import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import datas from 'src/datas';
 // import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
-
+import MyMarker from './Marker';
 
 const MyMapComponent = compose(
   withProps({
@@ -20,7 +20,7 @@ const MyMapComponent = compose(
       defaultZoom={8}
       defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
-      <Marker position={{ lat: 48.85, lng: 2.34 }} onClick={props.onMarkerClick} labelAnchor={new google.maps.Point(0, 0)} icon="/images/blue_MarkerR.png" title={datas.marker[0].title} name="nom du lieu" />
+      {((props.places.length > 0)) && props.places.map(place => <MyMarker key={place.adress} {...place} />)}
     </GoogleMap>
   ));
 
@@ -29,6 +29,7 @@ class MyFancyComponent extends React.Component {
     isMarkerShown: false,
     lat: 0,
     lng: 0,
+    places: [],
   }
   // eslint disable
   componentDidMount() {
@@ -47,12 +48,13 @@ class MyFancyComponent extends React.Component {
       const lng = 2.3488;
       this.setState({ lat, lng });
     }
+    // this.props.loadPlace();
     this.delayedShowMarker();
   }
 
   delayedShowMarker = () => {
     setTimeout(() => {
-      this.setState({ isMarkerShown: true });
+      this.setState({ isMarkerShown: true, places: this.props.places });
     }, 3000);
   }
 
@@ -63,6 +65,7 @@ class MyFancyComponent extends React.Component {
         lat={this.state.lat}
         lng={this.state.lng}
         isMarkerShown={this.state.isMarkerShown}
+        places={this.state.places}
       />
     );
   }

@@ -12,6 +12,11 @@ const initialState = {
   places: [],
 };
 let place = {};
+let leash = false;
+let fountain = false;
+let bag = false;
+let lake = false;
+
 /*
  * Reducer
  */
@@ -23,12 +28,20 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
       };
 
-      // gets the values returned by the rest api
+    // gets the values returned by the rest api
     case GET_PLACE:
+      leash = (action.data.details.indexOf('Laisse') >= 0);
+      fountain = (action.data.details.indexOf('Fontaine') >= 0);
+      bag = (action.data.details.indexOf('Sacs de déjections canines') >= 0);
+      lake = (action.data.details.indexOf('lac à proximité') >= 0);
       place = {
         adress: action.data.adresse.address,
-        lat: action.data.adresse.lat,
-        lng: action.data.adresse.lng,
+        lat: Number(action.data.adresse.lat),
+        lng: Number(action.data.adresse.lng),
+        leash,
+        fountain,
+        bag,
+        lake,
       };
       return {
         ...state,

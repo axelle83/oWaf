@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /*
 * Local Import
 */
-import MyMapComponent from 'src/components/MyMapComponent';
+import MyMapComponent from 'src/containers/MyMapComponent';
 import Details from './Details/';
 import DetailsInfo from './DetailsInfo';
 
