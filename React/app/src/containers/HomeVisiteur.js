@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 /*
  * Local import
  */
-import HomeMembre from 'src/components/HomeMembre';
+import HomeVisiteur from 'src/components/HomeVisiteur';
 import { loadPost } from 'src/store/reducers/post';
 
 /*
@@ -35,4 +35,4 @@ const mapDispatchToProps = dispatch => ({
 /*
  * Export default
  */
-export default connect(mapStateToProps, mapDispatchToProps)(HomeMembre);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeVisiteur);

@@ -6,7 +6,7 @@ import React from 'react';
 /*
  * Local import
  */
-import HomeVisiteur from 'src/components/HomeVisiteur';
+import HomeVisiteur from 'src/containers/HomeVisiteur';
 import HomeMembre from 'src/containers/HomeMembre';
 import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
