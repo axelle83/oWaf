@@ -13,6 +13,7 @@ import member from 'src/store/reducers/member';
 import login from 'src/store/reducers/login';
 import contact from 'src/store/reducers/contact';
 import post from 'src/store/reducers/post';
+import map from 'src/store/reducers/map';
 
 /*
  * Code
@@ -25,6 +26,7 @@ const reducers = combineReducers({
   login,
   contact,
   post,
+  map,
 });
 
 /*

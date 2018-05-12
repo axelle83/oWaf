@@ -17,9 +17,13 @@ import DetailsInfo from './DetailsInfo';
 */
 class MapPage extends React.Component {
   static propTypes = {
-    inputValue: PropTypes.string.isRequired,
-    actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
+    // inputValue: PropTypes.string.isRequired,
+    // actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
+    loadPlace: PropTypes.func.isRequired,
   };
+  componentDidMount() {
+    this.props.loadPlace();
+  }
 
   handleChange = (evt) => {
     // Je recup la value depuis la cible de l'event

@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
  */
 class HomeVisiteur extends React.Component {
   componentDidMount() {
-    this.props.getPost();
+    this.props.loadPost();
   }
 
   render() {
@@ -54,7 +54,7 @@ class HomeVisiteur extends React.Component {
 }
 
 HomeVisiteur.propTypes = {
-  getPost: PropTypes.func.isRequired,
+  loadPost: PropTypes.func.isRequired,
   title1: PropTypes.string.isRequired,
   category1: PropTypes.string.isRequired,
   excerpt1: PropTypes.string.isRequired,

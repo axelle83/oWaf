@@ -11,7 +11,7 @@ import HomeMembre from 'src/containers/HomeMembre';
 import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/containers/Profile';
-import MapPage from 'src/components/MapPage';
+import MapPage from 'src/containers/MapPage';
 import Disconnect from 'src/containers/Disconnect';
 
 /*

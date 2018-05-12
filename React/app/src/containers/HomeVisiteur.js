@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 
 // Actions
 const mapDispatchToProps = dispatch => ({
-  getPost: () => {
+  loadPost: () => {
     dispatch(loadPost());
   },
 });
