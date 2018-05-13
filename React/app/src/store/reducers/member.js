@@ -4,16 +4,18 @@
 const initialState = {
   members: [],
   errorpassword: false,
-  dogSex: 'femelle',
-  view: 'password',
-  selectedFile: {},
-  subscribe: false,
   exist: false,
   logged: false,
+  subscribe: false,
+  view: 'password',
   pseudo: '',
   city: '',
   id: '',
   email: '',
+  dogName: '',
+  dogSex: 'femelle',
+  dogBirth: '',
+  selectedFile: {},
 };
 
 /*
@@ -25,6 +27,7 @@ export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
 export const LOAD_IMAGE = 'LOAD_IMAGE';
 const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
+const GET_DOG = 'GET_DOG';
 const USER_EXIST = 'USER_EXIST';
 
 /*
@@ -41,6 +44,15 @@ const reducer = (state = initialState, action = {}) => {
         id: action.data.id,
         email: action.data.email,
         // TODO autres données
+      };
+
+    // gets the dog data of the connected member
+    case GET_DOG:
+      return {
+        ...state,
+        dogName: action.data.slug,
+        dogBirth: action.data.naiss,
+        dogSex: action.data.genre,
       };
 
     // user exists (pseudo or email)
@@ -134,6 +146,10 @@ export const loadImage = value => ({
 });
 export const getMember = data => ({
   type: GET_MEMBER,
+  data,
+});
+export const getDog = data => ({
+  type: GET_DOG,
   data,
 });
 

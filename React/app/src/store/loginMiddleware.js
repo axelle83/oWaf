@@ -3,13 +3,14 @@
 */
 import axios from 'axios';
 import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass, userError } from './reducers/login';
-import { getMember } from './reducers/member';
+import { getMember, getDog } from './reducers/member';
 
 /**
  * Code
  */
 const urlUser = 'http://217.70.189.93/wp-json/wp/v2/users';
 const urlUserMe = 'http://217.70.189.93/wp-json/wp/v2/users/me';
+const urlDog = 'http://217.70.189.93/wp-json/wp/v2/dog';
 const urlPass = 'http://localhost:4000/pass';
 
 const loginMiddleware = store => next => (action) => {
@@ -25,9 +26,15 @@ const loginMiddleware = store => next => (action) => {
         .get(urlUserMe, config)
         // an user exists with this password : let's connect
         .then((response) => {
-          console.log(response.data);
           store.dispatch(connect());
+          // puts the member data in the state
           store.dispatch(getMember(response.data));
+          axios
+            // puts the member dog data in the state
+            .get(`${urlDog}/${response.data.dog_id}`, config)
+            .then((res) => {
+              store.dispatch(getDog(res.data));
+            });
         })
         // else displays an error message
         .catch(() => {
