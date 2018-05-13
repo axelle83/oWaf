@@ -45,6 +45,7 @@ const subscribeMiddleware = store => next => (action) => {
                       title: state.member.dogName,
                       naiss: state.member.dogBirth,
                       genre: state.member.dogSex,
+                      status: 'publish',
                     }, config)
                     .then((response) => {
                       console.log('ok', response.data.id);
