@@ -8,6 +8,7 @@ const initialState = {
   view: 'password',
   selectedFile: {},
   subscribe: false,
+  exist: false,
   logged: false,
   pseudo: '',
   city: '',
@@ -24,6 +25,7 @@ export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
 export const LOAD_IMAGE = 'LOAD_IMAGE';
 const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
+const USER_EXIST = 'USER_EXIST';
 
 /*
  * Reducer
@@ -41,11 +43,19 @@ const reducer = (state = initialState, action = {}) => {
         // TODO autres données
       };
 
+    // user exists (pseudo or email)
+    case USER_EXIST:
+      return {
+        ...state,
+        exist: true,
+      };
+
     // change of an input
     case INPUT_CHANGE:
       return {
         ...state,
         [action.name]: action.value,
+        exist: false,
       };
 
     case LOAD_IMAGE:
@@ -53,7 +63,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
       };
 
-    // subscibe form submit
+    // subscribe form submit
     case SUBSCRIBE_SUBMIT: {
       if (state.password !== state.confirmpassword) {
         return {
@@ -81,12 +91,16 @@ const reducer = (state = initialState, action = {}) => {
         errorpassword: false,
       };
     }
+
+    // subscribe is finished
     case SUBSCRIBE:
       console.log('subscribe');
       return {
         ...state,
         subscribe: true,
       };
+
+    // default case
     default:
       return state;
   }
@@ -110,6 +124,9 @@ export const profileSubmit = () => ({
 });
 export const subscribe = () => ({
   type: SUBSCRIBE,
+});
+export const userExists = () => ({
+  type: USER_EXIST,
 });
 export const loadImage = value => ({
   type: LOAD_IMAGE,

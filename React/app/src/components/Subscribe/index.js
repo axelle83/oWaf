@@ -1,11 +1,9 @@
 /*
-* npm install
-*
+*  Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 
 /*
 * Local import
@@ -23,12 +21,6 @@ class Subscribe extends React.Component {
     evt.preventDefault();
     this.props.onSubscribeSubmit();
   }
-
-  // addDog = () => {
-  //   console.log('add');
-  //   document.getElementById('next').innerHTML += 'test';
-  // render('<div>test</div>', document.getElementById('next'));
-  // }
 
   render() {
     return (
@@ -52,6 +44,18 @@ class Subscribe extends React.Component {
           >
             Les mots de passe ne sont pas identiques
           </div>
+          <div
+            className={
+              classNames(
+                'exist',
+                {
+                'exist-true': this.props.exist,
+              },
+            )
+          }
+          >
+            Il existe déjà un utilisateur avec ce pseudo ou cette adresse email
+          </div>
         </div>
         <div className="subscribe-dog">
           <div className="subscribe-dog-title">Mon chien</div>
@@ -59,12 +63,6 @@ class Subscribe extends React.Component {
           <SubscribeRadio name="dogSex" />
           <SubscribeUpload name="dogImage" />
         </div>
-        {/* <button
-          id="subscribe-dog-add"
-          onClick={this.addDog}
-        >
-          Ajouter un chien
-        </button> */}
         <button
           id="subscribe-submit"
           onClick={this.onSubmit}
@@ -77,11 +75,12 @@ class Subscribe extends React.Component {
 }
 Subscribe.propTypes = {
   onSubscribeSubmit: PropTypes.func.isRequired,
-  errorpassword: PropTypes.bool,
+  errorpassword: PropTypes.bool.isRequired,
+  exist: PropTypes.bool.isRequired,
 };
-Subscribe.defaultProps = {
-  errorpassword: 'false',
-};
+// Subscribe.defaultProps = {
+//   errorpassword: 'false',
+// };
 /*
 * Export default
  */
