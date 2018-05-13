@@ -32,19 +32,22 @@ class HomeMembre extends React.Component {
             <div className="post">
               <p className="post-category">{category1}</p>
               <p className="post-title">{title1}</p>
-              <p className="post-excerpt">{excerpt1}</p>
+              {/* eslint-disable-next-line */}
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt1 }} />
               <p className="post-more">En lire plus</p>
             </div>
             <div className="post">
               <p className="post-category">{category2}</p>
               <p className="post-title">{title2}</p>
-              <p className="post-excerpt">{excerpt2}</p>
+              {/* eslint-disable-next-line */}
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt2 }} />
               <p className="post-more">En lire plus</p>
             </div>
             <div className="post">
               <p className="post-category">{category3}</p>
               <p className="post-title">{title3}</p>
-              <p className="post-excerpt">{excerpt3}</p>
+              {/* eslint-disable-next-line */}
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt3 }} />
               <p className="post-more">En lire plus</p>
             </div>
           </div>

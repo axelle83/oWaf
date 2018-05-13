@@ -34,17 +34,20 @@ class HomeVisiteur extends React.Component {
             <div className="post">
               <p className="post-category">{category1}</p>
               <p className="post-title">{title1}</p>
-              <p className="post-excerpt">{excerpt1}</p>
+              {/* eslint-disable-next-line */}
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt1 }} />
             </div>
             <div className="post">
               <p className="post-category">{category2}</p>
               <p className="post-title">{title2}</p>
-              <p className="post-excerpt">{excerpt2}</p>
+              {/* eslint-disable-next-line */}
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt2 }} />
             </div>
             <div className="post">
               <p className="post-category">{category3}</p>
               <p className="post-title">{title3}</p>
-              <p className="post-excerpt">{excerpt3}</p>
+              {/* eslint-disable-next-line */}
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt3 }} />
             </div>
           </div>
         </div>
