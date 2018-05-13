@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 /*
  * Local import
  */
-import HomeMembre from 'src/components/HomeMembre';
+import HomeVisiteur from 'src/components/HomeVisiteur';
 import { loadPost } from 'src/store/reducers/post';
 
 /*
@@ -23,8 +23,6 @@ const mapStateToProps = state => ({
   title3: state.post.title3,
   category3: state.post.category3,
   excerpt3: state.post.excerpt3,
-  name: state.member.pseudo,
-  dogName: state.member.dogName,
 });
 
 // Actions
@@ -37,4 +35,4 @@ const mapDispatchToProps = dispatch => ({
 /*
  * Export default
  */
-export default connect(mapStateToProps, mapDispatchToProps)(HomeMembre);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeVisiteur);

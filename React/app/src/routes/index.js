@@ -6,13 +6,12 @@ import React from 'react';
 /*
  * Local import
  */
-import HomeVisiteur from 'src/components/HomeVisiteur';
-import HomeMembre from 'src/components/HomeMembre';
+import HomeVisiteur from 'src/containers/HomeVisiteur';
+import HomeMembre from 'src/containers/HomeMembre';
 import Cgu from 'src/components/Cgu';
 import Subscribe from 'src/containers/Subscribe';
 import Profile from 'src/containers/Profile';
-import MapPage from 'src/components/MapPage';
-// import Login from 'src/containers/Login';
+import MapPage from 'src/containers/MapPage';
 import Disconnect from 'src/containers/Disconnect';
 
 /*
@@ -70,9 +69,6 @@ const routes = {
       Accueil: {
         path: '/',
       },
-      Profile: {
-        path: '/profile',
-      },
     },
   },
   '/membre': {
@@ -102,7 +98,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/',
+        path: '/membre',
       },
       Carte: {
         path: '/map',
@@ -122,9 +118,9 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/',
+        path: '/membre',
       },
-      Profil: {
+      'Mon profil': {
         path: '/profile',
       },
       Blog: {

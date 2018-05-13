@@ -3,18 +3,19 @@
 */
 import axios from 'axios';
 import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass, userError } from './reducers/login';
-import { getMember } from './reducers/member';
+import { getMember, getDog } from './reducers/member';
 
 /**
  * Code
  */
 const urlUser = 'http://217.70.189.93/wp-json/wp/v2/users';
 const urlUserMe = 'http://217.70.189.93/wp-json/wp/v2/users/me';
+const urlDog = 'http://217.70.189.93/wp-json/wp/v2/dog';
 const urlPass = 'http://localhost:4000/pass';
 
 const loginMiddleware = store => next => (action) => {
   switch (action.type) {
-    // login : demande d'autorisation pseudo:password en base64
+    // login : asks the rest api to check if user+password is correct (base64)
     case LOGIN_SUBMIT: {
       const state = store.getState();
       const user = btoa(`${state.login.pseudo}:${state.login.password}`);
@@ -23,19 +24,26 @@ const loginMiddleware = store => next => (action) => {
       };
       axios
         .get(urlUserMe, config)
-        // il existe un user avec ce mdp : on connecte
+        // an user exists with this password : let's connect
         .then((response) => {
           store.dispatch(connect());
+          // puts the member data in the state
           store.dispatch(getMember(response.data));
+          axios
+            // puts the member dog data in the state
+            .get(`${urlDog}/${response.data.dog_id}`, config)
+            .then((res) => {
+              store.dispatch(getDog(res.data));
+            });
         })
-        // sinon on affiche un message d'erreur
+        // else displays an error message
         .catch(() => {
           store.dispatch(userError());
         });
       break;
     }
 
-    // mot de passe oublié
+    // forgot password
     case PASS_SUBMIT: {
       let state = store.getState();
       const email = state.login.email.trim();
@@ -47,18 +55,18 @@ const loginMiddleware = store => next => (action) => {
       const newConfig = {
         headers: { Authorization: `Basic ${admin}` },
       };
-      // nouveau mot de passe
-      const password = Math.random().toString(36).substr(2, 9);
       axios
         .get(urlMail, config)
-        // il existe un user avec ce mail : on regénère un mdp
+        // there is a user with this email
         .then((response) => {
+          // new password generating
+          const password = Math.random().toString(36).substr(2, 9);
           if (response.data.length > 0) {
-            // récupération de l'id pour ajout dans l'url
+            // gets the user id and adds to the url
             store.dispatch(getMember(response.data));
             state = store.getState();
             const urlId = `${urlUser}/${state.member.id}`;
-            // envoi du nouveau mdp dans la bdd
+            // sends the new password into the databse
             axios
               .post(urlId, { password }, newConfig)
               .then((res) => {
@@ -67,7 +75,7 @@ const loginMiddleware = store => next => (action) => {
               .catch((error) => {
                 console.log(error);
               });
-            // envoi du mdp par mail
+            // sends the new password by email
             axios
               .post(urlPass, `email=${email}&password=${password}`, config)
               .then(() => {
@@ -79,7 +87,7 @@ const loginMiddleware = store => next => (action) => {
             store.dispatch(sendPass());
           }
           else {
-            // il n'existe pas d'utilisateur correspondant : on affiche un message d'erreur
+            // there is no user : displays an error message
             store.dispatch(userError());
           }
         })
