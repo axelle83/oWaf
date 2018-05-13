@@ -127,9 +127,8 @@ export const changeInput = ({ name, value }) => ({
   value,
   name,
 });
-export const subscribeSubmit = id => ({
+export const subscribeSubmit = () => ({
   type: SUBSCRIBE_SUBMIT,
-  id,
 });
 export const profileSubmit = () => ({
   type: PROFILE_SUBMIT,

@@ -5,43 +5,65 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /*
-* Local Import
-*/
-
-
-/*
 * Code
 */
-const detailsInfo = ({ lieu }) => (
+const detailsInfo = ({ myPlace }) => (
   <div id="detailsInfo">
-
-    <p className="detailsInfo-name">{ lieu.name }</p>
-    <p className="detailsInfo-address">{ lieu.address }</p>
-    <p className="detailsInfo-GPS">{ lieu.gps }</p>
-
+    <div className="mapField">
+      <p className="detailsInfo-label">Nom du lieu</p>
+      <p className="detailsInfo-data">{myPlace.name}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Adresse du lieu</p>
+      <p className="detailsInfo-data">{myPlace.adress}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Catégorie</p>
+      <p className="detailsInfo-data">{myPlace.category}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Coordonnées GPS</p>
+      <p className="detailsInfo-label">Lat</p>
+      <p className="detailsInfo-data">{myPlace.lat}</p>
+      <p className="detailsInfo-label">Lng</p>
+      <p className="detailsInfo-data">{myPlace.lng}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Commentaires</p>
+      <p className="detailsInfo-data">{myPlace.comment}</p>
+    </div>
     <p className="check"> Laisse <input
-      className="details-laisse"
+      className="details-leash"
       type="checkbox"
-      value=""
+      checked={myPlace.leash}
     />
     </p>
     <p className="check"> Fontaine <input
-      className="details-fontaine"
+      className="details-fountain"
       type="checkbox"
-      value=""
+      checked={myPlace.fountain}
     />
     </p>
-    <p className="check"> Sac de déjection <input
-      className="details-sac"
+    <p className="check"> Lac à proximité <input
+      className="details-lake"
       type="checkbox"
-      value=""
+      checked={myPlace.lake}
+    />
+    </p>
+    <p className="check"> Sac à déjections <input
+      className="details-bag"
+      type="checkbox"
+      checked={myPlace.bag}
     />
     </p>
   </div>
 );
 
+/*
+* PropTypes
+*/
 detailsInfo.propTypes = {
-  lieu: PropTypes.string.isRequired,
+  myPlace: PropTypes.object.isRequired,
 };
 /*
 * Export Default

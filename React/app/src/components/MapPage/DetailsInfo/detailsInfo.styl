@@ -1,23 +1,29 @@
 @require "app/styles/charte"
 
 #detailsInfo
-    display: block
-    flex-direction: column
-    margin: auto
-    width: 25em
+  display: block
+  flex-direction: column
+  margin: auto
+  width: 25em
 
+.detailsInfo-data
+  border-radius: .5em
+  font-size: 1.5em
+  padding: .5em
+  width: 100%
+  background-color: $color
+  color: $bgGray
 
-.detailsInfo-name, .detailsInfo-address, .detailsInfo-gps
-    border: 0
-    border-radius: .5em
-    font-size: 1.5em
-    margin-bottom: 1em
-    padding: .5em
-    width: 100%
+.detailsInfo-label
+  color: $bgGray
+  font-size: 1.2em
+  padding: 0.5em 0 0.5em 0.5em
+  width: 100%
 
 .check
-    color: $bgGray
-    font-size: 2em
+  color: $bgGray
+  font-size: 1.2em
+  padding: 0.5em 0 0.5em 0.5em
 
 input[type=checkbox]
     -webkit-appearance: none

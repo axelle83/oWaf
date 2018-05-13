@@ -1,9 +1,7 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
-import datas from 'src/datas';
-// import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
-import MyMarker from './Marker';
+import MyMarker from 'src/containers/Marker';
 
 const MyMapComponent = compose(
   withProps({
@@ -20,7 +18,8 @@ const MyMapComponent = compose(
       defaultZoom={8}
       defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
-      {((props.places.length > 0)) && props.places.map(place => <MyMarker key={place.adress} {...place} />)}
+      {((props.places.length > 0)) && props.places.map(place =>
+        <MyMarker key={place.adress} {...place} />)}
     </GoogleMap>
   ));
 
