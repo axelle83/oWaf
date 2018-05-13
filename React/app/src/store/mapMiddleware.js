@@ -6,6 +6,7 @@ const mapMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_PLACE: {
       const urlMap = 'http://217.70.189.93/wp-json/wp/v2/lieu';
+      const urlCategory = 'http://217.70.189.93/wp-json/wp/v2/categories';
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
@@ -14,8 +15,20 @@ const mapMiddleware = store => next => (action) => {
         .get(urlMap, config)
         .then((response) => {
           response.data.map((data) => {
+            axios
+              .get(`${urlCategory}/${data.categories[0]}`, config)
+              .then((res) => {
+                data.categories[0] = res.data.name;
+              });
             // adds the place to the state
-            store.dispatch(getPlaces(data));
+            // store.dispatch(getPlaces(data));
+            setTimeout(
+              () => {
+                console.log(data);
+                store.dispatch(getPlaces(data));
+              }
+              , 500,
+            );
           });
         })
         .catch((error) => {

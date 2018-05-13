@@ -36,6 +36,8 @@ const reducer = (state = initialState, action = {}) => {
       lake = (action.data.details.indexOf('lac à proximité') >= 0);
       place = {
         adress: action.data.adresse.address,
+        name: action.data.title.rendered,
+        category: action.data.categories[0],
         lat: Number(action.data.adresse.lat),
         lng: Number(action.data.adresse.lng),
         leash,
