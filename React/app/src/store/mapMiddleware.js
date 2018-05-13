@@ -15,13 +15,13 @@ const mapMiddleware = store => next => (action) => {
         .get(urlMap, config)
         .then((response) => {
           response.data.map((data) => {
+            // gets the category
             axios
               .get(`${urlCategory}/${data.categories[0]}`, config)
               .then((res) => {
                 data.categories[0] = res.data.name;
               });
             // adds the place to the state
-            // store.dispatch(getPlaces(data));
             setTimeout(
               () => {
                 console.log(data);

@@ -8,19 +8,14 @@ import PropTypes from 'prop-types';
 * Local Import
 */
 import MyMapComponent from 'src/containers/MyMapComponent';
+import DetailsInfo from 'src/containers/DetailsInfo';
 import Details from './Details/';
-import DetailsInfo from './DetailsInfo';
 
 
 /*
 * Code
 */
 class MapPage extends React.Component {
-  static propTypes = {
-    // inputValue: PropTypes.string.isRequired,
-    // actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
-    loadPlace: PropTypes.func.isRequired,
-  };
   componentDidMount() {
     this.props.loadPlace();
   }
@@ -60,13 +55,18 @@ class MapPage extends React.Component {
             <li><img src="images/yellow_MarkerP.png" alt="img marker" width="20" height="25" />Plage</li>
           </ul>
         </div>
-        <div> <Details /> </div>
-        {/* <div> <DetailsInfo /> </div> */}
+        {/* <div> <Details /> </div> */}
+        <div> <DetailsInfo /> </div>
       </form>
     );
   }
 }
 
+MapPage.propTypes = {
+  // inputValue: PropTypes.string.isRequired,
+  // actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
+  loadPlace: PropTypes.func.isRequired,
+};
 
 /*
 * Export Default

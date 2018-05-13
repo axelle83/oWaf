@@ -4,12 +4,14 @@
  */
 export const LOAD_PLACE = 'LOAD_PLACE';
 export const GET_PLACE = 'GET_PLACE';
+export const GET_MY_PLACE = 'GET_MY_PLACE';
 
 /*
  * State
  */
 const initialState = {
   places: [],
+  myPlace: {},
 };
 let place = {};
 let leash = false;
@@ -50,6 +52,23 @@ const reducer = (state = initialState, action = {}) => {
         places: [...state.places, place],
       };
 
+    // puts the data of the marker clicked in the state
+    case GET_MY_PLACE:
+      return {
+        ...state,
+        myPlace: {
+          name: action.data.name,
+          category: action.data.category,
+          adress: action.data.adress,
+          lat: action.data.lat,
+          lng: action.data.lng,
+          bag: action.data.bag,
+          fountain: action.data.fountain,
+          lake: action.data.lake,
+          leash: action.data.leash,
+        },
+      };
+
     // default case
     default:
       return state;
@@ -64,6 +83,10 @@ export const loadPlace = () => ({
 });
 export const getPlaces = data => ({
   type: GET_PLACE,
+  data,
+});
+export const getMyPlace = data => ({
+  type: GET_MY_PLACE,
   data,
 });
 

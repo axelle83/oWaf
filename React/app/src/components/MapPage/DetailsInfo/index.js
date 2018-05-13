@@ -12,36 +12,49 @@ import PropTypes from 'prop-types';
 /*
 * Code
 */
-const detailsInfo = ({ lieu }) => (
+const detailsInfo = ({ myPlace }) => (
   <div id="detailsInfo">
-
-    <p className="detailsInfo-name">{ lieu.name }</p>
-    <p className="detailsInfo-address">{ lieu.address }</p>
-    <p className="detailsInfo-GPS">{ lieu.gps }</p>
+    <p className="detailsInfo-name">Nom : {myPlace.name}</p>
+    <p className="detailsInfo-address">Adresse : {myPlace.adress}</p>
+    <p className="detailsInfo-address">Type : {myPlace.category}</p>
+    <p className="detailsInfo-GPS">
+      <p>
+        lat : {myPlace.lat}
+      </p>
+      <p>
+        lng : {myPlace.lng}
+      </p>
+    </p>
 
     <p className="check"> Laisse <input
-      className="details-laisse"
+      className="details-leash"
       type="checkbox"
-      value=""
+      checked={myPlace.leash}
     />
     </p>
     <p className="check"> Fontaine <input
-      className="details-fontaine"
+      className="details-fountain"
       type="checkbox"
-      value=""
+      checked={myPlace.fountain}
     />
     </p>
-    <p className="check"> Sac de déjection <input
-      className="details-sac"
+    <p className="check"> Lac à proximité <input
+      className="details-lake"
       type="checkbox"
-      value=""
+      checked={myPlace.lake}
+    />
+    </p>
+    <p className="check"> Sac à déjection <input
+      className="details-bag"
+      type="checkbox"
+      checked={myPlace.bag}
     />
     </p>
   </div>
 );
 
 detailsInfo.propTypes = {
-  lieu: PropTypes.string.isRequired,
+  myPlace: PropTypes.object.isRequired,
 };
 /*
 * Export Default

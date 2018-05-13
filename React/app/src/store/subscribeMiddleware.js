@@ -62,12 +62,14 @@ const subscribeMiddleware = store => next => (action) => {
                         // creates user in the db
                         .post(urlUser, {
                           username: state.member.pseudo,
+                          last_name: state.member.pseudo,
                           email: state.member.email,
                           password: state.member.password,
                           meta: {
                             ville: state.member.city,
                           },
-                        //   dog_id: response.data.id,
+                          ville: state.member.city,
+                          // dog_id: response.data.id,
                         }, config)
                         .then((res) => {
                           console.log(res.data);
