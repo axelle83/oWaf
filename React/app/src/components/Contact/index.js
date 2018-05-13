@@ -19,7 +19,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { openContact, send } = this.props;
+    const { openContact, send, toggleContact } = this.props;
     return (
       <div
         id="contact"
@@ -49,8 +49,29 @@ class Contact extends React.Component {
             name="message"
             placeholder="Votre message"
           />
-          <button type="submit" id="contact-submit">
+          <button
+            type="submit"
+            id="contact-submit"
+            className={
+              classNames(
+              'contact',
+              { 'contact--send': !send },
+              )
+            }
+          >
           Valider
+          </button>
+          <button
+            onClick={toggleContact}
+            id="contact-send"
+            className={
+              classNames(
+              'contact',
+              { 'contact--send': send },
+              )
+            }
+          >
+          Fermer
           </button>
           <p
             id="contactSend"
@@ -73,6 +94,7 @@ Contact.propTypes = {
   openContact: PropTypes.bool.isRequired,
   send: PropTypes.bool.isRequired,
   contactSubmit: PropTypes.func.isRequired,
+  toggleContact: PropTypes.func.isRequired,
 };
 
 /**

@@ -13,8 +13,8 @@ import PropTypes from 'prop-types';
 */
 class Details extends React.Component {
   static propTypes = {
-    inputValue: PropTypes.string.isRequired,
-    actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
+    // inputValue: PropTypes.string.isRequired,
+    // actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
   };
 
 

@@ -17,6 +17,7 @@ import { subscribeSubmit } from 'src/store/reducers/member';
 // State
 const mapStateToProps = state => ({
   errorpassword: state.member.errorpassword,
+  exist: state.member.exist,
 });
 
 // Actions

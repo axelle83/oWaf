@@ -18,6 +18,7 @@ export default class SubscribeUpload extends React.Component {
 
   fileChangedHandler = (event) => {
     const file = event.target.files[0];
+    console.log(file);
     this.props.onChange(file);
     // this.setState({ selectedFile: event.target.files[0] });
   }
