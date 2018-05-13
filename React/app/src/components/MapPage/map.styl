@@ -5,20 +5,21 @@
     display: block
     flex-direction: column
     height: auto
-    padding-top: 15em
+    padding-top: 9em
 
 .map-title
     color: $color
     font-family: $title
     font-size: 3em
-    padding-bottom: 1em
-    padding-top: .5em
     text-align: center
 
 .map-image
-    margin: 2em auto
-    width: 80%
+    margin: 1em auto
+    width: 90%
+    display: flex
 
+.map-google
+  width: 90%
 
 .map-addPlace
     border: 0
@@ -37,14 +38,32 @@
 .map-icon
   background-color: $bgGrayLigth
   border-radius: 1.5em
-  margin: 2em auto
-  padding: 2em
-  width: 25%
+  margin-top: 12em
+  padding: .5em 0 .5em 1em
+  width: 10%
+  height: 9em
+  align-items: center
 
 .map-table
   color: $color
-  font-size: 1.5em
-  padding-right:1em
+  font-size: 1.1em
 
 .map-table img
   margin-right: .5em
+
+#map-details
+  display: flex
+  width: 90%
+  margin: .5em auto
+
+.details
+  width: 50%
+
+.details-label
+  font-family: $title
+  color: $color
+  font-size: 1.8em
+  text-align: center
+
+.details-infos
+  padding: 1em

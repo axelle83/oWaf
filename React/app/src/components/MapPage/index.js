@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 */
 import MyMapComponent from 'src/containers/MyMapComponent';
 import DetailsInfo from 'src/containers/DetailsInfo';
-import Details from './Details/';
+import Details from 'src/containers/Details';
 
 
 /*
@@ -20,43 +20,45 @@ class MapPage extends React.Component {
     this.props.loadPlace();
   }
 
-  handleChange = (evt) => {
-    // Je recup la value depuis la cible de l'event
-    const { value } = evt.target;
-    // j'exécute la fonction fournie en passant la value
-    this.props.actions.changeInputForm(value);
-  }
-
-  handleSubmit = (evt) => {
-    // J'empeche le comportement par défaut
-    evt.preventDefault();
-    // J'exécute la fonction fournie par les props
-    this.props.actions.sendMessage();
-  }
+  // handleChange = (evt) => {
+  // Je recup la value depuis la cible de l'event
+  // const { value } = evt.target;
+  // j'exécute la fonction fournie en passant la value
+  // this.props.actions.changeInputForm(value);
+  // }
 
   render() {
-    const { inputValue } = this.props;
     return (
-      <form id="map" onSubmit={this.handleSubmit}>
+      <form id="map">
         <h1 className="map-title">La carte !</h1>
-        <input
-          className="map-addPlace"
-          type="text"
-          placeholder="votre lieu"
-          value={inputValue}
-          onChange={this.handleChange}
-        />
-        <div className="map-image"><MyMapComponent /></div>
-        <div className="map-icon">
-          <ul className="map-table">
-            <li><img src="images/blue_MarkerR.png" alt="img marker" width="20" height="25" />Restaurant </li>
-            <li><img src="images/darkgreen_MarkerB.png" alt="img marker" width="20" height="25" />Balade</li>
-            <li><img src="images/red_MarkerH.png" alt="img marker" width="20" height="25" />Hôtel</li>
-            <li><img src="images/yellow_MarkerP.png" alt="img marker" width="20" height="25" />Plage</li>
-          </ul>
+        <div className="map-image">
+          <div className="map-google"><MyMapComponent /></div>
+          <div className="map-icon">
+            <ul className="map-table">
+              <li><img src="images/blue_MarkerR.png" alt="img marker" width="20" height="25" />Restaurant </li>
+              <li><img src="images/darkgreen_MarkerB.png" alt="img marker" width="20" height="25" />Balade</li>
+              <li><img src="images/red_MarkerH.png" alt="img marker" width="20" height="25" />Hôtel</li>
+              <li><img src="images/yellow_MarkerP.png" alt="img marker" width="20" height="25" />Plage</li>
+            </ul>
+          </div>
         </div>
-        {/* <div> <Details /> </div> */}
-        <div> <DetailsInfo /> </div>
+        <div id="map-details">
+          <div className="details">
+            <div className="details-label">Cliquer sur un marqueur pour afficher les détails du lieu</div>
+            <div className="details-infos"><DetailsInfo /></div>
+          </div>
+          <div className="details">
+            <div className="details-label">Ajouter un lieu</div>
+            {/* <input
+              className="map-addPlace"
+              type="text"
+              placeholder="votre lieu"
+              value={inputValue}
+              onChange={this.handleChange}
+            /> */}
+            <div className="details-infos"><Details /></div>
+          </div>
+        </div>
       </form>
     );
   }

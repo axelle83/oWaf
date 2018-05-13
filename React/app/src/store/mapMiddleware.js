@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import { LOAD_PLACE, getPlaces } from './reducers/map';
+import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace } from './reducers/map';
 
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
@@ -14,6 +14,7 @@ const mapMiddleware = store => next => (action) => {
       axios
         .get(urlMap, config)
         .then((response) => {
+          /* eslint-disable-next-line */
           response.data.map((data) => {
             // gets the category
             axios
@@ -24,7 +25,6 @@ const mapMiddleware = store => next => (action) => {
             // adds the place to the state
             setTimeout(
               () => {
-                console.log(data);
                 store.dispatch(getPlaces(data));
               }
               , 500,
@@ -36,6 +36,37 @@ const mapMiddleware = store => next => (action) => {
         });
     }
       break;
+
+    case PLACE_SUBMIT: {
+      const state = store.getState();
+      const urlMap = 'http://217.70.189.93/wp-json/wp/v2/lieu';
+      const admin = btoa('restapi:restapi');
+      const config = {
+        headers: {
+          Authorization: `Basic ${admin}`,
+        },
+      };
+      // gets the places
+      axios
+        .post(urlMap, {
+          title: state.map.name,
+          status: 'publish',
+          commentaire: state.map.comment,
+          adresse: {
+            adress: state.map.adress,
+            lat: state.map.lat,
+            lng: state.map.lng,
+          },
+        }, config)
+        .then((response) => {
+          store.dispatch(newPlace());
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      break;
+    }
 
     default:
       break;

@@ -5,27 +5,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /*
-* Local Import
-*/
-
-
-/*
 * Code
 */
 const detailsInfo = ({ myPlace }) => (
   <div id="detailsInfo">
-    <p className="detailsInfo-name">Nom : {myPlace.name}</p>
-    <p className="detailsInfo-address">Adresse : {myPlace.adress}</p>
-    <p className="detailsInfo-address">Type : {myPlace.category}</p>
-    <p className="detailsInfo-GPS">
-      <p>
-        lat : {myPlace.lat}
-      </p>
-      <p>
-        lng : {myPlace.lng}
-      </p>
-    </p>
-
+    <div className="mapField">
+      <p className="detailsInfo-label">Nom du lieu</p>
+      <p className="detailsInfo-data">{myPlace.name}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Adresse du lieu</p>
+      <p className="detailsInfo-data">{myPlace.adress}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Catégorie</p>
+      <p className="detailsInfo-data">{myPlace.category}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Coordonnées GPS</p>
+      <p className="detailsInfo-label">Lat</p>
+      <p className="detailsInfo-data">{myPlace.lat}</p>
+      <p className="detailsInfo-label">Lng</p>
+      <p className="detailsInfo-data">{myPlace.lng}</p>
+    </div>
+    <div className="mapField">
+      <p className="detailsInfo-label">Commentaires</p>
+      <p className="detailsInfo-data">{myPlace.comment}</p>
+    </div>
     <p className="check"> Laisse <input
       className="details-leash"
       type="checkbox"
@@ -44,7 +50,7 @@ const detailsInfo = ({ myPlace }) => (
       checked={myPlace.lake}
     />
     </p>
-    <p className="check"> Sac à déjection <input
+    <p className="check"> Sac à déjections <input
       className="details-bag"
       type="checkbox"
       checked={myPlace.bag}
@@ -53,6 +59,9 @@ const detailsInfo = ({ myPlace }) => (
   </div>
 );
 
+/*
+* PropTypes
+*/
 detailsInfo.propTypes = {
   myPlace: PropTypes.object.isRequired,
 };
