@@ -1,4 +1,4 @@
-ca va <?php
+<?php
    /*
    Plugin Name: RestApi (RAR)
    Description: Créer une liaison BDD entre WP et React

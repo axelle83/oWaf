@@ -9,7 +9,7 @@ function owaf_lieu_register_rest_fields() {
         'adresse',
         [
             'get_callback' => 'owaf_rest_api_adresse',
-            'update_callback' => null,
+            'update_callback' => 'owaf_post_rest_api_adresse',
             'schema'  => null
         ]
     );
@@ -20,7 +20,7 @@ function owaf_lieu_register_rest_fields() {
         'details',
         [
           'get_callback' => 'owaf_rest_api_details',
-          'update_callback' => null,
+          'update_callback' => 'owaf_post_rest_api_details',
           'schema' => null
         ]
     );
@@ -31,17 +31,22 @@ function owaf_lieu_register_rest_fields() {
         'commentaire',
         [
           'get_callback' => 'owaf_rest_api_commentaire',
-          'update_callback' => null,
+          'update_callback' => 'owaf_post_rest_api_commentaire',
           'schema' => null
         ]
     );
 
 }
 
-// Fonction appelée en callback
+// Fonction appelée Get en callback
 function owaf_rest_api_adresse($lieu, $adresse, $request) {
 
   return get_post_meta($lieu['id'], 'adresse', true);
+}
+// Fonction appelée Psot en callback
+function owaf_post_rest_api_adresse( $value, $object, $field_name) {
+
+  return update_post_meta($object->ID, 'adresse', $value);
 }
 
 // Fonction appelée en callback
@@ -49,9 +54,19 @@ function owaf_rest_api_details($lieu, $details, $request) {
 
   return get_post_meta($lieu['id'], 'details', true);
 }
+// Fonction appelée Psot en callback
+function owaf_post_rest_api_details( $value, $object, $field_name) {
+
+  return update_post_meta($object->ID, 'details', $value);
+}
 
 // Fonction appelée en callback
 function owaf_rest_api_commentaire($lieu, $commentaire, $request) {
 
   return get_post_meta($lieu['id'], 'commentaire', true);
+}
+// Fonction appelée Psot en callback
+function owaf_post_rest_api_commentaire( $value, $object, $field_name) {
+
+  return update_post_meta($object->ID, 'commentaire', $value);
 }
