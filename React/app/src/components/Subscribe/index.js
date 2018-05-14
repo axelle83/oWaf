@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Redirect } from 'react-router-dom';
 
 /*
 * Local import
@@ -23,6 +24,8 @@ class Subscribe extends React.Component {
   }
 
   render() {
+    const { subscribe } = this.props;
+    if (subscribe) return <Redirect to="/connect" />;
     return (
       <form
         encType="multipart/form-data"
@@ -77,6 +80,7 @@ Subscribe.propTypes = {
   onSubscribeSubmit: PropTypes.func.isRequired,
   errorpassword: PropTypes.bool.isRequired,
   exist: PropTypes.bool.isRequired,
+  subscribe: PropTypes.bool.isRequired,
 };
 // Subscribe.defaultProps = {
 //   errorpassword: 'false',
