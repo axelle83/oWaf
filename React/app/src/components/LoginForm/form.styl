@@ -11,6 +11,7 @@
 		color: #51483f
 		font-family: 'Pacifico'
 		font-size: 2em
+		padding-bottom: .5em
 
 	&-desc
 		font-size: 1em
@@ -19,12 +20,14 @@
 		margin: .25em 0
 
 	&-submit
-		background: $colorBlue
+		background: $bgBlueDuck
 		border: 0
 		border-radius: 10px
-		color: #fff
+		color: $color
 		font-size: 1em
+		font-weight: 700
 		display: block
+		margin: 1em 0
 		text-transform: uppercase
 		height: 3.3em
 		width: 100%
@@ -38,16 +41,18 @@
 	&.password
 		display: none
 	&.password--send
-		font-family: 'Pacifico'
+		font-family: $title
 		font-size: 1.15em
 		padding: .5em
 		display: block
+		color: $bgBlueDuck
 
 #errorLogin
 	&.errorLogin
 		display: none
 	&.errorLogin--true
-		font-family: 'Pacifico'
+		font-family: $title
 		font-size: 1.15em
 		padding: .5em .5em 0
 		display: block
+		color: $bgBlueDuck

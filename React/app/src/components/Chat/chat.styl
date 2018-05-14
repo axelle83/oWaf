@@ -2,11 +2,12 @@
 
 #chat
 	position:fixed
-	top: 35%
-	left: 10%
-	border: 3px outset $bgBtn
+	// top: 15%
+	// left: 50%
+	border: 3px solid #046380
 	border-radius: 12px
-	background: linear-gradient(50deg, $bgBtn, $color)
+	background: #f5f5f5
+	// background: linear-gradient(50deg, $bgBtn, $color)
 	overflow: hidden
 	color: $color
 	width: 50em
@@ -20,11 +21,14 @@
 		display: flex
 
 	&-display
-		margin-left: 2em
+		margin-left: 1em
+		margin-right: 1em
 		width: 95%
 
 #chatClose
+#chatEdit
 	font-size: 2em
+	color: #046380
 
 @media (min-width: 1024px)
 	#chat

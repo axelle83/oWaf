@@ -18,10 +18,10 @@ class HomeMembre extends React.Component {
       title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
       name, dogName, logged,
     } = this.props;
-    if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
+    // if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
     return (
       <div id="homeMembre">
-        <div className="homeMembre-img" />
+        {/* <div className="homeMembre-img" /> */}
         <div className="homeMembre-text">Bienvenue {name} et {dogName} </div>
         <div className="homeMembre-carte-title">Carte interactive</div>
         <div className="homeMembre-carte">
