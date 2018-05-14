@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 import MyMarker from 'src/containers/Marker';
 
 const MyMapComponent = compose(
@@ -19,7 +20,7 @@ const MyMapComponent = compose(
       defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
       {((props.places.length > 0)) && props.places.map(place =>
-        <MyMarker key={place.adress} {...place} />)}
+        <MyMarker key={place.id} {...place} />)}
     </GoogleMap>
   ));
 
@@ -30,7 +31,7 @@ class MyFancyComponent extends React.Component {
     lng: 0,
     places: [],
   }
-  // eslint disable
+
   componentDidMount() {
     if ('geolocation' in navigator) {
       // coords de géolocalisation
@@ -45,9 +46,9 @@ class MyFancyComponent extends React.Component {
       // coords de Paris
       const lat = 48.8534;
       const lng = 2.3488;
+      /* eslint-disable-next-line */
       this.setState({ lat, lng });
     }
-    // this.props.loadPlace();
     this.delayedShowMarker();
   }
 
@@ -69,5 +70,7 @@ class MyFancyComponent extends React.Component {
     );
   }
 }
-
+MyFancyComponent.propTypes = {
+  places: PropTypes.array.isRequired,
+};
 export default MyFancyComponent;

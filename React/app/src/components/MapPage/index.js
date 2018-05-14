@@ -25,8 +25,8 @@ class MapPage extends React.Component {
     const { logged } = this.props;
     // if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
     return (
-      <form id="map">
-        <h1 className="map-title">La carte !</h1>
+      <div id="map">
+        {/* <h1 className="map-title">La carte !</h1> */}
         <div className="map-image">
           <div className="map-google"><MyMapComponent /></div>
           <div className="map-icon">
@@ -55,14 +55,12 @@ class MapPage extends React.Component {
             <div className="details-infos"><Details /></div>
           </div>
         </div>
-      </form>
+      </div>
     );
   }
 }
 
 MapPage.propTypes = {
-  // inputValue: PropTypes.string.isRequired,
-  // actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
   loadPlace: PropTypes.func.isRequired,
   logged: PropTypes.bool.isRequired,
 };

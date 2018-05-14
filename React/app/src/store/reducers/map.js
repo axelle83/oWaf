@@ -49,6 +49,7 @@ const reducer = (state = initialState, action = {}) => {
       bag = (action.data.details.indexOf('Sacs de déjections canines') >= 0);
       lake = (action.data.details.indexOf('lac à proximité') >= 0);
       place = {
+        id: action.data.id,
         adress: action.data.adresse,
         comment: action.data.commentaire,
         name: action.data.title.rendered,

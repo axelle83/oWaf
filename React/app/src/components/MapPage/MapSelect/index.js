@@ -23,7 +23,8 @@ class MapSelect extends React.Component {
     const { name, categories } = this.props;
     return (
       <select name={name} id="mapSelect" onChange={this.handleChange}>
-        {categories.map((category, key) => <option value={key}>{category.label}</option>)}
+        {categories.map((category, key) =>
+          <option key={category.label} value={key}>{category.label}</option>)}
       </select>
     );
   }
