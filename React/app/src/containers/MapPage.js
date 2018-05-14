@@ -15,7 +15,9 @@ import { loadPlace } from 'src/store/reducers/map';
  * Code
  */
 // State
-const mapStateToProps = null;
+const mapStateToProps = state => ({
+  logged: state.member.logged,
+});
 
 // Actions
 const mapDispatchToProps = dispatch => ({

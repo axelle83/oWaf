@@ -138,7 +138,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/',
+        path: '/membre',
       },
     },
   },

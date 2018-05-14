@@ -3,6 +3,7 @@
 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 /*
 * Local Import
@@ -28,6 +29,8 @@ class MapPage extends React.Component {
   // }
 
   render() {
+    const { logged } = this.props;
+    if (!logged) return <Redirect to="/" />;
     return (
       <form id="map">
         <h1 className="map-title">La carte !</h1>
@@ -68,6 +71,7 @@ MapPage.propTypes = {
   // inputValue: PropTypes.string.isRequired,
   // actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
   loadPlace: PropTypes.func.isRequired,
+  logged: PropTypes.bool.isRequired,
 };
 
 /*
