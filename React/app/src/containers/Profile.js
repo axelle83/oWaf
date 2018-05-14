@@ -17,6 +17,7 @@ import { profileSubmit } from 'src/store/reducers/member';
 // State
 const mapStateToProps = state => ({
   errorpassword: state.member.errorpassword,
+  logged: state.login.logged,
 });
 
 // Actions

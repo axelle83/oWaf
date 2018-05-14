@@ -78,18 +78,19 @@ const subscribeMiddleware = store => next => (action) => {
       break;
     }
     case LOAD_IMAGE: {
-      // const formData = new FormData();
-      // formData.append('image', action.value, action.value.name);
+      const formData = new FormData();
+      formData.append('image', action.value);
+      console.log('formData', formData.get('image'));
       // formData.append('name', action.value.name);
       // formData.append('image', action.value);
-      // console.log(formData);
-      console.log(action.value.name);
+      // console.log('formdata', formData);
+      // console.log('action.value', action.value);
       const admin = btoa('restapi:restapi');
-      const file = btoa(`${action.value.name}`);
+      const file = btoa(formData);
       const config = {
         headers: {
           Authorization: `Basic ${admin}`,
-          'content-type': false,
+          'content-type': `form-data; filename=${action.value.name}`,
         },
       };
       axios

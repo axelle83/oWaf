@@ -16,7 +16,7 @@ import { loadPlace } from 'src/store/reducers/map';
  */
 // State
 const mapStateToProps = state => ({
-  logged: state.member.logged,
+  logged: state.login.logged,
 });
 
 // Actions

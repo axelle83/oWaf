@@ -81,7 +81,7 @@ const reducer = (state = initialState, action = {}) => {
     case DISCONNECT:
       return {
         ...state,
-        looged: false,
+        logged: false,
       };
 
     // default case

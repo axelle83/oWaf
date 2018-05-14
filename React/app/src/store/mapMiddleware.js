@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace } from './reducers/map';
+import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories } from './reducers/map';
 
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
@@ -10,17 +10,32 @@ const mapMiddleware = store => next => (action) => {
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
+      const categories = [];
+      // gets the categories
+      axios
+        .get(urlCategory, config)
+        .then((response) => {
+          // gets the category
+          for (let i = 0; i < response.data.length; i += 1) {
+            categories[response.data[i].id] = {
+              label: response.data[i].name,
+            };
+          }
+          store.dispatch(getCategories(categories));
+        });
       // gets the places
       axios
         .get(urlMap, config)
         .then((response) => {
           /* eslint-disable-next-line */
           response.data.map((data) => {
-            // gets the category
+            // gets the lat & lng from the adress
+            const adress = JSON.stringify(data.adresse.address);
             axios
-              .get(`${urlCategory}/${data.categories[0]}`, config)
+              .get(`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%${adress}&sensor=false`)
               .then((res) => {
-                data.categories[0] = res.data.name;
+                data.lat = res.data.results[0].geometry.location.lat;
+                data.lng = res.data.results[0].geometry.location.lng;
               });
             // adds the place to the state
             setTimeout(
@@ -46,21 +61,17 @@ const mapMiddleware = store => next => (action) => {
           Authorization: `Basic ${admin}`,
         },
       };
-      // gets the places
+      // adds the place
       axios
         .post(urlMap, {
           title: state.map.name,
           status: 'publish',
           commentaire: state.map.comment,
-          adresse: {
-            adress: state.map.adress,
-            lat: state.map.lat,
-            lng: state.map.lng,
-          },
+          adresse: state.map.adress,
         }, config)
         .then((response) => {
+          console.log(response.data);
           store.dispatch(newPlace());
-          console.log(response);
         })
         .catch((error) => {
           console.log(error);

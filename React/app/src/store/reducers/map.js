@@ -3,6 +3,7 @@
  * Types
  */
 export const LOAD_PLACE = 'LOAD_PLACE';
+export const GET_CATEGORIES = 'GET_CATEGORIES';
 export const GET_PLACE = 'GET_PLACE';
 export const GET_MY_PLACE = 'GET_MY_PLACE';
 export const INPUT_MAP_CHANGE = 'INPUT_MAP_CHANGE';
@@ -16,6 +17,7 @@ const initialState = {
   places: [],
   myPlace: {},
   newPlace: false,
+  categories: '',
 };
 let place = {};
 let leash = false;
@@ -33,6 +35,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
       };
+    // gets the categories from the rest api
+    case GET_CATEGORIES:
+      return {
+        ...state,
+        categories: action.data,
+      };
 
     // gets the values returned by the rest api
     case GET_PLACE:
@@ -44,9 +52,9 @@ const reducer = (state = initialState, action = {}) => {
         adress: action.data.adresse.address,
         comment: action.data.commentaire,
         name: action.data.title.rendered,
-        category: action.data.categories[0],
-        lat: Number(action.data.adresse.lat),
-        lng: Number(action.data.adresse.lng),
+        category: state.categories[action.data.categories[0]].label,
+        lat: action.data.lat,
+        lng: action.data.lng,
         leash,
         fountain,
         bag,
@@ -92,7 +100,6 @@ const reducer = (state = initialState, action = {}) => {
 
     // new place has been added
     case NEW_PLACE: {
-      console.log('ok');
       return {
         ...state,
         newPlace: true,
@@ -115,6 +122,10 @@ export const getPlaces = data => ({
   type: GET_PLACE,
   data,
 });
+export const getCategories = data => ({
+  type: GET_CATEGORIES,
+  data,
+});
 export const getMyPlace = data => ({
   type: GET_MY_PLACE,
   data,
@@ -130,6 +141,7 @@ export const placeSubmit = () => ({
 export const newPlace = () => ({
   type: NEW_PLACE,
 });
+
 /*
  * Export default
  */

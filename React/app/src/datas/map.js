@@ -11,18 +11,18 @@ const places = [
     placeholder: 'Adresse du lieu',
     mandatory: true,
   },
-  {
-    type: 'number',
-    name: 'lat',
-    placeholder: 'Lat',
-    mandatory: true,
-  },
-  {
-    type: 'number',
-    name: 'lng',
-    placeholder: 'Lng',
-    mandatory: true,
-  },
+  // {
+  //   type: 'number',
+  //   name: 'lat',
+  //   placeholder: 'Lat',
+  //   mandatory: true,
+  // },
+  // {
+  //   type: 'number',
+  //   name: 'lng',
+  //   placeholder: 'Lng',
+  //   mandatory: true,
+  // },
   {
     type: 'textarea',
     name: 'comment',

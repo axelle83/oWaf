@@ -14,9 +14,11 @@ export default class SubscribeRadio extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    selectedOption: PropTypes.string.isRequired,
+    selectedOption: PropTypes.string,
   }
-
+  static defaultProps = {
+    selectedOption: 'femelle',
+  }
   /**
    * Handle change event
    */
