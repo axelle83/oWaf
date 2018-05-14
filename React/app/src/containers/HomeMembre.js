@@ -25,6 +25,7 @@ const mapStateToProps = state => ({
   excerpt3: state.post.excerpt3,
   name: state.member.pseudo,
   dogName: state.member.dogName,
+  logged: state.login.logged,
 });
 
 // Actions
