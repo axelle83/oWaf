@@ -11,6 +11,7 @@ import classNames from 'classnames';
 import fields from 'src/datas/map';
 import MapField from 'src/containers/MapField';
 import MapCheck from 'src/containers/MapCheck';
+import MapSelect from 'src/containers/MapSelect';
 
 /*
 * Code
@@ -27,6 +28,7 @@ class Details extends React.Component {
     return (
       <form id="details" onSubmit={this.handleSubmit}>
         {fields.places.map(field => <MapField key={field.name} {...field} />)}
+        <MapSelect name="category" />
         {fields.check.map(field => <MapCheck key={field.name} {...field} />)}
         <p
           id="newPlaceSend"

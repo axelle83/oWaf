@@ -17,7 +17,7 @@ const initialState = {
   places: [],
   myPlace: {},
   newPlace: false,
-  categories: '',
+  categories: [],
 };
 let place = {};
 let leash = false;
@@ -49,7 +49,7 @@ const reducer = (state = initialState, action = {}) => {
       bag = (action.data.details.indexOf('Sacs de déjections canines') >= 0);
       lake = (action.data.details.indexOf('lac à proximité') >= 0);
       place = {
-        adress: action.data.adresse.address,
+        adress: action.data.adresse,
         comment: action.data.commentaire,
         name: action.data.title.rendered,
         category: state.categories[action.data.categories[0]].label,
@@ -102,6 +102,7 @@ const reducer = (state = initialState, action = {}) => {
     case NEW_PLACE: {
       return {
         ...state,
+        places: [...state.places, action.data],
         newPlace: true,
       };
     }
@@ -138,8 +139,9 @@ export const changeMapInput = ({ name, value }) => ({
 export const placeSubmit = () => ({
   type: PLACE_SUBMIT,
 });
-export const newPlace = () => ({
+export const newPlace = data => ({
   type: NEW_PLACE,
+  data,
 });
 
 /*

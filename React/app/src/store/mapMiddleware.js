@@ -30,13 +30,15 @@ const mapMiddleware = store => next => (action) => {
           /* eslint-disable-next-line */
           response.data.map((data) => {
             // gets the lat & lng from the adress
-            const adress = JSON.stringify(data.adresse.address);
-            axios
-              .get(`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%${adress}&sensor=false`)
-              .then((res) => {
-                data.lat = res.data.results[0].geometry.location.lat;
-                data.lng = res.data.results[0].geometry.location.lng;
-              });
+            const adress = JSON.stringify(data.adresse);
+            if (adress) {
+              axios
+                .get(`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%${adress}&sensor=false`)
+                .then((res) => {
+                  data.lat = res.data.results[0].geometry.location.lat;
+                  data.lng = res.data.results[0].geometry.location.lng;
+                });
+            }
             // adds the place to the state
             setTimeout(
               () => {
@@ -62,16 +64,24 @@ const mapMiddleware = store => next => (action) => {
         },
       };
       // adds the place
+      const details = [
+        state.map.leach && 'Laisse',
+        state.map.fountain && 'Fontaine',
+        state.map.lake && 'lac à proximité',
+        state.map.bag && 'Sacs de déjections canines',
+      ];
+      const myNewPlace = {
+        title: state.map.name,
+        status: 'publish',
+        commentaire: state.map.comment,
+        adresse: state.map.adress,
+        categories: state.map.category,
+        details,
+      };
       axios
-        .post(urlMap, {
-          title: state.map.name,
-          status: 'publish',
-          commentaire: state.map.comment,
-          adresse: state.map.adress,
-        }, config)
+        .post(urlMap, myNewPlace, config)
         .then((response) => {
-          console.log(response.data);
-          store.dispatch(newPlace());
+          store.dispatch(newPlace(myNewPlace));
         })
         .catch((error) => {
           console.log(error);
