@@ -1,6 +1,6 @@
 <?php
 
-$category = get_category_by_slug('categorie-de-blog');
+$category = get_category_by_slug('blog');
 
 $wp_list_args = [
     'child_of' => $category->term_id,

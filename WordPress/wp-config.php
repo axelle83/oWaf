@@ -47,14 +47,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'R)4@Q;ln,_?WY72dro)Y%1+6 /HR-v{3F)tk4!q9K }*R}e|CXY[<!ub Pk>Ye|Q');
-define('SECURE_AUTH_KEY',  '{}05X20=Jf3(^AUQjrti|F5NH?L!BUi)srdQ,L+a$1/]lkc>i3q+0lCXDXS0+J#9');
-define('LOGGED_IN_KEY',    'sz{*LNw+JhiL+j(QUjLavM3@z-.[UQ!7;4R5xc;K)T.+dH#50q;Je]8Tha.N18(/');
-define('NONCE_KEY',        '(+qj#g]!:!F^v7X>[7I@U+$M.U`qzKUO,!MA2|Gcn/44dJc<l,?3T62IVR[la]n0');
-define('AUTH_SALT',        '5ax,K9$y_b/;!i0Sc?~6O5Y)5,esk$Bqm*JQF-5~^ZFb1ww{fj%+50~b%Q=NH<7C');
-define('SECURE_AUTH_SALT', ';875SZ|-Elt{F.$Q_[SBwG#nPLbf!aV_{@UnXb]OvI#|HeBJyFT-^mv|]?TSzo9o');
-define('LOGGED_IN_SALT',   'j|Yo#dZS% `Fi_1:V5)yLc+W_4s,iq`hdR0PK9Ic<-E8x2+o}iW3|-i+a%Faf:r}');
-define('NONCE_SALT',       '6B-v[g0J/:`zNj1|Pxdz0+2izgq<3tX<`hM5+i(e}XZtGEu?1=<zh7ivh[Q8|x>K');
+define('AUTH_KEY',         '++A)O: 0aL~NhZS&k)U1f1M%R qaG@nTJlq|*N!]-7++jMqZPh:N+9$CIwb1-.]z');
+define('SECURE_AUTH_KEY',  'ruk94oz9!D9G3mChlklOMX#DB (D6=$5{}B<gAg.Bgsf|wMUdQkoyKb 9K_B X%c');
+define('LOGGED_IN_KEY',    'jSnen{]M}g/Pw#T9.X{ vS/.4Q`^x`c8OmD %Ko<^^+/?2p^U~&23XP_v{r[Sd C');
+define('NONCE_KEY',        '5q{7Fj)I^J/C+57l~+2r{2.,-8W>*vif4jEWHj$+W?$9#u^[|jo+/2r4!z@*Ff()');
+define('AUTH_SALT',        'k^%|~lSV0+q[?F4},-FU|p4I*yGang9l?gl^`z%|GV?$~Q5s;?oI9oE`~6}Qt<@h');
+define('SECURE_AUTH_SALT', '(=E*d`yz!?fhO x}~;BHwZFy5 [f4+c+@nYO|R WT-QPd3*Vf-iTlw(QH1VPUyqk');
+define('LOGGED_IN_SALT',   '#x3(>Hx}[$}(Jg&R^C~/im1K$-t0L<8-Zc`,jR;`p|?F-fUBV>JrAun]_&-metUP');
+define('NONCE_SALT',       'Dpr?{H{|[^<4(7>u^`-A@V5>7|%OjkU9t#ZSv}|ZjN[QWhK3toSDP9rh& 7OelNO');
 
 /**#@-*/
 
@@ -75,11 +75,11 @@ $table_prefix  = 'wp_';
 define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
 
 // URL complete du répertoire WP-CONTENT (déplacé)
-define('WP_CONTENT_URL', 'http://localhost/oWaf/WordPress/content');
-// define('WP_CONTENT_URL', 'http://217.70.189.93/WordPress/content/');
+// define('WP_CONTENT_URL', 'http://localhost/oWaf/WordPress/content');
+define('WP_CONTENT_URL', 'http://217.70.189.93/content/');
 
-define('WP_HOME','http://localhost/oWaf/WordPress/wp');
-define('WP_SITEURL','http://localhost/oWaf/WordPress/');
+define('WP_HOME','http://217.70.189.93/wp');
+define('WP_SITEURL','http://217.70.189.93');
 /**
  * For developers: WordPress debugging mode.
  *
