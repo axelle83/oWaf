@@ -19,7 +19,7 @@ function owaf_user_register_rest_fields() {
       'ville',
         [
             'get_callback'  => 'rest_get_ville_user_field',
-            'update_callback'   => null,
+            'update_callback'   => 'rest_post_ville_user_field',
             'schema'            => null,
          ]
     );
@@ -33,10 +33,16 @@ function rest_get_dog_id_user_field( $object, $field_name, $request ) {
 
 function rest_post_dog_id_user_field( $value, $object, $field_name) {
 
-    return add_user_meta($object['id'], 'dog_id', $value);
+    return update_user_meta($object->id, 'dog_id', $value);
+    
 }
 
 function rest_get_ville_user_field( $object, $field_name, $request ) {
 
     return get_user_meta( $object[ 'id' ], 'ville', true );
+}
+
+function rest_post_ville_user_field( $value, $object, $field_name ) {
+
+    return update_user_meta($object->id, 'ville', $value);
 }
