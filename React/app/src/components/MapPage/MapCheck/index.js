@@ -25,9 +25,6 @@ export default class MapCheck extends React.Component {
     const id = `mapField-${name}`;
     return (
       <div className="mapField check">
-        <span className="mapField-label">
-          {label}
-        </span>
         <input
           type="checkbox"
           className="mapField-check"
@@ -35,6 +32,9 @@ export default class MapCheck extends React.Component {
           name={name}
           onChange={this.handleChange}
         />
+        <span className="mapField-label">
+          {label}
+        </span>
       </div>
     );
   }

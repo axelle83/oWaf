@@ -4,7 +4,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import FaWeChat from 'react-icons/lib/fa/wechat';
+import FaEdit from 'react-icons/lib/fa/edit';
+import FaClose from 'react-icons/lib/fa/close';
 
 /**
  * Local import
@@ -28,11 +29,12 @@ const Chat = ({ actions, openChat }) => (
     )
     }
   >
-    <FaWeChat id="chatClose" onClick={actions.toggleChat} />
+    <FaClose id="chatClose" onClick={actions.toggleChat} />
     <div id="chat-display">
       <ChatMessages />
       <ChatForm />
     </div>
+
   </div>
 );
 Chat.propTypes = {

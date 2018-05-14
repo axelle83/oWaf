@@ -42,10 +42,29 @@ class Details extends React.Component {
           Le nouveau lieu a bien été ajouté !
         </p>
         <button
+          type="submit"
           id="place-submit"
           onClick={this.onSubmit}
+          className={
+            classNames(
+            'add',
+            { 'add--true': !newPlace },
+            )
+          }
         >
           Ajouter
+        </button>
+        <button
+          // onClick={toggleContact}
+          id="place-close"
+          className={
+            classNames(
+            'add',
+            { 'add--true': newPlace },
+            )
+          }
+        >
+          Fermer
         </button>
       </form>
     );

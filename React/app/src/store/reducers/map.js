@@ -17,6 +17,7 @@ const initialState = {
   places: [],
   myPlace: {},
   newPlace: false,
+  addPlace: false,
   categories: [],
 };
 let place = {};
@@ -105,6 +106,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         places: [...state.places, action.data],
         newPlace: true,
+        addPlace: true,
       };
     }
 

@@ -18,9 +18,8 @@ const Footer = () => {
   const year = now.getFullYear();
   return (
     <footer id="footer">
-      <a className="footer-title" title="owaf" href="/home">&copy; oWaf -{year}</a>
+      <a className="footer-title" title="owaf" href="/home">Copyright <span id="footer-logo">oWaf</span> {year}</a>
       <a className="footer-cgu" title="nos cgu" href="/cgu">Nos conditions d'utilisation</a>
-      <a className="footer-contact"title="contact" href="contact">Contactez-nous</a>
       <div className="footer-sociaux">
         <i className="fab fa-facebook-f" />
         <i className="fab fa-twitter" />

@@ -27,7 +27,7 @@ class Profile extends React.Component {
 
   render() {
     const { logged } = this.props;
-    if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
+    // if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
     return (
       <form
         id="profile"
@@ -49,11 +49,11 @@ class Profile extends React.Component {
             Les mots de passe ne sont pas identiques
           </div>
         </div>
+        <div className="subscribe-dog-title">Mon chien</div>
         <div className="subscribe-dog">
-          <div className="subscribe-dog-title">Mon chien</div>
           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
           <SubscribeRadio name="dogSex" />
-          <SubscribeUpload name="dogImage" />
+          {/* <SubscribeUpload name="dogImage" /> */}
         </div>
         <button
           id="profile-submit"

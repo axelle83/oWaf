@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
+import FaPlus from 'react-icons/lib/fa/plus-circle';
 
 /*
 * Local Import
@@ -17,8 +18,17 @@ import Details from 'src/containers/Details';
 * Code
 */
 class MapPage extends React.Component {
+  state = {
+    addOpen: false,
+  }
+
   componentDidMount() {
     this.props.loadPlace();
+  }
+
+  handleClick = () => {
+    this.state.addOpen = !this.state.addOpen;
+    this.setState({ addOpen: this.state.addOpen });
   }
 
   render() {
@@ -39,22 +49,20 @@ class MapPage extends React.Component {
           </div>
         </div>
         <div id="map-details">
-          <div className="details">
+          {/* <div className="details"> */}
             <div className="details-label">Cliquer sur un marqueur pour afficher les détails du lieu</div>
-            <div className="details-infos"><DetailsInfo /></div>
-          </div>
-          <div className="details">
-            <div className="details-label">Ajouter un lieu</div>
-            {/* <input
-              className="map-addPlace"
-              type="text"
-              placeholder="votre lieu"
-              value={inputValue}
-              onChange={this.handleChange}
-            /> */}
-            <div className="details-infos"><Details /></div>
-          </div>
+          {/* </div>
+          <div className="details"> */}
+            <div className="details-label">
+              Ajouter un lieu
+              <FaPlus id="place-add" onClick={this.handleClick} />
+            </div>
+          {/* </div> */}
         </div>
+        {!this.state.addOpen &&
+          <div className="details-infos"><DetailsInfo /></div>}
+        {this.state.addOpen &&
+          <div className="details-infos"><Details /></div>}
       </div>
     );
   }
