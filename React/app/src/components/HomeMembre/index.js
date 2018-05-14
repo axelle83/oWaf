@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 /*
 *  Code
@@ -15,19 +16,20 @@ class HomeMembre extends React.Component {
   render() {
     const {
       title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
-      name,
+      name, dogName, logged,
     } = this.props;
+    if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
     return (
       <div id="homeMembre">
         <div className="homeMembre-img" />
-        <div className="homeMembre-text">Bienvenue {name} et   </div>
+        <div className="homeMembre-text">Bienvenue {name} et {dogName} </div>
         <div className="homeMembre-carte-title">Carte interactive</div>
         <div className="homeMembre-carte">
           <div className="homeMembre-carte-img" />
           <div className="homeMembre-carte-texte">Venez partager vos lieux de détente favoris et découvrir ceux des autres !</div>
         </div>
         <div className="home-blog">
-          Discussions à la une
+          <p className="home-blog-title">Discussions à la une</p>
           <div className="home-blog-post">
             <div className="post">
               <p className="post-category">{category1}</p>
@@ -68,7 +70,8 @@ HomeMembre.propTypes = {
   category3: PropTypes.string.isRequired,
   excerpt3: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  // dogName: PropTypes.string.isRequired,
+  logged: PropTypes.bool.isRequired,
+  dogName: PropTypes.string.isRequired,
 };
 
 /*

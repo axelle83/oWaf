@@ -32,7 +32,7 @@ class HomeVisiteur extends React.Component {
           <div className="visiteur-img2-img" />
         </div>
         <div className="home-blog">
-          Articles à la une
+          <p className="home-blog-title">Articles à la une</p>
           <div className="home-blog-post">
             <div className="post">
               <p className="post-category">{category1}</p>

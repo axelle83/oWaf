@@ -21,16 +21,9 @@ class MapPage extends React.Component {
     this.props.loadPlace();
   }
 
-  // handleChange = (evt) => {
-  // Je recup la value depuis la cible de l'event
-  // const { value } = evt.target;
-  // j'exécute la fonction fournie en passant la value
-  // this.props.actions.changeInputForm(value);
-  // }
-
   render() {
     const { logged } = this.props;
-    if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
+    // if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
     return (
       <form id="map">
         <h1 className="map-title">La carte !</h1>

@@ -12,19 +12,20 @@ export default class MapCheck extends React.Component {
    * Handle change event
    */
   handleChange = (evt) => {
-    const { value } = evt.target;
-    this.props.onChange(value);
+    console.log(evt.target.checked);
+    const { checked } = evt.target;
+    this.props.onChange(checked);
   }
 
   /*
    * Render
    */
   render() {
-    const { name, label, inputValue } = this.props;
+    const { name, label } = this.props;
     const id = `mapField-${name}`;
     return (
       <div className="mapField check">
-        <span className="mapFiel-label">
+        <span className="mapField-label">
           {label}
         </span>
         <input
@@ -32,7 +33,6 @@ export default class MapCheck extends React.Component {
           className="mapField-check"
           id={id}
           name={name}
-          value={inputValue}
           onChange={this.handleChange}
         />
       </div>

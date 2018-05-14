@@ -57,24 +57,27 @@
   margin: 1em
   text-align: center
 
-.homeMembre-blog
-  color: $color
-  font-family: $title
-  font-size: 2em
-  padding-left: 1em
-  padding-top: .5em
-
 .home-blog
-  border: 2px solid $color
   color: $color
-  height: 20em
-  margin: 1em 1em 0 1em
+  height: auto
+  margin: 2em 1em 0em 2em
+  padding: 2.5em
+
+
+.home-blog-title
+  font-size: 1.8em
+  text-decoration: underline
+  padding-bottom: 1em
+
 
 .home-blog-post
   display: flex
+  font-size: 0.8em
+  flex-direction: column
+  text-align: justify
 
 .post
-  padding: 1em
+
   &-more
     text-align: right
     padding: 1em 0
@@ -82,6 +85,7 @@
     font-size:1.5em
     padding: .5em 0
   &-category
+    text-decoration: underline
     text-transform: uppercase
     font-size: 2em
     padding-top: .5em
@@ -126,10 +130,10 @@
     padding-left: 0
     width: 30%
 
-  .homeMembre-blog
-    font-size: 2em
-    margin-left: 1em
-    text-align: left
-  .homeMembre-blog-article
-    height: 25em
-    margin: 2em 2em 0 2em
+  .home-blog-post
+    display: flex
+    font-size: 1em
+    flex-direction: row;
+    text-align:left
+  .post
+    padding-right: 2.5em

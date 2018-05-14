@@ -2,7 +2,7 @@
 * Import
 */
 import axios from 'axios';
-import { SUBSCRIBE_SUBMIT, LOAD_IMAGE, subscribe, userExists } from './reducers/member';
+import { SUBSCRIBE_SUBMIT, LOAD_IMAGE, PROFILE_SUBMIT, subscribe, userExists } from './reducers/member';
 
 /**
  * Code
@@ -69,11 +69,41 @@ const subscribeMiddleware = store => next => (action) => {
                     })
                     .catch((error) => {
                       console.log('ko', error);
-                  });
-
+                    });
                 }
               });
           }
+        });
+      break;
+    }
+
+    case PROFILE_SUBMIT: {
+      const state = store.getState();
+      const admin = btoa('restapi:restapi');
+      const config = {
+        headers: {
+          Authorization: `Basic ${admin}`,
+        },
+      };
+      // updates user in the db
+      axios
+        .post(`${urlUser}/${state.member.id}`, {
+          ville: state.member.city,
+          password: state.member.password,
+          email: state.member.email,
+        }, config)
+        .then((response) => {
+          console.log(response);
+        });
+      // updates dog in the db
+      axios
+        .post(`${urlDog}/${state.member.dogId}`, {
+          slug: state.member.dogName,
+          naiss: state.member.dogBirth,
+          genre: state.member.dogSex,
+        }, config)
+        .then((response) => {
+          console.log(response);
         });
       break;
     }
@@ -81,10 +111,6 @@ const subscribeMiddleware = store => next => (action) => {
       const formData = new FormData();
       formData.append('image', action.value);
       console.log('formData', formData.get('image'));
-      // formData.append('name', action.value.name);
-      // formData.append('image', action.value);
-      // console.log('formdata', formData);
-      // console.log('action.value', action.value);
       const admin = btoa('restapi:restapi');
       const file = btoa(formData);
       const config = {

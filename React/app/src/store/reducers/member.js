@@ -38,17 +38,17 @@ const reducer = (state = initialState, action = {}) => {
     case GET_MEMBER:
       return {
         ...state,
-        pseudo: action.data.slug,
-        city: action.data.ville,
         id: action.data.id,
+        pseudo: action.data.slug,
         email: action.data.email,
-        // TODO autres données
+        city: action.data.ville,
       };
 
     // gets the dog data of the connected member
     case GET_DOG:
       return {
         ...state,
+        dogId: action.data.id,
         dogName: action.data.slug,
         dogBirth: action.data.naiss,
         dogSex: action.data.genre,
