@@ -27,7 +27,7 @@ class HomeMembre extends React.Component {
           <div className="homeMembre-carte-texte">Venez partager vos lieux de détente favoris et découvrir ceux des autres !</div>
         </div>
         <div className="home-blog">
-          Discussions à la une
+          <p className="home-blog-title">Discussions à la une</p>
           <div className="home-blog-post">
             <div className="post">
               <p className="post-category">{category1}</p>
