@@ -23,7 +23,7 @@ const mapStateToProps = state => ({
   title3: state.post.title3,
   category3: state.post.category3,
   excerpt3: state.post.excerpt3,
-  logged: state.member.logged,
+  logged: state.login.logged,
 });
 
 // Actions

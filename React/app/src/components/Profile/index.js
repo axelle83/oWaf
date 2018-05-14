@@ -5,6 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Redirect } from 'react-router-dom';
 
 
 /*
@@ -25,6 +26,8 @@ class Profile extends React.Component {
   }
 
   render() {
+    const { logged } = this.props;
+    if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
     return (
       <form
         id="profile"
@@ -64,6 +67,7 @@ class Profile extends React.Component {
 }
 Profile.propTypes = {
   onProfileSubmit: PropTypes.func.isRequired,
+  logged: PropTypes.bool.isRequired,
   errorpassword: PropTypes.bool,
 };
 Profile.defaultProps = {

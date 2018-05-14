@@ -5,7 +5,6 @@ const initialState = {
   members: [],
   errorpassword: false,
   exist: false,
-  logged: false,
   subscribe: false,
   view: 'password',
   pseudo: '',

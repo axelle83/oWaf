@@ -23,7 +23,7 @@ const Nav = ({ buttons }) => (
     <div id="button">
       {Object.keys(buttons).map(button => (
         <NavLink
-          exact
+          // exact
           key={button}
           to={buttons[button].path}
           className="button-nav"

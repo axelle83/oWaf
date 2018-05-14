@@ -40,7 +40,7 @@ export default class SubscribeUpload extends React.Component {
             id="subscribe-dog-image-file"
             type="file"
             onChange={this.fileChangedHandler}
-            accept=".jpg, .jpeg, .png"
+            accept="image/*"
           />
         </label>
         <button

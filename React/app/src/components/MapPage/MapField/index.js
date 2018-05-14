@@ -66,7 +66,7 @@ MapField.propTypes = {
   onChange: PropTypes.func.isRequired,
   mandatory: PropTypes.bool.isRequired,
   inputValue: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'checkbox', 'number']).isRequired,
+  type: PropTypes.oneOf(['text', 'textarea', 'number']).isRequired,
 };
 
 MapField.defaultProps = {
