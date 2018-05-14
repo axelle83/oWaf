@@ -15,6 +15,7 @@ class HomeVisiteur extends React.Component {
 
   render() {
     const { logged } = this.props;
+    if (logged) return <Redirect to="/membre" />;
     const {
       title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
     } = this.props;

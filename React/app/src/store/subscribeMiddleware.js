@@ -33,8 +33,8 @@ const subscribeMiddleware = store => next => (action) => {
             // test if pseudo exists in the db
             axios
               .get(`${urlUser}/?search=${state.member.pseudo}`, config)
-              .then((res) => {
-                if (res.data.length > 0) {
+              .then((resp) => {
+                if (resp.data.length > 0) {
                   store.dispatch(userExists());
                 }
                 else {
@@ -48,16 +48,7 @@ const subscribeMiddleware = store => next => (action) => {
                       status: 'publish',
                     }, config)
                     .then((response) => {
-                      console.log('ok', response.data.id);
-                      // axios
-                      //   .post(`${urlDog}/${response.data.id}`, {
-                      //   }, config)
-                      //   .then((res) => {
-                      //     console.log(res);
-                      //   })
-                      //   .catch((error) => {
-                      //     console.log(error);
-                      //   });
+                      console.log('ok', response.data);
                       axios
                         // creates user in the db
                         .post(urlUser, {
@@ -65,14 +56,11 @@ const subscribeMiddleware = store => next => (action) => {
                           last_name: state.member.pseudo,
                           email: state.member.email,
                           password: state.member.password,
-                          meta: {
-                            ville: state.member.city,
-                          },
                           ville: state.member.city,
-                          // dog_id: response.data.id,
+                          dog_id: response.data.id,
                         }, config)
-                        .then((res) => {
-                          console.log(res.data);
+                        .then((respons) => {
+                          console.log(respons.data);
                         })
                         .catch((error) => {
                           console.log(error);
