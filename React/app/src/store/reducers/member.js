@@ -40,7 +40,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         id: action.data.id,
         pseudo: action.data.slug,
-        email: action.data.email,
+        email: action.data.user_email,
         city: action.data.ville,
       };
 
