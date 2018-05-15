@@ -16,6 +16,7 @@ import mailMiddleware from './mailMiddleware';
 import loginMiddleware from './loginMiddleware';
 import postMiddleware from './postMiddleware';
 import mapMiddleware from './mapMiddleware';
+import localStorageMiddleware from './localStorageMiddleware';
 
 /*
  * Code
@@ -26,8 +27,9 @@ if (window.devToolsExtension) {
   devTools.push(window.devToolsExtension());
 }
 
-// Middleware vers Enhancers
+// Middleware -> Enhancers
 const Enhancer = applyMiddleware(
+  localStorageMiddleware,
   chatMiddleware,
   subscribeMiddleware,
   mailMiddleware,
@@ -37,8 +39,11 @@ const Enhancer = applyMiddleware(
 );
 const middlewares = compose(Enhancer, ...devTools);
 
+// Check if state exists in localStorage
+const persistedState = localStorage.getItem('applicationState') ? JSON.parse(localStorage.getItem('applicationState')) : {};
+
 // createStore
-const store = createStore(reducers, middlewares);
+const store = createStore(reducers, persistedState, middlewares);
 
 /*
  * Export

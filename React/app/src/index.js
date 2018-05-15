@@ -29,4 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
   render(rootComponent, document.getElementById('root'));
 
   store.dispatch(chatConnect());
+  localStorage.setItem('applicationState', JSON.stringify(store.getState()));
 });
