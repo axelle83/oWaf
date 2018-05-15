@@ -18,17 +18,17 @@ class HomeMembre extends React.Component {
       title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
       name, dogName, logged,
     } = this.props;
-    // if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
+    if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
     return (
       <div id="homeMembre">
         {/* <div className="homeMembre-img" /> */}
         <div className="homeMembre-text">Bienvenue {name} et {dogName} </div>
         <div className="homeMembre-carte-title">Carte interactive</div>
-        <div className="homeMembre-carte">
+        <a href="/map" className="homeMembre-carte">
           <div className="homeMembre-carte-img" />
-          <div className="homeMembre-carte-texte">Venez partager vos lieux de détente favoris et découvrir ceux des autres !</div>
-        </div>
-        <div className="home-blog">
+          <div className="homeMembre-carte-texte">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
+        </a>
+        <a href="/blog" className="home-blog">
           Discussions à la une
           <div className="home-blog-post">
             <div className="post">
@@ -53,7 +53,7 @@ class HomeMembre extends React.Component {
               <p className="post-more">En lire plus</p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     );
   }
