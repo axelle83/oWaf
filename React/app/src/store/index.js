@@ -11,11 +11,12 @@ import reducers from './reducers';
 
 // Middleware
 import chatMiddleware from './chatMiddleware';
-import subscribeMiddleware from './subscribeMiddleware';
+import memberMiddleware from './memberMiddleware';
 import mailMiddleware from './mailMiddleware';
 import loginMiddleware from './loginMiddleware';
 import postMiddleware from './postMiddleware';
 import mapMiddleware from './mapMiddleware';
+import sessionStorageMiddleware from './sessionStorageMiddleware';
 
 /*
  * Code
@@ -26,10 +27,11 @@ if (window.devToolsExtension) {
   devTools.push(window.devToolsExtension());
 }
 
-// Middleware vers Enhancers
+// Middleware -> Enhancers
 const Enhancer = applyMiddleware(
+  sessionStorageMiddleware,
   chatMiddleware,
-  subscribeMiddleware,
+  memberMiddleware,
   mailMiddleware,
   loginMiddleware,
   postMiddleware,
@@ -37,8 +39,11 @@ const Enhancer = applyMiddleware(
 );
 const middlewares = compose(Enhancer, ...devTools);
 
+// Check if state exists in localStorage
+const persistedState = sessionStorage.getItem('applicationState') ? JSON.parse(sessionStorage.getItem('applicationState')) : {};
+
 // createStore
-const store = createStore(reducers, middlewares);
+const store = createStore(reducers, persistedState, middlewares);
 
 /*
  * Export

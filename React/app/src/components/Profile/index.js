@@ -52,9 +52,10 @@ class Profile extends React.Component {
         <div className="subscribe-dog-title">Mon chien</div>
         <div className="subscribe-dog">
           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
-          <SubscribeRadio name="dogSex" />
+          <SubscribeRadio name="dogGender" />
           {/* <SubscribeUpload name="dogImage" /> */}
         </div>
+        <div className="mandatory">* Champs obligatoires</div>
         <button
           id="profile-submit"
           onClick={this.onSubmit}

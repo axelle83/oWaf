@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import FaEdit from 'react-icons/lib/fa/edit';
 
 /**
  * Code
@@ -32,7 +31,6 @@ class ChatForm extends React.Component {
     const { inputValue } = this.props;
     return (
       <form id="chat-form" onSubmit={this.handleSubmit}>
-        <FaEdit id="chatEdit" />
         <input
           type="text"
           id="chat-form-input"

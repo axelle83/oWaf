@@ -24,17 +24,15 @@ export default class MapCheck extends React.Component {
     const { name, label } = this.props;
     const id = `mapField-${name}`;
     return (
-      <div className="mapField check">
+      <div className="check">
         <input
           type="checkbox"
-          className="mapField-check"
+          className="details-check"
           id={id}
           name={name}
           onChange={this.handleChange}
         />
-        <span className="mapField-label">
-          {label}
-        </span>
+        {label}
       </div>
     );
   }
@@ -46,9 +44,9 @@ MapCheck.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  inputValue: PropTypes.string,
+  // inputValue: PropTypes.string,
 };
 
-MapCheck.defaultProps = {
-  inputValue: '',
-};
+// MapCheck.defaultProps = {
+//   inputValue: '',
+// };

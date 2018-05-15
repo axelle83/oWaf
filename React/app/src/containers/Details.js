@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
  * Local import
  */
 import Details from 'src/components/MapPage/Details';
-import { placeSubmit } from 'src/store/reducers/map';
+import { placeSubmit, addForm } from 'src/store/reducers/map';
 
 /*
  * Code
@@ -22,6 +22,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onPlaceSubmit: () => {
     dispatch(placeSubmit());
+  },
+  addForm: () => {
+    dispatch(addForm());
   },
 });
 
