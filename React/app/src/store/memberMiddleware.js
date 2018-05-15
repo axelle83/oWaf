@@ -98,6 +98,7 @@ const memberMiddleware = store => next => (action) => {
       // updates dog in the db
       axios
         .post(`${urlDog}/${state.member.dogId}`, {
+          title: state.member.dogName,
           slug: state.member.dogName,
           naiss: state.member.dogBirth,
           genre: state.member.dogGender,

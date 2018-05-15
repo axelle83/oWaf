@@ -49,7 +49,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         dogId: action.data.id,
-        dogName: action.data.slug,
+        dogName: action.data.title.rendered,
         dogBirth: action.data.naiss,
         dogGender: action.data.genre,
       };
