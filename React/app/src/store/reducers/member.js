@@ -12,7 +12,7 @@ const initialState = {
   id: '',
   email: '',
   dogName: '',
-  dogSex: 'femelle',
+  dogGender: 'femelle',
   dogBirth: '',
   selectedFile: {},
 };
@@ -40,7 +40,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         id: action.data.id,
         pseudo: action.data.slug,
-        email: action.data.email,
+        email: action.data.user_email,
         city: action.data.ville,
       };
 
@@ -51,7 +51,7 @@ const reducer = (state = initialState, action = {}) => {
         dogId: action.data.id,
         dogName: action.data.slug,
         dogBirth: action.data.naiss,
-        dogSex: action.data.genre,
+        dogGender: action.data.genre,
       };
 
     // user exists (pseudo or email)

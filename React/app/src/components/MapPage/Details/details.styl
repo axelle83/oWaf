@@ -3,12 +3,12 @@
 #details
     display: block
     flex-direction: column
-    width: 25em
+    width: 50%
     margin: auto
 
 #place-submit
 #place-close
-	background-color: $bgPeche
+	background-color: $bgBlueDuck
 	border: none
 	border-radius: 1em
 	color: $color
@@ -18,7 +18,7 @@
 	padding: 0.5em
 	text-align: center
 	text-transform: uppercase
-	margin: auto
+	margin: .5em auto 0
 	width: 10em
 	&.add
 		display: none
@@ -29,8 +29,12 @@
 	&.newPlace
 		display: none
 	&.newPlace--true
-		font-family: 'Pacifico'
+		font-family: $title
 		font-size: 1.5em
 		padding: .5em
 		display: block
 		color: $bgGray
+
+.mandatory-map
+  text-align: center
+  // color : $color

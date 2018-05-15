@@ -14,7 +14,7 @@ import { changeInput } from 'src/store/reducers/member';
  * Code
  */
 const mapStateToProps = state => ({
-  selectedOption: state.member.dogSex,
+  selectedOption: state.member.dogGender,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

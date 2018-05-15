@@ -25,11 +25,12 @@ class HomeVisiteur extends React.Component {
         <div className="visiteur-text-img">Vous êtes propriétaire de chien et vous voulez partager des lieux dogfriendly</div>
         <div className="visiteur-carte">
           <div className="visiteur-carte-img" />
-          <div className="visiteur-carte-text">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres ! </div>
+          <div className="visiteur-carte-text">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
         </div>
         <div className="visiteur-img2">
-          <div className="visiteur-img2-text">Vous partez en déplacement <br/> et vous ne savez pas <br />où détendre votre chien ?
-          <p> <br />Restez zen <br />la communauté oWaf <br />est là pour vous...</p></div>
+          <div className="visiteur-img2-text">Vous partez en déplacement <br />et vous ne savez pas <br />où détendre votre chien ?
+            <p> <br />Restez zen <br />la communauté oWaf <br />est là pour vous...</p>
+          </div>
           <div className="visiteur-img2-img" />
         </div>
         <div className="home-blog">

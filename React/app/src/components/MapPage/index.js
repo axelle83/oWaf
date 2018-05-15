@@ -18,21 +18,20 @@ import Details from 'src/containers/Details';
 * Code
 */
 class MapPage extends React.Component {
-  state = {
-    addOpen: false,
-  }
+  // state = {
+  //   addOpen: false,
+  // }
 
   componentDidMount() {
     this.props.loadPlace();
   }
 
   handleClick = () => {
-    this.state.addOpen = !this.state.addOpen;
-    this.setState({ addOpen: this.state.addOpen });
+    this.props.addForm();
   }
 
   render() {
-    const { logged } = this.props;
+    const { logged, add } = this.props;
     // if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
     return (
       <div id="map">
@@ -50,18 +49,18 @@ class MapPage extends React.Component {
         </div>
         <div id="map-details">
           {/* <div className="details"> */}
-            <div className="details-label">Cliquer sur un marqueur pour afficher les détails du lieu</div>
+          <div className="details-title">Cliquer sur un marqueur pour afficher les détails du lieu</div>
           {/* </div>
           <div className="details"> */}
-            <div className="details-label">
-              Ajouter un lieu
-              <FaPlus id="place-add" onClick={this.handleClick} />
-            </div>
+          <div className="details-title">
+            Ajouter un lieu
+            <FaPlus id="place-add" onClick={this.handleClick} />
+          </div>
           {/* </div> */}
         </div>
-        {!this.state.addOpen &&
+        {!add &&
           <div className="details-infos"><DetailsInfo /></div>}
-        {this.state.addOpen &&
+        {add &&
           <div className="details-infos"><Details /></div>}
       </div>
     );
@@ -71,6 +70,8 @@ class MapPage extends React.Component {
 MapPage.propTypes = {
   loadPlace: PropTypes.func.isRequired,
   logged: PropTypes.bool.isRequired,
+  add: PropTypes.bool.isRequired,
+  addForm: PropTypes.func.isRequired,
 };
 
 /*

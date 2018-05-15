@@ -52,6 +52,7 @@ export default class MapField extends React.Component {
           onChange={this.handleChange}
           required={mandatory}
         />
+        {mandatory && '*'}
       </div>
     );
   }

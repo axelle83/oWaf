@@ -23,6 +23,10 @@ class Details extends React.Component {
     this.props.onPlaceSubmit();
   }
 
+  handleClose = () => {
+    this.props.addForm();
+  }
+
   render() {
     const { newPlace } = this.props;
     return (
@@ -41,6 +45,8 @@ class Details extends React.Component {
         >
           Le nouveau lieu a bien été ajouté !
         </p>
+
+        <div className="mandatory-map">* Champs obligatoires</div>
         <button
           type="submit"
           id="place-submit"
@@ -55,7 +61,7 @@ class Details extends React.Component {
           Ajouter
         </button>
         <button
-          // onClick={toggleContact}
+          onClick={this.handleClose}
           id="place-close"
           className={
             classNames(
@@ -76,6 +82,7 @@ class Details extends React.Component {
 */
 Details.propTypes = {
   onPlaceSubmit: PropTypes.func.isRequired,
+  addForm: PropTypes.func.isRequired,
   newPlace: PropTypes.bool.isRequired,
 };
 

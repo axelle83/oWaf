@@ -8,6 +8,7 @@ export const GET_PLACE = 'GET_PLACE';
 export const GET_MY_PLACE = 'GET_MY_PLACE';
 export const INPUT_MAP_CHANGE = 'INPUT_MAP_CHANGE';
 export const PLACE_SUBMIT = 'PLACE_SUBMIT';
+export const ADD_FORM = 'ADD_FORM';
 const NEW_PLACE = 'NEW_PLACE';
 
 /*
@@ -17,7 +18,7 @@ const initialState = {
   places: [],
   myPlace: {},
   newPlace: false,
-  addPlace: false,
+  add: false,
   categories: [],
 };
 let place = {};
@@ -71,6 +72,7 @@ const reducer = (state = initialState, action = {}) => {
     case GET_MY_PLACE:
       return {
         ...state,
+        add: false,
         myPlace: {
           name: action.data.name,
           category: action.data.category,
@@ -93,6 +95,13 @@ const reducer = (state = initialState, action = {}) => {
         newPlace: false,
       };
 
+    // swith to display add place form
+    case ADD_FORM: {
+      return {
+        ...state,
+        add: !state.add,
+      };
+    }
     // new place submit
     case PLACE_SUBMIT: {
       return {
@@ -145,6 +154,9 @@ export const placeSubmit = () => ({
 export const newPlace = data => ({
   type: NEW_PLACE,
   data,
+});
+export const addForm = () => ({
+  type: ADD_FORM,
 });
 
 /*

@@ -81,7 +81,7 @@ const mapMiddleware = store => next => (action) => {
       axios
         .post(urlMap, myNewPlace, config)
         .then((response) => {
-          store.dispatch(newPlace(myNewPlace));
+          store.dispatch(newPlace(response.data));
         })
         .catch((error) => {
           console.log(error);

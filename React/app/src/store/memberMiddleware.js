@@ -12,7 +12,7 @@ const urlUser = 'http://217.70.189.93/wp-json/wp/v2/users';
 const urlDog = 'http://217.70.189.93/wp-json/wp/v2/dog';
 const urlMedia = 'http://217.70.189.93/wp-json/wp/v2/media';
 
-const subscribeMiddleware = store => next => (action) => {
+const memberMiddleware = store => next => (action) => {
   switch (action.type) {
     case SUBSCRIBE_SUBMIT: {
       const state = store.getState();
@@ -44,7 +44,7 @@ const subscribeMiddleware = store => next => (action) => {
                       slug: state.member.dogName,
                       title: state.member.dogName,
                       naiss: state.member.dogBirth,
-                      genre: state.member.dogSex,
+                      genre: state.member.dogGender,
                       status: 'publish',
                     }, config)
                     .then((response) => {
@@ -100,7 +100,7 @@ const subscribeMiddleware = store => next => (action) => {
         .post(`${urlDog}/${state.member.dogId}`, {
           slug: state.member.dogName,
           naiss: state.member.dogBirth,
-          genre: state.member.dogSex,
+          genre: state.member.dogGender,
         }, config)
         .then((response) => {
           console.log(response);
@@ -141,4 +141,4 @@ const subscribeMiddleware = store => next => (action) => {
 /**
  * Export
  */
-export default subscribeMiddleware;
+export default memberMiddleware;

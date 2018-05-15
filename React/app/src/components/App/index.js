@@ -2,20 +2,18 @@
  * Npm import
  */
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-
+import { Route, Switch } from 'react-router-dom';
 
 /*
  * Local import
  */
 
-import Nav from 'src/containers/Nav';
+import routes from 'src/routes';
+
 import NotFound from 'src/components/NotFound';
 import Footer from 'src/components/Footer';
 
-// import MapPage from 'src/components/MapPage';
-
-import routes from 'src/routes';
+import Nav from 'src/containers/Nav';
 import ChatBtn from 'src/containers/Chat/ChatBtn';
 import ContactBtn from 'src/containers/ContactBtn';
 import Chat from 'src/containers/Chat/Chat';
