@@ -40,10 +40,10 @@ class MapPage extends React.Component {
           <div className="map-google"><MyMapComponent /></div>
           <div className="map-icon">
             <ul className="map-table">
-              <li><img src="images/blue_MarkerR.png" alt="img marker" width="20" height="25" />Restaurant </li>
               <li><img src="images/darkgreen_MarkerB.png" alt="img marker" width="20" height="25" />Balade</li>
-              <li><img src="images/red_MarkerH.png" alt="img marker" width="20" height="25" />Hôtel</li>
               <li><img src="images/yellow_MarkerP.png" alt="img marker" width="20" height="25" />Plage</li>
+              <li><img src="images/blue_MarkerR.png" alt="img marker" width="20" height="25" />Rest. </li>
+              <li><img src="images/red_MarkerH.png" alt="img marker" width="20" height="25" />Hôtel</li>
             </ul>
           </div>
         </div>

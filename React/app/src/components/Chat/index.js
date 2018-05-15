@@ -34,6 +34,7 @@ const Chat = ({ actions, openChat }) => (
       <ChatMessages />
       <ChatForm />
     </div>
+    <FaEdit id="chatEdit" />
 
   </div>
 );
