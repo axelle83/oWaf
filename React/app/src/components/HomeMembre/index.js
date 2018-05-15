@@ -29,7 +29,6 @@ class HomeMembre extends React.Component {
           to="/map"
           className="homeMembre-carte"
         >
-          Carte interactive
           <div className="homeMembre-carte-img" />
           <div className="homeMembre-carte-texte">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
         </NavLink>
