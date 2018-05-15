@@ -99,7 +99,7 @@ const reducer = (state = initialState, action = {}) => {
     case ADD_FORM: {
       return {
         ...state,
-        add: true,
+        add: !state.add,
       };
     }
     // new place submit

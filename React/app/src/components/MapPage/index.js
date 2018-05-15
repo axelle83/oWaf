@@ -31,7 +31,7 @@ class MapPage extends React.Component {
   }
 
   render() {
-    const { logged, add, addForm } = this.props;
+    const { logged, add } = this.props;
     // if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
     return (
       <div id="map">
