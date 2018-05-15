@@ -91,6 +91,7 @@ export default class SubscribeField extends React.Component {
           onChange={this.handleChange}
           required={mandatory}
         />
+        {mandatory && '*'}
       </div>
     );
   }

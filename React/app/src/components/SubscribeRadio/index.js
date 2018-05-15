@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 /*
  * Component
@@ -35,10 +36,10 @@ export default class SubscribeRadio extends React.Component {
       selectedOption, name,
     } = this.props;
     return (
-      <div className="subscribe-dog-sex">
+      <div className="subscribe-dog-gender">
         {/* labels only in profile view, not in subscribe view */}
         {window.location.pathname === '/profile' && 'Genre'}
-        <label className="subscribe-dog-sex-label">
+        {/* <label className="subscribe-dog-gender-label">
           <input
             name={name}
             type="radio"
@@ -47,15 +48,30 @@ export default class SubscribeRadio extends React.Component {
             onChange={this.handleChange}
           />
         Femelle
+        </label> */}
+        <input
+          className={classNames(
+            'subscribe-dog-gender-input',
+            { 'subscribe-dog-gender-first': window.location.pathname === '/profile' },
+          )}
+          name={name}
+          type="radio"
+          value="femelle"
+          checked={selectedOption === 'femelle'}
+          onChange={this.handleChange}
+        />
+        <label className="subscribe-dog-gender-label">
+          Femelle
         </label>
-        <label className="subscribe-dog-sex-label">
-          <input
-            name={name}
-            type="radio"
-            value="mâle"
-            checked={selectedOption === 'mâle'}
-            onChange={this.handleChange}
-          />
+        <input
+          className="subscribe-dog-gender-input"
+          name={name}
+          type="radio"
+          value="mâle"
+          checked={selectedOption === 'mâle'}
+          onChange={this.handleChange}
+        />
+        <label className="subscribe-dog-gender-label">
           Mâle
         </label>
       </div>

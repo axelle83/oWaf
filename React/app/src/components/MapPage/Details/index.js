@@ -45,6 +45,8 @@ class Details extends React.Component {
         >
           Le nouveau lieu a bien été ajouté !
         </p>
+
+        <div className="mandatory-map">* Champs obligatoires</div>
         <button
           type="submit"
           id="place-submit"

@@ -44,9 +44,9 @@ MapCheck.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  inputValue: PropTypes.string,
+  // inputValue: PropTypes.string,
 };
 
-MapCheck.defaultProps = {
-  inputValue: '',
-};
+// MapCheck.defaultProps = {
+//   inputValue: '',
+// };
