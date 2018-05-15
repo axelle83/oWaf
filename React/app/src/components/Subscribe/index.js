@@ -64,7 +64,7 @@ class Subscribe extends React.Component {
           <div className="subscribe-dog-title">Mon chien</div>
           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
           <SubscribeRadio name="dogSex" />
-          <SubscribeUpload name="dogImage" />
+          {/* <SubscribeUpload name="dogImage" /> */}
         </div>
         <button
           id="subscribe-submit"

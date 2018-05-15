@@ -36,6 +36,8 @@ export default class SubscribeRadio extends React.Component {
     } = this.props;
     return (
       <div className="subscribe-dog-sex">
+        {/* labels only in profile view, not in subscribe view */}
+        {window.location.pathname === '/profile' && 'Genre'}
         <label className="subscribe-dog-sex-label">
           <input
             name={name}
