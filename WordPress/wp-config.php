@@ -73,13 +73,13 @@ $table_prefix  = 'wp_';
  */
 // Chemin local du répertoire WP-CONTENT (déplacé)
 define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
-
 // URL complete du répertoire WP-CONTENT (déplacé)
-// define('WP_CONTENT_URL', 'http://localhost/oWaf/WordPress/content');
-define('WP_CONTENT_URL', 'http://217.70.189.93/content/');
 
-define('WP_HOME','http://217.70.189.93/wp');
-define('WP_SITEURL','http://217.70.189.93');
+// define('WP_CONTENT_URL', 'http://localhost/oWaf/WordPress/content');
+define('WP_CONTENT_URL', 'http://217.70.189.93/blog/content/');
+
+define('WP_HOME','http://217.70.189.93/blog/wp');
+define('WP_SITEURL','http://217.70.189.93/blog');
 /**
  * For developers: WordPress debugging mode.
  *
