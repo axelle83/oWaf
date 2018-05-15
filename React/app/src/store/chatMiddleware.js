@@ -15,7 +15,7 @@ const io = require('socket.io-client');
 const chatMiddleware = store => next => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT:
-      socket = io('http://localhost:3000/');
+      socket = io('http://217.70.189.93:3000/');
       socket.on('send_message', (message) => {
         store.dispatch(receiveMessage(message));
       });
@@ -37,7 +37,7 @@ const chatMiddleware = store => next => (action) => {
 
       if (content !== '') {
         const message = {
-          username: state.login.pseudo,
+          username: state.member.pseudo,
           content,
           date,
         };

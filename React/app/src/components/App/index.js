@@ -60,7 +60,7 @@ class App extends React.Component {
          <Route
            exact
            path="/blog"
-           render={() => window.location = 'http://217.70.189.93/WordPress/content/themes/oWaf/public/'}
+           render={() => window.location = 'http://217.70.189.93/blog/'}
          />
          <Route render={() => (
            <main>

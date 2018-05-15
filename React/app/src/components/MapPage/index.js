@@ -32,7 +32,7 @@ class MapPage extends React.Component {
 
   render() {
     const { logged, add } = this.props;
-    // if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
+    if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
     return (
       <div id="map">
         {/* <h1 className="map-title">La carte !</h1> */}

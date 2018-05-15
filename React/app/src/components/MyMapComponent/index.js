@@ -40,12 +40,13 @@ class MyFancyComponent extends React.Component {
         const lat = crd.latitude;
         const lng = crd.longitude;
         this.setState({ lat, lng });
+        console.log('ok', lat, '/', lng);
       });
     }
     else {
       // coords de Paris
-      const lat = 48.8534;
-      const lng = 2.3488;
+      const lat = 48.8627;
+      const lng = 2.2875;
       /* eslint-disable-next-line */
       this.setState({ lat, lng });
     }

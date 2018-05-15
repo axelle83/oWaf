@@ -8,9 +8,9 @@ import { getMember, getDog } from './reducers/member';
 /**
  * Code
  */
-const urlUser = 'http://217.70.189.93/wp-json/wp/v2/users';
-const urlUserMe = 'http://217.70.189.93/wp-json/wp/v2/users/me';
-const urlDog = 'http://217.70.189.93/wp-json/wp/v2/dog';
+const urlUser = 'http://217.70.189.93/blog/wp-json/wp/v2/users';
+const urlUserMe = 'http://217.70.189.93/blog/wp-json/wp/v2/users/me';
+const urlDog = 'http://217.70.189.93/blog/wp-json/wp/v2/dog';
 const urlPass = 'http://localhost:4000/pass';
 
 const loginMiddleware = store => next => (action) => {

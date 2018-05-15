@@ -14,7 +14,7 @@ import { Redirect } from 'react-router-dom';
 import fields from 'src/datas/subscribe';
 import SubscribeField from 'src/containers/ProfileField';
 import SubscribeRadio from 'src/containers/SubscribeRadio';
-import SubscribeUpload from 'src/containers/SubscribeUpload';
+// import SubscribeUpload from 'src/containers/SubscribeUpload';
 
 /*
 *  Code
@@ -27,7 +27,7 @@ class Profile extends React.Component {
 
   render() {
     const { logged } = this.props;
-    // if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
+    if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
     return (
       <form
         id="profile"

@@ -5,8 +5,8 @@ import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories } from './
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_PLACE: {
-      const urlMap = 'http://217.70.189.93/wp-json/wp/v2/lieu';
-      const urlCategory = 'http://217.70.189.93/wp-json/wp/v2/categories';
+      const urlMap = 'http://217.70.189.93/blog/wp-json/wp/v2/lieu';
+      const urlCategory = 'http://217.70.189.93/blog/wp-json/wp/v2/categories';
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
@@ -56,7 +56,7 @@ const mapMiddleware = store => next => (action) => {
 
     case PLACE_SUBMIT: {
       const state = store.getState();
-      const urlMap = 'http://217.70.189.93/wp-json/wp/v2/lieu';
+      const urlMap = 'http://217.70.189.93/blog/wp-json/wp/v2/lieu';
       const admin = btoa('restapi:restapi');
       const config = {
         headers: {

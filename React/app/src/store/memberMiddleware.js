@@ -8,9 +8,9 @@ import { SUBSCRIBE_SUBMIT, LOAD_IMAGE, PROFILE_SUBMIT, subscribe, userExists } f
  * Code
  */
 
-const urlUser = 'http://217.70.189.93/wp-json/wp/v2/users';
-const urlDog = 'http://217.70.189.93/wp-json/wp/v2/dog';
-const urlMedia = 'http://217.70.189.93/wp-json/wp/v2/media';
+const urlUser = 'http://217.70.189.93/blog/wp-json/wp/v2/users';
+const urlDog = 'http://217.70.189.93/blog/wp-json/wp/v2/dog';
+const urlMedia = 'http://217.70.189.93/blog/wp-json/wp/v2/media';
 
 const memberMiddleware = store => next => (action) => {
   switch (action.type) {
