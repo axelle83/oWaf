@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 
 /*
 *  Code
@@ -24,11 +24,15 @@ class HomeMembre extends React.Component {
         {/* <div className="homeMembre-img" /> */}
         <div className="homeMembre-text">Bienvenue {name} et {dogName} </div>
         <div className="homeMembre-carte-title">Carte interactive</div>
-        <div className="homeMembre-carte">
+        <NavLink
+          key="cgu"
+          to="/map"
+          className="homeMembre-carte"
+        >
+          Carte interactive
           <div className="homeMembre-carte-img" />
           <div className="homeMembre-carte-texte">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
-        </div>
-
+        </NavLink>
         <a href="/blog" className="home-blog">
           <p className="home-blog-title">Discussions à la une</p>
           <div className="home-blog-post">
