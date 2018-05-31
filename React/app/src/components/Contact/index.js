@@ -1,15 +1,17 @@
-/**
+/*
  * Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import FaClose from 'react-icons/lib/fa/close';
 
-/**
+/*
  * Local import
  */
 import ContactField from 'src/containers/ContactField';
-/**
+
+/*
  * Code
  */
 class Contact extends React.Component {
@@ -33,7 +35,10 @@ class Contact extends React.Component {
         }
       >
         <form method="POST" id="contactform" onSubmit={this.onSubmit}>
-          <h1 id="contact-title">Nous contacter</h1>
+          <div id="contactHead">
+            <FaClose id="contactClose" onClick={toggleContact} />
+            <h1 id="contact-title">Nous contacter</h1>
+          </div>
           <ContactField
             type="email"
             name="email"
@@ -90,6 +95,9 @@ class Contact extends React.Component {
   }
 }
 
+/*
+ * PropTypes
+ */
 Contact.propTypes = {
   openContact: PropTypes.bool.isRequired,
   send: PropTypes.bool.isRequired,
@@ -97,7 +105,7 @@ Contact.propTypes = {
   toggleContact: PropTypes.func.isRequired,
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default Contact;
