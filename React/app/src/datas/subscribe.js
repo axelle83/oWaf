@@ -41,7 +41,7 @@ const dog = [
   {
     type: 'number',
     name: 'dogBirth',
-    placeholder: 'Année de naissance',
+    placeholder: 'Année de naissance (4 chiffres)',
     mandatory: false,
   },
 ];

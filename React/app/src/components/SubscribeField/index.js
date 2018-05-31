@@ -73,14 +73,14 @@ export default class SubscribeField extends React.Component {
         )}
       >
         {/* labels only in profile view, not in subscribe view */}
-        {window.location.pathname === '/profile' &&
+        {/* {window.location.pathname === '/profile' && */}
         <label
           className="subscribe-label"
           htmlFor={id}
         >
           {placeholder}
         </label>
-        }
+        {/* } */}
         <input
           type={type}
           className="subscribe-input"
@@ -92,6 +92,7 @@ export default class SubscribeField extends React.Component {
           required={mandatory}
         />
         {mandatory && <span className="field-mandatory">*</span>}
+        {!mandatory && <span className="field-not-mandatory">.</span>}
       </div>
     );
   }

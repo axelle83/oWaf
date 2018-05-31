@@ -1,29 +1,17 @@
 @require "app/styles/charte"
 
 #cgu
-  animation: pulse 5s infinite
+  background-color: $bgSalmon
   display: flex
   font-family: $text
   justify-content: center
   height: 75em
-
-@keyframes pulse
-  0%
-    background-color: $bgPink
-  50%
-    background-color: $bgPeche
-
-  100%
-    background-color: $bgSalmon
-
-
 
 .cgu
   background-color: $color
   border-radius: 1em
   padding: 0 1em
   width: 75%
-
   &-title
     font-size: 1.7em
     font-family: $title
@@ -37,6 +25,11 @@
     font-size: 1em
     line-height: 1.5em
     margin: 1.8em
+
+ul li
+  margin-left: 1em
+  &::before
+    content: '- '
 
 @media screen and (min-width: 1200px)
 

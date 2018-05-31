@@ -18,7 +18,8 @@
     "jsx-a11y/label-has-for": "off",
     "array-callback-return": "off",
     "consistent-return": "off",
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "max-len": "off"
   },
   "settings": {
     "import/resolver": {
