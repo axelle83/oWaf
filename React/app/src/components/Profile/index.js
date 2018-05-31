@@ -14,20 +14,31 @@ import { Redirect } from 'react-router-dom';
 import fields from 'src/datas/subscribe';
 import SubscribeField from 'src/containers/ProfileField';
 import SubscribeRadio from 'src/containers/SubscribeRadio';
-// import SubscribeUpload from 'src/containers/SubscribeUpload';
 
 /*
 *  Code
  */
+
+
 class Profile extends React.Component {
+  // form submit handler
   onSubmit = (evt) => {
     evt.preventDefault();
     this.props.onProfileSubmit();
   }
+  // window close handler
+  onClose = (evt) => {
+    evt.preventDefault();
+    this.props.onProfileClose();
+    this.close = true;
+  }
+  close = false;
 
+  // render
   render() {
-    const { logged } = this.props;
+    const { logged, profile } = this.props;
     if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
+    if (window.location.pathname === '/profile' && this.close) return <Redirect to="/membre" />;
     return (
       <form
         id="profile"
@@ -53,27 +64,61 @@ class Profile extends React.Component {
         <div className="subscribe-dog">
           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
           <SubscribeRadio name="dogGender" />
-          {/* <SubscribeUpload name="dogImage" /> */}
         </div>
         <div className="mandatory">* Champs obligatoires</div>
+        <div
+          className={
+            classNames(
+            'profile',
+            { 'profile--confirm': profile },
+            )
+          }
+        >
+          Votre profil a bien été modifié
+        </div>
         <button
           id="profile-submit"
+          className={
+            classNames(
+            'profile',
+            { 'profile--modified': !profile },
+            )
+          }
           onClick={this.onSubmit}
         >
           Valider
+        </button>
+        <button
+          id="profile-close"
+          className={
+            classNames(
+            'profile',
+            { 'profile--modified': profile },
+            )
+          }
+          onClick={this.onClose}
+        >
+          Retour à l'accueil
         </button>
       </form>
     );
   }
 }
+
+/*
+* PropTypes
+ */
 Profile.propTypes = {
   onProfileSubmit: PropTypes.func.isRequired,
+  onProfileClose: PropTypes.func.isRequired,
+  profile: PropTypes.bool.isRequired,
   logged: PropTypes.bool.isRequired,
   errorpassword: PropTypes.bool,
 };
 Profile.defaultProps = {
   errorpassword: 'false',
 };
+
 /*
 * Export default
  */

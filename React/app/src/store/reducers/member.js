@@ -6,6 +6,7 @@ const initialState = {
   errorpassword: false,
   exist: false,
   subscribe: false,
+  profile: false,
   view: 'password',
   pseudo: '',
   city: '',
@@ -28,6 +29,7 @@ const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
 const GET_DOG = 'GET_DOG';
 const USER_EXIST = 'USER_EXIST';
+const PROFILE_CLOSE = 'PROFILE_CLOSE';
 
 /*
  * Reducer
@@ -67,6 +69,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         [action.name]: action.value,
         exist: false,
+        profile: false,
       };
 
     case LOAD_IMAGE:
@@ -96,16 +99,23 @@ const reducer = (state = initialState, action = {}) => {
           errorpassword: true,
         };
       }
-      console.log('profile');
       return {
         ...state,
         errorpassword: false,
+        profile: true,
+      };
+    }
+
+    // profile form close
+    case PROFILE_CLOSE: {
+      return {
+        ...state,
+        profile: false,
       };
     }
 
     // subscribe is finished
     case SUBSCRIBE:
-      console.log('subscribe');
       return {
         ...state,
         subscribe: true,
@@ -131,6 +141,9 @@ export const subscribeSubmit = () => ({
 });
 export const profileSubmit = () => ({
   type: PROFILE_SUBMIT,
+});
+export const profileClose = () => ({
+  type: PROFILE_CLOSE,
 });
 export const subscribe = () => ({
   type: SUBSCRIBE,

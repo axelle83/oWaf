@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
  * Local import
  */
 import Profile from 'src/components/Profile';
-import { profileSubmit } from 'src/store/reducers/member';
+import { profileSubmit, profileClose } from 'src/store/reducers/member';
 
 /*
  * Code
@@ -18,12 +18,16 @@ import { profileSubmit } from 'src/store/reducers/member';
 const mapStateToProps = state => ({
   errorpassword: state.member.errorpassword,
   logged: state.login.logged,
+  profile: state.member.profile,
 });
 
 // Actions
 const mapDispatchToProps = dispatch => ({
   onProfileSubmit: () => {
     dispatch(profileSubmit());
+  },
+  onProfileClose: () => {
+    dispatch(profileClose());
   },
 });
 
