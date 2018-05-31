@@ -1,7 +1,7 @@
 @require "app/styles/charte"
 
 #login
-	position: absolute
+	position: fixed
 	top: 0
 	right: 0
 	border: 3px solid $bgBlueDuck
@@ -17,9 +17,14 @@
 	&.login--open
 		display: block
 
+#loginClose
+	font-size: 2em
+	margin-left: .2em
+	color: #046380
+
 @media (min-width: 1024px)
 	#login
 		max-width: 360px
 		width: 50vw
 		margin: 20vh 25vw
-		height: 45vh
+		height: 50vh

@@ -12,6 +12,7 @@ const DISCONNECT = 'DISCONNECT';
 const CONNECT = 'CONNECT';
 const SEND_PASS = 'SEND_PASS';
 const USER_ERROR = 'USER_ERROR';
+const LOGIN_CLOSE = 'LOGIN_CLOSE';
 
 /*
  * State
@@ -84,6 +85,13 @@ const reducer = (state = initialState, action = {}) => {
         logged: false,
       };
 
+    // close the window
+    case LOGIN_CLOSE:
+      return {
+        ...state,
+        visible: false,
+      };
+
     // default case
     default:
       return state;
@@ -102,6 +110,9 @@ export const loginSubmit = () => ({
 });
 export const disconnect = () => ({
   type: DISCONNECT,
+});
+export const closeLogin = () => ({
+  type: LOGIN_CLOSE,
 });
 export const connect = data => ({
   type: CONNECT,
