@@ -4,12 +4,14 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
-var join = require('path').join;
+const join = require('path').join;
+
 const app = express();
 
-var indexPath = join(__dirname, '..', '/public/index.html');
-var assetsPath = join(__dirname, '..', 'public');
+// const indexPath = join(__dirname, '..', '/public/index.html');
+const assetsPath = join(__dirname, '..', 'public');
 
+const pass = '1oWaf&4filles';
 /*
  * Express
  */
@@ -31,6 +33,16 @@ app.post('/send', (req, res) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
+  const transporter = nodemailer.createTransport('SMTP', {
+    auth: {
+      user: 'owafusion@gmail.com',
+      pass,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
   const output = `
     <h3>Expéditeur</h3>
     <p>${req.body.email}</p>
@@ -40,18 +52,8 @@ app.post('/send', (req, res) => {
     <p>${req.body.message}</p>
   `;
 
-  const transporter = nodemailer.createTransport('SMTP', {
-    auth: {
-      user: 'owafusion@gmail.com',
-      pass: '1oWaf&4filles',
-    },
-    tls: {
-      rejectUnauthorized: false,
-    },
-  });
-
   const mailOptions = {
-    from: 'axelle.lecroq@yahoo.fr',
+    from: req.body.email,
     to: 'owafusion@gmail.com',
     subject: 'Message de contact oWaf',
     html: output,
@@ -68,7 +70,7 @@ app.post('/send', (req, res) => {
 });
 
 /*
- * POST (oubli password)
+ * POST (forgot password)
  */
 app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -76,20 +78,20 @@ app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
-  const output = `
-    <h3>Voici votre nouveau mot de passe pour accéder au site oWaf :</h3>
-    <p>${req.body.password}</p>
-  `;
-
   const transporter = nodemailer.createTransport('SMTP', {
     auth: {
       user: 'owafusion@gmail.com',
-      pass: '1oWaf&4filles',
+      pass,
     },
     tls: {
       rejectUnauthorized: false,
     },
   });
+
+  const output = `
+    <h3>Voici votre nouveau mot de passe pour accéder au site oWaf :</h3>
+    <p>${req.body.password}</p>
+  `;
 
   const mailOptions = {
     to: req.body.email,

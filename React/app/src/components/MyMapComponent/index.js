@@ -27,29 +27,10 @@ const MyMapComponent = compose(
 class MyFancyComponent extends React.Component {
   state = {
     isMarkerShown: false,
-    lat: 0,
-    lng: 0,
     places: [],
   }
 
   componentDidMount() {
-    if ('geolocation' in navigator) {
-      // coords de géolocalisation
-      navigator.geolocation.getCurrentPosition((position) => {
-        const crd = position.coords;
-        const lat = crd.latitude;
-        const lng = crd.longitude;
-        this.setState({ lat, lng });
-        console.log('ok', lat, '/', lng);
-      });
-    }
-    else {
-      // coords de Paris
-      const lat = 48.8627;
-      const lng = 2.2875;
-      /* eslint-disable-next-line */
-      this.setState({ lat, lng });
-    }
     this.delayedShowMarker();
   }
 
@@ -59,12 +40,12 @@ class MyFancyComponent extends React.Component {
     }, 3000);
   }
 
-
   render() {
+    const { lat, lng } = this.props;
     return (
       <MyMapComponent
-        lat={this.state.lat}
-        lng={this.state.lng}
+        lat={lat}
+        lng={lng}
         isMarkerShown={this.state.isMarkerShown}
         places={this.state.places}
       />
@@ -73,5 +54,7 @@ class MyFancyComponent extends React.Component {
 }
 MyFancyComponent.propTypes = {
   places: PropTypes.array.isRequired,
+  lat: PropTypes.number.isRequired,
+  lng: PropTypes.number.isRequired,
 };
 export default MyFancyComponent;

@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
  * Local import
  */
 import MapPage from 'src/components/MapPage';
-import { loadPlace, addForm } from 'src/store/reducers/map';
+import { loadPlace, addForm, getMyPosition } from 'src/store/reducers/map';
 
 /*
  * Code
@@ -28,6 +28,9 @@ const mapDispatchToProps = dispatch => ({
   },
   addForm: () => {
     dispatch(addForm());
+  },
+  getMyPosition: () => {
+    dispatch(getMyPosition());
   },
 });
 

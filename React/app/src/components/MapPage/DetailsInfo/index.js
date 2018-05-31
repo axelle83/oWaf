@@ -29,6 +29,10 @@ const detailsInfo = ({ myPlace }) => (
       <p className="details-data">{myPlace.lng}</p>
     </div>
     <div className="mapField">
+      <p className="details-label">Proposé par</p>
+      <p className="details-data">{myPlace.pseudo}</p>
+    </div>
+    <div className="mapField">
       <p className="details-label">Commentaires</p>
       <p className="details-data">{myPlace.comment}</p>
     </div>

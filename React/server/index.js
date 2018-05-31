@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*
  * Require
  */
@@ -5,7 +7,6 @@ var express = require('express');
 var join = require('path').join;
 var Server = require('http').Server;
 var socket = require('socket.io');
-
 
 /*
  * Vars
@@ -16,7 +17,6 @@ var io = socket(server);
 
 var indexPath = join(__dirname, '..', '/public/index.html');
 var assetsPath = join(__dirname, '..', 'public');
-
 
 /*
  * Express
@@ -29,7 +29,6 @@ app.get('/', function(req, res) {
   res.sendFile(indexPath);
 });
 
-
 /*
  * Socket.io
  */
@@ -40,7 +39,6 @@ io.on('connection', function(socket) {
     io.emit('send_message', message);
   });
 });
-
 
 /*
  * Server

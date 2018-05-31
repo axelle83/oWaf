@@ -18,7 +18,6 @@ import MapSelect from 'src/containers/MapSelect';
 */
 class Details extends React.Component {
   handleSubmit = (evt) => {
-    // J'empeche le comportement par défaut
     evt.preventDefault();
     this.props.onPlaceSubmit();
   }
@@ -34,6 +33,14 @@ class Details extends React.Component {
         {fields.places.map(field => <MapField key={field.name} {...field} />)}
         <MapSelect name="category" />
         {fields.check.map(field => <MapCheck key={field.name} {...field} />)}
+        <div className="check">
+          <input
+            type="checkbox"
+            className="details-check"
+            required
+          />
+          Le lieu  que je propose respecte les conditions d'utilisation
+        </div>
         <p
           id="newPlaceSend"
           className={

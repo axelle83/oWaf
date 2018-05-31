@@ -18,12 +18,9 @@ import Details from 'src/containers/Details';
 * Code
 */
 class MapPage extends React.Component {
-  // state = {
-  //   addOpen: false,
-  // }
-
   componentDidMount() {
     this.props.loadPlace();
+    this.props.getMyPosition();
   }
 
   handleClick = () => {
@@ -69,6 +66,7 @@ class MapPage extends React.Component {
 
 MapPage.propTypes = {
   loadPlace: PropTypes.func.isRequired,
+  getMyPosition: PropTypes.func.isRequired,
   logged: PropTypes.bool.isRequired,
   add: PropTypes.bool.isRequired,
   addForm: PropTypes.func.isRequired,

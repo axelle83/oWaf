@@ -1,16 +1,35 @@
 
 import axios from 'axios';
-import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories } from './reducers/map';
+import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories, getMyPosition } from './reducers/map';
 
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_PLACE: {
       const urlMap = 'http://217.70.189.93/blog/wp-json/wp/v2/lieu';
       const urlCategory = 'http://217.70.189.93/blog/wp-json/wp/v2/categories';
+      const urlGoogle = 'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%';
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
       const categories = [];
+      // if ('geolocation' in navigator) {
+      //   // coords de géolocalisation
+      //   navigator.geolocation.getCurrentPosition((position) => {
+      //     const crd = position.coords;
+      //     const gps = {
+      //       lat: crd.latitude,
+      //       lng: crd.longitude,
+      //     };
+      //     console.log('ok', gps);
+      //     store.dispatch(getMyPosition(gps));
+      //     // setTimeout(
+      //     //   () => {
+      //     //     store.dispatch(getMyPosition(gps));
+      //     //   }
+      //     //   , 100,
+      //     // );
+      //   });
+      // }
       // gets the categories
       axios
         .get(urlCategory, config)
@@ -27,7 +46,6 @@ const mapMiddleware = store => next => (action) => {
       axios
         .get(urlMap, config)
         .then((response) => {
-          /* eslint-disable-next-line */
           response.data.map((data) => {
             // gets the lat & lng from the adress
             const adress = JSON.stringify(data.adresse);
@@ -74,6 +92,7 @@ const mapMiddleware = store => next => (action) => {
         title: state.map.name,
         status: 'publish',
         commentaire: state.map.comment,
+        pseudo: state.member.pseudo,
         adresse: state.map.adress,
         categories: state.map.category,
         details,

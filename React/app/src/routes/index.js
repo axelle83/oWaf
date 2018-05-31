@@ -18,23 +18,6 @@ import Disconnect from 'src/containers/Disconnect';
  * Code
  */
 const routes = {
-  '/disconnect': {
-    nav: 'Disconnect',
-    component: <Disconnect />,
-    chat: false,
-    buttons: {
-      Accueil: {
-        path: '/',
-      },
-    },
-  },
-  '/not-found': {
-    buttons: {
-      Accueil: {
-        path: '/',
-      },
-    },
-  },
   '/': {
     nav: 'Home',
     component: <HomeVisiteur />,
@@ -60,17 +43,6 @@ const routes = {
       },
     },
   },
-  '/subscribe': {
-    nav: 'Subscribe',
-    component: <Subscribe />,
-    chat: false,
-    login: false,
-    buttons: {
-      Accueil: {
-        path: '/',
-      },
-    },
-  },
   '/membre': {
     nav: 'Home',
     component: <HomeMembre />,
@@ -88,6 +60,35 @@ const routes = {
       },
       Déconnexion: {
         path: '/disconnect',
+      },
+    },
+  },
+  '/disconnect': {
+    nav: 'Disconnect',
+    component: <Disconnect />,
+    chat: false,
+    login: false,
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
+  '/not-found': {
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
+  '/subscribe': {
+    nav: 'Subscribe',
+    component: <Subscribe />,
+    chat: false,
+    login: false,
+    buttons: {
+      Accueil: {
+        path: '/',
       },
     },
   },
