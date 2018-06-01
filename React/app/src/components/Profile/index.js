@@ -82,52 +82,44 @@ class Profile extends React.Component {
         >
           Votre profil a bien été modifié
         </div>
-        <div
-          className={
-            classNames(
-            'profile',
-            { 'profile--deleted': deleted },
-            )
-          }
-        >
-          Votre profil a bien été modifié
+        <div id="profileButtons">
+          <button
+            id="profile-submit"
+            className={
+              classNames(
+                'profile',
+                { 'profile--modified': !profile },
+              )
+            }
+            onClick={this.onSubmit}
+          >
+            Valider mon profil
+          </button>
+          <button
+            id="profile-delete"
+            className={
+              classNames(
+                'profile',
+                { 'profile--modified': !profile },
+              )
+            }
+            onClick={this.onDelete}
+          >
+            Supprimer mon compte
+          </button>
+          <button
+            id="profile-close"
+            className={
+              classNames(
+                'profile',
+                { 'profile--modified': profile },
+              )
+            }
+            onClick={this.onClose}
+          >
+            Retour à l'accueil
+          </button>
         </div>
-        <button
-          id="profile-delete"
-          className={
-            classNames(
-            'profile',
-            { 'profile--modified': !profile },
-            )
-          }
-          onClick={this.onDelete}
-        >
-          Supprimer mon compte
-        </button>
-        <button
-          id="profile-submit"
-          className={
-            classNames(
-            'profile',
-            { 'profile--modified': !profile },
-            )
-          }
-          onClick={this.onSubmit}
-        >
-          Valider
-        </button>
-        <button
-          id="profile-close"
-          className={
-            classNames(
-            'profile',
-            { 'profile--modified': profile },
-            )
-          }
-          onClick={this.onClose}
-        >
-          Retour à l'accueil
-        </button>
       </form>
     );
   }
