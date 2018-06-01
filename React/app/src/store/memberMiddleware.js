@@ -2,7 +2,7 @@
 * Import
 */
 import axios from 'axios';
-import { SUBSCRIBE_SUBMIT, LOAD_IMAGE, PROFILE_SUBMIT, subscribe, userExists } from './reducers/member';
+import { SUBSCRIBE_SUBMIT, PROFILE_SUBMIT, PROFILE_DELETE, subscribe, userExists } from './reducers/member';
 
 /**
  * Code
@@ -10,7 +10,7 @@ import { SUBSCRIBE_SUBMIT, LOAD_IMAGE, PROFILE_SUBMIT, subscribe, userExists } f
 
 const urlUser = 'http://217.70.189.93/blog/wp-json/wp/v2/users';
 const urlDog = 'http://217.70.189.93/blog/wp-json/wp/v2/dog';
-const urlMedia = 'http://217.70.189.93/blog/wp-json/wp/v2/media';
+// const urlMedia = 'http://217.70.189.93/blog/wp-json/wp/v2/media';
 
 const memberMiddleware = store => next => (action) => {
   switch (action.type) {
@@ -48,7 +48,6 @@ const memberMiddleware = store => next => (action) => {
                       status: 'publish',
                     }, config)
                     .then((response) => {
-                      console.log('ok', response.data);
                       axios
                         // creates user in the db
                         .post(urlUser, {
@@ -108,38 +107,65 @@ const memberMiddleware = store => next => (action) => {
         });
       break;
     }
-    case LOAD_IMAGE: {
-      const formData = new FormData();
-      formData.append('image', action.value);
-      console.log('formData', formData.get('image'));
+
+    case PROFILE_DELETE: {
+      const state = store.getState();
       const admin = btoa('restapi:restapi');
-      const file = btoa(formData);
       const config = {
         headers: {
           Authorization: `Basic ${admin}`,
-          'content-type': `form-data; filename=${action.value.name}`,
+          'content-type': 'application/json',
         },
       };
+      // deletes user in the db
       axios
-        .post(urlMedia, file, config)
-        .then((response) => {
-          console.log('ok', response.data);
+        .delete(`${urlUser}/${state.member.id}?force=true&reassign=1`, config)
+        .then(() => {
+          // if correct then deletes dog in the db
+          axios
+            .delete(`${urlDog}/${state.member.dogId}?force=true&reassign=1`, config)
+            .then((res) => {
+              console.log(res);
+            });
         })
         .catch((error) => {
-          console.log('ko', error);
+          console.log(error);
         });
+
       break;
     }
+    // case LOAD_IMAGE: {
+    //   const formData = new FormData();
+    //   formData.append('image', action.value);
+    //   console.log('formData', formData.get('image'));
+    //   const admin = btoa('restapi:restapi');
+    //   const file = btoa(formData);
+    //   const config = {
+    //     headers: {
+    //       Authorization: `Basic ${admin}`,
+    //       'content-type': `form-data; filename=${action.value.name}`,
+    //     },
+    //   };
+    //   axios
+    //     .post(urlMedia, file, config)
+    //     .then((response) => {
+    //       console.log('ok', response.data);
+    //     })
+    //     .catch((error) => {
+    //       console.log('ko', error);
+    //     });
+    //   break;
+    // }
 
     default:
       break;
   }
 
-  // Passe au suivant
+  // next
   next(action);
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default memberMiddleware;

@@ -32,13 +32,19 @@ class Profile extends React.Component {
     this.props.onProfileClose();
     this.close = true;
   }
-  close = false;
+  // delete user & dog
+  onDelete = (evt) => {
+    evt.preventDefault();
+    this.props.onProfileDelete();
+  }
 
+  close = false;
   // render
   render() {
-    const { logged, profile } = this.props;
+    const { logged, profile, deleted } = this.props;
     if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
     if (window.location.pathname === '/profile' && this.close) return <Redirect to="/membre" />;
+    if (window.location.pathname === '/profile' && deleted) return <Redirect to="/disconnect" />;
     return (
       <form
         id="profile"
@@ -76,6 +82,28 @@ class Profile extends React.Component {
         >
           Votre profil a bien été modifié
         </div>
+        <div
+          className={
+            classNames(
+            'profile',
+            { 'profile--deleted': deleted },
+            )
+          }
+        >
+          Votre profil a bien été modifié
+        </div>
+        <button
+          id="profile-delete"
+          className={
+            classNames(
+            'profile',
+            { 'profile--modified': !profile },
+            )
+          }
+          onClick={this.onDelete}
+        >
+          Supprimer mon compte
+        </button>
         <button
           id="profile-submit"
           className={
@@ -109,9 +137,11 @@ class Profile extends React.Component {
 * PropTypes
  */
 Profile.propTypes = {
+  onProfileDelete: PropTypes.func.isRequired,
   onProfileSubmit: PropTypes.func.isRequired,
   onProfileClose: PropTypes.func.isRequired,
   profile: PropTypes.bool.isRequired,
+  deleted: PropTypes.bool.isRequired,
   logged: PropTypes.bool.isRequired,
   errorpassword: PropTypes.bool,
 };

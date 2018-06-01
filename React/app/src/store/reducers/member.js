@@ -7,6 +7,7 @@ const initialState = {
   exist: false,
   subscribe: false,
   profile: false,
+  deleted: false,
   view: 'password',
   pseudo: '',
   city: '',
@@ -30,6 +31,7 @@ const GET_MEMBER = 'GET_MEMBER';
 const GET_DOG = 'GET_DOG';
 const USER_EXIST = 'USER_EXIST';
 const PROFILE_CLOSE = 'PROFILE_CLOSE';
+export const PROFILE_DELETE = 'PROFILE_DELETE';
 
 /*
  * Reducer
@@ -114,6 +116,14 @@ const reducer = (state = initialState, action = {}) => {
       };
     }
 
+    // profile delete
+    case PROFILE_DELETE: {
+      return {
+        initialState,
+        deleted: true,
+      };
+    }
+
     // subscribe is finished
     case SUBSCRIBE:
       return {
@@ -144,6 +154,9 @@ export const profileSubmit = () => ({
 });
 export const profileClose = () => ({
   type: PROFILE_CLOSE,
+});
+export const profileDelete = () => ({
+  type: PROFILE_DELETE,
 });
 export const subscribe = () => ({
   type: SUBSCRIBE,
