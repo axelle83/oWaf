@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
           )
           }
         >
-          Il n'y a pas d'utilisateur correspondant
+          L'utilisateur ou le mot de passe sont incorrects
         </p>
       </form>
     );

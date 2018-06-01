@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 /*
- * POST
+ * POST - sends contact message to contact mail & confirm
  */
 app.post('/send', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -33,6 +33,7 @@ app.post('/send', (req, res) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
+  // initializes transporter
   const transporter = nodemailer.createTransport('SMTP', {
     auth: {
       user: 'owafusion@gmail.com',
@@ -43,6 +44,7 @@ app.post('/send', (req, res) => {
     },
   });
 
+  // message to be send
   const output = `
     <h3>Expéditeur</h3>
     <p>${req.body.email}</p>
@@ -59,18 +61,33 @@ app.post('/send', (req, res) => {
     html: output,
   };
 
+  const mailConfirmOptions = {
+    from: 'owafusion@gmail.com',
+    to: req.body.email,
+    subject: 'Confirmation d\'envoi de votre message de contact oWaf',
+    html: output,
+  };
+
+  // sends message to contact mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
     }
     console.log('message envoyé', info.messageId);
-    res.render('contact', { msg: 'message envoyé' });
+    // sends confirm
+    transporter.sendMail(mailConfirmOptions, (errorC, infoC) => {
+      if (errorC) {
+        return console.log(errorC);
+      }
+      console.log('message envoyé', infoC.messageId);
+    });
   });
+
+
   transporter.close();
 });
-
 /*
- * POST (forgot password)
+ * POST  -forgot password
  */
 app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -78,6 +95,7 @@ app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
+  // initializes transporter
   const transporter = nodemailer.createTransport('SMTP', {
     auth: {
       user: 'owafusion@gmail.com',
@@ -88,6 +106,7 @@ app.post('/pass', (req, res) => {
     },
   });
 
+  // message to be send
   const output = `
     <h3>Voici votre nouveau mot de passe pour accéder au site oWaf :</h3>
     <p>${req.body.password}</p>
@@ -99,6 +118,7 @@ app.post('/pass', (req, res) => {
     html: output,
   };
 
+  // sends password by mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);

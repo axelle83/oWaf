@@ -32,6 +32,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+        send: false,
       };
     default:
       return state;

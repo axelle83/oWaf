@@ -11,7 +11,7 @@ import { getMember, getDog } from './reducers/member';
 const urlUser = 'http://217.70.189.93/blog/wp-json/wp/v2/users';
 const urlUserMe = 'http://217.70.189.93/blog/wp-json/wp/v2/users/me';
 const urlDog = 'http://217.70.189.93/blog/wp-json/wp/v2/dog';
-const urlPass = 'http://localhost:4000/pass';
+const urlPass = 'http://217.70.189.93:4000/pass';
 
 const loginMiddleware = store => next => (action) => {
   switch (action.type) {
