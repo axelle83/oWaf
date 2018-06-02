@@ -9,31 +9,15 @@ import validateEmail from 'validate-email';
 /*
  * Component
  */
-export default class SubscribeField extends React.Component {
-  /*
-   * PropTypes
-   */
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    mandatory: PropTypes.bool.isRequired,
-    inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
-  }
-
-  static defaultProps = {
-    inputValue: '',
-  }
-
+class SubscribeField extends React.Component {
   state = {
     error: false,
     focus: false,
   }
 
-  /**
-   * Handle change event
-   */
+  modify = true;
+
+  // Handle change event
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
@@ -54,15 +38,14 @@ export default class SubscribeField extends React.Component {
     }
   }
 
-  /*
-   * Render
-   */
+  // Render
   render() {
     const { error, focus } = this.state;
     const {
       name, placeholder, inputValue, type, mandatory,
     } = this.props;
     const id = `subscribe-${name}`;
+    if (name === 'pseudo' && window.location.pathname === '/profile') this.modify = false;
     return (
       <div
         className={classNames(
@@ -72,15 +55,12 @@ export default class SubscribeField extends React.Component {
           { 'subscribe--has-focus': focus },
         )}
       >
-        {/* labels only in profile view, not in subscribe view */}
-        {/* {window.location.pathname === '/profile' && */}
         <label
           className="subscribe-label"
           htmlFor={id}
         >
           {placeholder}
         </label>
-        {/* } */}
         <input
           type={type}
           className="subscribe-input"
@@ -88,7 +68,7 @@ export default class SubscribeField extends React.Component {
           name={name}
           placeholder={placeholder}
           value={inputValue}
-          onChange={this.handleChange}
+          onChange={this.modify && this.handleChange}
           required={mandatory}
         />
         {mandatory && <span className="field-mandatory">*</span>}
@@ -97,3 +77,24 @@ export default class SubscribeField extends React.Component {
     );
   }
 }
+
+/*
+ * PropTypes
+ */
+SubscribeField.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  mandatory: PropTypes.bool.isRequired,
+  inputValue: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
+};
+
+SubscribeField.defaultProps = {
+  inputValue: '',
+};
+
+/*
+* Export Default
+*/
+export default SubscribeField;
