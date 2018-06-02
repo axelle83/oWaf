@@ -15,17 +15,22 @@ class HomeMembre extends React.Component {
 
   render() {
     const {
-      title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
+      title1, category1, excerpt1, slug1,
+      title2, category2, excerpt2, slug2,
+      title3, category3, excerpt3, slug3,
       name, dogName, logged,
     } = this.props;
     if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
+    const blog1 = `/blog/${slug1}/`;
+    const blog2 = `/blog/${slug2}/`;
+    const blog3 = `/blog/${slug3}/`;
     return (
       <div id="homeMembre">
         {/* <div className="homeMembre-img" /> */}
         <div className="homeMembre-text">Bienvenue {name} et {dogName} </div>
         <div className="homeMembre-carte-title">Carte interactive</div>
         <NavLink
-          key="cgu"
+          key="map"
           to="/map"
           className="homeMembre-carte"
         >
@@ -40,21 +45,27 @@ class HomeMembre extends React.Component {
               <p className="post-title">{title1}</p>
               {/* eslint-disable-next-line */}
               <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt1 }} />
-              <p className="post-more">En lire plus</p>
+              <a href={blog1}>
+                <p className="post-more">En lire plus</p>
+              </a>
             </div>
             <div className="post">
               <p className="post-category">{category2}</p>
               <p className="post-title">{title2}</p>
               {/* eslint-disable-next-line */}
               <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt2 }} />
-              <p className="post-more">En lire plus</p>
+              <a href={blog2}>
+                <p className="post-more">En lire plus</p>
+              </a>
             </div>
             <div className="post">
               <p className="post-category">{category3}</p>
               <p className="post-title">{title3}</p>
               {/* eslint-disable-next-line */}
               <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt3 }} />
-              <p className="post-more">En lire plus</p>
+              <a href={blog3}>
+                <p className="post-more">En lire plus</p>
+              </a>
             </div>
           </div>
         </a>
@@ -62,17 +73,24 @@ class HomeMembre extends React.Component {
     );
   }
 }
+
+/*
+* Export default
+*/
 HomeMembre.propTypes = {
   loadPost: PropTypes.func.isRequired,
   title1: PropTypes.string.isRequired,
   category1: PropTypes.string.isRequired,
   excerpt1: PropTypes.string.isRequired,
+  slug1: PropTypes.string.isRequired,
   title2: PropTypes.string.isRequired,
   category2: PropTypes.string.isRequired,
   excerpt2: PropTypes.string.isRequired,
+  slug2: PropTypes.string.isRequired,
   title3: PropTypes.string.isRequired,
   category3: PropTypes.string.isRequired,
   excerpt3: PropTypes.string.isRequired,
+  slug3: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   logged: PropTypes.bool.isRequired,
   dogName: PropTypes.string.isRequired,
@@ -81,5 +99,4 @@ HomeMembre.propTypes = {
 /*
 * Export default
  */
-
 export default HomeMembre;
