@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 
 /*
 * Local Import
@@ -39,7 +40,7 @@ class Details extends React.Component {
             className="details-check"
             required
           />
-          Le lieu  que je propose respecte les conditions d'utilisation
+          Le lieu  que je propose respecte <NavLink className="link" to="/cgu">les conditions d'utilisation</NavLink>
         </div>
         <p
           id="newPlaceSend"
