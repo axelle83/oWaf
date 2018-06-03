@@ -33,11 +33,20 @@ class MyFancyComponent extends React.Component {
   componentDidMount() {
     this.delayedShowMarker();
   }
+  componentDidUpdate() {
+    this.delayedShowMarker();
+  }
 
   delayedShowMarker = () => {
     setTimeout(() => {
       this.setState({ isMarkerShown: true, places: this.props.places });
-    }, 3000);
+    }, 5000);
+  }
+
+  delayedAddPlace = () => {
+    setTimeout(() => {
+      this.setState({ places: this.props.places });
+    }, 1000);
   }
 
   render() {

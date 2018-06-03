@@ -21,6 +21,7 @@ class Details extends React.Component {
   handleSubmit = (evt) => {
     evt.preventDefault();
     this.props.onPlaceSubmit();
+    setTimeout(() => this.props.loadPlace(), 500);
   }
 
   handleClose = () => {
@@ -90,6 +91,7 @@ class Details extends React.Component {
 */
 Details.propTypes = {
   onPlaceSubmit: PropTypes.func.isRequired,
+  loadPlace: PropTypes.func.isRequired,
   addForm: PropTypes.func.isRequired,
   newPlace: PropTypes.bool.isRequired,
 };

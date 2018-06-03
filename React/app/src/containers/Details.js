@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
  * Local import
  */
 import Details from 'src/components/MapPage/Details';
-import { placeSubmit, addForm } from 'src/store/reducers/map';
+import { placeSubmit, addForm, loadPlace } from 'src/store/reducers/map';
 
 /*
  * Code
@@ -25,6 +25,9 @@ const mapDispatchToProps = dispatch => ({
   },
   addForm: () => {
     dispatch(addForm());
+  },
+  loadPlace: () => {
+    dispatch(loadPlace());
   },
 });
 

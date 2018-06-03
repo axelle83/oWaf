@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories, getMyPosition } from './reducers/map';
+import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories } from './reducers/map';
 
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
@@ -12,24 +12,6 @@ const mapMiddleware = store => next => (action) => {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
       const categories = [];
-      // if ('geolocation' in navigator) {
-      //   // coords de géolocalisation
-      //   navigator.geolocation.getCurrentPosition((position) => {
-      //     const crd = position.coords;
-      //     const gps = {
-      //       lat: crd.latitude,
-      //       lng: crd.longitude,
-      //     };
-      //     console.log('ok', gps);
-      //     store.dispatch(getMyPosition(gps));
-      //     // setTimeout(
-      //     //   () => {
-      //     //     store.dispatch(getMyPosition(gps));
-      //     //   }
-      //     //   , 100,
-      //     // );
-      //   });
-      // }
       // gets the categories
       axios
         .get(urlCategory, config)
@@ -51,7 +33,7 @@ const mapMiddleware = store => next => (action) => {
             const adress = JSON.stringify(data.adresse);
             if (adress) {
               axios
-                .get(`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%${adress}&sensor=false`)
+                .get(`${urlGoogle}${adress}&sensor=false`)
                 .then((res) => {
                   data.lat = res.data.results[0].geometry.location.lat;
                   data.lng = res.data.results[0].geometry.location.lng;
@@ -112,11 +94,11 @@ const mapMiddleware = store => next => (action) => {
       break;
   }
 
-  // Passe au suivant
+  // Next
   next(action);
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default mapMiddleware;

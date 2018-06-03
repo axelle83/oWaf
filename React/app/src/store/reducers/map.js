@@ -135,6 +135,7 @@ const reducer = (state = initialState, action = {}) => {
 
     // new place has been added
     case NEW_PLACE: {
+      console.log(state.places);
       return {
         ...state,
         places: [...state.places, action.data],
