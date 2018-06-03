@@ -5,7 +5,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Redirect } from 'react-router-dom';
-import FaClose from 'react-icons/lib/fa/close';
 
 /*
  * Local import
@@ -19,9 +18,7 @@ import LoginForm from 'src/containers/LoginForm';
 /* eslint-disable-next-line */
 class Login extends React.Component {
   render() {
-    const {
-      visible, logged, closeLogin, openLogin,
-    } = this.props;
+    const { visible, logged } = this.props;
     if (window.location.pathname === '/connect' && logged) return <Redirect to="/membre" />;
     return (
       <div
@@ -30,12 +27,11 @@ class Login extends React.Component {
         classNames(
           'login',
           {
-            'login--open': visible && !openLogin,
+            'login--open': visible,
           },
         )
       }
       >
-        <FaClose id="loginClose" onClick={closeLogin} />
         <ChangeView from="password" to="login" back />
         <LoginForm />
         <ChangeView from="login" to="password" />
@@ -48,8 +44,6 @@ class Login extends React.Component {
 * propTypes
 */
 Login.propTypes = {
-  closeLogin: PropTypes.func.isRequired,
-  openLogin: PropTypes.bool.isRequired,
   visible: PropTypes.bool.isRequired,
   logged: PropTypes.bool.isRequired,
 };

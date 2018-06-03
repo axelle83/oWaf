@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
  * Local import
  */
 import Login from 'src/components/Login';
-import { toggleLogin } from 'src/store/reducers/buttons';
 
 /**
  * Code
@@ -18,11 +17,7 @@ const mapStateToProps = state => ({
   openLogin: state.buttons.openLogin,
 });
 
-const mapDispatchToProps = dispatch => ({
-  closeLogin: () => {
-    dispatch(toggleLogin());
-  },
-});
+const mapDispatchToProps = {};
 
 // Container
 const LoginContainer = connect(mapStateToProps, mapDispatchToProps)(Login);

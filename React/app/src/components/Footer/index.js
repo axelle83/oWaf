@@ -13,7 +13,7 @@ const Footer = () => {
   const year = now.getFullYear();
   return (
     <footer id="footer">
-      <a className="footer-title" title="owaf" href="/home">Copyright <span id="footer-logo">oWaf</span> {year}</a>
+      <a className="footer-title" title="owaf" href="/">Copyright <span id="footer-logo">oWaf</span> {year}</a>
       <NavLink
         key="cgu"
         to="/cgu"

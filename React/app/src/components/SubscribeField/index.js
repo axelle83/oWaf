@@ -68,7 +68,8 @@ class SubscribeField extends React.Component {
           name={name}
           placeholder={placeholder}
           value={inputValue}
-          onChange={this.modify && this.handleChange}
+          onChange={this.handleChange}
+          readOnly={!this.modify}
           required={mandatory}
         />
         {mandatory && <span className="field-mandatory">*</span>}

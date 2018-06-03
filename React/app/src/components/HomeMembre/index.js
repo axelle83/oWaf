@@ -37,38 +37,43 @@ class HomeMembre extends React.Component {
           <div className="homeMembre-carte-img" />
           <div className="homeMembre-carte-texte">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
         </NavLink>
-        <a href="/blog" className="home-blog">
+        {/* <NavLink
+          key="blog"
+          to="/blog"
+          className="home-blog"
+        > */}
+        <div className="home-blog">
           <p className="home-blog-title">Discussions à la une</p>
           <div className="home-blog-post">
-            <div className="post">
-              <p className="post-category">{category1}</p>
-              <p className="post-title">{title1}</p>
-              {/* eslint-disable-next-line */}
-              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt1 }} />
-              <a href={blog1}>
+            <a href={blog1}>
+              <div className="post">
+                <p className="post-category">{category1}</p>
+                <p className="post-title">{title1}</p>
+                {/* eslint-disable-next-line */}
+                <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt1 }} />
                 <p className="post-more">En lire plus</p>
-              </a>
-            </div>
-            <div className="post">
-              <p className="post-category">{category2}</p>
-              <p className="post-title">{title2}</p>
-              {/* eslint-disable-next-line */}
-              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt2 }} />
-              <a href={blog2}>
+              </div>
+            </a>
+            <a href={blog2}>
+              <div className="post">
+                <p className="post-category">{category2}</p>
+                <p className="post-title">{title2}</p>
+                {/* eslint-disable-next-line */}
+                <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt2 }} />
                 <p className="post-more">En lire plus</p>
-              </a>
-            </div>
-            <div className="post">
-              <p className="post-category">{category3}</p>
-              <p className="post-title">{title3}</p>
-              {/* eslint-disable-next-line */}
-              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt3 }} />
-              <a href={blog3}>
+              </div>
+            </a>
+            <a href={blog3}>
+              <div className="post">
+                <p className="post-category">{category3}</p>
+                <p className="post-title">{title3}</p>
+                {/* eslint-disable-next-line */}
+                <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: excerpt3 }} />
                 <p className="post-more">En lire plus</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
-        </a>
+        </div>
       </div>
     );
   }
