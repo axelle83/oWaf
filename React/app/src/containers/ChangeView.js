@@ -3,7 +3,6 @@
  */
 import { connect } from 'react-redux';
 
-
 /*
  * Local import
  */
@@ -14,19 +13,16 @@ import datas from 'src/datas/subscribe';
 /*
  * Code
  */
-// State
 const mapStateToProps = (state, ownProps) => ({
   active: state.login.view === ownProps.from,
   data: datas[state.login.view],
 });
 
-// Actions
 const mapDispatchToProps = (dispatch, ownProps) => ({
   changeView: () => {
     dispatch(changeView(ownProps.to));
   },
 });
-
 
 /*
  * Export default

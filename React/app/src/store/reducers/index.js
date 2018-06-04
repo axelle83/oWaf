@@ -1,5 +1,5 @@
 /*
- * Import NPM
+ * Npm import
  */
 import { combineReducers } from 'redux';
 

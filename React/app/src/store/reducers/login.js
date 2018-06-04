@@ -1,6 +1,3 @@
-
-// import React from 'react';
-// import { Redirect } from 'react-router-dom';
 /*
  * Types
  */
@@ -15,7 +12,7 @@ const USER_ERROR = 'USER_ERROR';
 const LOGIN_CLOSE = 'LOGIN_CLOSE';
 
 /*
- * State
+ * Initial state
  */
 const initialState = {
   view: 'login',
@@ -133,4 +130,7 @@ export const changeLogin = ({ name, value }) => ({
   value,
 });
 
+/*
+ * Export default
+ */
 export default reducer;

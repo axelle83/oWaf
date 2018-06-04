@@ -1,4 +1,3 @@
-
 /*
  * Types
  */
@@ -13,7 +12,7 @@ const NEW_PLACE = 'NEW_PLACE';
 const MY_POSITION = 'MY_POSITION';
 
 /*
- * State
+ * Initial state
  */
 const initialState = {
   places: [],

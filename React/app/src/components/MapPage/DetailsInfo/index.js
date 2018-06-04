@@ -40,7 +40,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.leash}
+        defaultChecked={myPlace.leash}
       />
       Laisse
     </p>
@@ -48,7 +48,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.fountain}
+        defaultChecked={myPlace.fountain}
       />
       Fontaine
     </p>
@@ -56,7 +56,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.lake}
+        defaultChecked={myPlace.lake}
       />
       Lac à proximité
     </p>
@@ -64,7 +64,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.bag}
+        defaultChecked={myPlace.bag}
       />
       Sac à déjections
     </p>

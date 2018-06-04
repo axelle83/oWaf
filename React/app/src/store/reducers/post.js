@@ -1,4 +1,3 @@
-
 /*
  * Types
  */
@@ -6,7 +5,7 @@ export const LOAD_POST = 'LOAD_POST';
 export const GET_POST = 'GET_POST';
 
 /*
- * State
+ * Initial state
  */
 const initialState = {
   title1: '',

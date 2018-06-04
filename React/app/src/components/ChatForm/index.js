@@ -1,29 +1,20 @@
-/**
+/*
  * Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
+/*
  * Code
  */
 class ChatForm extends React.Component {
-  static propTypes = {
-    inputValue: PropTypes.string.isRequired,
-    actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
-  };
-
   handleChange = (evt) => {
-    // Je recup la value depuis la cible de l'event
     const { value } = evt.target;
-    // j'exécute la fonction fournie en passant la value
     this.props.actions.changeInputForm(value);
   }
 
   handleSubmit = (evt) => {
-    // J'empeche le comportement par défaut
     evt.preventDefault();
-    // J'exécute la fonction fournie par les props
     this.props.actions.sendMessage();
   }
 
@@ -46,7 +37,15 @@ class ChatForm extends React.Component {
   }
 }
 
-/**
- * Export
+/*
+ * PropTypes
+ */
+ChatForm.propTypes = {
+  inputValue: PropTypes.string.isRequired,
+  actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
+};
+
+/*
+ * Export default
  */
 export default ChatForm;

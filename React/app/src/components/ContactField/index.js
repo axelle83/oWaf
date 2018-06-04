@@ -8,30 +8,12 @@ import classNames from 'classnames';
 /*
  * Component
  */
-export default class ContactField extends React.Component {
-  /*
-   * PropTypes
-   */
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    // mandatory: PropTypes.bool.isRequired,
-    inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'textarea', 'email']).isRequired,
-  }
-
-  static defaultProps = {
-    inputValue: '',
-  }
-
+class ContactField extends React.Component {
   state = {
     error: false,
   }
 
-  /**
-   * Handle change event
-   */
+  // Handle change event
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
@@ -42,9 +24,7 @@ export default class ContactField extends React.Component {
     }
   }
 
-  /*
-   * Render
-   */
+  // Render
   render() {
     const { error } = this.state;
     const {
@@ -76,3 +56,23 @@ export default class ContactField extends React.Component {
     );
   }
 }
+
+/*
+ * PropTypes
+*/
+ContactField.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  inputValue: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'textarea', 'email']).isRequired,
+};
+
+ContactField.defaultProps = {
+  inputValue: '',
+};
+
+/*
+ * Export default
+*/
+export default ContactField;

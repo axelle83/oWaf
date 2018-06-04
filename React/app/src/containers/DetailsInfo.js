@@ -11,12 +11,10 @@ import DetailsInfo from 'src/components/MapPage/DetailsInfo';
 /*
  * Code
  */
-// State
 const mapStateToProps = state => ({
   myPlace: state.map.myPlace,
 });
 
-// Actions
 const mapDispatchToProps = {};
 
 /*

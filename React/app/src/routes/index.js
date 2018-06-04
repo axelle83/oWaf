@@ -43,7 +43,7 @@ const routes = {
       },
     },
   },
-  '/membre': {
+  '/member': {
     nav: 'Home',
     component: <HomeMembre />,
     chat: true,
@@ -99,7 +99,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/membre',
+        path: '/member',
       },
       Carte: {
         path: '/map',
@@ -119,7 +119,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/membre',
+        path: '/member',
       },
       'Mon profil': {
         path: '/profile',
@@ -139,7 +139,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/membre',
+        path: '/member',
       },
     },
   },

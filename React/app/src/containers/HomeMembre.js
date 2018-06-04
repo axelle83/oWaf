@@ -12,7 +12,6 @@ import { loadPost } from 'src/store/reducers/post';
 /*
  * Code
  */
-// State
 const mapStateToProps = state => ({
   title1: state.post.title1,
   category1: state.post.category1,
@@ -31,7 +30,6 @@ const mapStateToProps = state => ({
   logged: state.login.logged,
 });
 
-// Actions
 const mapDispatchToProps = dispatch => ({
   loadPost: () => {
     dispatch(loadPost());

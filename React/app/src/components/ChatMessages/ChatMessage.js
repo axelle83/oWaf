@@ -1,11 +1,11 @@
-/**
+/*
  * Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-/**
+/*
  * Code
  */
 const ChatMessage = ({
@@ -37,7 +37,7 @@ ChatMessage.propTypes = {
   date: PropTypes.string.isRequired,
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default ChatMessage;

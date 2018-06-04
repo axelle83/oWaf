@@ -1,6 +1,5 @@
 /*
-*  Npm import
-*
+* Npm import
  */
 import React from 'react';
 

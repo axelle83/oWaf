@@ -53,16 +53,16 @@ const Cgu = () => (
         <p className="cgu-text">Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de l’Editeur.
           <br />De même, la responsabilité du site de ne peut être engagée en cas de force majeure ou du fait imprévisible d’un tiers.
         </p>
-        <h3 className="cgu-subtitle">Article 6 - Propriété intellectuelle</h3>
+      <h3 className="cgu-subtitle">Article 6 - Propriété intellectuelle</h3>
         <p className="cgu-text">L’Utilisateur est entièrement responsable de tout contenu qu’il met en ligne et il s’engage à ne pas porter atteinte à un tiers.
           <br />L’Editeur du site se réserve le droit de modérer ou de supprimer librement et à tout moment les contenus mis en ligne par les utilisateurs, et ce sans justification.
           <br />Tout usage commercial des informations publiées sur le site et le blog est interdit.
           <br />Les contenus du site et du blog sont protégés par le droit d’auteur, en vertu du Code de la propriété intellectuelle.
         </p>
-        <h3 className="cgu-subtitle">Article 7 - Evolution des conditions générales d'utilisation</h3>
+      <h3 className="cgu-subtitle">Article 7 - Evolution des conditions générales d'utilisation</h3>
         <p className="cgu-text">oWaf se réserve le droit de modifier les clauses de ces conditions générales d’utilisation à tout moment et sans justification.
         </p>
-        <h3 className="cgu-subtitle">Article 8 - Durée du contrat</h3>
+      <h3 className="cgu-subtitle">Article 8 - Durée du contrat</h3>
         <p className="cgu-text">La durée du présent contrat est indéterminée. Le contrat produit ses effets à l’égard de l’Utilisateur à compter du début de l’utilisation du service.
         </p>
       <h3 className="cgu-subtitle">Article 9 - Clause de non responsabilité</h3>

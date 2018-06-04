@@ -1,9 +1,15 @@
+/*
+ * Npm import
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 import MyMarker from 'src/containers/Marker';
 
+/*
+ * Component
+ */
 const MyMapComponent = compose(
   withProps({
     googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAVQtHXYY_yzzutflzsTmGc6DcRg6TLhB4&v=3.exp&libraries=geometry,drawing,places',
@@ -24,6 +30,9 @@ const MyMapComponent = compose(
     </GoogleMap>
   ));
 
+/*
+ * Component
+ */
 class MyFancyComponent extends React.Component {
   state = {
     isMarkerShown: false,
@@ -61,9 +70,17 @@ class MyFancyComponent extends React.Component {
     );
   }
 }
+
+/*
+ * PropTypes
+ */
 MyFancyComponent.propTypes = {
   places: PropTypes.array.isRequired,
   lat: PropTypes.number.isRequired,
   lng: PropTypes.number.isRequired,
 };
+
+/*
+ * Export default
+ */
 export default MyFancyComponent;

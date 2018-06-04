@@ -1,13 +1,10 @@
 @require "app/styles/charte"
 
-/*
- * Classes
- */
 .subscribe
 	position: relative
 	display: block
 	height: 3.5em
-	color: #0A71A4
+	color: $bgBlueSky
 
 	&-input
 		border: none
@@ -22,7 +19,7 @@
 		padding: 0 1em
 
 		&::placeholder
-			color: #0A71A4
+			color: $bgBlueSky
 			font-size: .8em
 
 	&-label
@@ -36,9 +33,9 @@
 
 	&--has-error &
 		&-input
-			border-color: blue
+			border-color: $bgBlueHard
 		&-label
-			color: blue
+			color: $bgBlueHard
 
 .field-mandatory
 	margin-left: .5em

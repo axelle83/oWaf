@@ -1,10 +1,12 @@
-
-/**
- * Code
- */
+/*
+* Import
+*/
 import { receiveMessage } from './reducers/chatMessages';
 import { SEND_MESSAGE } from './reducers/chatForm';
 
+/*
+ * Code
+ */
 const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
 
 let socket;
@@ -50,15 +52,15 @@ const chatMiddleware = store => next => (action) => {
       break;
   }
 
-  // Passe au suivant
+  // Next
   next(action);
 };
 
+/*
+ * Export
+ */
 export const chatConnect = () => ({
   type: WEBSOCKET_CONNECT,
 });
 
-/**
- * Export
- */
 export default chatMiddleware;

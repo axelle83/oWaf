@@ -1,4 +1,6 @@
-
+/*
+ * Code
+ */
 const sessionStorageMiddleware = (store) => {
   return next => (action) => {
     const result = next(action);
@@ -7,7 +9,7 @@ const sessionStorageMiddleware = (store) => {
   };
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default sessionStorageMiddleware;

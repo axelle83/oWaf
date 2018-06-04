@@ -1,7 +1,6 @@
 /*
-* npm install
-*
- */
+* Npm import
+*/
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -21,7 +20,6 @@ const Footer = () => {
       >
         Nos conditions d'utilisation
       </NavLink>
-      {/* <a className="footer-cgu" title="nos cgu" href="/cgu">Nos conditions d'utilisation</a> */}
       <div className="footer-sociaux">
         <i className="fab fa-facebook-f" />
         <i className="fab fa-twitter" />

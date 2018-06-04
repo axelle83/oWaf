@@ -14,13 +14,8 @@ import Nav from 'src/components/Nav';
 const mapStateToProps = null;
 
 const mapDispatchToProps = {};
-// Container
-const NavContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Nav);
 
 /*
 * Export Default
 */
-export default NavContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);

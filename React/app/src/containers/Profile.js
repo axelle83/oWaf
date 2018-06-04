@@ -4,7 +4,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-
 /*
  * Local import
  */
@@ -14,7 +13,6 @@ import { profileSubmit, profileClose, profileDelete } from 'src/store/reducers/m
 /*
  * Code
  */
-// State
 const mapStateToProps = state => ({
   errorpassword: state.member.errorpassword,
   logged: state.login.logged,
@@ -22,7 +20,6 @@ const mapStateToProps = state => ({
   deleted: state.member.deleted,
 });
 
-// Actions
 const mapDispatchToProps = dispatch => ({
   onProfileSubmit: () => {
     dispatch(profileSubmit());

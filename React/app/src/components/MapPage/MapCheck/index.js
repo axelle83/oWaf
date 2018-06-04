@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /*
  * Component
  */
-export default class MapCheck extends React.Component {
+class MapCheck extends React.Component {
   // Handle change event
   handleChange = (evt) => {
     const { checked } = evt.target;
@@ -41,3 +41,8 @@ MapCheck.propTypes = {
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
+
+/*
+* Export default
+*/
+export default MapCheck;

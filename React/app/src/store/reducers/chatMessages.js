@@ -1,15 +1,15 @@
 /*
+* Types
+*/
+const ADD_MESSAGE = 'ADD_MESSAGE';
+
+/*
  * InitialState
  */
 const initialState = {
   ids: [],
   list: {},
 };
-
-/*
- * Types
- */
-const ADD_MESSAGE = 'ADD_MESSAGE';
 
 /*
  * Reducer
@@ -47,6 +47,6 @@ export const receiveMessage = message => ({
 });
 
 /*
- * Export
+ * Export default
  */
 export default reducer;

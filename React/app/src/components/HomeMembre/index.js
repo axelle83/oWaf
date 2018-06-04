@@ -20,7 +20,7 @@ class HomeMembre extends React.Component {
       title3, category3, excerpt3, slug3,
       name, dogName, logged,
     } = this.props;
-    if (window.location.pathname === '/membre' && !logged) return <Redirect to="/" />;
+    if (window.location.pathname === '/member' && !logged) return <Redirect to="/" />;
     const blog1 = `/blog/${slug1}/`;
     const blog2 = `/blog/${slug2}/`;
     const blog3 = `/blog/${slug3}/`;
@@ -37,11 +37,6 @@ class HomeMembre extends React.Component {
           <div className="homeMembre-carte-img" />
           <div className="homeMembre-carte-texte">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
         </NavLink>
-        {/* <NavLink
-          key="blog"
-          to="/blog"
-          className="home-blog"
-        > */}
         <div className="home-blog">
           <p className="home-blog-title">Discussions à la une</p>
           <div className="home-blog-post">
@@ -80,7 +75,7 @@ class HomeMembre extends React.Component {
 }
 
 /*
-* Export default
+* PropTypes
 */
 HomeMembre.propTypes = {
   loadPost: PropTypes.func.isRequired,

@@ -1,4 +1,3 @@
-
 /*
  * Types
  */
@@ -7,7 +6,7 @@ export const CONTACT_CHANGE = 'CONTACT_CHANGE';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 
 /*
- * State
+ * Initial State
  */
 const initialState = {
   send: false,

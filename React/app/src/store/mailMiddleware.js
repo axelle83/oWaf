@@ -1,7 +1,12 @@
-
+/*
+* Import
+*/
 import axios from 'axios';
 import { CONTACT_SUBMIT, sendMessage } from './reducers/contact';
 
+/*
+ * Code
+ */
 const mailMiddleware = store => next => (action) => {
   switch (action.type) {
     case CONTACT_SUBMIT: {
@@ -33,11 +38,11 @@ const mailMiddleware = store => next => (action) => {
   next(action);
 };
 
+/**
+ * Export
+ */
 export const contactSubmit = () => ({
   type: CONTACT_SUBMIT,
 });
 
-/**
- * Export
- */
 export default mailMiddleware;

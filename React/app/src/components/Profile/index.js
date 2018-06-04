@@ -1,5 +1,5 @@
 /*
-* npm install
+* Npm import
 *
  */
 import React from 'react';
@@ -18,8 +18,6 @@ import SubscribeRadio from 'src/containers/SubscribeRadio';
 /*
 *  Code
  */
-
-
 class Profile extends React.Component {
   // form submit handler
   onSubmit = (evt) => {
@@ -39,11 +37,12 @@ class Profile extends React.Component {
   }
 
   close = false;
+
   // render
   render() {
     const { logged, profile, deleted } = this.props;
     if (window.location.pathname === '/profile' && !logged) return <Redirect to="/" />;
-    if (window.location.pathname === '/profile' && this.close) return <Redirect to="/membre" />;
+    if (window.location.pathname === '/profile' && this.close) return <Redirect to="/member" />;
     if (window.location.pathname === '/profile' && deleted) return <Redirect to="/disconnect" />;
     return (
       <form

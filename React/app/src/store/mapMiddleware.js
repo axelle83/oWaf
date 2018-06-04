@@ -1,7 +1,12 @@
-
+/*
+* Import
+*/
 import axios from 'axios';
 import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories } from './reducers/map';
 
+/*
+ * Code
+ */
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_PLACE: {

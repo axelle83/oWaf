@@ -1,4 +1,18 @@
 /*
+* Types
+*/
+const INPUT_CHANGE = 'INPUT_CHANGE';
+export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
+export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
+export const LOAD_IMAGE = 'LOAD_IMAGE';
+const SUBSCRIBE = 'SUBSCRIBE';
+const GET_MEMBER = 'GET_MEMBER';
+const GET_DOG = 'GET_DOG';
+const USER_EXIST = 'USER_EXIST';
+const PROFILE_CLOSE = 'PROFILE_CLOSE';
+export const PROFILE_DELETE = 'PROFILE_DELETE';
+
+/*
  * Initial state
  */
 const initialState = {
@@ -18,20 +32,6 @@ const initialState = {
   dogBirth: '',
   selectedFile: {},
 };
-
-/*
-* Types
-*/
-const INPUT_CHANGE = 'INPUT_CHANGE';
-export const SUBSCRIBE_SUBMIT = 'SUBSCRIBE_SUBMIT';
-export const PROFILE_SUBMIT = 'PROFILE_SUBMIT';
-export const LOAD_IMAGE = 'LOAD_IMAGE';
-const SUBSCRIBE = 'SUBSCRIBE';
-const GET_MEMBER = 'GET_MEMBER';
-const GET_DOG = 'GET_DOG';
-const USER_EXIST = 'USER_EXIST';
-const PROFILE_CLOSE = 'PROFILE_CLOSE';
-export const PROFILE_DELETE = 'PROFILE_DELETE';
 
 /*
  * Reducer
@@ -177,4 +177,7 @@ export const getDog = data => ({
   data,
 });
 
+/*
+ * Export default
+ */
 export default reducer;

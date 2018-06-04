@@ -1,16 +1,14 @@
-/**
+/*
 * Import
 */
 import axios from 'axios';
 import { SUBSCRIBE_SUBMIT, PROFILE_SUBMIT, PROFILE_DELETE, subscribe, userExists } from './reducers/member';
 
-/**
+/*
  * Code
  */
-
 const urlUser = 'http://217.70.189.93/blog/wp-json/wp/v2/users';
 const urlDog = 'http://217.70.189.93/blog/wp-json/wp/v2/dog';
-// const urlMedia = 'http://217.70.189.93/blog/wp-json/wp/v2/media';
 
 const memberMiddleware = store => next => (action) => {
   switch (action.type) {
@@ -134,28 +132,6 @@ const memberMiddleware = store => next => (action) => {
 
       break;
     }
-    // case LOAD_IMAGE: {
-    //   const formData = new FormData();
-    //   formData.append('image', action.value);
-    //   console.log('formData', formData.get('image'));
-    //   const admin = btoa('restapi:restapi');
-    //   const file = btoa(formData);
-    //   const config = {
-    //     headers: {
-    //       Authorization: `Basic ${admin}`,
-    //       'content-type': `form-data; filename=${action.value.name}`,
-    //     },
-    //   };
-    //   axios
-    //     .post(urlMedia, file, config)
-    //     .then((response) => {
-    //       console.log('ok', response.data);
-    //     })
-    //     .catch((error) => {
-    //       console.log('ko', error);
-    //     });
-    //   break;
-    // }
 
     default:
       break;

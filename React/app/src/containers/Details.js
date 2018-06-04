@@ -12,13 +12,11 @@ import { placeSubmit, addForm, loadPlace } from 'src/store/reducers/map';
 /*
  * Code
  */
-// State
 const mapStateToProps = state => ({
   myPlace: state.map.myPlace,
   newPlace: state.map.newPlace,
 });
 
-// Actions
 const mapDispatchToProps = dispatch => ({
   onPlaceSubmit: () => {
     dispatch(placeSubmit());

@@ -1,7 +1,12 @@
-
+/*
+ * Import
+ */
 import axios from 'axios';
 import { LOAD_POST, getPost } from './reducers/post';
 
+/*
+ * Code
+ */
 const postMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_POST: {
@@ -40,11 +45,11 @@ const postMiddleware = store => next => (action) => {
       break;
   }
 
-  // Passe au suivant
+  // Next
   next(action);
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default postMiddleware;

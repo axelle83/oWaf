@@ -26,10 +26,7 @@ import Login from 'src/containers/Login';
 
 class App extends React.Component {
  changeTitle = ({ pathname }) => {
-   // On récupère notre objet de data
    const route = routes[pathname];
-
-   // On modifie le title de la page
    document.title = route.title;
  }
 
