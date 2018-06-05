@@ -33,6 +33,7 @@ class Subscribe extends React.Component {
       >
         <div id="subscribe-title">Inscription</div>
         <div id="subscribe-me">
+          <div className="subscribe-me-title">Moi</div>
           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
           <div
             className={

@@ -22,7 +22,7 @@ const Cgu = () => (
           Les conditions générales d’utilisation doivent être acceptées par tout Utilisateur, et son accès au site et au blog vaut acceptation de ces conditions
         </p>
       <h3 className="cgu-subtitle">Article 2 - Mentions légales</h3>
-        <p className="cgu-text">Le site et le blog oWaf ets édité par Ingrid, Christelle, Axelle et Angélique domicilées au Cockpit d’ O’clock, et ses Utilisateurs.
+        <p className="cgu-text">Le site et le blog oWaf sont édités par Ingrid, Christelle, Axelle et Angélique domicilées au Cockpit d’ O’clock, et leurs Utilisateurs.
         </p>
       <h3 className="cgu-subtitle">Article 3 - Accès aux services</h3>
         <p className="cgu-text">Tout utilisateur ayant accès à Internet peut accéder gratuitement et depuis n’importe où au site et au blog.
