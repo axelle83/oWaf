@@ -1,5 +1,5 @@
 /*
-*  Npm import
+  Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
