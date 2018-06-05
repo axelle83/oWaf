@@ -7,77 +7,28 @@ import classNames from 'classnames';
 import FaLock from 'react-icons/lib/fa/lock';
 import FaUser from 'react-icons/lib/fa/user';
 
-
-/*
- * Local import
- */
-
-
-/*
- * Code
- */
-
-
 /*
  * Component
  */
-export default class LoginField extends React.Component {
-  /*
-   * PropTypes
-   */
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    fa: PropTypes.string.isRequired,
-    inputValue: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email']),
-  }
-
-  static defaultProps = {
-    inputValue: '',
-    type: 'text',
-  }
-
+class LoginField extends React.Component {
   state = {
     error: false,
     focus: false,
   }
 
-  /**
-   * Handle change event
-   */
+  // Handle change event
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
 
-    // on vérifie les champs obligatoires
+    // check mandatory fields
     if (evt.target.required) {
       const error = !value;
       this.setState({ error });
     }
   }
 
-  /**
-   * Handle focus event
-   */
-  // handleFocus = () => {
-  //   this.setState({
-  //     error: false,
-  //     focus: true,
-  //   });
-  // }
-
-  /**
-   * Handle blur event
-   */
-  // handleBlur = () => {
-  //   this.setState({ focus: false });
-  // }
-
-  /*
-   * Render
-   */
+  // Render
   render() {
     const { error, focus } = this.state;
     const {
@@ -115,3 +66,25 @@ export default class LoginField extends React.Component {
     );
   }
 }
+
+/*
+ * PropTypes
+ */
+LoginField.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  fa: PropTypes.string.isRequired,
+  inputValue: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'password', 'email']),
+};
+
+LoginField.defaultProps = {
+  inputValue: '',
+  type: 'text',
+};
+
+/*
+ * Export default
+ */
+export default LoginField;

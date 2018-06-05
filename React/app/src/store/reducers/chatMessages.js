@@ -1,4 +1,9 @@
 /*
+* Types
+*/
+const ADD_MESSAGE = 'ADD_MESSAGE';
+
+/*
  * InitialState
  */
 const initialState = {
@@ -7,21 +12,17 @@ const initialState = {
 };
 
 /*
- * Types
- */
-const ADD_MESSAGE = 'ADD_MESSAGE';
-
-/*
  * Reducer
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_MESSAGE: {
-      // on descend le scroll du chat
+      // scroll down
       const node = document.getElementById('messages');
       setTimeout(() => {
         node.scrollTop = node.scrollHeight;
       }, 100);
+      // adds the message to the messages list
       return {
         ...state,
         ids: [...state.ids, action.message.id],
@@ -46,6 +47,6 @@ export const receiveMessage = message => ({
 });
 
 /*
- * Export
+ * Export default
  */
 export default reducer;

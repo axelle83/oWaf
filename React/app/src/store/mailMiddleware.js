@@ -1,7 +1,12 @@
-
+/*
+* Import
+*/
 import axios from 'axios';
 import { CONTACT_SUBMIT, sendMessage } from './reducers/contact';
 
+/*
+ * Code
+ */
 const mailMiddleware = store => next => (action) => {
   switch (action.type) {
     case CONTACT_SUBMIT: {
@@ -9,7 +14,7 @@ const mailMiddleware = store => next => (action) => {
       const object = state.contact.object.trim();
       const message = state.contact.message.trim();
       const email = state.contact.email.trim();
-      const url = 'http://localhost:4000/send';
+      const url = 'http://217.70.189.93:4000/send';
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
@@ -17,11 +22,11 @@ const mailMiddleware = store => next => (action) => {
       axios
         .post(url, `email=${email}&object=${object}&message=${message}`, config)
         .then(() => {
-          store.dispatch(sendMessage());
         })
         .catch((error) => {
           console.log(error);
         });
+      store.dispatch(sendMessage());
     }
       break;
 
@@ -33,11 +38,11 @@ const mailMiddleware = store => next => (action) => {
   next(action);
 };
 
+/**
+ * Export
+ */
 export const contactSubmit = () => ({
   type: CONTACT_SUBMIT,
 });
 
-/**
- * Export
- */
 export default mailMiddleware;

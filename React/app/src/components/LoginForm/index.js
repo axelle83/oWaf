@@ -11,7 +11,7 @@ import classNames from 'classnames';
 import LoginField from 'src/containers/LoginField';
 
 /*
- * Code
+ * Component
  */
 class LoginForm extends React.Component {
   onSubmit = (evt) => {
@@ -55,12 +55,16 @@ class LoginForm extends React.Component {
           )
           }
         >
-          Il n'y a pas d'utilisateur correspondant
+          L'utilisateur ou le mot de passe sont incorrects
         </p>
       </form>
     );
   }
 }
+
+/*
+ * PropTypes
+ */
 LoginForm.propTypes = {
   loginSubmit: PropTypes.func.isRequired,
   passSend: PropTypes.bool.isRequired,
@@ -79,6 +83,7 @@ LoginForm.propTypes = {
 LoginForm.contextTypes = {
   router: PropTypes.object.isRequired,
 };
+
 /*
  * Export default
  */

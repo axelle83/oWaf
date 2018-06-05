@@ -19,7 +19,7 @@ import LoginForm from 'src/containers/LoginForm';
 class Login extends React.Component {
   render() {
     const { visible, logged } = this.props;
-    if (window.location.pathname === '/connect' && logged) return <Redirect to="/membre" />;
+    if (window.location.pathname === '/connect' && logged) return <Redirect to="/member" />;
     return (
       <div
         id="login"
@@ -40,6 +40,9 @@ class Login extends React.Component {
   }
 }
 
+/*
+* propTypes
+*/
 Login.propTypes = {
   visible: PropTypes.bool.isRequired,
   logged: PropTypes.bool.isRequired,

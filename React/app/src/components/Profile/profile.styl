@@ -5,14 +5,17 @@
   padding: 8em 10em 5em
   height: 95vh
   &-title
-    color: #0A71A4
+    color: $bgBlueSky
     font-family: $title
     font-size: 2em
     padding-bottom: 1em
     text-align: right
 
-#profile-submit
-  background-color: #0A71A4
+.profile
+  display: none
+.profile--modified
+  display: block
+  background-color: $bgBlueSky
   border: none
   border-radius: 1em
   color: $color
@@ -21,6 +24,14 @@
   text-align: center
   margin: auto
   text-transform: uppercase
+.profile--confirm
+.profil--deleted
+  display: block
+  font-family: $title
+  color: $bgBlueSky
+  text-align: center
+  font-size: 1.5em
+  padding-bottom: .5em
 
 #subscribe-me
 .subscribe-dog
@@ -44,5 +55,8 @@
   display: block
 
 .mandatory
-  color : #0A71A4
-  margin-bottom: .5em
+  color : $bgBlueSky
+  margin-bottom: .1em
+
+#profileButtons
+  display: flex

@@ -17,7 +17,7 @@ class MyMarker extends React.Component {
     const colorMarker = {
       Balade: '/images/darkgreen_MarkerB.png',
       Restaurant: '/images/blue_MarkerR.png',
-      Plage: '/images/yellow_MarkerP.png',
+      plage: '/images/yellow_MarkerP.png',
       Hôtel: '/images/red_MarkerH.png',
     };
     const {

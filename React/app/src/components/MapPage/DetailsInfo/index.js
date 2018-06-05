@@ -29,6 +29,10 @@ const detailsInfo = ({ myPlace }) => (
       <p className="details-data">{myPlace.lng}</p>
     </div>
     <div className="mapField">
+      <p className="details-label">Proposé par</p>
+      <p className="details-data">{myPlace.pseudo}</p>
+    </div>
+    <div className="mapField">
       <p className="details-label">Commentaires</p>
       <p className="details-data">{myPlace.comment}</p>
     </div>
@@ -36,7 +40,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.leash}
+        defaultChecked={myPlace.leash}
       />
       Laisse
     </p>
@@ -44,7 +48,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.fountain}
+        defaultChecked={myPlace.fountain}
       />
       Fontaine
     </p>
@@ -52,7 +56,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.lake}
+        defaultChecked={myPlace.lake}
       />
       Lac à proximité
     </p>
@@ -60,7 +64,7 @@ const detailsInfo = ({ myPlace }) => (
       <input
         className="details-check"
         type="checkbox"
-        checked={myPlace.bag}
+        defaultChecked={myPlace.bag}
       />
       Sac à déjections
     </p>

@@ -4,12 +4,14 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
-var join = require('path').join;
+const join = require('path').join;
+
 const app = express();
 
-var indexPath = join(__dirname, '..', '/public/index.html');
-var assetsPath = join(__dirname, '..', 'public');
+// const indexPath = join(__dirname, '..', '/public/index.html');
+const assetsPath = join(__dirname, '..', 'public');
 
+const pass = '1oWaf&4filles';
 /*
  * Express
  */
@@ -23,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 /*
- * POST
+ * POST - sends contact message to contact mail & confirm
  */
 app.post('/send', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -31,6 +33,18 @@ app.post('/send', (req, res) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
+  // initializes transporter
+  const transporter = nodemailer.createTransport('SMTP', {
+    auth: {
+      user: 'owafusion@gmail.com',
+      pass,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  // message to be send
   const output = `
     <h3>Expéditeur</h3>
     <p>${req.body.email}</p>
@@ -40,35 +54,40 @@ app.post('/send', (req, res) => {
     <p>${req.body.message}</p>
   `;
 
-  const transporter = nodemailer.createTransport('SMTP', {
-    auth: {
-      user: 'owafusion@gmail.com',
-      pass: '1oWaf&4filles',
-    },
-    tls: {
-      rejectUnauthorized: false,
-    },
-  });
-
   const mailOptions = {
-    from: 'axelle.lecroq@yahoo.fr',
+    from: req.body.email,
     to: 'owafusion@gmail.com',
     subject: 'Message de contact oWaf',
     html: output,
   };
 
+  const mailConfirmOptions = {
+    from: 'owafusion@gmail.com',
+    to: req.body.email,
+    subject: 'Confirmation d\'envoi de votre message de contact oWaf',
+    html: output,
+  };
+
+  // sends message to contact mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
     }
     console.log('message envoyé', info.messageId);
-    res.render('contact', { msg: 'message envoyé' });
+    // sends confirm
+    transporter.sendMail(mailConfirmOptions, (errorC, infoC) => {
+      if (errorC) {
+        return console.log(errorC);
+      }
+      console.log('message envoyé', infoC.messageId);
+    });
   });
+
+
   transporter.close();
 });
-
 /*
- * POST (oubli password)
+ * POST  -forgot password
  */
 app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -76,20 +95,22 @@ app.post('/pass', (req, res) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma');
 
-  const output = `
-    <h3>Voici votre nouveau mot de passe pour accéder au site oWaf :</h3>
-    <p>${req.body.password}</p>
-  `;
-
+  // initializes transporter
   const transporter = nodemailer.createTransport('SMTP', {
     auth: {
       user: 'owafusion@gmail.com',
-      pass: '1oWaf&4filles',
+      pass,
     },
     tls: {
       rejectUnauthorized: false,
     },
   });
+
+  // message to be send
+  const output = `
+    <h3>Voici votre nouveau mot de passe pour accéder au site oWaf :</h3>
+    <p>${req.body.password}</p>
+  `;
 
   const mailOptions = {
     to: req.body.email,
@@ -97,6 +118,7 @@ app.post('/pass', (req, res) => {
     html: output,
   };
 
+  // sends password by mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);

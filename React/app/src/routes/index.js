@@ -18,23 +18,6 @@ import Disconnect from 'src/containers/Disconnect';
  * Code
  */
 const routes = {
-  '/disconnect': {
-    nav: 'Disconnect',
-    component: <Disconnect />,
-    chat: false,
-    buttons: {
-      Accueil: {
-        path: '/',
-      },
-    },
-  },
-  '/not-found': {
-    buttons: {
-      Accueil: {
-        path: '/',
-      },
-    },
-  },
   '/': {
     nav: 'Home',
     component: <HomeVisiteur />,
@@ -60,18 +43,7 @@ const routes = {
       },
     },
   },
-  '/subscribe': {
-    nav: 'Subscribe',
-    component: <Subscribe />,
-    chat: false,
-    login: false,
-    buttons: {
-      Accueil: {
-        path: '/',
-      },
-    },
-  },
-  '/membre': {
+  '/member': {
     nav: 'Home',
     component: <HomeMembre />,
     chat: true,
@@ -91,6 +63,35 @@ const routes = {
       },
     },
   },
+  '/disconnect': {
+    nav: 'Disconnect',
+    component: <Disconnect />,
+    chat: false,
+    login: false,
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
+  '/not-found': {
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
+  '/subscribe': {
+    nav: 'Subscribe',
+    component: <Subscribe />,
+    chat: false,
+    login: false,
+    buttons: {
+      Accueil: {
+        path: '/',
+      },
+    },
+  },
   '/profile': {
     nav: 'Profile',
     component: <Profile />,
@@ -98,7 +99,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/membre',
+        path: '/member',
       },
       Carte: {
         path: '/map',
@@ -118,7 +119,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/membre',
+        path: '/member',
       },
       'Mon profil': {
         path: '/profile',
@@ -138,7 +139,7 @@ const routes = {
     login: false,
     buttons: {
       Accueil: {
-        path: '/membre',
+        path: '/member',
       },
     },
   },

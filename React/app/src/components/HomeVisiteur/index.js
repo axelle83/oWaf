@@ -15,7 +15,7 @@ class HomeVisiteur extends React.Component {
 
   render() {
     const { logged } = this.props;
-    if (logged) return <Redirect to="/membre" />;
+    if (logged) return <Redirect to="/member" />;
     const {
       title1, category1, excerpt1, title2, category2, excerpt2, title3, category3, excerpt3,
     } = this.props;
@@ -61,6 +61,9 @@ class HomeVisiteur extends React.Component {
   }
 }
 
+/*
+* PropTypes
+ */
 HomeVisiteur.propTypes = {
   loadPost: PropTypes.func.isRequired,
   title1: PropTypes.string.isRequired,
@@ -74,8 +77,8 @@ HomeVisiteur.propTypes = {
   excerpt3: PropTypes.string.isRequired,
   logged: PropTypes.bool.isRequired,
 };
+
 /*
 * Export default
  */
-
 export default HomeVisiteur;

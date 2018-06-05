@@ -7,19 +7,14 @@ import PropTypes from 'prop-types';
 /*
  * Component
  */
-export default class MapCheck extends React.Component {
-  /*
-   * Handle change event
-   */
+class MapCheck extends React.Component {
+  // Handle change event
   handleChange = (evt) => {
-    console.log(evt.target.checked);
     const { checked } = evt.target;
     this.props.onChange(checked);
   }
 
-  /*
-   * Render
-   */
+  // Render
   render() {
     const { name, label } = this.props;
     const id = `mapField-${name}`;
@@ -37,6 +32,7 @@ export default class MapCheck extends React.Component {
     );
   }
 }
+
 /*
  * PropTypes
  */
@@ -44,9 +40,9 @@ MapCheck.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  // inputValue: PropTypes.string,
 };
 
-// MapCheck.defaultProps = {
-//   inputValue: '',
-// };
+/*
+* Export default
+*/
+export default MapCheck;

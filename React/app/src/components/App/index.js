@@ -26,10 +26,7 @@ import Login from 'src/containers/Login';
 
 class App extends React.Component {
  changeTitle = ({ pathname }) => {
-   // On récupère notre objet de data
    const route = routes[pathname];
-
-   // On modifie le title de la page
    document.title = route.title;
  }
 
@@ -60,7 +57,7 @@ class App extends React.Component {
          <Route
            exact
            path="/blog"
-           render={() => window.location = 'http://217.70.189.93/WordPress/content/themes/oWaf/public/'}
+           render={() => window.location = 'http://217.70.189.93/blog/'}
          />
          <Route render={() => (
            <main>

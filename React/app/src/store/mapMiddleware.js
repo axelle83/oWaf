@@ -1,12 +1,18 @@
-
+/*
+* Import
+*/
 import axios from 'axios';
 import { LOAD_PLACE, PLACE_SUBMIT, getPlaces, newPlace, getCategories } from './reducers/map';
 
+/*
+ * Code
+ */
 const mapMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_PLACE: {
-      const urlMap = 'http://217.70.189.93/wp-json/wp/v2/lieu';
-      const urlCategory = 'http://217.70.189.93/wp-json/wp/v2/categories';
+      const urlMap = 'http://217.70.189.93/blog/wp-json/wp/v2/lieu';
+      const urlCategory = 'http://217.70.189.93/blog/wp-json/wp/v2/categories';
+      const urlGoogle = 'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%';
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
@@ -27,13 +33,12 @@ const mapMiddleware = store => next => (action) => {
       axios
         .get(urlMap, config)
         .then((response) => {
-          /* eslint-disable-next-line */
           response.data.map((data) => {
             // gets the lat & lng from the adress
             const adress = JSON.stringify(data.adresse);
             if (adress) {
               axios
-                .get(`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAzMBKPPyaM0-z_VOq4NzIP9QcPcUihAuc&address=%${adress}&sensor=false`)
+                .get(`${urlGoogle}${adress}&sensor=false`)
                 .then((res) => {
                   data.lat = res.data.results[0].geometry.location.lat;
                   data.lng = res.data.results[0].geometry.location.lng;
@@ -56,7 +61,7 @@ const mapMiddleware = store => next => (action) => {
 
     case PLACE_SUBMIT: {
       const state = store.getState();
-      const urlMap = 'http://217.70.189.93/wp-json/wp/v2/lieu';
+      const urlMap = 'http://217.70.189.93/blog/wp-json/wp/v2/lieu';
       const admin = btoa('restapi:restapi');
       const config = {
         headers: {
@@ -74,6 +79,7 @@ const mapMiddleware = store => next => (action) => {
         title: state.map.name,
         status: 'publish',
         commentaire: state.map.comment,
+        pseudo: state.member.pseudo,
         adresse: state.map.adress,
         categories: state.map.category,
         details,
@@ -93,11 +99,11 @@ const mapMiddleware = store => next => (action) => {
       break;
   }
 
-  // Passe au suivant
+  // Next
   next(action);
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default mapMiddleware;

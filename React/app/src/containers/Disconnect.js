@@ -9,23 +9,18 @@ import { connect } from 'react-redux';
 import Disconnect from 'src/components/Disconnect';
 import { disconnect } from 'src/store/reducers/login';
 
-
 /*
  * Code
  */
-// State
-// const mapStateToProps = null;
 const mapStateToProps = state => ({
   logged: state.login.logged,
 });
 
-// Actions
 const mapDispatchToProps = dispatch => ({
   disconnect: () => {
     dispatch(disconnect());
   },
 });
-
 
 /*
  * Export default

@@ -1,10 +1,10 @@
 @require "app/styles/charte"
 
 #contact
-	position: absolute
+	position: fixed
 	top: 0
 	right: 0
-	border: 3px solid #046380
+	border: 3px solid $bgBlueDuck
 	border-radius: 12px
 	background: #f5f5f5
 	margin: 10em auto
@@ -18,9 +18,13 @@
 	&.contact--open
 		display: block
 	&-title
-		font-family: 'Pacifico'
+		font-family: $title
 		font-size: 2em
 		padding-bottom: .5em
+		padding-left: 6em
+
+#contactHead
+	display: flex
 
 #contactSend
 	&.contact
@@ -33,7 +37,7 @@
 
 #contact-submit
 #contact-send
-	background: #046380
+	background: $bgBlueDuck
 	border: 0
 	border-radius: 10px
 	color: #fff
@@ -48,6 +52,10 @@
 		font-size: 1em
 		padding: .5em
 		display: block
+
+#contactClose
+	font-size: 2em
+	color: $bgBlueDuck
 
 @media (min-width: 1024px)
 	#contact

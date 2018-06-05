@@ -1,12 +1,17 @@
-
+/*
+ * Import
+ */
 import axios from 'axios';
 import { LOAD_POST, getPost } from './reducers/post';
 
+/*
+ * Code
+ */
 const postMiddleware = store => next => (action) => {
   switch (action.type) {
     case LOAD_POST: {
-      const urlPost = 'http://217.70.189.93/wp-json/wp/v2/posts/?per_page=3';
-      const urlCategory = 'http://217.70.189.93/wp-json/wp/v2/categories';
+      const urlPost = 'http://217.70.189.93/blog/wp-json/wp/v2/posts/?per_page=3';
+      const urlCategory = 'http://217.70.189.93/blog/wp-json/wp/v2/categories';
       const config = {
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
       };
@@ -40,11 +45,11 @@ const postMiddleware = store => next => (action) => {
       break;
   }
 
-  // Passe au suivant
+  // Next
   next(action);
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default postMiddleware;

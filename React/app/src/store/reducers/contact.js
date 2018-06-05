@@ -1,4 +1,3 @@
-
 /*
  * Types
  */
@@ -7,7 +6,7 @@ export const CONTACT_CHANGE = 'CONTACT_CHANGE';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 
 /*
- * State
+ * Initial State
  */
 const initialState = {
   send: false,
@@ -32,6 +31,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+        send: false,
       };
     default:
       return state;

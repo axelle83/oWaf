@@ -46,6 +46,6 @@ const persistedState = sessionStorage.getItem('applicationState') ? JSON.parse(s
 const store = createStore(reducers, persistedState, middlewares);
 
 /*
- * Export
+ * Export default
  */
 export default store;

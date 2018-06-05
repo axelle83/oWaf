@@ -1,4 +1,11 @@
 /*
+* Types
+*/
+const CHAT_TOGGLE = 'CHAT_TOGGLE';
+const CONTACT_TOGGLE = 'CONTACT_TOGGLE';
+const LOGIN_TOGGLE = 'LOGIN_TOGGLE';
+
+/*
  * InitialState
  */
 const initialState = {
@@ -9,21 +16,12 @@ const initialState = {
 };
 
 /*
- * Types
- */
-// Settings
-const CHAT_TOGGLE = 'CHAT_TOGGLE';
-const CONTACT_TOGGLE = 'CONTACT_TOGGLE';
-const LOGIN_TOGGLE = 'LOGIN_TOGGLE';
-
-/*
  * Reducer
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     // Settings
     case CHAT_TOGGLE:
-      console.log(state);
       return {
         ...state,
         openChat: !state.openChat,
@@ -46,7 +44,6 @@ const reducer = (state = initialState, action = {}) => {
 /*
  * actionCreators
  */
-// Settings
 export const toggleChat = () => ({
   type: CHAT_TOGGLE,
 });
@@ -60,6 +57,6 @@ export const toggleLogin = () => ({
 });
 
 /*
- * Export
+ * Export default
  */
 export default reducer;

@@ -1,4 +1,3 @@
-
 /*
  * Types
  */
@@ -6,18 +5,21 @@ export const LOAD_POST = 'LOAD_POST';
 export const GET_POST = 'GET_POST';
 
 /*
- * State
+ * Initial state
  */
 const initialState = {
   title1: '',
   category1: '',
   excerpt1: '',
+  slug1: '',
   title2: '',
   category2: '',
   excerpt2: '',
+  slug2: '',
   title3: '',
   category3: '',
   excerpt3: '',
+  slug3: '',
 };
 
 /*
@@ -43,6 +45,9 @@ const reducer = (state = initialState, action = {}) => {
         excerpt1: action.data[0].excerpt.rendered,
         excerpt2: action.data[1].excerpt.rendered,
         excerpt3: action.data[2].excerpt.rendered,
+        slug1: action.data[0].slug,
+        slug2: action.data[1].slug,
+        slug3: action.data[2].slug,
       };
 
     // default case

@@ -1,11 +1,11 @@
-/**
+/*
  * Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import FaEnveloppe from 'react-icons/lib/fa/envelope';
 
-/**
+/*
  * Code
  */
 const ContactBtn = ({ actions }) => (
@@ -20,7 +20,7 @@ ContactBtn.propTypes = {
   actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default ContactBtn;

@@ -1,27 +1,24 @@
-/**
+/*
  * Npm import
  */
 import { connect } from 'react-redux';
 
-/**
+/*
  * Local import
  */
 import Login from 'src/components/Login';
 
-/**
+/*
  * Code
  */
-// Données
 const mapStateToProps = state => ({
   logged: state.login.logged,
+  openLogin: state.buttons.openLogin,
 });
 
 const mapDispatchToProps = {};
 
-// Container
-const LoginContainer = connect(mapStateToProps, mapDispatchToProps)(Login);
-
-/**
- * Export
+/*
+ * Export default
  */
-export default LoginContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

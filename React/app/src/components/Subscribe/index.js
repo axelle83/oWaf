@@ -12,7 +12,6 @@ import { Redirect } from 'react-router-dom';
 import fields from 'src/datas/subscribe';
 import SubscribeField from 'src/containers/SubscribeField';
 import SubscribeRadio from 'src/containers/SubscribeRadio';
-import SubscribeUpload from 'src/containers/SubscribeUpload';
 
 /*
 *  Code
@@ -64,7 +63,6 @@ class Subscribe extends React.Component {
           <div className="subscribe-dog-title">Mon chien</div>
           {fields.dog.map(field => <SubscribeField key={field.name} {...field} />)}
           <SubscribeRadio name="dogGender" />
-          {/* <SubscribeUpload name="dogImage" /> */}
         </div>
         <div className="mandatory">* Champs obligatoires</div>
         <button

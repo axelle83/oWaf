@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 
 /*
 * Local Import
@@ -18,9 +19,9 @@ import MapSelect from 'src/containers/MapSelect';
 */
 class Details extends React.Component {
   handleSubmit = (evt) => {
-    // J'empeche le comportement par défaut
     evt.preventDefault();
     this.props.onPlaceSubmit();
+    setTimeout(() => this.props.loadPlace(), 500);
   }
 
   handleClose = () => {
@@ -34,6 +35,14 @@ class Details extends React.Component {
         {fields.places.map(field => <MapField key={field.name} {...field} />)}
         <MapSelect name="category" />
         {fields.check.map(field => <MapCheck key={field.name} {...field} />)}
+        <div className="check">
+          <input
+            type="checkbox"
+            className="details-check"
+            required
+          />
+          Le lieu  que je propose respecte <NavLink className="link" to="/cgu">les conditions d'utilisation</NavLink>
+        </div>
         <p
           id="newPlaceSend"
           className={
@@ -82,6 +91,7 @@ class Details extends React.Component {
 */
 Details.propTypes = {
   onPlaceSubmit: PropTypes.func.isRequired,
+  loadPlace: PropTypes.func.isRequired,
   addForm: PropTypes.func.isRequired,
   newPlace: PropTypes.bool.isRequired,
 };

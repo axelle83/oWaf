@@ -15,6 +15,8 @@ import { loadPlace } from 'src/store/reducers/map';
  */
 const mapStateToProps = state => ({
   places: state.map.places,
+  lat: state.map.lat,
+  lng: state.map.lng,
 });
 
 const mapDispatchToProps = dispatch => ({

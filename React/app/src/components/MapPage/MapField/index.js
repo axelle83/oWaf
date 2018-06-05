@@ -8,14 +8,12 @@ import classNames from 'classnames';
 /*
  * Component
  */
-export default class MapField extends React.Component {
+class MapField extends React.Component {
   state = {
     error: false,
   }
 
-  /**
-   * Handle change event
-   */
+  // Handle change event
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
@@ -26,9 +24,7 @@ export default class MapField extends React.Component {
     }
   }
 
-  /*
-   * Render
-   */
+  // Render/
   render() {
     const { error } = this.state;
     const {
@@ -73,3 +69,8 @@ MapField.propTypes = {
 MapField.defaultProps = {
   inputValue: '',
 };
+
+/*
+* Export default
+*/
+export default MapField;

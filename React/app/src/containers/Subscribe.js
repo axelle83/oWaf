@@ -4,7 +4,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-
 /*
  * Local import
  */
@@ -14,14 +13,12 @@ import { subscribeSubmit } from 'src/store/reducers/member';
 /*
  * Code
  */
-// State
 const mapStateToProps = state => ({
   errorpassword: state.member.errorpassword,
   exist: state.member.exist,
   subscribe: state.member.subscribe,
 });
 
-// Actions
 const mapDispatchToProps = dispatch => ({
   onSubscribeSubmit: () => {
     dispatch(subscribeSubmit());

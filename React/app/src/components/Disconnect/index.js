@@ -6,11 +6,6 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
 /*
- * Local import
- */
-
-
-/*
  * Code
  */
 class Disconnect extends React.Component {
@@ -18,15 +13,17 @@ class Disconnect extends React.Component {
     this.props.disconnect();
   }
   render() {
-    const { logged } = this.props;
-    console.log(logged);
     return <Redirect to="/" />;
   }
 }
+
+/*
+ * PropTypes
+ */
 Disconnect.propTypes = {
   disconnect: PropTypes.func.isRequired,
-  logged: PropTypes.bool.isRequired,
 };
+
 /*
  * Export default
  */

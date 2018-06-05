@@ -10,11 +10,9 @@ import datas from 'src/datas/subscribe';
 import LoginForm from 'src/components/LoginForm';
 import { loginSubmit, newpassSubmit } from 'src/store/reducers/login';
 
-
 /*
  * Code
  */
-// State
 const mapStateToProps = state => ({
   data: datas[state.login.view],
   passSend: state.login.passSend,
@@ -22,7 +20,6 @@ const mapStateToProps = state => ({
   view: state.login.view,
 });
 
-// Actions
 const mapDispatchToProps = dispatch => ({
   loginSubmit: () => {
     dispatch(loginSubmit());
@@ -31,7 +28,6 @@ const mapDispatchToProps = dispatch => ({
     dispatch(newpassSubmit());
   },
 });
-
 
 /*
  * Export default

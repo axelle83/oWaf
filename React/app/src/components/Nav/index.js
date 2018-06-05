@@ -1,15 +1,9 @@
 /*
-* npm install
-*
+* Npm import
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-
-
-/*
-* Local import
- */
 
 /*
 *  Code
@@ -34,11 +28,15 @@ const Nav = ({ buttons }) => (
     </div>
   </nav>
 );
+
+/*
+* PropTypes
+ */
 Nav.propTypes = {
   buttons: PropTypes.object.isRequired,
 };
+
 /*
 * Export default
  */
-
 export default Nav;

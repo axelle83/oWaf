@@ -1,16 +1,15 @@
 /*
- * InitialState
+* Types
+*/
+const FORM_CHANGE_INPUT = 'FORM_CHANGE_INPUT';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
+
+/*
+ * Initial State
  */
 const initialState = {
   input: '',
 };
-
-/*
- * Types
- */
-// Form
-const FORM_CHANGE_INPUT = 'FORM_CHANGE_INPUT';
-export const SEND_MESSAGE = 'SEND_MESSAGE';
 
 /*
  * Reducer
@@ -35,7 +34,6 @@ const reducer = (state = initialState, action = {}) => {
 /*
  * actionCreators
  */
-// Form
 export const changeInputForm = value => ({
   type: FORM_CHANGE_INPUT,
   value,
@@ -46,6 +44,6 @@ export const sendMessage = () => ({
 });
 
 /*
- * Export
+ * Export default
  */
 export default reducer;

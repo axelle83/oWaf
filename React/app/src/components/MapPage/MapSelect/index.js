@@ -8,17 +8,13 @@ import PropTypes from 'prop-types';
  * Component
  */
 class MapSelect extends React.Component {
-  /**
-   * Handle change event
-   */
+  // Handle change event
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
   }
 
-  /*
-   * Render
-   */
+  // Render/
   render() {
     const { name, categories } = this.props;
     return (

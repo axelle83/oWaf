@@ -1,23 +1,4 @@
 /*
- * Initial state
- */
-const initialState = {
-  members: [],
-  errorpassword: false,
-  exist: false,
-  subscribe: false,
-  view: 'password',
-  pseudo: '',
-  city: '',
-  id: '',
-  email: '',
-  dogName: '',
-  dogGender: 'femelle',
-  dogBirth: '',
-  selectedFile: {},
-};
-
-/*
 * Types
 */
 const INPUT_CHANGE = 'INPUT_CHANGE';
@@ -28,6 +9,29 @@ const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
 const GET_DOG = 'GET_DOG';
 const USER_EXIST = 'USER_EXIST';
+const PROFILE_CLOSE = 'PROFILE_CLOSE';
+export const PROFILE_DELETE = 'PROFILE_DELETE';
+
+/*
+ * Initial state
+ */
+const initialState = {
+  members: [],
+  errorpassword: false,
+  exist: false,
+  subscribe: false,
+  profile: false,
+  deleted: false,
+  view: 'password',
+  pseudo: '',
+  city: '',
+  id: '',
+  email: '',
+  dogName: '',
+  dogGender: 'femelle',
+  dogBirth: '',
+  selectedFile: {},
+};
 
 /*
  * Reducer
@@ -49,7 +53,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         dogId: action.data.id,
-        dogName: action.data.slug,
+        dogName: action.data.title.rendered,
         dogBirth: action.data.naiss,
         dogGender: action.data.genre,
       };
@@ -67,6 +71,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         [action.name]: action.value,
         exist: false,
+        profile: false,
       };
 
     case LOAD_IMAGE:
@@ -96,16 +101,31 @@ const reducer = (state = initialState, action = {}) => {
           errorpassword: true,
         };
       }
-      console.log('profile');
       return {
         ...state,
         errorpassword: false,
+        profile: true,
+      };
+    }
+
+    // profile form close
+    case PROFILE_CLOSE: {
+      return {
+        ...state,
+        profile: false,
+      };
+    }
+
+    // profile delete
+    case PROFILE_DELETE: {
+      return {
+        initialState,
+        deleted: true,
       };
     }
 
     // subscribe is finished
     case SUBSCRIBE:
-      console.log('subscribe');
       return {
         ...state,
         subscribe: true,
@@ -132,6 +152,12 @@ export const subscribeSubmit = () => ({
 export const profileSubmit = () => ({
   type: PROFILE_SUBMIT,
 });
+export const profileClose = () => ({
+  type: PROFILE_CLOSE,
+});
+export const profileDelete = () => ({
+  type: PROFILE_DELETE,
+});
 export const subscribe = () => ({
   type: SUBSCRIBE,
 });
@@ -151,4 +177,7 @@ export const getDog = data => ({
   data,
 });
 
+/*
+ * Export default
+ */
 export default reducer;

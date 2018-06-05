@@ -1,4 +1,4 @@
-/**
+/*
  * Npm import
  */
 import React from 'react';
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import FaWeChat from 'react-icons/lib/fa/wechat';
 import classNames from 'classnames';
 
-/**
+/*
  * Code
  */
 const ChatBtn = ({ actions, visible }) => (
@@ -28,7 +28,7 @@ ChatBtn.propTypes = {
   visible: PropTypes.bool.isRequired,
 };
 
-/**
- * Export
+/*
+ * Export default
  */
 export default ChatBtn;

@@ -1,4 +1,3 @@
-
 /*
  * Types
  */
@@ -10,9 +9,10 @@ export const INPUT_MAP_CHANGE = 'INPUT_MAP_CHANGE';
 export const PLACE_SUBMIT = 'PLACE_SUBMIT';
 export const ADD_FORM = 'ADD_FORM';
 const NEW_PLACE = 'NEW_PLACE';
+const MY_POSITION = 'MY_POSITION';
 
 /*
- * State
+ * Initial state
  */
 const initialState = {
   places: [],
@@ -20,6 +20,9 @@ const initialState = {
   newPlace: false,
   add: false,
   categories: [],
+  lat: 48.8627,
+  lng: 2.2875,
+
 };
 let place = {};
 let leash = false;
@@ -32,8 +35,26 @@ let lake = false;
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    // gets the posts from the rest api
+    // gets the places from the rest api
     case LOAD_PLACE:
+      return {
+        ...state,
+      };
+    // gets my current position
+    case MY_POSITION:
+      if ('geolocation' in navigator) {
+        // geolocation
+        navigator.geolocation.getCurrentPosition((position) => {
+          const crd = position.coords;
+          const lat = crd.latitude;
+          const lng = crd.longitude;
+          return {
+            ...state,
+            lat,
+            lng,
+          };
+        });
+      }
       return {
         ...state,
       };
@@ -54,6 +75,7 @@ const reducer = (state = initialState, action = {}) => {
         id: action.data.id,
         adress: action.data.adresse,
         comment: action.data.commentaire,
+        pseudo: action.data.pseudo,
         name: action.data.title.rendered,
         category: state.categories[action.data.categories[0]].label,
         lat: action.data.lat,
@@ -78,6 +100,7 @@ const reducer = (state = initialState, action = {}) => {
           category: action.data.category,
           adress: action.data.adress,
           comment: action.data.comment,
+          pseudo: action.data.pseudo,
           lat: action.data.lat,
           lng: action.data.lng,
           bag: action.data.bag,
@@ -111,6 +134,7 @@ const reducer = (state = initialState, action = {}) => {
 
     // new place has been added
     case NEW_PLACE: {
+      console.log(state.places);
       return {
         ...state,
         places: [...state.places, action.data],
@@ -141,6 +165,10 @@ export const getCategories = data => ({
 });
 export const getMyPlace = data => ({
   type: GET_MY_PLACE,
+  data,
+});
+export const getMyPosition = data => ({
+  type: MY_POSITION,
   data,
 });
 export const changeMapInput = ({ name, value }) => ({

@@ -9,28 +9,13 @@ import classNames from 'classnames';
  * Component
  */
 export default class SubscribeRadio extends React.Component {
-  /*
-   * PropTypes
-   */
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    selectedOption: PropTypes.string,
-  }
-  static defaultProps = {
-    selectedOption: 'femelle',
-  }
-  /**
-   * Handle change event
-   */
+  // Handle change event
   handleChange = (evt) => {
     const { value } = evt.target;
     this.props.onChange(value);
   }
 
-  /*
-   * Render
-   */
+  // Render
   render() {
     const {
       selectedOption, name,
@@ -78,3 +63,16 @@ export default class SubscribeRadio extends React.Component {
     );
   }
 }
+
+/*
+ * PropTypes
+*/
+SubscribeRadio.propTypes = {
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  selectedOption: PropTypes.string,
+};
+
+SubscribeRadio.defaultProps = {
+  selectedOption: 'femelle',
+};
