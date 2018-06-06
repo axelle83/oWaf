@@ -28,11 +28,11 @@ class Subscribe extends React.Component {
     return (
       <form
         encType="multipart/form-data"
-        id="subscribe"
+        className="subscribe-form"
         onSubmit={this.onSubmit}
       >
-        <div id="subscribe-title">Inscription</div>
-        <div id="subscribe-me">
+        <div className="subscribe-title">Inscription</div>
+        <div className="subscribe-me">
           <div className="subscribe-me-title">Moi</div>
           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
           <div
@@ -82,9 +82,7 @@ Subscribe.propTypes = {
   exist: PropTypes.bool.isRequired,
   subscribe: PropTypes.bool.isRequired,
 };
-// Subscribe.defaultProps = {
-//   errorpassword: 'false',
-// };
+
 /*
 * Export default
  */

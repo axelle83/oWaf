@@ -5,13 +5,16 @@
   display: flex
   font-family: $text
   justify-content: center
-  height: 75em
+  height: auto
+  padding-top: 15em
+  padding-bottom: 5em
+  font-size: .6em
 
 .cgu
   background-color: $color
   border-radius: 1em
-  padding: 0 1em
-  width: 75%
+  padding: 1em
+  width: 95%
   &-title
     font-size: 1.7em
     font-family: $title
@@ -32,11 +35,10 @@
     content: '- '
 
 @media screen and (min-width: 1200px)
-
   #cgu
-    height: auto
     padding-top: 1.3em
   .cgu
+    width: 75%
     margin-bottom: 4em
     margin-top: 8em
     &-title

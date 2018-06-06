@@ -46,11 +46,11 @@ class Profile extends React.Component {
     if (window.location.pathname === '/profile' && deleted) return <Redirect to="/disconnect" />;
     return (
       <form
-        id="profile"
+        className="subscribe-form"
         onSubmit={this.onSubmit}
       >
-        <div id="subscribe-title">Mon profil</div>
-        <div id="subscribe-me">
+        <div className="subscribe-title">Mon profil</div>
+        <div className="subscribe-me">
           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
           <div
             className={
