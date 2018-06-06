@@ -57,6 +57,18 @@ class Profile extends React.Component {
               classNames(
                 'password',
                 {
+                  'error-password': this.props.errorpass,
+                },
+              )
+            }
+          >
+            Le mot de passe doit avoir 6 caractères minimum
+          </div>
+          <div
+            className={
+              classNames(
+                'password',
+                {
                 'error-password': this.props.errorpassword,
               },
             )
@@ -134,10 +146,8 @@ Profile.propTypes = {
   profile: PropTypes.bool.isRequired,
   deleted: PropTypes.bool.isRequired,
   logged: PropTypes.bool.isRequired,
-  errorpassword: PropTypes.bool,
-};
-Profile.defaultProps = {
-  errorpassword: 'false',
+  errorpassword: PropTypes.bool.isRequired,
+  errorpass: PropTypes.bool.isRequired,
 };
 
 /*

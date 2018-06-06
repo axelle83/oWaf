@@ -20,7 +20,7 @@ const me = [
   {
     type: 'password',
     name: 'password',
-    placeholder: 'Mon mot de passe',
+    placeholder: 'Mon mot de passe (6 caractères mini)',
     mandatory: true,
   },
   {

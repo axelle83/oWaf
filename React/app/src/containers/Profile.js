@@ -15,6 +15,7 @@ import { profileSubmit, profileClose, profileDelete } from 'src/store/reducers/m
  */
 const mapStateToProps = state => ({
   errorpassword: state.member.errorpassword,
+  errorpass: state.member.errorpass,
   logged: state.login.logged,
   profile: state.member.profile,
   deleted: state.member.deleted,

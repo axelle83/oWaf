@@ -40,6 +40,18 @@ class Subscribe extends React.Component {
               classNames(
                 'password',
                 {
+                  'error-password': this.props.errorpass,
+                },
+              )
+            }
+          >
+            Le mot de passe doit avoir 6 caractères minimum
+          </div>
+          <div
+            className={
+              classNames(
+                'password',
+                {
                 'error-password': this.props.errorpassword,
               },
             )
@@ -79,6 +91,7 @@ class Subscribe extends React.Component {
 Subscribe.propTypes = {
   onSubscribeSubmit: PropTypes.func.isRequired,
   errorpassword: PropTypes.bool.isRequired,
+  errorpass: PropTypes.bool.isRequired,
   exist: PropTypes.bool.isRequired,
   subscribe: PropTypes.bool.isRequired,
 };
