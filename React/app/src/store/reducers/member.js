@@ -8,6 +8,7 @@ export const LOAD_IMAGE = 'LOAD_IMAGE';
 const SUBSCRIBE = 'SUBSCRIBE';
 const GET_MEMBER = 'GET_MEMBER';
 const GET_DOG = 'GET_DOG';
+const GET_PASS = 'GET_PASS';
 const USER_EXIST = 'USER_EXIST';
 const PROFILE_CLOSE = 'PROFILE_CLOSE';
 export const PROFILE_DELETE = 'PROFILE_DELETE';
@@ -47,6 +48,13 @@ const reducer = (state = initialState, action = {}) => {
         pseudo: action.data.slug,
         email: action.data.user_email,
         city: action.data.ville,
+      };
+    // gets the data of the connected member
+    case GET_PASS:
+      return {
+        ...state,
+        password: action.data,
+        confirmpassword: action.data,
       };
 
     // gets the dog data of the connected member
@@ -191,6 +199,10 @@ export const getMember = data => ({
 });
 export const getDog = data => ({
   type: GET_DOG,
+  data,
+});
+export const getPass = data => ({
+  type: GET_PASS,
   data,
 });
 

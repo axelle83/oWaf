@@ -22,11 +22,11 @@ const mailMiddleware = store => next => (action) => {
       axios
         .post(url, `email=${email}&object=${object}&message=${message}`, config)
         .then(() => {
+          store.dispatch(sendMessage());
         })
         .catch((error) => {
           console.log(error);
         });
-      store.dispatch(sendMessage());
     }
       break;
 
