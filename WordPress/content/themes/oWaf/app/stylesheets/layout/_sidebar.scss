@@ -9,6 +9,7 @@
       font-size: 1.3em;
       justify-content: center;
       display: flex;
+      margin-top: 2em;
     }
   }
 
@@ -20,6 +21,7 @@
       @media (max-width: 768px){
         border: none;
       }
+      
   }
 
   li {

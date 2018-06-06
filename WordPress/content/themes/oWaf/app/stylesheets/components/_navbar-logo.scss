@@ -24,9 +24,13 @@
   }
 }
 
+.navbar-brand{
+  background-color: #114B63;
+}
+
+
 .navbar-brand .navbar-item, .navbar-tabs .navbar-item {
   @media (max-width: 1087px) {
     display: block;
   }
-
 }
