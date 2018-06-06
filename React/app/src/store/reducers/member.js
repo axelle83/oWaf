@@ -18,6 +18,7 @@ export const PROFILE_DELETE = 'PROFILE_DELETE';
 const initialState = {
   members: [],
   errorpassword: false,
+  errorpass: false,
   exist: false,
   subscribe: false,
   profile: false,
@@ -72,6 +73,8 @@ const reducer = (state = initialState, action = {}) => {
         [action.name]: action.value,
         exist: false,
         profile: false,
+        errorpassword: false,
+        errorpass: false,
       };
 
     case LOAD_IMAGE:
@@ -87,9 +90,16 @@ const reducer = (state = initialState, action = {}) => {
           errorpassword: true,
         };
       }
+      if (state.password.length < 6) {
+        return {
+          ...state,
+          errorpass: true,
+        };
+      }
       return {
         ...state,
         errorpassword: false,
+        errorpass: false,
       };
     }
 
@@ -101,8 +111,15 @@ const reducer = (state = initialState, action = {}) => {
           errorpassword: true,
         };
       }
+      if (state.password.length < 6) {
+        return {
+          ...state,
+          errorpass: true,
+        };
+      }
       return {
         ...state,
+        errorpass: false,
         errorpassword: false,
         profile: true,
       };

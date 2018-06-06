@@ -28,13 +28,25 @@ class Subscribe extends React.Component {
     return (
       <form
         encType="multipart/form-data"
-        id="subscribe"
+        className="subscribe-form"
         onSubmit={this.onSubmit}
       >
-        <div id="subscribe-title">Inscription</div>
-        <div id="subscribe-me">
+        <div className="subscribe-title">Inscription</div>
+        <div className="subscribe-me">
           <div className="subscribe-me-title">Moi</div>
           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
+          <div
+            className={
+              classNames(
+                'password',
+                {
+                  'error-password': this.props.errorpass,
+                },
+              )
+            }
+          >
+            Le mot de passe doit avoir 6 caractères minimum
+          </div>
           <div
             className={
               classNames(
@@ -79,12 +91,11 @@ class Subscribe extends React.Component {
 Subscribe.propTypes = {
   onSubscribeSubmit: PropTypes.func.isRequired,
   errorpassword: PropTypes.bool.isRequired,
+  errorpass: PropTypes.bool.isRequired,
   exist: PropTypes.bool.isRequired,
   subscribe: PropTypes.bool.isRequired,
 };
-// Subscribe.defaultProps = {
-//   errorpassword: 'false',
-// };
+
 /*
 * Export default
  */

@@ -3,13 +3,27 @@
 .subscribe-dog-gender
 	position: relative
 	display: block
+	text-align: left
 	padding-bottom: 1em
 	color: $bgBlueSky
-	font-size: 1.2em
-	padding-left: 1em
+	font-size: 1.5em
+	margin: 1em
+	padding: 0 1em
 
 	&-label
 		margin-right: 1em
 
 .subscribe-dog-gender-first
-	margin-left: 17rem
+	margin-left: 5rem
+
+@media screen and (min-width: 1024px)
+	.subscribe-dog-gender
+		font-size: 1.2em
+		padding: 0 2.5em
+	.subscribe-dog-gender-first
+		margin-left: 21.5em
+@media screen and (min-width: 1200px)
+	.subscribe-dog-gender
+		padding: 0 6em
+	.subscribe-dog-gender-first
+		margin-left: 17.5em

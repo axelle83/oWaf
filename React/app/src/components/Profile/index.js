@@ -46,12 +46,24 @@ class Profile extends React.Component {
     if (window.location.pathname === '/profile' && deleted) return <Redirect to="/disconnect" />;
     return (
       <form
-        id="profile"
+        className="subscribe-form"
         onSubmit={this.onSubmit}
       >
-        <div id="subscribe-title">Mon profil</div>
-        <div id="subscribe-me">
+        <div className="subscribe-title">Mon profil</div>
+        <div className="subscribe-me">
           {fields.me.map(field => <SubscribeField key={field.name} {...field} />)}
+          <div
+            className={
+              classNames(
+                'password',
+                {
+                  'error-password': this.props.errorpass,
+                },
+              )
+            }
+          >
+            Le mot de passe doit avoir 6 caractères minimum
+          </div>
           <div
             className={
               classNames(
@@ -134,10 +146,8 @@ Profile.propTypes = {
   profile: PropTypes.bool.isRequired,
   deleted: PropTypes.bool.isRequired,
   logged: PropTypes.bool.isRequired,
-  errorpassword: PropTypes.bool,
-};
-Profile.defaultProps = {
-  errorpassword: 'false',
+  errorpassword: PropTypes.bool.isRequired,
+  errorpass: PropTypes.bool.isRequired,
 };
 
 /*
