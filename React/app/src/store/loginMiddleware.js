@@ -3,7 +3,7 @@
 */
 import axios from 'axios';
 import { LOGIN_SUBMIT, PASS_SUBMIT, connect, sendPass, userError } from './reducers/login';
-import { getMember, getDog } from './reducers/member';
+import { getMember, getDog, getPass } from './reducers/member';
 
 /*
  * Code
@@ -29,6 +29,7 @@ const loginMiddleware = store => next => (action) => {
           store.dispatch(connect());
           // puts the member data in the state
           store.dispatch(getMember(response.data));
+          store.dispatch(getPass(state.login.password));
           axios
             // puts the member dog data in the state
             .get(`${urlDog}/${response.data.dog_id}`, config)

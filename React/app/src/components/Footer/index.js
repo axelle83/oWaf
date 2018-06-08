@@ -12,7 +12,13 @@ const Footer = () => {
   const year = now.getFullYear();
   return (
     <footer id="footer">
-      <a className="footer-title" title="owaf" href="/">Copyright <span id="footer-logo">oWaf</span> {year}</a>
+      <NavLink
+        key="home"
+        to="/"
+        className="footer-title"
+      >
+        Copyright <span id="footer-logo">oWaf</span> {year}
+      </NavLink>
       <NavLink
         key="cgu"
         to="/cgu"
@@ -21,8 +27,8 @@ const Footer = () => {
         Nos conditions d'utilisation
       </NavLink>
       <div className="footer-sociaux">
-        <i className="fab fa-facebook-f" />
-        <i className="fab fa-twitter" />
+        <a href="https://www.oclock.io/"><i className="fab fa-facebook-f" /></a>
+        <a href="https://www.oclock.io/"><i className="fab fa-twitter" /></a>
       </div>
     </footer>
   );
