@@ -57,39 +57,64 @@
   line-height: 1.2em
 
 .home-blog
-  color: $color
+  background: #F3F3F3;
+  color: $colorB
   height: auto
-  padding: 2.5em
+  padding: 1em
 
 
 .home-blog-title
-  font-size: 2.2em
-  padding-bottom: 1em
+  color: #135A7F
+  font-size: 2.7em
   font-family: $title
-  text-align: center
-  margin: 1em
-
+  margin: 0.5em
 
 .home-blog-post
-  margin: 2em
   display: flex
   font-size: 0.8em
   flex-direction: column
   text-align: justify
+  align-items: center
 
 .post
+  background-color: $color
+  border-radius: 3px
+  box-shadow: 0 1px 2px rgba(#000, 0.2)
+  cursor: pointer
+  height: 21em
+  padding: 1em
 
+  &:hover
+    box-shadow: 0 4px 8px rgba(#000, 0.2)
   &-more
     text-align: right
     padding: 1em 0
+    line-height:1.2em
   &-title
     font-size:1.5em
     padding: .5em 0
   &-category
-    text-decoration: underline
-    text-transform: uppercase
-    font-size: 2em
+    color: #3A677F
+    font-size: 1em
+    font-weight:bolder
     padding-top: .5em
+    padding-bottom: 0.8em
+    text-align:right
+    text-transform: uppercase
+
+
+@media screen and (min-width: 500px)
+
+    .home-blog-post
+      display: flex
+      font-size: 1em
+      text-align:left
+    .post
+      padding: 2.5em
+      width: 100%
+      height: 16em
+
+
 
 @media screen and (min-width: 1200px)
   #homeMembre
@@ -129,7 +154,10 @@
   .home-blog-post
     display: flex
     font-size: 1em
-    flex-direction: row;
+    flex-direction: row
     text-align:left
+
   .post
     padding-right: 2.5em
+    height: 22em
+    width:98%
