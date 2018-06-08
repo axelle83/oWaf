@@ -4,7 +4,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-
 /*
 *  Code
  */
@@ -21,17 +20,20 @@ class HomeVisiteur extends React.Component {
     } = this.props;
     return (
       <div id="homeVisiteur">
-        <div className="visiteur-img" />
-        <div className="visiteur-text-img">Vous êtes propriétaire de chien et vous voulez partager des lieux dogfriendly</div>
-        <div className="visiteur-carte">
-          <div className="visiteur-carte-img" />
-          <div className="visiteur-carte-text">Venez partager <br />vos lieux de détente favoris <br /> et découvrir ceux des autres !</div>
+        <div className="visiteur-img">
+          <div className="visiteur-text-img">Vous êtes propriétaire de chien et vous voulez partager des lieux dogfriendly </div>
         </div>
         <div className="visiteur-img2">
-          <div className="visiteur-img2-text">Vous partez en déplacement <br />et vous ne savez pas <br />où détendre votre chien ?
-            <p> <br />Restez zen <br />la communauté oWaf <br />est là pour vous...</p>
+          <div className="visiteur-img2-text">
+            <p>Vous partez en déplacement <br />et vous ne savez pas où détendre votre chien ?</p>
+            <div className="visiteur-img2-text-upper">Restez zen la communauté oWaf est là pour vous...</div>
           </div>
           <div className="visiteur-img2-img" />
+        </div>
+        <div className="visiteur-carte">
+          <div className="visiteur-carte-img" />
+          <div className="visiteur-carte-text">Grâce à une carte intéractive <br />venez partager vos lieux de détente favoris <br />et découvrir ceux des autres !
+          </div>
         </div>
         <div className="home-blog">
           <p className="home-blog-title">Articles à la une</p>

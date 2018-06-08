@@ -8,89 +8,78 @@
   padding-top: 5em
 
 
-
 .visiteur-img
   background-image: url('/images/andrew-pons-web.jpg')
-  background-position: center
+  background-position: 100% 30%
   background-repeat: no-repeat
   background-size: cover
-  border: 3px solid #dcdcdc
   margin: auto
-  width: 90%
+  position: relative
+  width: 100%
+
 
 .visiteur-text-img
   color: $color
   font-family: $title
-  font-size: 2em
-  padding: 1em
+  line-height:1.2em
+  padding-top: 10em
+  position: absolue
   text-align: center
-
+  text-shadow: 2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, -2px 0 0 black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black
 
 
 .visiteur-carte
-
-  color: $color
   display: flex
-  padding-bottom: 1em
-  padding-top: 1em
-  width: 100%
-
-.visiteur-carte-img
-  background-image: url('/images/google-maps-par-defaut.jpg')
-  background-position: top
-  background-repeat: no-repeat
-  background-size: contain
-  height: 15em
-  margin-left: 1em
-  margin-top: 1em
-  width: 40%
-
+  height:15em
+  margin: auto
+  margin-bottom: 1em;
+  width:100%
 
 
 .visiteur-carte-text
+  color:$color
   font-family: $text
   font-size: 2em
-  padding-left: 2.5em
-  padding-top: 1.5em
+  font-weight: bolder
+  padding: 1em
   text-align: center
-  width: 50%
-  line-height: 1.2em
+  width: 100%
+  line-height: 1.4em
+
+
 
 .visiteur-img2
-
-  color: $color
   display: flex
+  height: 30em
+  padding-top: 5em
   width: 100%
 
 .visiteur-img2-text
+  background-color:$color
   font-family: $text
-  font-size: 2em
-  margin-left: 1.5em
-  padding-bottom: 2em
-  padding-left: 1em
-  padding-top: 1em
+  padding-top:3em
   text-align: center
-  width: 40%
+  width: 100%
   line-height: 1.2em
 
-
+.visiteur-img2-text-upper
+  color:black
+  font-size:0.9em
+  padding-top: 5em
+  text-transform:uppercase
 
 .visiteur-img2-img
   background-image: url(/images/tim-mossholder-web.jpg);
   background-position: top
   background-repeat: no-repeat
-  background-size: contain
+  background-size: cover
   height: 20em
-  margin-left: 2em
-  margin-top: 1em
-  width: 50%
-
-
+  width: 60%
 
 
 .visiteur-articles
   color: $color
-  font-size: 2em
+  font-size: 3em
   height: 8em
   padding-left: 1em
   padding-top: .5em
@@ -98,60 +87,37 @@
 
 @media screen and (min-width: 500px)
   .visiteur-img
-    height: 40em
-    margin-top: 6.1em
+    height: 20em
+    margin-top: 3em
+    margin-right: 4em
 
   .visiteur-text-img
-    font-size: 2em
-
-  .visiteur-carte-img
-    height: 15em
+    font-size: 1.7em
 
 
   .visiteur-carte-text
-    font-size: 2em
+    font-size: 1.5em
 
   .visiteur-img2-text
-    font-size: 2em
-    margin-bottom: 0
-    margin-left: 1em
-    padding-bottom: 0
-    padding-left: 0
+    font-size: 1.5em
 
 
   .visiteur-img2-img
-    height: 20em
-    margin-left: 2em
-    margin-top:0
-    padding-top: 0
+    height: 100%
 
 @media screen and (min-width: 1200px)
   #homeVisiteur
     padding-top: 10em
 
   .visiteur-img
-    height: 60em
+    height: 30em
     margin: auto
-    width: 80%
 
   .visiteur-text-img
-    font-size: 3em
-
-  .visiteur-carte-img
-    height: 28em
-    margin-left: 5em
+    font-size: 2.5em
 
   .visiteur-carte-text
-    font-size: 3em
-    margin-right: 4em
-
+    font-size: 2.5em
 
   .visiteur-img2-text
-    font-size: 2.8em
-    margin-left: 4em
-
-  .visiteur-img2-img
-    height: 30em
-    margin-right: 7em
-    margin-top: 0
-    padding-top: 0
+    font-size: 1.8em
