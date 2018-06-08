@@ -27,7 +27,7 @@ class MapPage extends React.Component {
   }
 
   render() {
-    const { logged, add } = this.props;
+    const { logged, add, details } = this.props;
     if (window.location.pathname === '/map' && !logged) return <Redirect to="/" />;
     return (
       <div id="map">
@@ -49,9 +49,9 @@ class MapPage extends React.Component {
             <FaPlus id="place-add" onClick={this.handleClick} />
           </div>
         </div>
-        {!add &&
+        {details &&
           <div className="details-infos"><DetailsInfo /></div>}
-        {add &&
+        {add && !details &&
           <div className="details-infos"><Details /></div>}
       </div>
     );
@@ -66,6 +66,7 @@ MapPage.propTypes = {
   getMyPosition: PropTypes.func.isRequired,
   logged: PropTypes.bool.isRequired,
   add: PropTypes.bool.isRequired,
+  details: PropTypes.bool.isRequired,
   addForm: PropTypes.func.isRequired,
 };
 

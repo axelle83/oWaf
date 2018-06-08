@@ -16,6 +16,7 @@ import { loadPlace, addForm, getMyPosition } from 'src/store/reducers/map';
 const mapStateToProps = state => ({
   logged: state.login.logged,
   add: state.map.add,
+  details: state.map.details,
   addForm: state.map.addForm,
 });
 

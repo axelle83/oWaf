@@ -19,6 +19,7 @@ const initialState = {
   myPlace: {},
   newPlace: false,
   add: false,
+  details: false,
   categories: [],
   lat: 48.8627,
   lng: 2.2875,
@@ -95,6 +96,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         add: false,
+        details: true,
         myPlace: {
           name: action.data.name,
           category: action.data.category,
@@ -123,6 +125,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         add: !state.add,
+        details: !state.details,
       };
     }
     // new place submit
