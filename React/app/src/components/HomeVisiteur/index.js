@@ -32,8 +32,14 @@ class HomeVisiteur extends React.Component {
         </div>
         <div className="visiteur-carte">
           <div className="visiteur-carte-img" />
-          <div className="visiteur-carte-text">Grâce à une carte intéractive <br />venez partager vos lieux de détente favoris <br />et découvrir ceux des autres !
+          <div className="visiteur-carte-text">Grâce à une carte interactive <br />venez partager vos lieux de détente favoris <br />et découvrir ceux des autres !
           </div>
+        </div>
+        <div className="wrapper">
+          <div className="one ball" />
+          <div className="two ball" />
+          <div className="three ball" />
+          <div className="four ball" />
         </div>
         <div className="home-blog">
           <p className="home-blog-title">Articles à la une</p>

@@ -30,7 +30,7 @@
 
 .visiteur-carte
   display: flex
-  height:15em
+  height:5em
   margin: auto
   margin-bottom: 1em;
   width:100%
@@ -84,6 +84,46 @@
   padding-left: 1em
   padding-top: .5em
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px
+}
+
+.ball {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  margin: 0 10px;
+
+  animation: 2s bounce ease infinite;
+}
+
+.one {
+  background-color: #EEEEEC;
+}
+
+.two {
+  background-color: #888A85;
+  animation-delay: .25s;
+}
+
+.three {
+  background-color: #555753;
+  animation-delay: .5s;
+}
+
+.four {
+  background-color: #2E3436;
+  animation-delay: .75s;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(25px);
+    }
+}
 
 @media screen and (min-width: 500px)
   .visiteur-img
@@ -121,3 +161,6 @@
 
   .visiteur-img2-text
     font-size: 1.8em
+
+  .visiteur-carte
+    height:10em
